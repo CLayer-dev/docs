@@ -10,12 +10,12 @@ h3[id],
 h4[id],
 h5[id],
 h6[id] {
-  scroll-margin-top: 100px !important;
+    scroll-margin-top: 100px !important;
 }
 
 /* Also add scroll margin to elements with anchor links */
 :target {
-  scroll-margin-top: 100px !important;
+    scroll-margin-top: 100px !important;
 }
 
 /* ========================================
@@ -25,151 +25,157 @@ h6[id] {
 /* Light theme footer - Light gray background with dark text */
 [data-theme="light"] .footer,
 [data-theme="light"] .footer--dark {
-  background-color: #f8f9fa !important;
-  color: #1c1e21 !important;
-  border-top: 1px solid #e9ecef !important;
+    background-color: #f8f9fa !important;
+    color: #1c1e21 !important;
+    border-top: 1px solid #e9ecef !important;
 }
 
 [data-theme="light"] .footer__link-item,
 [data-theme="light"] .footer a {
-  color: #495057 !important;
-  transition: color 0.2s ease !important;
+    color: #495057 !important;
+    transition: color 0.2s ease !important;
 }
 
 [data-theme="light"] .footer__link-item:hover,
 [data-theme="light"] .footer a:hover {
-  color: #1a73e8 !important;
-  text-decoration: none !important;
+    color: #1a73e8 !important;
+    text-decoration: none !important;
 }
 
 [data-theme="light"] .footer__title {
-  color: #212529 !important;
-  font-weight: 600 !important;
+    color: #212529 !important;
+    font-weight: 600 !important;
 }
 
 [data-theme="light"] .footer__copyright,
 [data-theme="light"] .footer__copyright a {
-  color: #6c757d !important;
+    color: #6c757d !important;
 }
 
 [data-theme="light"] .footer__copyright a:hover {
-  color: #1a73e8 !important;
+    color: #1a73e8 !important;
 }
 
 /* Dark theme footer - Dark background with white text */
 [data-theme="dark"] .footer,
 [data-theme="dark"] .footer--dark {
-  background-color: #1a1a1a !important;
-  color: #ffffff !important;
-  border-top: 1px solid #333333 !important;
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-top: 1px solid #333333 !important;
 }
 
 [data-theme="dark"] .footer__link-item,
 [data-theme="dark"] .footer a {
-  color: #e9ecef !important;
-  transition: color 0.2s ease !important;
+    color: #e9ecef !important;
+    transition: color 0.2s ease !important;
 }
 
 [data-theme="dark"] .footer__link-item:hover,
 [data-theme="dark"] .footer a:hover {
-  color: #4189ed !important;
-  text-decoration: none !important;
+    color: #4189ed !important;
+    text-decoration: none !important;
 }
 
 [data-theme="dark"] .footer__title {
-  color: #ffffff !important;
-  font-weight: 600 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
 }
 
 [data-theme="dark"] .footer__copyright,
 [data-theme="dark"] .footer__copyright a {
-  color: #adb5bd !important;
+    color: #adb5bd !important;
 }
 
 [data-theme="dark"] .footer__copyright a:hover {
-  color: #4189ed !important;
+    color: #4189ed !important;
 }
 
 /* Ensure footer items have proper spacing and typography */
 .footer__title {
-  margin-bottom: 0.75rem !important;
-  font-size: 1rem !important;
+    margin-bottom: 0.75rem !important;
+    font-size: 1rem !important;
 }
 
 .footer__item {
-  margin-bottom: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
 }
 
 .footer__link-item {
-  display: inline-block !important;
-  font-size: 0.9rem !important;
-  line-height: 1.5 !important;
+    display: inline-block !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
 }
 
 /* ========================================
-   NAVBAR LAYOUT FIXES
+   NEW NAVBAR SYSTEM - PERFECT UX
    ======================================== */
 
-/* Ensure proper spacing between logo and docs button */
-.navbar__brand {
-  margin-right: 1rem !important;
-  flex-shrink: 0 !important;
+/* Base navbar styles - Desktop Only */
+.navbar {
+    background: var(--ifm-navbar-background-color) !important;
+    border-bottom: 1px solid var(--ifm-color-emphasis-200) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Logo responsive sizing */
+/* ========================================
+   DESKTOP NAVBAR - CLEAN & PROFESSIONAL
+   ======================================== */
+
+/* Desktop layout controls - Default behavior */
+.navbar__layout--desktop {
+    display: block !important;
+}
+
+.navbar__layout--mobile {
+    display: none !important;
+}
+
+/* Desktop logo sizing - Professional */
 .navbar__logo {
-  height: 40px !important;
-  max-height: 40px !important;
-  width: auto !important;
-  object-fit: contain !important;
+    max-width: 220px !important;
+    height: auto !important;
+    width: auto !important;
+    object-fit: contain !important;
+    transition: opacity 0.2s ease !important;
 }
 
-.navbar__items--left {
-  gap: 0.5rem !important;
-  flex: 1 !important;
-  display: flex !important;
-  align-items: center !important;
+.navbar__logo:hover {
+    opacity: 0.8 !important;
+}
+
+/* Desktop navbar items spacing */
+.navbar__items {
+    gap: 0.75rem !important;
+    display: flex !important;
+    align-items: center !important;
 }
 
 .navbar__items--right {
-  gap: 0.75rem !important;
-  flex-shrink: 0 !important;
-  display: flex !important;
-  align-items: center !important;
+    margin-left: auto !important;
 }
 
-/* Hide navbar dropdowns on mobile to prevent overlapping */
-@media screen and (max-width: 996px) {
-  .navbar__item:not(.navbar-docs-btn):not(:has(> a[href*="github"])):not(:has(> a[href*="t.me"])) {
-    display: none !important;
-  }
-}
-
-/* Only style the Docs button as a button, keep other navbar items as regular text */
+/* Desktop docs button styling */
 .navbar-docs-btn,
 .navbar-docs-btn a,
 [data-theme="light"] .navbar-docs-btn,
 [data-theme="light"] .navbar-docs-btn a,
 [data-theme="dark"] .navbar-docs-btn,
 [data-theme="dark"] .navbar-docs-btn a {
-  font-size: 1.6rem !important;
-  font-weight: 900 !important;
-  padding: 0.35rem 1.75rem !important;
-  margin: 0 1rem 0 1rem !important;
-  /* Increased left margin to prevent overlap */
-  background: linear-gradient(90deg, #1a73e8 0%, #18b6a4 100%) !important;
-  color: #ffffff !important;
-  border-radius: 8px !important;
-  box-shadow: 0 2px 8px rgba(26, 115, 232, 0.08) !important;
-  border: 2px solid #1a73e8 !important;
-  cursor: pointer !important;
-  transition: background 0.2s, box-shadow 0.2s, border 0.2s !important;
-  display: inline-block !important;
-  white-space: nowrap !important;
-  /* Prevent text wrapping */
-  flex-shrink: 0 !important;
-  /* Prevent button from shrinking */
-  text-decoration: none !important;
+    font-size: 1.6rem !important;
+    font-weight: 900 !important;
+    padding: 0.35rem 1.75rem !important;
+    margin: 0 1rem 0 1rem !important;
+    background: linear-gradient(90deg, #1a73e8 0%, #18b6a4 100%) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(26, 115, 232, 0.08) !important;
+    border: 2px solid #1a73e8 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    text-decoration: none !important;
 }
 
 .navbar-docs-btn:hover,
@@ -178,266 +184,343 @@ h6[id] {
 [data-theme="light"] .navbar-docs-btn a:hover,
 [data-theme="dark"] .navbar-docs-btn:hover,
 [data-theme="dark"] .navbar-docs-btn a:hover {
-  background: linear-gradient(90deg, #003087 0%, #18b6a4 100%) !important;
-  box-shadow: 0 4px 16px rgba(26, 115, 232, 0.16) !important;
-  border: 2px solid #003087 !important;
-  color: #ffffff !important;
-  text-decoration: none !important;
+    background: linear-gradient(90deg, #003087 0%, #18b6a4 100%) !important;
+    box-shadow: 0 4px 16px rgba(26, 115, 232, 0.16) !important;
+    border: 2px solid #003087 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transform: translateY(-1px) !important;
 }
 
-/* Revert other navbar links to default style */
+/* Desktop navigation links - Keep default Docusaurus styling */
 .navbar__link {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: inherit;
-  background: none;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
-  transition: color 0.2s;
-  white-space: nowrap;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: var(--ifm-navbar-link-color) !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.2s ease !important;
 }
 
 .navbar__link:hover {
-  color: #1a73e8;
-  background: none;
+    color: var(--ifm-navbar-link-hover-color) !important;
+    text-decoration: none !important;
+}
+
+/* Desktop search button styling */
+.navbar__search-button {
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0.5rem 1rem !important;
+    color: var(--ifm-navbar-link-color) !important;
+    font-size: var(--ifm-font-size-base) !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+.navbar__search-button:hover {
+    color: var(--ifm-navbar-link-hover-color) !important;
+    background: var(--ifm-color-emphasis-100) !important;
+}
+
+.navbar__search-icon {
+    opacity: 0.8 !important;
+    transition: opacity 0.2s ease !important;
+}
+
+.navbar__search-button:hover .navbar__search-icon {
+    opacity: 1 !important;
+}
+
+/* Keyboard shortcut styling - Desktop only */
+.navbar__search-kbd {
+    background: var(--ifm-color-emphasis-200) !important;
+    border: 1px solid var(--ifm-color-emphasis-300) !important;
+    border-radius: 4px !important;
+    padding: 0.2rem 0.4rem !important;
+    font-size: 0.75rem !important;
+    font-family: var(--ifm-font-family-monospace) !important;
+    margin-left: 0.5rem !important;
+    opacity: 0.7 !important;
+}
+
+[data-theme="dark"] .navbar__search-kbd {
+    background: var(--ifm-color-emphasis-300) !important;
+    border-color: var(--ifm-color-emphasis-400) !important;
+    color: var(--ifm-color-emphasis-900) !important;
 }
 
 /* ========================================
-   RESPONSIVE NAVBAR IMPROVEMENTS
+   MOBILE NAVBAR - PERFECT UX LAYOUT
    ======================================== */
 
-/* Large desktop screens */
-@media screen and (min-width: 1200px) {
-
-  .navbar-docs-btn,
-  .navbar-docs-btn a,
-  [data-theme="light"] .navbar-docs-btn,
-  [data-theme="light"] .navbar-docs-btn a,
-  [data-theme="dark"] .navbar-docs-btn,
-  [data-theme="dark"] .navbar-docs-btn a {
-    font-size: 1.6rem !important;
-    padding: 0.35rem 1.75rem !important;
-    margin: 0 1.5rem 0 1.5rem !important;
-    color: #ffffff !important;
-  }
-
-  .navbar__items--right {
-    gap: 1rem !important;
-  }
-}
-
-/* Desktop screens */
-@media screen and (min-width: 997px) and (max-width: 1199px) {
-
-  .navbar-docs-btn,
-  .navbar-docs-btn a,
-  [data-theme="light"] .navbar-docs-btn,
-  [data-theme="light"] .navbar-docs-btn a,
-  [data-theme="dark"] .navbar-docs-btn,
-  [data-theme="dark"] .navbar-docs-btn a {
-    font-size: 1.4rem !important;
-    padding: 0.3rem 1.5rem !important;
-    margin: 0 1rem 0 1rem !important;
-    color: #ffffff !important;
-  }
-
-  .navbar__items--right {
-    gap: 0.75rem !important;
-  }
-}
-
-/* Tablet screens */
-@media screen and (max-width: 996px) {
-  .navbar {
-    padding: 0.5rem 1rem !important;
-  }
-
-  .navbar__brand {
-    margin-right: 0.5rem !important;
-  }
-
-  .navbar__logo {
-    height: 32px !important;
-    max-height: 32px !important;
-  }
-
-  .navbar-docs-btn,
-  .navbar-docs-btn a,
-  [data-theme="light"] .navbar-docs-btn,
-  [data-theme="light"] .navbar-docs-btn a,
-  [data-theme="dark"] .navbar-docs-btn,
-  [data-theme="dark"] .navbar-docs-btn a {
-    font-size: 1.2rem !important;
-    padding: 0.3rem 1.2rem !important;
-    margin: 0 0.75rem 0 0.5rem !important;
-    color: #ffffff !important;
-  }
-
-  .navbar__items--right {
-    gap: 0.5rem !important;
-  }
-
-  .navbar__link {
-    font-size: 0.9rem !important;
-    padding: 0.4rem 0.6rem !important;
-    margin: 0 0.25rem !important;
-  }
-}
-
-/* Mobile screens */
 @media screen and (max-width: 768px) {
-  .navbar {
-    padding: 0.5rem 0.75rem !important;
-  }
 
-  .navbar__brand {
-    margin-right: 0.25rem !important;
-  }
+    /* Switch to mobile layout */
+    .navbar__layout--desktop {
+        display: none !important;
+    }
 
-  .navbar__logo {
-    height: 28px !important;
-    max-height: 28px !important;
-  }
+    .navbar__layout--mobile {
+        display: block !important;
+    }
 
-  .navbar-docs-btn,
-  .navbar-docs-btn a,
-  [data-theme="light"] .navbar-docs-btn,
-  [data-theme="light"] .navbar-docs-btn a,
-  [data-theme="dark"] .navbar-docs-btn,
-  [data-theme="dark"] .navbar-docs-btn a {
-    font-size: 1.1rem !important;
-    padding: 0.25rem 1rem !important;
-    margin: 0 0.5rem 0 0.25rem !important;
-    color: #ffffff !important;
-  }
+    /* Hide desktop-only elements */
+    .navbar__item:has(.dropdown) {
+        display: none !important;
+    }
 
-  .navbar__items--right {
-    gap: 0.25rem !important;
-  }
+    .navbar__search-kbd {
+        display: none !important;
+    }
 
-  .navbar__link {
-    font-size: 0.8rem !important;
-    padding: 0.3rem 0.5rem !important;
-    margin: 0 0.125rem !important;
-  }
+    /* Mobile navbar container */
+    .navbar {
+        padding: 0.5rem 0.75rem !important;
+        min-height: 56px !important;
+    }
+
+    /* Mobile navbar inner - Layout: Menu | Logo | Docs | [space] | Theme Search */
+    .navbar__inner--mobile {
+        display: grid !important;
+        grid-template-columns: auto auto auto 1fr auto auto !important;
+        grid-template-areas: "menu logo docs spacer theme search" !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 0.5rem !important;
+        max-width: 100vw !important;
+        overflow: hidden !important;
+    }
+
+    /* 1. Menu button */
+    .navbar__mobile-item--menu {
+        grid-area: menu !important;
+        justify-self: start !important;
+    }
+
+    /* 2. Logo - Bigger size */
+    .navbar__mobile-item--logo {
+        grid-area: logo !important;
+        justify-self: start !important;
+        overflow: hidden !important;
+    }
+
+    .navbar__mobile-item--logo .navbar__logo {
+        max-width: 140px !important;
+        /* Increased from 120px */
+    }
+
+    /* 3. Docs button */
+    .navbar__mobile-item--docs {
+        grid-area: docs !important;
+        justify-self: start !important;
+        min-width: 0 !important;
+    }
+
+    .navbar__mobile-item--docs .navbar-docs-btn,
+    .navbar__mobile-item--docs .navbar-docs-btn a {
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        padding: 0.5rem 1.2rem !important;
+        margin: 0 !important;
+        border-radius: 24px !important;
+        white-space: nowrap !important;
+    }
+
+    /* 4. Theme toggle - Right side */
+    .navbar__mobile-item--theme {
+        grid-area: theme !important;
+        justify-self: end !important;
+    }
+
+    /* 5. Search button - Right side */
+    .navbar__mobile-item--search {
+        grid-area: search !important;
+        justify-self: end !important;
+    }
+
+    .navbar__search-button--mobile {
+        padding: 0.4rem !important;
+        font-size: 0 !important;
+        /* Hide text */
+        min-width: 40px !important;
+        min-height: 40px !important;
+        background: var(--ifm-color-emphasis-100) !important;
+        border-radius: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: none !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .navbar__search-button--mobile:hover {
+        background: var(--ifm-color-primary) !important;
+        color: #ffffff !important;
+    }
+
+    .navbar__search-button--mobile .navbar__search-icon {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    /* Theme toggle mobile styling */
+    .colorModeToggleMobile {
+        padding: 0.4rem !important;
+        min-width: 40px !important;
+        min-height: 40px !important;
+        background: var(--ifm-color-emphasis-100) !important;
+        border-radius: 12px !important;
+        border: none !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .colorModeToggleMobile:hover {
+        background: var(--ifm-color-primary) !important;
+        color: #ffffff !important;
+    }
+
+    /* Mobile hamburger styling */
+    .navbar__toggle {
+        padding: 0.3rem !important;
+        min-width: 44px !important;
+        height: 44px !important;
+        border-radius: 8px !important;
+        border: none !important;
+        background: transparent !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        transition: background 0.2s ease !important;
+    }
+
+    .navbar__toggle:hover {
+        background: var(--ifm-color-emphasis-100) !important;
+    }
 }
 
-/* Small mobile screens */
+/* Smaller mobile screens */
 @media screen and (max-width: 480px) {
-  .navbar {
-    padding: 0.5rem 0.5rem !important;
-  }
+    .navbar {
+        padding: 0.4rem 0.6rem !important;
+        min-height: 52px !important;
+    }
 
-  .navbar__brand {
-    margin-right: 0.25rem !important;
-  }
+    .navbar__inner--mobile {
+        gap: 0.4rem !important;
+    }
 
-  .navbar__logo {
-    height: 24px !important;
-    max-height: 24px !important;
-  }
+    .navbar__mobile-item--logo .navbar__logo {
+        max-width: 120px !important;
+        /* Reduced slightly for smaller screens */
+    }
 
-  .navbar-docs-btn,
-  .navbar-docs-btn a,
-  [data-theme="light"] .navbar-docs-btn,
-  [data-theme="light"] .navbar-docs-btn a,
-  [data-theme="dark"] .navbar-docs-btn,
-  [data-theme="dark"] .navbar-docs-btn a {
-    font-size: 1rem !important;
-    padding: 0.2rem 0.8rem !important;
-    margin: 0 0.25rem 0 0.25rem !important;
-    color: #ffffff !important;
-  }
+    .navbar__mobile-item--docs .navbar-docs-btn,
+    .navbar__mobile-item--docs .navbar-docs-btn a {
+        font-size: 0.9rem !important;
+        padding: 0.45rem 1rem !important;
+        border-radius: 20px !important;
+    }
 
-  .navbar__items--right {
-    gap: 0.125rem !important;
-  }
+    .navbar__search-button--mobile,
+    .colorModeToggleMobile {
+        min-width: 36px !important;
+        min-height: 36px !important;
+        padding: 0.35rem !important;
+    }
 
-  .navbar__link {
-    font-size: 0.75rem !important;
-    padding: 0.25rem 0.4rem !important;
-    margin: 0 0.0625rem !important;
-  }
+    .navbar__toggle {
+        min-width: 40px !important;
+        height: 40px !important;
+    }
 }
 
 /* Very small screens */
 @media screen and (max-width: 380px) {
-  .navbar {
-    padding: 0.25rem 0.25rem !important;
-  }
+    .navbar {
+        padding: 0.35rem 0.5rem !important;
+        min-height: 48px !important;
+    }
 
-  .navbar__brand {
-    margin-right: 0.125rem !important;
-  }
+    .navbar__inner--mobile {
+        gap: 0.3rem !important;
+    }
 
-  .navbar__logo {
-    height: 20px !important;
-    max-height: 20px !important;
-  }
+    .navbar__mobile-item--logo .navbar__logo {
+        max-width: 100px !important;
+    }
 
-  .navbar-docs-btn,
-  .navbar-docs-btn a,
-  [data-theme="light"] .navbar-docs-btn,
-  [data-theme="light"] .navbar-docs-btn a,
-  [data-theme="dark"] .navbar-docs-btn,
-  [data-theme="dark"] .navbar-docs-btn a {
-    font-size: 0.9rem !important;
-    padding: 0.15rem 0.6rem !important;
-    margin: 0 0.125rem 0 0.125rem !important;
-    color: #ffffff !important;
-  }
+    .navbar__mobile-item--docs .navbar-docs-btn,
+    .navbar__mobile-item--docs .navbar-docs-btn a {
+        font-size: 0.85rem !important;
+        padding: 0.4rem 0.85rem !important;
+        border-radius: 18px !important;
+    }
 
-  /* Hide navbar title text on very small screens to save space */
-  .navbar__title {
-    display: none !important;
-  }
+    .navbar__search-button--mobile,
+    .colorModeToggleMobile {
+        min-width: 32px !important;
+        min-height: 32px !important;
+        padding: 0.3rem !important;
+    }
 
-  .navbar__items--right {
-    gap: 0.0625rem !important;
-  }
-
-  .navbar__link {
-    font-size: 0.7rem !important;
-    padding: 0.2rem 0.3rem !important;
-    margin: 0 !important;
-  }
+    .navbar__toggle {
+        min-width: 36px !important;
+        height: 36px !important;
+    }
 }
 
 /* ========================================
-   RESPONSIVE IMPROVEMENTS FOR CONTENT
+   DESKTOP RESPONSIVE IMPROVEMENTS
    ======================================== */
 
-/* Improve readability on mobile */
-@media screen and (max-width: 768px) {
+/* Tablet screens - Desktop layout but smaller */
+@media screen and (max-width: 996px) and (min-width: 769px) {
+    .navbar {
+        padding: 0.5rem 1rem !important;
+    }
 
-  /* Better line height for mobile reading */
-  .markdown p,
-  .markdown li {
-    line-height: 1.6 !important;
-  }
+    .navbar__logo {
+        max-width: 180px !important;
+    }
 
-  /* Better spacing for lists */
-  .markdown ul,
-  .markdown ol {
-    padding-left: 1.5rem !important;
-  }
+    .navbar-docs-btn,
+    .navbar-docs-btn a {
+        font-size: 1.4rem !important;
+        padding: 0.3rem 1.4rem !important;
+        margin: 0 0.75rem 0 0.5rem !important;
+    }
+}
 
-  /* Code blocks mobile improvements */
-  .markdown pre {
-    margin: 1rem 0 !important;
-    overflow-x: auto !important;
-    font-size: 0.8rem !important;
-  }
+/* Large desktop screens */
+@media screen and (min-width: 1200px) {
+    .navbar__logo {
+        max-width: 240px !important;
+    }
 
-  /* Blockquotes mobile improvements */
-  .markdown blockquote {
-    margin: 1rem 0 !important;
-    padding: 0.5rem 1rem !important;
-    border-left: 4px solid var(--ifm-color-primary) !important;
-  }
+    .navbar-docs-btn,
+    .navbar-docs-btn a {
+        font-size: 1.7rem !important;
+        padding: 0.4rem 2rem !important;
+        margin: 0 1.5rem 0 1.5rem !important;
+    }
+
+    .navbar__items {
+        gap: 1rem !important;
+    }
 }
 
 /* ========================================
@@ -450,7 +533,7 @@ h6[id] {
 [data-theme="dark"] article,
 [data-theme="dark"] .container,
 [data-theme="dark"] .col {
-  color: var(--ifm-font-color-base) !important;
+    color: var(--ifm-font-color-base) !important;
 }
 
 /* Fix markdown content colors */
@@ -460,133 +543,133 @@ h6[id] {
 [data-theme="dark"] .markdown h4,
 [data-theme="dark"] .markdown h5,
 [data-theme="dark"] .markdown h6 {
-  color: #ffffff !important;
+    color: #ffffff !important;
 }
 
 [data-theme="dark"] .markdown p,
 [data-theme="dark"] .markdown li,
 [data-theme="dark"] .markdown td,
 [data-theme="dark"] .markdown span {
-  color: #e1e1e3 !important;
+    color: #e1e1e3 !important;
 }
 
 [data-theme="dark"] .markdown strong,
 [data-theme="dark"] .markdown b {
-  color: #ffffff !important;
+    color: #ffffff !important;
 }
 
 [data-theme="dark"] .markdown a {
-  color: #4189ed !important;
+    color: #4189ed !important;
 }
 
 [data-theme="dark"] .markdown a:hover {
-  color: #5b98f0 !important;
+    color: #5b98f0 !important;
 }
 
 /* Fix code blocks and inline code */
 [data-theme="dark"] code {
-  color: #e1e1e3 !important;
-  background-color: #2d2d2d !important;
+    color: #e1e1e3 !important;
+    background-color: #2d2d2d !important;
 }
 
 [data-theme="dark"] pre {
-  background-color: #1e1e1e !important;
+    background-color: #1e1e1e !important;
 }
 
 [data-theme="dark"] .prism-code {
-  background-color: #1e1e1e !important;
+    background-color: #1e1e1e !important;
 }
 
 /* Fix alerts/admonitions */
 [data-theme="dark"] .alert {
-  border-left-color: #4189ed !important;
+    border-left-color: #4189ed !important;
 }
 
 [data-theme="dark"] .alert .admonition-heading h5 {
-  color: #ffffff !important;
+    color: #ffffff !important;
 }
 
 [data-theme="dark"] .alert .admonition-content p {
-  color: #e1e1e3 !important;
+    color: #e1e1e3 !important;
 }
 
 /* Fix tabs */
 [data-theme="dark"] .tabs__item {
-  color: #a5abaf !important;
+    color: #a5abaf !important;
 }
 
 [data-theme="dark"] .tabs__item--active {
-  color: #4189ed !important;
+    color: #4189ed !important;
 }
 
 /* Fix search components */
 [data-theme="dark"] .navbar__search-input {
-  color: #e1e1e3 !important;
-  background-color: #2d2d2d !important;
+    color: #e1e1e3 !important;
+    background-color: #2d2d2d !important;
 }
 
 /* Fix pagination */
 [data-theme="dark"] .pagination-nav__link {
-  color: #e1e1e3 !important;
-  border-color: #535353 !important;
+    color: #e1e1e3 !important;
+    border-color: #535353 !important;
 }
 
 [data-theme="dark"] .pagination-nav__link:hover {
-  color: #4189ed !important;
+    color: #4189ed !important;
 }
 
 [data-theme="dark"] .pagination-nav__label {
-  color: #4189ed !important;
+    color: #4189ed !important;
 }
 
 [data-theme="dark"] .pagination-nav__sublabel {
-  color: #a5abaf !important;
+    color: #a5abaf !important;
 }
 
 /* Fix edit page links */
 [data-theme="dark"] .theme-edit-this-page {
-  color: #4189ed !important;
+    color: #4189ed !important;
 }
 
 /* Fix last updated info */
 [data-theme="dark"] .theme-last-updated {
-  color: #a5abaf !important;
+    color: #a5abaf !important;
 }
 
 /* Fix dropdown menus */
 [data-theme="dark"] .dropdown__menu {
-  background-color: #242526 !important;
-  border-color: #535353 !important;
+    background-color: #242526 !important;
+    border-color: #535353 !important;
 }
 
 [data-theme="dark"] .dropdown__link {
-  color: #e1e1e3 !important;
+    color: #e1e1e3 !important;
 }
 
 [data-theme="dark"] .dropdown__link:hover {
-  color: #4189ed !important;
-  background-color: #2d2d2d !important;
+    color: #4189ed !important;
+    background-color: #2d2d2d !important;
 }
 
 /* Fix doc sidebar */
 [data-theme="dark"] .theme-doc-sidebar-container {
-  background-color: #1b1b1d !important;
+    background-color: #1b1b1d !important;
 }
 
 [data-theme="dark"] .theme-doc-sidebar-menu {
-  background-color: #1b1b1d !important;
+    background-color: #1b1b1d !important;
 }
 
 /* Fix any remaining hardcoded colors */
 [data-theme="dark"] .theme-doc-sidebar-menu li:first-child>div {
-  border-color: #535353 !important;
+    border-color: #535353 !important;
 }
 
 /* Ensure homepage features work in dark theme */
 [data-theme="dark"] .feature {
-  color: #e1e1e3 !important;
+    color: #e1e1e3 !important;
 }
 
 [data-theme="dark"] .feature h3 {
-  color: #ffffff !important;
+    color: #ffffff !important;
 }

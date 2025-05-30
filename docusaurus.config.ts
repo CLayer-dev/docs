@@ -142,8 +142,6 @@ const config: Config = {
         alt: 'Circle Layer Logo',
         src: 'img/light-theme-logo.png',
         srcDark: 'img/dark-theme-logo.png',
-        height: 40,
-        width: 'auto',
       },
       items: [
         {

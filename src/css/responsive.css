@@ -140,32 +140,12 @@
    NAVBAR RESPONSIVE IMPROVEMENTS
    ======================================== */
 
-/* Mobile navbar */
+/* Mobile navbar - simplified, detailed styles in custom.css */
 @media screen and (max-width: 996px) {
-    .navbar {
-        padding: 0.5rem 1rem !important;
-    }
 
-    .navbar__brand {
-        margin-right: 0.5rem !important;
-        order: 1 !important;
-        flex-shrink: 0 !important;
-    }
-
-    .navbar__logo {
-        height: 32px !important;
-        max-height: 32px !important;
-        width: auto !important;
-        object-fit: contain !important;
-    }
-
-    /* Docs button mobile optimization */
-    .navbar-docs-btn {
-        font-size: 1rem !important;
-        padding: 0.4rem 1rem !important;
-        margin: 0 0.5rem 0 0 !important;
-        order: 2 !important;
-        flex-shrink: 0 !important;
+    /* Basic mobile navbar reset - details handled in custom.css */
+    .navbar__item:not(.navbar-docs-btn):not(:has(> a[href*="github"])):not(:has(> a[href*="t.me"])) {
+        display: none !important;
     }
 
     /* Mobile menu improvements */
@@ -179,18 +159,6 @@
 
     .navbar-sidebar__item {
         margin: 0.5rem 0 !important;
-    }
-
-    /* Right side items on mobile */
-    .navbar__items--right {
-        gap: 0.5rem !important;
-        order: 3 !important;
-        flex-shrink: 0 !important;
-    }
-
-    .navbar__items--right .navbar__link {
-        font-size: 0.9rem !important;
-        padding: 0.4rem 0.6rem !important;
     }
 }
 
