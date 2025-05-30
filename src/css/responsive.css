@@ -31,6 +31,46 @@
 }
 
 /* ========================================
+   NAVBAR LAYOUT IMPROVEMENTS
+   ======================================== */
+
+/* Ensure navbar has proper flex layout */
+.navbar__inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.navbar__items {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+}
+
+.navbar__items--left {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+.navbar__items--right {
+    flex-shrink: 0 !important;
+}
+
+/* Prevent navbar overflow on small screens */
+@media screen and (max-width: 996px) {
+    .navbar__items--left .navbar__item:not(.navbar-docs-btn) {
+        display: none !important;
+    }
+
+    .navbar__toggle {
+        margin-left: auto !important;
+        order: 3 !important;
+    }
+}
+
+/* ========================================
    MOBILE STYLES (320px - 768px)
    ======================================== */
 
@@ -108,6 +148,7 @@
 
     .navbar__brand {
         margin-right: 0.5rem !important;
+        order: 1 !important;
     }
 
     .navbar__logo {
@@ -120,6 +161,7 @@
         font-size: 1rem !important;
         padding: 0.4rem 1rem !important;
         margin: 0 0.5rem 0 0 !important;
+        order: 2 !important;
     }
 
     /* Mobile menu improvements */

@@ -19,12 +19,31 @@ h6[id] {
   scroll-margin-top: 100px !important;
 }
 
+/* ========================================
+   NAVBAR LAYOUT FIXES
+   ======================================== */
+
+/* Ensure proper spacing between logo and docs button */
+.navbar__brand {
+  margin-right: 1rem !important;
+  flex-shrink: 0 !important;
+}
+
+.navbar__items--left {
+  gap: 0.5rem !important;
+}
+
+.navbar__items--right {
+  gap: 0.5rem !important;
+}
+
 /* Only style the Docs button as a button, keep other navbar items as regular text */
 .navbar-docs-btn {
   font-size: 1.4rem !important;
   font-weight: 900 !important;
   padding: 0.5rem 2rem !important;
-  margin: 0 2rem 0 0.5rem !important;
+  margin: 0 1rem 0 1rem !important;
+  /* Increased left margin to prevent overlap */
   background: linear-gradient(90deg, #1a73e8 0%, #18b6a4 100%) !important;
   color: #fff !important;
   border-radius: 8px !important;
@@ -33,6 +52,10 @@ h6[id] {
   cursor: pointer !important;
   transition: background 0.2s, box-shadow 0.2s, border 0.2s !important;
   display: inline-block !important;
+  white-space: nowrap !important;
+  /* Prevent text wrapping */
+  flex-shrink: 0 !important;
+  /* Prevent button from shrinking */
 }
 
 .navbar-docs-btn:hover {
@@ -54,6 +77,7 @@ h6[id] {
   margin: 0 0.5rem;
   padding: 0.5rem 1rem;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .navbar__link:hover {
@@ -65,28 +89,90 @@ h6[id] {
    RESPONSIVE NAVBAR IMPROVEMENTS
    ======================================== */
 
-/* Mobile navbar adjustments for docs button */
+/* Large desktop screens */
+@media screen and (min-width: 1200px) {
+  .navbar-docs-btn {
+    font-size: 1.4rem !important;
+    padding: 0.5rem 2rem !important;
+    margin: 0 1.5rem 0 1.5rem !important;
+  }
+}
+
+/* Desktop screens */
+@media screen and (min-width: 997px) and (max-width: 1199px) {
+  .navbar-docs-btn {
+    font-size: 1.2rem !important;
+    padding: 0.4rem 1.5rem !important;
+    margin: 0 1rem 0 1rem !important;
+  }
+}
+
+/* Tablet screens */
 @media screen and (max-width: 996px) {
+  .navbar__brand {
+    margin-right: 0.5rem !important;
+  }
+
   .navbar-docs-btn {
     font-size: 1rem !important;
     padding: 0.4rem 1.2rem !important;
-    margin: 0 1rem 0 0.25rem !important;
+    margin: 0 0.75rem 0 0.75rem !important;
   }
 }
 
+/* Mobile screens */
 @media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 0.75rem !important;
+  }
+
+  .navbar__brand {
+    margin-right: 0.25rem !important;
+  }
+
   .navbar-docs-btn {
     font-size: 0.9rem !important;
     padding: 0.35rem 1rem !important;
-    margin: 0 0.5rem 0 0.25rem !important;
+    margin: 0 0.5rem 0 0.5rem !important;
   }
 }
 
+/* Small mobile screens */
 @media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem 0.5rem !important;
+  }
+
+  .navbar__brand {
+    margin-right: 0.25rem !important;
+  }
+
   .navbar-docs-btn {
     font-size: 0.8rem !important;
     padding: 0.3rem 0.8rem !important;
     margin: 0 0.25rem 0 0.25rem !important;
+  }
+}
+
+/* Very small screens */
+@media screen and (max-width: 380px) {
+  .navbar {
+    padding: 0.25rem 0.25rem !important;
+  }
+
+  .navbar__brand {
+    margin-right: 0.125rem !important;
+  }
+
+  .navbar-docs-btn {
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.6rem !important;
+    margin: 0 0.125rem 0 0.125rem !important;
+  }
+
+  /* Hide navbar title text on very small screens to save space */
+  .navbar__title {
+    display: none !important;
   }
 }
 

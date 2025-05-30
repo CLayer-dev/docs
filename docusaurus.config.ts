@@ -127,7 +127,7 @@ const config: Config = {
 
     // Color mode configuration
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
