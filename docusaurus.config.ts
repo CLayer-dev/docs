@@ -15,6 +15,11 @@ const config: Config = {
     require.resolve('./src/clientModules/setDefaultTheme.js'),
   ],
 
+  // Enable Mermaid diagrams
+  markdown: {
+    mermaid: true,
+  },
+
   // SEO metadata
   headTags: [
     // Viewport meta tag for responsive design
@@ -125,6 +130,8 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig: {
     // Replace with your project's social card

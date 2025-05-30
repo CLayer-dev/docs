@@ -1,5 +1,5 @@
 import React from 'react';
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
@@ -14,7 +14,11 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Fast & Scalable',
     Svg: () => (
-      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="32" fill="#1a73e8"/><path d="M32 16L44 32H20L32 16Z" fill="#18b6a4"/><circle cx="32" cy="40" r="8" fill="#003087"/></svg>
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="32" fill="currentColor" className="feature-svg-bg" />
+        <path d="M32 16L44 32H20L32 16Z" fill="currentColor" className="feature-svg-accent" />
+        <circle cx="32" cy="40" r="8" fill="currentColor" className="feature-svg-detail" />
+      </svg>
     ),
     description: (
       <>
@@ -25,7 +29,11 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'AI-Powered Security',
     Svg: () => (
-      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="32" fill="#18b6a4"/><rect x="20" y="24" width="24" height="16" rx="4" fill="#1a73e8"/><circle cx="32" cy="32" r="4" fill="#003087"/></svg>
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="32" fill="currentColor" className="feature-svg-bg" />
+        <rect x="20" y="24" width="24" height="16" rx="4" fill="currentColor" className="feature-svg-accent" />
+        <circle cx="32" cy="32" r="4" fill="currentColor" className="feature-svg-detail" />
+      </svg>
     ),
     description: (
       <>
@@ -36,7 +44,11 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'EVM Compatible',
     Svg: () => (
-      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="32" fill="#003087"/><rect x="24" y="24" width="16" height="16" rx="4" fill="#18b6a4"/><rect x="28" y="28" width="8" height="8" rx="2" fill="#1a73e8"/></svg>
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="32" fill="currentColor" className="feature-svg-bg" />
+        <rect x="24" y="24" width="16" height="16" rx="4" fill="currentColor" className="feature-svg-accent" />
+        <rect x="28" y="28" width="8" height="8" rx="2" fill="currentColor" className="feature-svg-detail" />
+      </svg>
     ),
     description: (
       <>
@@ -46,7 +58,7 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">

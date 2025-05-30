@@ -1,24 +1,48 @@
 ---
 slug: /
 title: Welcome to Circle Layer
+hide_title: true
 description: Circle Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain with AI security features.
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import '@site/src/css/intro.css';
 
 <div className="hero-gradient">
-  <div className="hero-logo-glow">
-    <picture>
-      <source srcSet="/img/dark-theme-logo.png" media="(prefers-color-scheme: dark)" />
-      <img src="/img/light-theme-logo.png" alt="Circle Layer Logo" className="main-logo" />
-    </picture>
+  <h1 className="hero-title">Welcome to Circle Layer Documentation</h1>
+  <p className="hero-description">
+    Circle Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain designed to power the next generation of decentralized applications.
+  </p>
+  
+  <div className="hero-cta-container">
+    <a href="/docs/getting-started/set-up-wallet" className="hero-cta-primary">
+      🚀 Get Started
+    </a>
+    <a href="/docs/development/writing-smart-contracts" className="hero-cta-secondary">
+      🏗️ Build Now
+    </a>
+  </div>
+
+  <div className="hero-stats">
+    <div className="hero-stat">
+      <div className="hero-stat-value">50K+</div>
+      <div className="hero-stat-label">Target TPS</div>
+    </div>
+    <div className="hero-stat">
+      <div className="hero-stat-value">&lt;1s</div>
+      <div className="hero-stat-label">Finality</div>
+    </div>
+    <div className="hero-stat">
+      <div className="hero-stat-value">99.9%</div>
+      <div className="hero-stat-label">Energy Efficient</div>
+    </div>
+  </div>
+
+  <div className="scroll-indicator">
+    <div className="scroll-arrow"></div>
   </div>
 </div>
-
-# Welcome to Circle Layer Documentation
-
-Circle Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain designed to power the next generation of decentralized applications.
 
 ## 📈 Network Performance Metrics
 
@@ -32,7 +56,7 @@ Circle Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 block
   <div className="metric-card">
     <div className="metric-value">50,000</div>
     <div className="metric-label">TPS Target</div>
-    <div className="metric-trend">🎯 Roadmap 2024</div>
+    <div className="metric-trend">🎯 Roadmap 2025</div>
   </div>
   
   <div className="metric-card">
@@ -125,19 +149,184 @@ graph LR
     A[Transaction Submitted] -->|under 1s| B[Validated]
     B -->|2-5s| C[Block Included]  
     C -->|under 10s| D[Finalized]
-    
-    style A fill:#e1f5fe
-    style D fill:#e8f5e8
 ```
 
-**Performance Comparison:**
+#### Target Performance Metrics
 
-| Blockchain | TPS | Finality | Energy Usage |
-|------------|-----|----------|--------------|
-| **Circle Layer** | **2,000** | **under 10s** | **99.9% less** |
-| Ethereum | 15 | 6-10min | High |
-| Bitcoin | 7 | 60min | Very High |
-| Solana | 65,000 | 2.5s | Medium |
+<div className="performance-metrics">
+  <div className="performance-card">
+    <div className="performance-value">50,000+</div>
+    <div className="performance-label">🎯 Target TPS</div>
+  </div>
+  <div className="performance-card">
+    <div className="performance-value">&lt; 1s</div>
+    <div className="performance-label">⚡ Finality</div>
+  </div>
+  <div className="performance-card">
+    <div className="performance-value">99.9%</div>
+    <div className="performance-label">🌱 Energy Efficient</div>
+  </div>
+</div>
+
+<div className="mobile-target-cards">
+  <div className="target-main-card">
+    <h4>🎯 Our Target</h4>
+    <div className="target-stats-grid">
+      <div className="target-stat">
+        <div className="target-stat-value">⚡ 50,000+ TPS</div>
+        <div className="target-stat-label">Target Speed</div>
+      </div>
+      <div className="target-stat">
+        <div className="target-stat-value">⏱️ Under 1s</div>
+        <div className="target-stat-label">Finality</div>
+      </div>
+      <div className="target-stat">
+        <div className="target-stat-value">🌱 99.9%</div>
+        <div className="target-stat-label">Less Energy</div>
+      </div>
+      <div className="target-stat">
+        <div className="target-stat-value">Circle Layer</div>
+        <div className="target-stat-label">Blockchain</div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="competition-header">
+    📊 vs EVM L1 Competition:
+  </div>
+  
+  <div className="competition-cards">
+    <div className="competition-card polygon">
+      <div className="competition-name">Polygon</div>
+      <div className="competition-tps">7,000 TPS</div>
+    </div>
+    
+    <div className="competition-card bsc">
+      <div className="competition-name">BSC</div>
+      <div className="competition-tps">300 TPS</div>
+    </div>
+    
+    <div className="competition-card avalanche">
+      <div className="competition-name">Avalanche</div>
+      <div className="competition-tps">4,500 TPS</div>
+    </div>
+    
+    <div className="competition-card ethereum">
+      <div className="competition-name">Ethereum</div>
+      <div className="competition-tps">15 TPS</div>
+    </div>
+  </div>
+</div>
+
+<table>
+  <colgroup>
+    <col style={{width: '25%'}} />
+    <col style={{width: '25%'}} />
+    <col style={{width: '25%'}} />
+    <col style={{width: '25%'}} />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Blockchain</th>
+      <th>TPS</th>
+      <th>Finality</th>
+      <th>Energy Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Circle Layer (Target)</strong></td>
+      <td><strong>50,000+</strong> 🎯</td>
+      <td><strong>under 1s</strong></td>
+      <td><strong>99.9% less</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Circle Layer (Current)</strong></td>
+      <td><strong>2,000</strong></td>
+      <td><strong>under 10s</strong></td>
+      <td><strong>99.9% less</strong></td>
+    </tr>
+    <tr>
+      <td>Polygon</td>
+      <td>7,000</td>
+      <td>2-3s</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>BSC</td>
+      <td>300</td>
+      <td>3s</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Avalanche</td>
+      <td>4,500</td>
+      <td>1-2s</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>Ethereum</td>
+      <td>15</td>
+      <td>6-10min</td>
+      <td>High</td>
+    </tr>
+  </tbody>
+</table>
+
+<div className="roadmap-container">
+  <div className="roadmap-header">
+    <h3 className="roadmap-main-title">🚧 Development Roadmap - Phase 1</h3>
+    <div className="roadmap-subtitle">Target: 50,000 TPS (In Development)</div>
+  </div>
+
+  <div className="roadmap-section">
+    <div className="roadmap-content">
+      <div className="roadmap-title">
+        <span className="title-icon">🔬</span>
+        How We'll Achieve 50,000 TPS
+      </div>
+      
+      <div className="achievement-grid">
+        <div className="achievement-item">
+          <div className="achievement-icon">⚡</div>
+          <div className="achievement-content">
+            <h4>Parallel Transaction Processing</h4>
+            <p>Multi-threaded execution for maximum throughput</p>
+          </div>
+        </div>
+        
+        <div className="achievement-item">
+          <div className="achievement-icon">🔄</div>
+          <div className="achievement-content">
+            <h4>Optimized Consensus</h4>
+            <p>Enhanced PoS with instant finality</p>
+          </div>
+        </div>
+        
+        <div className="achievement-item">
+          <div className="achievement-icon">🚀</div>
+          <div className="achievement-content">
+            <h4>State Sharding</h4>
+            <p>Horizontal scaling architecture</p>
+          </div>
+        </div>
+        
+        <div className="achievement-item">
+          <div className="achievement-icon">🎯</div>
+          <div className="achievement-content">
+            <h4>EVM Optimization</h4>
+            <p>Custom bytecode improvements</p>
+          </div>
+        </div>
+      </div>
+      
+      <div className="status-badge">
+        <span className="status-icon">📊</span>
+        <span className="status-text">Status: Currently in development - Testnet achieving 2,000+ TPS</span>
+      </div>
+    </div>
+  </div>
+</div>
 
   </TabItem>
   
@@ -154,18 +343,15 @@ flowchart TD
     D --> F[Developer Notification]
     F --> G[Fix Required]
     E --> H[Continuous Monitoring]
-    
-    style D fill:#ffebee
-    style E fill:#e8f5e8
 ```
 
 **Security Features:**
 
 <ul>
-<li>🤖 <strong>Real-time AI auditing</strong></li>
-<li>🛡️ <strong>Automated threat detection</strong></li>
-<li>⚠️ <strong>Smart contract vulnerability scanning</strong></li>
-<li>🔔 <strong>Instant security alerts</strong></li>
+  <li>🤖 <strong>Real-time AI auditing</strong></li>
+  <li>🛡️ <strong>Automated threat detection</strong></li>
+  <li>⚠️ <strong>Smart contract vulnerability scanning</strong></li>
+  <li>🔔 <strong>Instant security alerts</strong></li>
 </ul>
 
   </TabItem>
@@ -192,10 +378,10 @@ flowchart TD
 **Supported Tools & Frameworks:**
 
 <ul>
-<li>🔧 Hardhat, Truffle, Remix</li>
-<li>🌐 Web3.js, Ethers.js</li>
-<li>💼 MetaMask, WalletConnect</li>
-<li>📊 The Graph, OpenZeppelin</li>
+  <li>🔧 Hardhat, Truffle, Remix</li>
+  <li>🌐 Web3.js, Ethers.js</li>
+  <li>💼 MetaMask, WalletConnect</li>
+  <li>📊 The Graph, OpenZeppelin</li>
 </ul>
 
   </TabItem>
@@ -251,6 +437,8 @@ flowchart TD
   </div>
 </div>
 
+<div className="architecture-section">
+
 ## 🏗️ Architecture Overview
 
 Circle Layer's innovative architecture combines proven blockchain technology with cutting-edge AI security:
@@ -278,12 +466,9 @@ graph TB
         D --> O[RPC Endpoints]
         D --> P[Cross-chain Bridges]
     end
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5  
-    style C fill:#fff3e0
-    style D fill:#e8f5e8
 ```
+
+</div>
 
 ## 📚 What's Next?
 
@@ -310,6 +495,6 @@ graph TB
   </div>
 </div>
 
----
-
-🌟 **Ready to build the future?** Circle Layer provides the perfect foundation for your next-generation dApp. 
+<div className="intro-footer-cta">
+  <p>🌟 <strong>Ready to build the future?</strong> Circle Layer provides the perfect foundation for your next-generation dApp.</p>
+</div> 

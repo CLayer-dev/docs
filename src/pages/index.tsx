@@ -54,12 +54,10 @@ function MobilePerformanceComparison() {
 function HeroSection() {
   return (
     <div className="hero-gradient">
-      <div className="hero-logo-glow">
-        <picture>
-          <source srcSet="/img/dark-theme-logo.png" media="(prefers-color-scheme: dark)" />
-          <img src="/img/light-theme-logo.png" alt="Circle Layer Logo" className="main-logo" />
-        </picture>
-      </div>
+      <h1 className="hero-title">Welcome to Circle Layer Documentation</h1>
+      <p className="hero-description">
+        Circle Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain designed to power the next generation of decentralized applications.
+      </p>
     </div>
   );
 }
@@ -78,7 +76,7 @@ function MetricsDashboard() {
         <div className="metric-card">
           <div className="metric-value">50,000</div>
           <div className="metric-label">TPS Mainnet Goal</div>
-          <div className="metric-trend">🎯 2024 Roadmap</div>
+          <div className="metric-trend">🎯 2025 Roadmap</div>
         </div>
 
         <div className="metric-card">
@@ -377,7 +375,6 @@ export default function Home(): ReactNode {
       <main>
         <div className="container">
           <Heading as="h1">Welcome to Circle Layer Documentation</Heading>
-          <p>Circle Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain designed to power the next generation of decentralized applications.</p>
 
           <MetricsDashboard />
           <KeyFeatures />

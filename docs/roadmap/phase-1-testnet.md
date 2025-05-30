@@ -12,7 +12,7 @@ Circle Layer's Phase 1 focuses on launching a robust testnet environment for dev
 
 ## Timeline
 
-**Q1 2024 - Q2 2024**
+**Q1 2025 - Q2 2025**
 
 ## Key Milestones
 

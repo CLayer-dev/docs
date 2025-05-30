@@ -70,7 +70,8 @@ const CustomSearchButton = forwardRef(function CustomSearchButton({
           ref={ref}
           onTouchStart={onTouchStart}
           onFocus={onFocus}
-          onMouseOver={onMouseOver}>
+          onMouseOver={onMouseOver}
+          style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
           <svg
             width="24"
             height="24"
@@ -89,9 +90,10 @@ const CustomSearchButton = forwardRef(function CustomSearchButton({
               </clipPath>
             </defs>
           </svg>
-          <p>{placeholder || "Search documentation..."}</p>
-          <div className={styles.keys}>
-            {/* Dynamically render Ctrl or Cmd key SVG based on OS */}
+          <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            {placeholder || "Search documentation..."}
+          </span>
+          <div style={{ marginLeft: 'auto', display: 'flex', gap: '4px' }}>
             {isMacOS ? (
               // SVG for MacOS (Cmd key)
               <svg
@@ -142,30 +144,7 @@ const CustomSearchButton = forwardRef(function CustomSearchButton({
             </svg>
           </div>
         </div>
-        <div
-          className="search_mobile_icon"
-          onClick={handleOpenModal}
-          ref={ref}
-          onTouchStart={onTouchStart}
-          onFocus={onFocus}
-          onMouseOver={onMouseOver}>
-          <svg
-            width="20"
-            height="20"
-            className="DocSearch-Search-Icon"
-            viewBox="0 0 20 20"
-            fillRule="evenodd"
-            strokeLinecap="round"
-            strokeLinejoin="round">
-            <path
-              d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
-              stroke="currentColor"
-              fill="none"
-            ></path>
-          </svg>
-        </div>
       </div>
-
       <SearchModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </>
   );

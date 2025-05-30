@@ -9,3 +9,27 @@
   height: 200px;
   width: 200px;
 }
+
+.feature-svg-bg {
+  color: var(--ifm-color-primary);
+}
+
+[data-theme="dark"] .feature-svg-bg {
+  color: var(--ifm-color-primary-darkest);
+}
+
+.feature-svg-accent {
+  color: var(--ifm-color-primary-lightest);
+}
+
+[data-theme="dark"] .feature-svg-accent {
+  color: var(--ifm-color-primary);
+}
+
+.feature-svg-detail {
+  color: var(--ifm-color-primary-darker);
+}
+
+[data-theme="dark"] .feature-svg-detail {
+  color: var(--ifm-color-primary-lightest);
+}

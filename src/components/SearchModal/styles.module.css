@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(135deg, var(--ifm-background-color) 0%, var(--ifm-background-surface-color) 100%);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     display: flex;
@@ -47,6 +47,7 @@
     animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     position: relative;
+    color: var(--ifm-font-color-base);
 }
 
 @keyframes slideUp {
@@ -65,10 +66,9 @@
 .header {
     padding: 24px 24px 20px 24px;
     border-bottom: 1px solid var(--ifm-color-emphasis-200);
-    background: linear-gradient(135deg,
-            var(--ifm-color-emphasis-50) 0%,
-            var(--ifm-color-emphasis-100) 100%);
+    background: linear-gradient(135deg, var(--ifm-color-emphasis-50) 0%, var(--ifm-color-emphasis-100) 100%);
     position: relative;
+    color: var(--ifm-font-color-base);
 }
 
 .header::before {
@@ -288,6 +288,8 @@
     border-bottom: 1px solid var(--ifm-color-emphasis-100);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    background: linear-gradient(135deg, var(--ifm-color-emphasis-50) 0%, var(--ifm-color-emphasis-100) 100%);
+    color: var(--ifm-font-color-base);
 }
 
 .result::before {
@@ -305,9 +307,7 @@
 
 .result:hover,
 .result.selected {
-    background: linear-gradient(135deg,
-            var(--ifm-color-emphasis-50) 0%,
-            var(--ifm-color-emphasis-100) 100%);
+    background: linear-gradient(135deg, var(--ifm-color-emphasis-50) 0%, var(--ifm-color-emphasis-100) 100%);
     transform: translateX(4px);
 }
 
@@ -355,9 +355,7 @@
 }
 
 .highlight {
-    background: linear-gradient(135deg,
-            var(--ifm-color-warning-lightest) 0%,
-            var(--ifm-color-warning-light) 100%);
+    background: linear-gradient(135deg, var(--ifm-color-warning-lightest) 0%, var(--ifm-color-warning-light) 100%);
     color: var(--ifm-color-warning-darkest);
     padding: 2px 4px;
     border-radius: 4px;
@@ -369,10 +367,9 @@
 .footer {
     padding: 18px 24px;
     border-top: 1px solid var(--ifm-color-emphasis-200);
-    background: linear-gradient(135deg,
-            var(--ifm-color-emphasis-50) 0%,
-            var(--ifm-color-emphasis-100) 100%);
+    background: linear-gradient(135deg, var(--ifm-color-emphasis-50) 0%, var(--ifm-color-emphasis-100) 100%);
     position: relative;
+    color: var(--ifm-font-color-base);
 }
 
 .footer::before {
@@ -404,7 +401,7 @@
 
 /* Dark theme enhancements */
 [data-theme="dark"] .overlay {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(135deg, var(--ifm-background-surface-color) 0%, var(--ifm-background-color) 100%);
 }
 
 [data-theme="dark"] .modal {
@@ -414,12 +411,12 @@
         0 25px 50px -12px rgba(0, 0, 0, 0.6),
         0 8px 25px -5px rgba(0, 0, 0, 0.3),
         0 0 0 1px rgba(255, 255, 255, 0.05);
+    color: var(--ifm-font-color-base);
 }
 
 [data-theme="dark"] .header {
-    background: linear-gradient(135deg,
-            var(--ifm-color-emphasis-200) 0%,
-            var(--ifm-color-emphasis-300) 100%);
+    background: linear-gradient(135deg, var(--ifm-color-emphasis-200) 0%, var(--ifm-color-emphasis-300) 100%);
+    color: var(--ifm-font-color-base);
 }
 
 [data-theme="dark"] .searchContainer {
@@ -444,11 +441,11 @@
     color: var(--ifm-font-color-base);
 }
 
-[data-theme="dark"] .result:hover,
-[data-theme="dark"] .result.selected {
-    background: linear-gradient(135deg,
-            var(--ifm-color-emphasis-200) 0%,
-            var(--ifm-color-emphasis-300) 100%);
+[data-theme="dark"] .result,
+[data-theme="dark"] .result.selected,
+[data-theme="dark"] .result:hover {
+    background: linear-gradient(135deg, var(--ifm-color-emphasis-200) 0%, var(--ifm-color-emphasis-300) 100%);
+    color: var(--ifm-font-color-base);
 }
 
 [data-theme="dark"] .resultUrl {
@@ -457,17 +454,14 @@
 }
 
 [data-theme="dark"] .highlight {
-    background: linear-gradient(135deg,
-            var(--ifm-color-warning-dark) 0%,
-            var(--ifm-color-warning) 100%);
+    background: linear-gradient(135deg, var(--ifm-color-warning-dark) 0%, var(--ifm-color-warning) 100%);
     color: var(--ifm-color-warning-lightest);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="dark"] .footer {
-    background: linear-gradient(135deg,
-            var(--ifm-color-emphasis-200) 0%,
-            var(--ifm-color-emphasis-300) 100%);
+    background: linear-gradient(135deg, var(--ifm-color-emphasis-200) 0%, var(--ifm-color-emphasis-300) 100%);
+    color: var(--ifm-font-color-base);
 }
 
 [data-theme="dark"] .shortcuts kbd {

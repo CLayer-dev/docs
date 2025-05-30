@@ -19,17 +19,30 @@
 	--ifm-h3-font-size: 1.2rem;
 	--ifm-h4-font-size: 1rem;
 	--docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-	--text-primary: #5f6368;
-	--text-secondary: #5f6368;
+	--text-primary: var(--ifm-font-color-base);
+	--text-secondary: var(--ifm-font-color-base);
 	--grey-100: #f8f9fa;
-	/* --contrast-100 */
 	--grey-900: #0e1013;
-	/* --border-dashed-primary-hk */
 	--ifm-menu-color-background-hover: var(--grey-100);
 	--ifm-background-color: #ffffff;
 	--ifm-background-surface-color: #ffffff;
 	--ifm-color-content: #1c1e21;
 	--ifm-font-color-base: #1c1e21;
+	--badge-easy-bg: #10b981;
+	--badge-easy-text: #fff;
+	--badge-medium-bg: #f59e0b;
+	--badge-medium-text: #fff;
+	--badge-ready-bg: #3b82f6;
+	--badge-ready-text: #fff;
+	--button-primary-bg: var(--ifm-color-primary);
+	--button-primary-text: #fff;
+	--button-secondary-bg: transparent;
+	--button-secondary-text: var(--ifm-color-primary);
+	--button-secondary-border: var(--ifm-color-primary);
+	--graph-bg: #e3f0ff;
+	--graph-border: #1a73e8;
+	--graph-label: #1a237e;
+	--graph-title: #1a73e8;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -93,13 +106,28 @@
 	--ifm-color-emphasis-300: #666666;
 	--ifm-color-emphasis-400: #808080;
 	--ifm-color-emphasis-500: #999999;
-	--ifm-color-emphasis-600: #b3b3b3;
-	--ifm-color-emphasis-700: #cccccc;
-	--ifm-color-emphasis-800: #e6e6e6;
-	--ifm-color-emphasis-900: #ffffff;
+	--ifm-color-emphasis-600: #a5abaf !important;
+	--ifm-color-emphasis-700: #8b9195 !important;
+	--ifm-color-emphasis-800: #71777b !important;
+	--ifm-color-emphasis-900: #575d61 !important;
 	--ifm-heading-color: #ffffff;
 	--ifm-link-color: #4189ed;
 	--ifm-link-hover-color: #5b98f0;
+	--badge-easy-bg: #064e3b;
+	--badge-easy-text: #a7f3d0;
+	--badge-medium-bg: #78350f;
+	--badge-medium-text: #fcd34d;
+	--badge-ready-bg: #1e40af;
+	--badge-ready-text: #93c5fd;
+	--button-primary-bg: var(--ifm-color-primary-darkest);
+	--button-primary-text: var(--ifm-color-primary-lightest);
+	--button-secondary-bg: transparent;
+	--button-secondary-text: var(--ifm-color-primary-lightest);
+	--button-secondary-border: var(--ifm-color-primary);
+	--graph-bg: #1a237e;
+	--graph-border: #7da8f2;
+	--graph-label: #bbdefb;
+	--graph-title: #7da8f2;
 }
 
 .theme-doc-sidebar-menu li:first-child>div {
@@ -417,15 +445,15 @@ p {
 [data-theme="dark"] h4,
 [data-theme="dark"] h5,
 [data-theme="dark"] h6 {
-	color: var(--ifm-heading-color) !important;
+	color: #ffffff !important;
 }
 
 [data-theme="dark"] a {
-	color: var(--ifm-link-color) !important;
+	color: var(--ifm-color-primary-lighter) !important;
 }
 
 [data-theme="dark"] a:hover {
-	color: var(--ifm-link-hover-color) !important;
+	color: var(--ifm-color-primary-light) !important;
 }
 
 /* Fix breadcrumbs */
@@ -1604,4 +1632,96 @@ footer .container.container-fluid {
 
 .important {
 	background: none;
+}
+
+/* Mermaid graph background */
+.mermaid {
+	font-family: var(--ifm-font-family-base, inherit) !important;
+	font-size: 1rem !important;
+	max-width: 100%;
+	overflow-x: auto;
+	background: transparent !important;
+	color: var(--ifm-font-color-base) !important;
+	border-radius: 12px;
+	margin-bottom: 2rem;
+}
+
+/* Mermaid node styles */
+.mermaid .node rect,
+.mermaid .node polygon,
+.mermaid .node ellipse {
+	fill: var(--ifm-background-color) !important;
+	stroke: var(--ifm-color-primary) !important;
+}
+
+/* Mermaid node text */
+.mermaid .node text {
+	fill: var(--ifm-font-color-base) !important;
+	font-family: var(--ifm-font-family-base, inherit) !important;
+	font-weight: 600;
+}
+
+/* Mermaid edge labels */
+.mermaid .edgeLabel text {
+	fill: var(--ifm-font-color-base) !important;
+}
+
+/* Mermaid edge lines */
+.mermaid .edgePath path {
+	stroke: var(--ifm-color-primary) !important;
+}
+
+/* Table and metric card polish */
+table,
+th,
+td {
+	background: var(--ifm-background-surface-color, #fff) !important;
+	color: var(--ifm-font-color-base) !important;
+	border: 1px solid var(--ifm-color-emphasis-300, #e0e0e0) !important;
+}
+
+thead th {
+	background: var(--ifm-color-primary-lightest, #f5faff) !important;
+	color: var(--ifm-color-primary, #1a73e8) !important;
+	font-weight: 700;
+}
+
+tr:nth-child(even) td {
+	background: var(--ifm-background-color, #f9f9f9) !important;
+}
+
+.metric-card,
+.performance-card {
+	background: var(--ifm-background-surface-color, #fff) !important;
+	color: var(--ifm-font-color-base) !important;
+	border: 1px solid var(--ifm-color-emphasis-300, #e0e0e0) !important;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	padding: 1.2em 1.5em;
+	margin: 0.5em 0;
+}
+
+/* Banner description in hero */
+.hero-description {
+	color: #fff;
+	font-size: 1.35rem;
+	font-weight: 400;
+	text-align: center;
+	margin: 1.5rem auto 0 auto;
+	max-width: 700px;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+	line-height: 1.6;
+}
+
+[data-theme="dark"] .hero-description {
+	color: #e1e1e3;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.32);
+}
+
+@media (max-width: 600px) {
+	.hero-description {
+		font-size: 1rem;
+		max-width: 95vw;
+		margin-top: 1rem;
+	}
 }
