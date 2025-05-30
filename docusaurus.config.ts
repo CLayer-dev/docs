@@ -10,6 +10,11 @@ const config: Config = {
   tagline: 'Official documentation for Circle Layer, an EVM-compatible POS Layer 1 blockchain',
   favicon: 'img/favicon.svg',
 
+  // Client modules for default theme setting
+  clientModules: [
+    require.resolve('./src/clientModules/setDefaultTheme.js'),
+  ],
+
   // SEO metadata
   headTags: [
     // Viewport meta tag for responsive design
@@ -129,7 +134,7 @@ const config: Config = {
     colorMode: {
       defaultMode: 'light',
       disableSwitch: false,
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: false,
     },
 
     navbar: {
@@ -137,6 +142,8 @@ const config: Config = {
         alt: 'Circle Layer Logo',
         src: 'img/light-theme-logo.png',
         srcDark: 'img/dark-theme-logo.png',
+        height: 40,
+        width: 'auto',
       },
       items: [
         {
@@ -176,13 +183,13 @@ const config: Config = {
           ],
         },
         {
-          href: 'https://github.com/circle-layer/docs',
+          href: 'https://github.com/Circle-layer-org/docs',
           label: 'GitHub',
           position: 'right',
         },
         {
-          href: 'https://discord.com/',
-          label: 'Discord',
+          href: 'https://t.me/circlelayer',
+          label: 'Telegram',
           position: 'right',
         },
       ],
@@ -211,8 +218,8 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Discord',
-              href: 'https://discord.com/',
+              label: 'Telegram',
+              href: 'https://t.me/circlelayer',
             },
             {
               label: 'X',
@@ -220,7 +227,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/circle-layer/docs',
+              href: 'https://github.com/Circle-layer-org/docs',
             },
           ],
         },

@@ -8,11 +8,41 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #1a73e8 0%, #18b6a4 100%);
+  color: white;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .heroBanner {
+  background: linear-gradient(135deg, #1557c7 0%, #16a085 100%);
+}
+
+/* Light theme hero title and subtitle */
+.heroBanner .hero__title {
+  color: white !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heroBanner .hero__subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+  }
+
+  .heroBanner .hero__title {
+    font-size: 2rem !important;
+  }
+
+  .heroBanner .hero__subtitle {
+    font-size: 1rem !important;
   }
 }
 

@@ -1,7 +1,6 @@
 @import url("./style.css");
 @import url("./responsive.css");
 
-
 /* You can override the default Infima variables here also you can overwrite the styles. you must have to use !important to overwrite style. */
 
 /* Fix anchor link scrolling to account for fixed header */
@@ -20,6 +19,94 @@ h6[id] {
 }
 
 /* ========================================
+   FOOTER THEME FIXES
+   ======================================== */
+
+/* Light theme footer - Light gray background with dark text */
+[data-theme="light"] .footer,
+[data-theme="light"] .footer--dark {
+  background-color: #f8f9fa !important;
+  color: #1c1e21 !important;
+  border-top: 1px solid #e9ecef !important;
+}
+
+[data-theme="light"] .footer__link-item,
+[data-theme="light"] .footer a {
+  color: #495057 !important;
+  transition: color 0.2s ease !important;
+}
+
+[data-theme="light"] .footer__link-item:hover,
+[data-theme="light"] .footer a:hover {
+  color: #1a73e8 !important;
+  text-decoration: none !important;
+}
+
+[data-theme="light"] .footer__title {
+  color: #212529 !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .footer__copyright,
+[data-theme="light"] .footer__copyright a {
+  color: #6c757d !important;
+}
+
+[data-theme="light"] .footer__copyright a:hover {
+  color: #1a73e8 !important;
+}
+
+/* Dark theme footer - Dark background with white text */
+[data-theme="dark"] .footer,
+[data-theme="dark"] .footer--dark {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border-top: 1px solid #333333 !important;
+}
+
+[data-theme="dark"] .footer__link-item,
+[data-theme="dark"] .footer a {
+  color: #e9ecef !important;
+  transition: color 0.2s ease !important;
+}
+
+[data-theme="dark"] .footer__link-item:hover,
+[data-theme="dark"] .footer a:hover {
+  color: #4189ed !important;
+  text-decoration: none !important;
+}
+
+[data-theme="dark"] .footer__title {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .footer__copyright,
+[data-theme="dark"] .footer__copyright a {
+  color: #adb5bd !important;
+}
+
+[data-theme="dark"] .footer__copyright a:hover {
+  color: #4189ed !important;
+}
+
+/* Ensure footer items have proper spacing and typography */
+.footer__title {
+  margin-bottom: 0.75rem !important;
+  font-size: 1rem !important;
+}
+
+.footer__item {
+  margin-bottom: 0.5rem !important;
+}
+
+.footer__link-item {
+  display: inline-block !important;
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+}
+
+/* ========================================
    NAVBAR LAYOUT FIXES
    ======================================== */
 
@@ -29,23 +116,49 @@ h6[id] {
   flex-shrink: 0 !important;
 }
 
+/* Logo responsive sizing */
+.navbar__logo {
+  height: 40px !important;
+  max-height: 40px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
 .navbar__items--left {
   gap: 0.5rem !important;
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .navbar__items--right {
-  gap: 0.5rem !important;
+  gap: 0.75rem !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Hide navbar dropdowns on mobile to prevent overlapping */
+@media screen and (max-width: 996px) {
+  .navbar__item:not(.navbar-docs-btn):not(:has(> a[href*="github"])):not(:has(> a[href*="t.me"])) {
+    display: none !important;
+  }
 }
 
 /* Only style the Docs button as a button, keep other navbar items as regular text */
-.navbar-docs-btn {
-  font-size: 1.4rem !important;
+.navbar-docs-btn,
+.navbar-docs-btn a,
+[data-theme="light"] .navbar-docs-btn,
+[data-theme="light"] .navbar-docs-btn a,
+[data-theme="dark"] .navbar-docs-btn,
+[data-theme="dark"] .navbar-docs-btn a {
+  font-size: 1.6rem !important;
   font-weight: 900 !important;
-  padding: 0.5rem 2rem !important;
+  padding: 0.35rem 1.75rem !important;
   margin: 0 1rem 0 1rem !important;
   /* Increased left margin to prevent overlap */
   background: linear-gradient(90deg, #1a73e8 0%, #18b6a4 100%) !important;
-  color: #fff !important;
+  color: #ffffff !important;
   border-radius: 8px !important;
   box-shadow: 0 2px 8px rgba(26, 115, 232, 0.08) !important;
   border: 2px solid #1a73e8 !important;
@@ -56,13 +169,20 @@ h6[id] {
   /* Prevent text wrapping */
   flex-shrink: 0 !important;
   /* Prevent button from shrinking */
+  text-decoration: none !important;
 }
 
-.navbar-docs-btn:hover {
+.navbar-docs-btn:hover,
+.navbar-docs-btn a:hover,
+[data-theme="light"] .navbar-docs-btn:hover,
+[data-theme="light"] .navbar-docs-btn a:hover,
+[data-theme="dark"] .navbar-docs-btn:hover,
+[data-theme="dark"] .navbar-docs-btn a:hover {
   background: linear-gradient(90deg, #003087 0%, #18b6a4 100%) !important;
   box-shadow: 0 4px 16px rgba(26, 115, 232, 0.16) !important;
   border: 2px solid #003087 !important;
-  color: #fff !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 /* Revert other navbar links to default style */
@@ -91,32 +211,79 @@ h6[id] {
 
 /* Large desktop screens */
 @media screen and (min-width: 1200px) {
-  .navbar-docs-btn {
-    font-size: 1.4rem !important;
-    padding: 0.5rem 2rem !important;
+
+  .navbar-docs-btn,
+  .navbar-docs-btn a,
+  [data-theme="light"] .navbar-docs-btn,
+  [data-theme="light"] .navbar-docs-btn a,
+  [data-theme="dark"] .navbar-docs-btn,
+  [data-theme="dark"] .navbar-docs-btn a {
+    font-size: 1.6rem !important;
+    padding: 0.35rem 1.75rem !important;
     margin: 0 1.5rem 0 1.5rem !important;
+    color: #ffffff !important;
+  }
+
+  .navbar__items--right {
+    gap: 1rem !important;
   }
 }
 
 /* Desktop screens */
 @media screen and (min-width: 997px) and (max-width: 1199px) {
-  .navbar-docs-btn {
-    font-size: 1.2rem !important;
-    padding: 0.4rem 1.5rem !important;
+
+  .navbar-docs-btn,
+  .navbar-docs-btn a,
+  [data-theme="light"] .navbar-docs-btn,
+  [data-theme="light"] .navbar-docs-btn a,
+  [data-theme="dark"] .navbar-docs-btn,
+  [data-theme="dark"] .navbar-docs-btn a {
+    font-size: 1.4rem !important;
+    padding: 0.3rem 1.5rem !important;
     margin: 0 1rem 0 1rem !important;
+    color: #ffffff !important;
+  }
+
+  .navbar__items--right {
+    gap: 0.75rem !important;
   }
 }
 
 /* Tablet screens */
 @media screen and (max-width: 996px) {
+  .navbar {
+    padding: 0.5rem 1rem !important;
+  }
+
   .navbar__brand {
     margin-right: 0.5rem !important;
   }
 
-  .navbar-docs-btn {
-    font-size: 1rem !important;
-    padding: 0.4rem 1.2rem !important;
-    margin: 0 0.75rem 0 0.75rem !important;
+  .navbar__logo {
+    height: 32px !important;
+    max-height: 32px !important;
+  }
+
+  .navbar-docs-btn,
+  .navbar-docs-btn a,
+  [data-theme="light"] .navbar-docs-btn,
+  [data-theme="light"] .navbar-docs-btn a,
+  [data-theme="dark"] .navbar-docs-btn,
+  [data-theme="dark"] .navbar-docs-btn a {
+    font-size: 1.2rem !important;
+    padding: 0.3rem 1.2rem !important;
+    margin: 0 0.75rem 0 0.5rem !important;
+    color: #ffffff !important;
+  }
+
+  .navbar__items--right {
+    gap: 0.5rem !important;
+  }
+
+  .navbar__link {
+    font-size: 0.9rem !important;
+    padding: 0.4rem 0.6rem !important;
+    margin: 0 0.25rem !important;
   }
 }
 
@@ -130,10 +297,31 @@ h6[id] {
     margin-right: 0.25rem !important;
   }
 
-  .navbar-docs-btn {
-    font-size: 0.9rem !important;
-    padding: 0.35rem 1rem !important;
-    margin: 0 0.5rem 0 0.5rem !important;
+  .navbar__logo {
+    height: 28px !important;
+    max-height: 28px !important;
+  }
+
+  .navbar-docs-btn,
+  .navbar-docs-btn a,
+  [data-theme="light"] .navbar-docs-btn,
+  [data-theme="light"] .navbar-docs-btn a,
+  [data-theme="dark"] .navbar-docs-btn,
+  [data-theme="dark"] .navbar-docs-btn a {
+    font-size: 1.1rem !important;
+    padding: 0.25rem 1rem !important;
+    margin: 0 0.5rem 0 0.25rem !important;
+    color: #ffffff !important;
+  }
+
+  .navbar__items--right {
+    gap: 0.25rem !important;
+  }
+
+  .navbar__link {
+    font-size: 0.8rem !important;
+    padding: 0.3rem 0.5rem !important;
+    margin: 0 0.125rem !important;
   }
 }
 
@@ -147,10 +335,31 @@ h6[id] {
     margin-right: 0.25rem !important;
   }
 
-  .navbar-docs-btn {
-    font-size: 0.8rem !important;
-    padding: 0.3rem 0.8rem !important;
+  .navbar__logo {
+    height: 24px !important;
+    max-height: 24px !important;
+  }
+
+  .navbar-docs-btn,
+  .navbar-docs-btn a,
+  [data-theme="light"] .navbar-docs-btn,
+  [data-theme="light"] .navbar-docs-btn a,
+  [data-theme="dark"] .navbar-docs-btn,
+  [data-theme="dark"] .navbar-docs-btn a {
+    font-size: 1rem !important;
+    padding: 0.2rem 0.8rem !important;
     margin: 0 0.25rem 0 0.25rem !important;
+    color: #ffffff !important;
+  }
+
+  .navbar__items--right {
+    gap: 0.125rem !important;
+  }
+
+  .navbar__link {
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.4rem !important;
+    margin: 0 0.0625rem !important;
   }
 }
 
@@ -164,15 +373,36 @@ h6[id] {
     margin-right: 0.125rem !important;
   }
 
-  .navbar-docs-btn {
-    font-size: 0.75rem !important;
-    padding: 0.25rem 0.6rem !important;
+  .navbar__logo {
+    height: 20px !important;
+    max-height: 20px !important;
+  }
+
+  .navbar-docs-btn,
+  .navbar-docs-btn a,
+  [data-theme="light"] .navbar-docs-btn,
+  [data-theme="light"] .navbar-docs-btn a,
+  [data-theme="dark"] .navbar-docs-btn,
+  [data-theme="dark"] .navbar-docs-btn a {
+    font-size: 0.9rem !important;
+    padding: 0.15rem 0.6rem !important;
     margin: 0 0.125rem 0 0.125rem !important;
+    color: #ffffff !important;
   }
 
   /* Hide navbar title text on very small screens to save space */
   .navbar__title {
     display: none !important;
+  }
+
+  .navbar__items--right {
+    gap: 0.0625rem !important;
+  }
+
+  .navbar__link {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.3rem !important;
+    margin: 0 !important;
   }
 }
 
@@ -208,4 +438,155 @@ h6[id] {
     padding: 0.5rem 1rem !important;
     border-left: 4px solid var(--ifm-color-primary) !important;
   }
+}
+
+/* ========================================
+   COMPREHENSIVE DARK THEME TEXT FIXES
+   ======================================== */
+
+/* Ensure all content has proper text colors in dark theme */
+[data-theme="dark"] .main-wrapper,
+[data-theme="dark"] main,
+[data-theme="dark"] article,
+[data-theme="dark"] .container,
+[data-theme="dark"] .col {
+  color: var(--ifm-font-color-base) !important;
+}
+
+/* Fix markdown content colors */
+[data-theme="dark"] .markdown h1,
+[data-theme="dark"] .markdown h2,
+[data-theme="dark"] .markdown h3,
+[data-theme="dark"] .markdown h4,
+[data-theme="dark"] .markdown h5,
+[data-theme="dark"] .markdown h6 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .markdown p,
+[data-theme="dark"] .markdown li,
+[data-theme="dark"] .markdown td,
+[data-theme="dark"] .markdown span {
+  color: #e1e1e3 !important;
+}
+
+[data-theme="dark"] .markdown strong,
+[data-theme="dark"] .markdown b {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .markdown a {
+  color: #4189ed !important;
+}
+
+[data-theme="dark"] .markdown a:hover {
+  color: #5b98f0 !important;
+}
+
+/* Fix code blocks and inline code */
+[data-theme="dark"] code {
+  color: #e1e1e3 !important;
+  background-color: #2d2d2d !important;
+}
+
+[data-theme="dark"] pre {
+  background-color: #1e1e1e !important;
+}
+
+[data-theme="dark"] .prism-code {
+  background-color: #1e1e1e !important;
+}
+
+/* Fix alerts/admonitions */
+[data-theme="dark"] .alert {
+  border-left-color: #4189ed !important;
+}
+
+[data-theme="dark"] .alert .admonition-heading h5 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .alert .admonition-content p {
+  color: #e1e1e3 !important;
+}
+
+/* Fix tabs */
+[data-theme="dark"] .tabs__item {
+  color: #a5abaf !important;
+}
+
+[data-theme="dark"] .tabs__item--active {
+  color: #4189ed !important;
+}
+
+/* Fix search components */
+[data-theme="dark"] .navbar__search-input {
+  color: #e1e1e3 !important;
+  background-color: #2d2d2d !important;
+}
+
+/* Fix pagination */
+[data-theme="dark"] .pagination-nav__link {
+  color: #e1e1e3 !important;
+  border-color: #535353 !important;
+}
+
+[data-theme="dark"] .pagination-nav__link:hover {
+  color: #4189ed !important;
+}
+
+[data-theme="dark"] .pagination-nav__label {
+  color: #4189ed !important;
+}
+
+[data-theme="dark"] .pagination-nav__sublabel {
+  color: #a5abaf !important;
+}
+
+/* Fix edit page links */
+[data-theme="dark"] .theme-edit-this-page {
+  color: #4189ed !important;
+}
+
+/* Fix last updated info */
+[data-theme="dark"] .theme-last-updated {
+  color: #a5abaf !important;
+}
+
+/* Fix dropdown menus */
+[data-theme="dark"] .dropdown__menu {
+  background-color: #242526 !important;
+  border-color: #535353 !important;
+}
+
+[data-theme="dark"] .dropdown__link {
+  color: #e1e1e3 !important;
+}
+
+[data-theme="dark"] .dropdown__link:hover {
+  color: #4189ed !important;
+  background-color: #2d2d2d !important;
+}
+
+/* Fix doc sidebar */
+[data-theme="dark"] .theme-doc-sidebar-container {
+  background-color: #1b1b1d !important;
+}
+
+[data-theme="dark"] .theme-doc-sidebar-menu {
+  background-color: #1b1b1d !important;
+}
+
+/* Fix any remaining hardcoded colors */
+[data-theme="dark"] .theme-doc-sidebar-menu li:first-child>div {
+  border-color: #535353 !important;
+}
+
+/* Ensure homepage features work in dark theme */
+[data-theme="dark"] .feature {
+  color: #e1e1e3 !important;
+}
+
+[data-theme="dark"] .feature h3 {
+  color: #ffffff !important;
 }
