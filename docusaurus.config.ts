@@ -12,6 +12,44 @@ const config: Config = {
 
   // SEO metadata
   headTags: [
+    // Viewport meta tag for responsive design
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes',
+      },
+    },
+    // PWA and mobile app meta tags
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'theme-color',
+        content: '#1a73e8',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'mobile-web-app-capable',
+        content: 'yes',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'apple-mobile-web-app-capable',
+        content: 'yes',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'apple-mobile-web-app-status-bar-style',
+        content: 'default',
+      },
+    },
+    // SEO meta tags
     {
       tagName: 'meta',
       attributes: {

@@ -1,0 +1,445 @@
+/* ========================================
+   RESPONSIVE STYLES FOR CIRCLE LAYER DOCS
+   ======================================== */
+
+/* Mobile-First Approach - Base styles for mobile, then scale up */
+
+/* ========================================
+   GLOBAL RESPONSIVE VARIABLES
+   ======================================== */
+:root {
+    /* Responsive spacing */
+    --mobile-spacing: 1rem;
+    --tablet-spacing: 1.5rem;
+    --desktop-spacing: 2rem;
+
+    /* Responsive font sizes */
+    --mobile-h1: 2rem;
+    --mobile-h2: 1.5rem;
+    --mobile-h3: 1.25rem;
+    --mobile-text: 0.9rem;
+
+    --tablet-h1: 2.5rem;
+    --tablet-h2: 1.75rem;
+    --tablet-h3: 1.4rem;
+    --tablet-text: 1rem;
+
+    --desktop-h1: 3rem;
+    --desktop-h2: 2rem;
+    --desktop-h3: 1.5rem;
+    --desktop-text: 1.1rem;
+}
+
+/* ========================================
+   MOBILE STYLES (320px - 768px)
+   ======================================== */
+
+/* Base mobile styles */
+@media screen and (max-width: 768px) {
+
+    /* Container and layout */
+    .container {
+        padding: 0 var(--mobile-spacing) !important;
+        max-width: 100% !important;
+    }
+
+    /* Typography adjustments */
+    h1 {
+        font-size: var(--mobile-h1) !important;
+    }
+
+    h2 {
+        font-size: var(--mobile-h2) !important;
+    }
+
+    h3 {
+        font-size: var(--mobile-h3) !important;
+    }
+
+    p,
+    li {
+        font-size: var(--mobile-text) !important;
+    }
+
+    /* Content spacing */
+    .markdown>*:not(:last-child) {
+        margin-bottom: 1rem !important;
+    }
+
+    /* Code blocks */
+    .prism-code {
+        font-size: 0.8rem !important;
+        overflow-x: auto !important;
+    }
+
+    /* Tables */
+    .table-wrapper {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    table {
+        min-width: 600px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Cards and content blocks */
+    .card {
+        margin: 0.5rem 0 !important;
+        padding: 1rem !important;
+    }
+
+    /* Images */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* ========================================
+   NAVBAR RESPONSIVE IMPROVEMENTS
+   ======================================== */
+
+/* Mobile navbar */
+@media screen and (max-width: 996px) {
+    .navbar {
+        padding: 0.5rem 1rem !important;
+    }
+
+    .navbar__brand {
+        margin-right: 0.5rem !important;
+    }
+
+    .navbar__logo {
+        height: 32px !important;
+        max-height: 32px !important;
+    }
+
+    /* Docs button mobile optimization */
+    .navbar-docs-btn {
+        font-size: 1rem !important;
+        padding: 0.4rem 1rem !important;
+        margin: 0 0.5rem 0 0 !important;
+    }
+
+    /* Mobile menu improvements */
+    .navbar-sidebar {
+        width: 100% !important;
+    }
+
+    .navbar-sidebar__items {
+        padding: 1rem !important;
+    }
+
+    .navbar-sidebar__item {
+        margin: 0.5rem 0 !important;
+    }
+}
+
+/* ========================================
+   SIDEBAR RESPONSIVE IMPROVEMENTS
+   ======================================== */
+
+/* Mobile sidebar */
+@media screen and (max-width: 996px) {
+    .theme-doc-sidebar-container {
+        border-right: none !important;
+    }
+
+    .menu__list-item {
+        margin: 0.25rem 0 !important;
+    }
+
+    .menu__link {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    .menu__caret {
+        margin-left: auto !important;
+    }
+}
+
+/* ========================================
+   CONTENT AREA RESPONSIVE IMPROVEMENTS
+   ======================================== */
+
+/* Mobile content adjustments */
+@media screen and (max-width: 996px) {
+    .main-wrapper {
+        padding: 0 !important;
+    }
+
+    .docMainContainer_gTbr {
+        padding: 1rem !important;
+    }
+
+    .docItemWrapper_Djhp {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Content spacing */
+    .theme-doc-markdown {
+        padding: 0 0.5rem !important;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+        margin-bottom: 1rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    .breadcrumbs__item {
+        padding: 0.25rem !important;
+    }
+}
+
+/* ========================================
+   TOC (Table of Contents) RESPONSIVE
+   ======================================== */
+
+@media screen and (max-width: 1320px) {
+    .table-of-contents {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1321px) {
+    .table-of-contents {
+        position: sticky !important;
+        top: calc(var(--ifm-navbar-height) + 2rem) !important;
+        max-height: calc(100vh - var(--ifm-navbar-height) - 4rem) !important;
+        overflow-y: auto !important;
+    }
+}
+
+/* ========================================
+   SEARCH MODAL RESPONSIVE
+   ======================================== */
+
+@media screen and (max-width: 768px) {
+    .DocSearch-Modal {
+        width: calc(100vw - 2rem) !important;
+        margin: 1rem !important;
+        border-radius: 8px !important;
+    }
+
+    .DocSearch-SearchBar {
+        padding: 0.5rem !important;
+    }
+
+    .DocSearch-Input {
+        font-size: 1rem !important;
+    }
+
+    .DocSearch-Hits {
+        max-height: 60vh !important;
+    }
+}
+
+/* ========================================
+   TABLET STYLES (769px - 1024px)
+   ======================================== */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    /* Typography adjustments */
+    h1 {
+        font-size: var(--tablet-h1) !important;
+    }
+
+    h2 {
+        font-size: var(--tablet-h2) !important;
+    }
+
+    h3 {
+        font-size: var(--tablet-h3) !important;
+    }
+
+    p,
+    li {
+        font-size: var(--tablet-text) !important;
+    }
+
+    /* Container adjustments */
+    .container {
+        padding: 0 var(--tablet-spacing) !important;
+    }
+
+    /* Content layout */
+    .docMainContainer_gTbr {
+        padding: var(--tablet-spacing) !important;
+    }
+
+    /* Navbar adjustments */
+    .navbar-docs-btn {
+        font-size: 1.2rem !important;
+        padding: 0.5rem 1.5rem !important;
+    }
+}
+
+/* ========================================
+   DESKTOP STYLES (1025px+)
+   ======================================== */
+
+@media screen and (min-width: 1025px) {
+
+    /* Typography adjustments */
+    h1 {
+        font-size: var(--desktop-h1) !important;
+    }
+
+    h2 {
+        font-size: var(--desktop-h2) !important;
+    }
+
+    h3 {
+        font-size: var(--desktop-h3) !important;
+    }
+
+    p,
+    li {
+        font-size: var(--desktop-text) !important;
+    }
+
+    /* Container adjustments */
+    .container {
+        padding: 0 var(--desktop-spacing) !important;
+    }
+
+    /* Content layout */
+    .docMainContainer_gTbr {
+        padding: var(--desktop-spacing) !important;
+    }
+}
+
+/* ========================================
+   CUSTOM COMPONENT RESPONSIVE FIXES
+   ======================================== */
+
+/* MetaActions component (edit links) responsive fix */
+@media screen and (max-width: 996px) {
+    .hideOnMobile {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 997px) {
+    .hideOnMobile {
+        display: flex !important;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+
+    .navbar,
+    .table-of-contents,
+    .hideOnMobile,
+    .theme-doc-sidebar-container {
+        display: none !important;
+    }
+
+    .main-wrapper {
+        padding: 0 !important;
+    }
+
+    .docMainContainer_gTbr {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    h1,
+    h2,
+    h3 {
+        break-after: avoid !important;
+    }
+
+    pre,
+    code {
+        white-space: pre-wrap !important;
+        word-break: break-word !important;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+
+/* Focus styles for better keyboard navigation */
+@media (prefers-reduced-motion: no-preference) {
+
+    .menu__link:focus,
+    .navbar__link:focus,
+    .breadcrumbs__link:focus {
+        outline: 2px solid var(--ifm-color-primary) !important;
+        outline-offset: 2px !important;
+        transition: outline 0.2s !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .navbar-docs-btn {
+        border: 3px solid currentColor !important;
+    }
+
+    .menu__link--active {
+        border-left: 4px solid var(--ifm-color-primary) !important;
+    }
+}
+
+/* ========================================
+   LANDSCAPE MOBILE ADJUSTMENTS
+   ======================================== */
+
+@media screen and (max-width: 896px) and (orientation: landscape) {
+    .navbar {
+        padding: 0.25rem 1rem !important;
+    }
+
+    .navbar__logo {
+        height: 28px !important;
+    }
+
+    .navbar-docs-btn {
+        font-size: 0.9rem !important;
+        padding: 0.3rem 0.8rem !important;
+    }
+}
+
+/* ========================================
+   VERY SMALL SCREENS (< 380px)
+   ======================================== */
+
+@media screen and (max-width: 380px) {
+    .navbar__brand .navbar__title {
+        display: none !important;
+    }
+
+    .navbar-docs-btn {
+        font-size: 0.85rem !important;
+        padding: 0.3rem 0.6rem !important;
+        margin: 0 0.25rem 0 0 !important;
+    }
+
+    h1 {
+        font-size: 1.75rem !important;
+    }
+
+    h2 {
+        font-size: 1.35rem !important;
+    }
+
+    h3 {
+        font-size: 1.15rem !important;
+    }
+
+    .theme-doc-markdown {
+        padding: 0 0.25rem !important;
+    }
+}

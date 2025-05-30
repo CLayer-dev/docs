@@ -1,4 +1,5 @@
 @import url("./style.css");
+@import url("./responsive.css");
 
 
 /* You can override the default Infima variables here also you can overwrite the styles. you must have to use !important to overwrite style. */
@@ -58,4 +59,67 @@ h6[id] {
 .navbar__link:hover {
   color: #1a73e8;
   background: none;
+}
+
+/* ========================================
+   RESPONSIVE NAVBAR IMPROVEMENTS
+   ======================================== */
+
+/* Mobile navbar adjustments for docs button */
+@media screen and (max-width: 996px) {
+  .navbar-docs-btn {
+    font-size: 1rem !important;
+    padding: 0.4rem 1.2rem !important;
+    margin: 0 1rem 0 0.25rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-docs-btn {
+    font-size: 0.9rem !important;
+    padding: 0.35rem 1rem !important;
+    margin: 0 0.5rem 0 0.25rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-docs-btn {
+    font-size: 0.8rem !important;
+    padding: 0.3rem 0.8rem !important;
+    margin: 0 0.25rem 0 0.25rem !important;
+  }
+}
+
+/* ========================================
+   RESPONSIVE IMPROVEMENTS FOR CONTENT
+   ======================================== */
+
+/* Improve readability on mobile */
+@media screen and (max-width: 768px) {
+
+  /* Better line height for mobile reading */
+  .markdown p,
+  .markdown li {
+    line-height: 1.6 !important;
+  }
+
+  /* Better spacing for lists */
+  .markdown ul,
+  .markdown ol {
+    padding-left: 1.5rem !important;
+  }
+
+  /* Code blocks mobile improvements */
+  .markdown pre {
+    margin: 1rem 0 !important;
+    overflow-x: auto !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Blockquotes mobile improvements */
+  .markdown blockquote {
+    margin: 1rem 0 !important;
+    padding: 0.5rem 1rem !important;
+    border-left: 4px solid var(--ifm-color-primary) !important;
+  }
 }
