@@ -1,18 +1,23 @@
 {
     "version": 2,
-    "name": "circle-layer-docs",
     "buildCommand": "npm run build",
     "outputDirectory": "build",
     "devCommand": "npm start",
     "installCommand": "npm install",
     "framework": null,
-    "public": false,
+    "functions": {
+        "app/api/**/*.js": {
+            "runtime": "nodejs18.x"
+        }
+    },
     "env": {
-        "NODE_ENV": "production"
+        "NODE_ENV": "production",
+        "NODE_VERSION": "18"
     },
     "build": {
         "env": {
-            "NODE_ENV": "production"
+            "NODE_ENV": "production",
+            "NODE_VERSION": "18"
         }
     },
     "rewrites": [
