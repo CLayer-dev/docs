@@ -1,0 +1,61 @@
+@import url("./style.css");
+
+
+/* You can override the default Infima variables here also you can overwrite the styles. you must have to use !important to overwrite style. */
+
+/* Fix anchor link scrolling to account for fixed header */
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id] {
+  scroll-margin-top: 100px !important;
+}
+
+/* Also add scroll margin to elements with anchor links */
+:target {
+  scroll-margin-top: 100px !important;
+}
+
+/* Only style the Docs button as a button, keep other navbar items as regular text */
+.navbar-docs-btn {
+  font-size: 1.4rem !important;
+  font-weight: 900 !important;
+  padding: 0.5rem 2rem !important;
+  margin: 0 2rem 0 0.5rem !important;
+  background: linear-gradient(90deg, #1a73e8 0%, #18b6a4 100%) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(26, 115, 232, 0.08) !important;
+  border: 2px solid #1a73e8 !important;
+  cursor: pointer !important;
+  transition: background 0.2s, box-shadow 0.2s, border 0.2s !important;
+  display: inline-block !important;
+}
+
+.navbar-docs-btn:hover {
+  background: linear-gradient(90deg, #003087 0%, #18b6a4 100%) !important;
+  box-shadow: 0 4px 16px rgba(26, 115, 232, 0.16) !important;
+  border: 2px solid #003087 !important;
+  color: #fff !important;
+}
+
+/* Revert other navbar links to default style */
+.navbar__link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: inherit;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s;
+}
+
+.navbar__link:hover {
+  color: #1a73e8;
+  background: none;
+}
