@@ -159,33 +159,19 @@ const config: Config = {
           className: 'navbar-docs-btn',
         },
         {
+          to: '/docs/introduction/what-is-circle-layer',
           label: 'Introduction',
           position: 'left',
-          items: [
-            { to: '/docs/introduction/what-is-circle-layer', label: 'What is Circle Layer?' },
-            { to: '/docs/introduction/key-features', label: 'Key Features' },
-            { to: '/docs/introduction/use-cases', label: 'Use Cases' },
-          ],
         },
         {
+          to: '/docs/architecture/pos-consensus',
           label: 'Architecture',
           position: 'left',
-          items: [
-            { to: '/docs/architecture/pos-consensus', label: 'POS Consensus' },
-            { to: '/docs/architecture/high-tps', label: 'High TPS' },
-            { to: '/docs/architecture/evm-compatibility', label: 'EVM Compatibility' },
-            { to: '/docs/ai-security/how-it-works', label: 'AI Security' },
-          ],
         },
         {
+          to: '/docs/development/writing-smart-contracts',
           label: 'Ecosystem',
           position: 'left',
-          items: [
-            { to: '/docs/development/writing-smart-contracts', label: 'Development' },
-            { to: '/docs/governance/governance-model', label: 'Governance' },
-            { to: '/docs/nodes-validation/becoming-validator', label: 'Nodes' },
-            { to: '/docs/roadmap/phase-1-testnet', label: 'Roadmap' },
-          ],
         },
         {
           href: 'https://github.com/Circle-layer-org/docs',

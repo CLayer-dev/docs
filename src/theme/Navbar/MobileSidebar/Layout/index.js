@@ -1,12 +1,14 @@
 import React from 'react';
 import clsx from 'clsx';
-import {useNavbarSecondaryMenu} from '@docusaurus/theme-common/internal';
+import { useNavbarSecondaryMenu } from '@docusaurus/theme-common/internal';
+
 export default function NavbarMobileSidebarLayout({
   header,
   primaryMenu,
   secondaryMenu,
 }) {
-  const {shown: secondaryMenuShown} = useNavbarSecondaryMenu();
+  const { shown: secondaryMenuShown } = useNavbarSecondaryMenu();
+
   return (
     <div className="navbar-sidebar">
       {header}

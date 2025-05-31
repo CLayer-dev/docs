@@ -58,15 +58,23 @@
     flex-shrink: 0 !important;
 }
 
-/* Prevent navbar overflow on small screens */
+/* Mobile navbar simplification - main styles handled in custom layout */
 @media screen and (max-width: 996px) {
-    .navbar__items--left .navbar__item:not(.navbar-docs-btn) {
+
+    /* Ensure the custom mobile layout takes precedence */
+    .navbar__inner {
+        display: block !important;
+        position: relative !important;
+    }
+
+    /* Hide default navigation items on mobile when custom layout is active */
+    .navbar__layout--desktop .navbar__items--left .navbar__item:not(.navbar-docs-btn) {
         display: none !important;
     }
 
     .navbar__toggle {
         margin-left: auto !important;
-        order: 3 !important;
+        order: 999 !important;
     }
 }
 

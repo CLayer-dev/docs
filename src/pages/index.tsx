@@ -100,15 +100,14 @@ function KeyFeatures() {
     <section>
       <Heading as="h2">✨ Key Features</Heading>
       <div className="features-grid">
-        <div className="feature-card highlight">
+        <div className="feature-card">
           <div className="feature-icon">🚀</div>
           <h3>High Performance</h3>
-          <p><strong>2,000 TPS</strong> at launch, scaling to <strong>50,000 TPS</strong></p>
-          <div className="feature-progress">
-            <div className="progress-bar">
-              <div className="progress-fill" data-width="40"></div>
-            </div>
-            <span>40% of target achieved</span>
+          <p>Scalable blockchain infrastructure with industry-leading speeds</p>
+          <div className="performance-badges">
+            <span className="badge">2,000 TPS Current</span>
+            <span className="badge">50,000 TPS Target</span>
+            <span className="badge">Sub-10s Finality</span>
           </div>
         </div>
 

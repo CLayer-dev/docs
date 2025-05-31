@@ -39,25 +39,12 @@ ${JSON.stringify(item, null, 2)}`,
 	);
 }
 
-// Desktop navbar layout
-function DesktopNavbarLayout({ left, right }) {
+// Clean navbar content layout - following Bittensor approach
+function NavbarContentLayout({ left, right }) {
 	return (
 		<div className="navbar__inner">
 			<div className="navbar__items">{left}</div>
 			<div className="navbar__items navbar__items--right">{right}</div>
-		</div>
-	);
-}
-
-// Mobile navbar layout - Perfect UX: Menu -> Logo -> Docs -> Theme -> Search
-function MobileNavbarLayout({ menu, logo, docs, theme, search }) {
-	return (
-		<div className="navbar__inner navbar__inner--mobile">
-			<div className="navbar__mobile-item navbar__mobile-item--menu">{menu}</div>
-			<div className="navbar__mobile-item navbar__mobile-item--logo">{logo}</div>
-			<div className="navbar__mobile-item navbar__mobile-item--docs">{docs}</div>
-			<div className="navbar__mobile-item navbar__mobile-item--theme">{theme}</div>
-			<div className="navbar__mobile-item navbar__mobile-item--search">{search}</div>
 		</div>
 	);
 }
@@ -67,10 +54,6 @@ export default function NavbarContent() {
 	const items = useNavbarItems();
 	const [leftItems, rightItems] = splitNavbarItems(items);
 	const [isModalOpen, setIsModalOpen] = useState(false);
-
-	// Find the docs button
-	const docsItem = leftItems.find((item) => item.className?.includes('navbar-docs-btn'));
-	const otherLeftItems = leftItems.filter((item) => !item.className?.includes('navbar-docs-btn'));
 
 	const handleOpenModal = () => {
 		setIsModalOpen(true);
@@ -97,40 +80,24 @@ export default function NavbarContent() {
 
 	return (
 		<>
-			{/* Desktop Layout */}
-			<div className="navbar__layout navbar__layout--desktop">
-				<DesktopNavbarLayout
-					left={
-						<>
-							{!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
-							<NavbarLogo />
-							<NavbarItems items={leftItems} />
-						</>
-					}
-					right={
-						<>
-							<NavbarItems items={rightItems} />
-							<NavbarColorModeToggle className={styles.colorModeToggle} />
-							<NavbarSearch>
-								<CustomSearchButton onClick={handleOpenModal} />
-							</NavbarSearch>
-						</>
-					}
-				/>
-			</div>
-
-			{/* Mobile Layout - Perfect UX */}
-			<div className="navbar__layout navbar__layout--mobile">
-				<MobileNavbarLayout
-					menu={!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
-					logo={<NavbarLogo />}
-					docs={docsItem && <NavbarItems items={[docsItem]} />}
-					theme={<NavbarColorModeToggle className={styles.colorModeToggleMobile} />}
-					search={
-						<CustomSearchButton onClick={handleOpenModal} />
-					}
-				/>
-			</div>
+			<NavbarContentLayout
+				left={
+					<>
+						{!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
+						<NavbarLogo />
+						<NavbarItems items={leftItems} />
+					</>
+				}
+				right={
+					<>
+						<NavbarItems items={rightItems} />
+						<NavbarColorModeToggle className={styles.colorModeToggle} />
+						<NavbarSearch>
+							<CustomSearchButton onClick={handleOpenModal} />
+						</NavbarSearch>
+					</>
+				}
+			/>
 
 			<SearchModal isOpen={isModalOpen} onClose={handleCloseModal} />
 		</>
