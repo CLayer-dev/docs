@@ -115,6 +115,18 @@ h6[id] {
     background: var(--ifm-navbar-background-color) !important;
     border-bottom: 1px solid var(--ifm-color-emphasis-200) !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
+.navbar__inner {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+.navbar__items {
+    max-width: 100% !important;
+    overflow: hidden !important;
 }
 
 /* ========================================
@@ -222,17 +234,65 @@ h6[id] {
         display: block !important;
     }
 
-    /* Mobile logo sizing */
-    .navbar__logo {
-        max-width: 180px !important;
+    /* Prevent navbar overflow */
+    .navbar__inner {
+        padding: 0 0.5rem !important;
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
     }
 
-    /* Mobile docs button styling */
+    .navbar__items {
+        flex-wrap: nowrap !important;
+        overflow: hidden !important;
+        max-width: 100% !important;
+    }
+
+    /* Mobile logo sizing */
+    .navbar__logo {
+        max-width: 140px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Mobile docs button styling - hide to save space */
     .navbar-docs-btn,
     .navbar-docs-btn a {
-        font-size: 1.2rem !important;
-        padding: 0.4rem 1.2rem !important;
-        margin: 0.5rem 0 !important;
+        display: none !important;
+    }
+
+    /* Mobile search - icon only */
+    .navbar__search,
+    .navbar__inner .search_container,
+    .navbar__inner .search_container>div {
+        min-width: 40px !important;
+        max-width: 40px !important;
+        width: 40px !important;
+        height: 40px !important;
+        margin-left: 0.5rem !important;
+        margin-right: 0.5rem !important;
+        padding: 0 !important;
+        flex-shrink: 0 !important;
+        justify-content: center !important;
+        border-radius: 50% !important;
+    }
+
+    /* Hide search text on mobile */
+    .navbar__search p,
+    .navbar__inner .search_container p {
+        display: none !important;
+    }
+
+    /* Hide keyboard shortcuts on mobile */
+    .navbar__search .keys,
+    .navbar__inner .search_container .keys {
+        display: none !important;
+    }
+
+    /* Center the search icon */
+    .navbar__search svg,
+    .navbar__inner .search_container svg {
+        margin-right: 0 !important;
+        width: 20px !important;
+        height: 20px !important;
     }
 
     /* Mobile menu button styling */
@@ -245,6 +305,7 @@ h6[id] {
         padding: 0.5rem !important;
         border-radius: 4px !important;
         transition: background-color 0.2s ease !important;
+        flex-shrink: 0 !important;
     }
 
     .navbar__toggle:hover {
@@ -305,12 +366,30 @@ h6[id] {
 /* Small screens - Compact layout */
 @media (max-width: 768px) {
     .navbar__logo {
-        max-width: 150px !important;
+        max-width: 120px !important;
     }
 
-    .navbar-docs-btn {
-        font-size: 1rem !important;
-        padding: 0.3rem 1rem !important;
+    .navbar__inner {
+        padding: 0 0.25rem !important;
+    }
+}
+
+/* Very small screens - Ultra compact */
+@media (max-width: 480px) {
+    .navbar__logo {
+        max-width: 100px !important;
+    }
+
+    .navbar__inner {
+        padding: 0 0.125rem !important;
+    }
+
+    /* Keep search icon same size but tighter spacing */
+    .navbar__search,
+    .navbar__inner .search_container,
+    .navbar__inner .search_container>div {
+        margin-left: 0.25rem !important;
+        margin-right: 0.25rem !important;
     }
 }
 
@@ -829,17 +908,20 @@ body .mobile-target-cards {
     display: flex !important;
     align-items: center !important;
     height: 40px !important;
-    min-width: 220px !important;
+    min-width: 0 !important;
     max-width: 320px !important;
+    width: 100% !important;
     background: var(--ifm-navbar-background-color, #fff) !important;
     border: 1.5px solid var(--ifm-color-emphasis-200, #dbdde1) !important;
     border-radius: 8px !important;
     box-shadow: 0 2px 8px rgba(26, 115, 232, 0.04) !important;
     padding: 0 16px !important;
-    margin-left: 1.5rem !important;
+    margin-left: 1rem !important;
     margin-right: 0.5rem !important;
     cursor: pointer !important;
     transition: border-color 0.2s, box-shadow 0.2s !important;
+    flex-shrink: 1 !important;
+    overflow: hidden !important;
 }
 
 .navbar__search:focus-within,
@@ -853,19 +935,25 @@ body .mobile-target-cards {
 .navbar__search svg,
 .navbar__inner .search_container svg {
     color: var(--ifm-color-primary) !important;
-    width: 22px !important;
-    height: 22px !important;
+    width: 20px !important;
+    height: 20px !important;
     margin-right: 8px !important;
     opacity: 0.85 !important;
+    flex-shrink: 0 !important;
 }
 
 .navbar__search p,
 .navbar__inner .search_container p {
     margin: 0 !important;
-    font-size: 15px !important;
+    font-size: 14px !important;
     color: var(--ifm-font-color-base, #222) !important;
     opacity: 0.92 !important;
     letter-spacing: 0.01em !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
 }
 
 .navbar__search .keys,
@@ -874,6 +962,7 @@ body .mobile-target-cards {
     display: flex !important;
     align-items: center !important;
     gap: 2px !important;
+    flex-shrink: 0 !important;
 }
 
 [data-theme="dark"] .navbar__search,
@@ -899,31 +988,7 @@ body .mobile-target-cards {
     margin-right: 0 !important;
 }
 
-/* Search bar responsive adjustments */
-@media (max-width: 480px) {
-
-    .navbar__search,
-    .navbar__inner .search_container,
-    .navbar__inner .search_container>div {
-        min-width: 180px !important;
-        max-width: 250px !important;
-        margin-left: 0.5rem !important;
-        margin-right: 0.25rem !important;
-    }
-}
-
-@media (max-width: 360px) {
-
-    .navbar__search,
-    .navbar__inner .search_container,
-    .navbar__inner .search_container>div {
-        min-width: 150px !important;
-        max-width: 200px !important;
-        margin-left: 0.25rem !important;
-        margin-right: 0.25rem !important;
-        padding: 0 12px !important;
-    }
-}
+/* Search bar responsive adjustments - REMOVED - Now handled in mobile navbar section */
 
 /* --- RESPONSIVE PROGRESS BARS AND SLIDERS --- */
 
