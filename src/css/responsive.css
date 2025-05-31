@@ -148,10 +148,10 @@
         display: none !important;
     }
 
-    /* Mobile menu improvements */
-    .navbar-sidebar {
+    /* Mobile menu improvements - width handled in custom.css */
+    /* .navbar-sidebar {
         width: 100% !important;
-    }
+    } */
 
     .navbar-sidebar__items {
         padding: 1rem !important;

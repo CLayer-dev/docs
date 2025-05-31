@@ -286,27 +286,120 @@ h6[id] {
         padding: 0 0.5rem !important;
         overflow-x: hidden !important;
         max-width: 100vw !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
     }
 
     .navbar__items {
         flex-wrap: nowrap !important;
         overflow: hidden !important;
         max-width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
     }
 
-    /* Mobile logo sizing */
-    .navbar__logo {
-        max-width: 140px !important;
+    .navbar__items--left {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+    }
+
+    .navbar__items--right {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        margin-left: auto !important;
+    }
+
+    /* Mobile hamburger menu - first item */
+    .navbar__toggle {
+        color: var(--ifm-navbar-link-color) !important;
+        font-size: 1.5rem !important;
+        border: none !important;
+        background: transparent !important;
+        cursor: pointer !important;
+        padding: 0.5rem !important;
+        border-radius: 4px !important;
+        transition: background-color 0.2s ease !important;
         flex-shrink: 0 !important;
+        order: 1 !important;
     }
 
-    /* Mobile docs button styling - hide to save space */
+    .navbar__toggle:hover {
+        background-color: var(--ifm-color-emphasis-200) !important;
+    }
+
+    /* Mobile logo - hide on very small screens to save space */
+    .navbar__logo {
+        max-width: 120px !important;
+        flex-shrink: 0 !important;
+        order: 2 !important;
+    }
+
+    /* Mobile docs button - second item, keep visible */
     .navbar-docs-btn,
     .navbar-docs-btn a {
-        display: none !important;
+        display: inline-block !important;
+        font-size: 0.9rem !important;
+        font-weight: 700 !important;
+        padding: 0.25rem 0.75rem !important;
+        margin: 0 0.25rem !important;
+        background: linear-gradient(90deg, #1a73e8 0%, #18b6a4 100%) !important;
+        color: #ffffff !important;
+        border-radius: 6px !important;
+        box-shadow: 0 1px 4px rgba(26, 115, 232, 0.08) !important;
+        border: 1px solid #1a73e8 !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        text-decoration: none !important;
+        order: 3 !important;
     }
 
-    /* Mobile search - icon only */
+    .navbar-docs-btn:hover,
+    .navbar-docs-btn a:hover {
+        background: linear-gradient(90deg, #003087 0%, #18b6a4 100%) !important;
+        box-shadow: 0 2px 8px rgba(26, 115, 232, 0.16) !important;
+        border: 1px solid #003087 !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+    }
+
+    /* Theme toggle - third item */
+    .navbar__item button[title*="theme" i],
+    .navbar__item button[title*="mode" i],
+    .navbar__item button[aria-label*="theme" i],
+    .navbar__item button[aria-label*="mode" i],
+    .navbar__item .clean-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 40px !important;
+        height: 40px !important;
+        padding: 0.5rem !important;
+        margin: 0 0.25rem !important;
+        border-radius: 50% !important;
+        background: transparent !important;
+        border: 1px solid var(--ifm-color-emphasis-300) !important;
+        color: var(--ifm-navbar-link-color) !important;
+        cursor: pointer !important;
+        transition: background-color 0.2s ease !important;
+        flex-shrink: 0 !important;
+        order: 4 !important;
+    }
+
+    .navbar__item button[title*="theme" i]:hover,
+    .navbar__item button[title*="mode" i]:hover,
+    .navbar__item button[aria-label*="theme" i]:hover,
+    .navbar__item button[aria-label*="mode" i]:hover,
+    .navbar__item .clean-btn:hover {
+        background-color: var(--ifm-color-emphasis-200) !important;
+    }
+
+    /* Mobile search - icon only, fourth item */
     .navbar__search,
     .navbar__inner .search_container,
     .navbar__inner .search_container>div {
@@ -314,12 +407,13 @@ h6[id] {
         max-width: 40px !important;
         width: 40px !important;
         height: 40px !important;
-        margin-left: 0.5rem !important;
-        margin-right: 0.5rem !important;
+        margin-left: 0.25rem !important;
+        margin-right: 0.25rem !important;
         padding: 0 !important;
         flex-shrink: 0 !important;
         justify-content: center !important;
         border-radius: 50% !important;
+        order: 5 !important;
     }
 
     /* Hide search text on mobile */
@@ -340,23 +434,6 @@ h6[id] {
         margin-right: 0 !important;
         width: 20px !important;
         height: 20px !important;
-    }
-
-    /* Mobile menu button styling */
-    .navbar__toggle {
-        color: var(--ifm-navbar-link-color) !important;
-        font-size: 1.5rem !important;
-        border: none !important;
-        background: transparent !important;
-        cursor: pointer !important;
-        padding: 0.5rem !important;
-        border-radius: 4px !important;
-        transition: background-color 0.2s ease !important;
-        flex-shrink: 0 !important;
-    }
-
-    .navbar__toggle:hover {
-        background-color: var(--ifm-color-emphasis-200) !important;
     }
 
     /* Mobile sidebar menu styling */
@@ -525,30 +602,97 @@ h6[id] {
 /* Small screens - Compact layout */
 @media (max-width: 768px) {
     .navbar__logo {
-        max-width: 120px !important;
+        max-width: 100px !important;
     }
 
     .navbar__inner {
         padding: 0 0.25rem !important;
+    }
+
+    /* Smaller docs button on small screens */
+    .navbar-docs-btn,
+    .navbar-docs-btn a {
+        font-size: 0.8rem !important;
+        padding: 0.2rem 0.6rem !important;
+        margin: 0 0.15rem !important;
+    }
+
+    /* Tighter spacing for all items */
+    .navbar__items {
+        gap: 0.25rem !important;
+    }
+
+    .navbar__items--left {
+        gap: 0.25rem !important;
+    }
+
+    .navbar__items--right {
+        gap: 0.25rem !important;
     }
 }
 
 /* Very small screens - Ultra compact */
 @media (max-width: 480px) {
     .navbar__logo {
-        max-width: 100px !important;
+        max-width: 80px !important;
     }
 
     .navbar__inner {
         padding: 0 0.125rem !important;
     }
 
-    /* Keep search icon same size but tighter spacing */
+    /* Even smaller docs button */
+    .navbar-docs-btn,
+    .navbar-docs-btn a {
+        font-size: 0.75rem !important;
+        padding: 0.15rem 0.5rem !important;
+        margin: 0 0.1rem !important;
+    }
+
+    /* Minimal spacing */
+    .navbar__items {
+        gap: 0.125rem !important;
+    }
+
+    .navbar__items--left {
+        gap: 0.125rem !important;
+    }
+
+    .navbar__items--right {
+        gap: 0.125rem !important;
+    }
+
+    /* Smaller theme toggle and search icons */
+    .navbar__item button[title*="theme" i],
+    .navbar__item button[title*="mode" i],
+    .navbar__item button[aria-label*="theme" i],
+    .navbar__item button[aria-label*="mode" i],
+    .navbar__item .clean-btn,
     .navbar__search,
     .navbar__inner .search_container,
     .navbar__inner .search_container>div {
-        margin-left: 0.25rem !important;
-        margin-right: 0.25rem !important;
+        width: 36px !important;
+        height: 36px !important;
+        margin: 0 0.1rem !important;
+    }
+}
+
+/* Ultra small screens - hide logo to save space */
+@media (max-width: 360px) {
+    .navbar__logo {
+        display: none !important;
+    }
+
+    .navbar__inner {
+        padding: 0 0.1rem !important;
+    }
+
+    /* Compact docs button for ultra small screens */
+    .navbar-docs-btn,
+    .navbar-docs-btn a {
+        font-size: 0.7rem !important;
+        padding: 0.1rem 0.4rem !important;
+        margin: 0 0.05rem !important;
     }
 }
 
