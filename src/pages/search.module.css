@@ -1,0 +1,104 @@
+.searchContainer {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 8px;
+    background: var(--ifm-background-color);
+    color: var(--ifm-font-color-base);
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--ifm-color-primary);
+    box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
+}
+
+.resultsList {
+    list-style: none;
+    padding: 0;
+}
+
+.resultItem {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--ifm-color-emphasis-300);
+    padding-bottom: 1rem;
+}
+
+.resultLink {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+}
+
+.resultLink:hover {
+    text-decoration: underline;
+}
+
+.resultSnippet {
+    color: var(--ifm-color-emphasis-600);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.highlight {
+    background: var(--ifm-color-warning-lightest);
+    color: var(--ifm-font-color-base);
+    padding: 0.1em 0.2em;
+    border-radius: 3px;
+}
+
+[data-theme="dark"] .highlight {
+    background: var(--ifm-color-warning-darkest);
+    color: var(--ifm-color-warning-lightest);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+    .searchContainer {
+        max-width: 95vw;
+        padding: 0.75rem;
+        margin: 1rem auto;
+    }
+
+    .searchInput {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    .resultLink {
+        font-size: 1rem;
+    }
+
+    .resultItem {
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .searchContainer {
+        padding: 0.5rem;
+    }
+
+    .searchInput {
+        font-size: 0.95rem;
+        padding: 0.6rem;
+    }
+
+    .resultLink {
+        font-size: 0.95rem;
+    }
+
+    .resultSnippet {
+        font-size: 0.9rem;
+    }
+}

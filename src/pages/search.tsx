@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import styles from './search.module.css';
 
 interface DocIndexEntry {
   title: string;
@@ -10,7 +11,7 @@ function highlight(text: string, query: string) {
   if (!query) return text;
   const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
   return text.split(regex).map((part, i) =>
-    regex.test(part) ? <mark key={i} style={{ background: '#ffe066', color: '#222' }}>{part}</mark> : part
+    regex.test(part) ? <mark key={i} className={styles.highlight}>{part}</mark> : part
   );
 }
 
@@ -72,7 +73,7 @@ const SearchPage = () => {
   }, []);
 
   return (
-    <div style={{ maxWidth: 700, margin: '2rem auto', padding: '1rem' }}>
+    <div className={styles.searchContainer}>
       <h1>Search Documentation</h1>
       <input
         ref={inputRef}
@@ -80,21 +81,21 @@ const SearchPage = () => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Type to search... (Press '/' or Ctrl+K to focus)"
-        style={{ width: '100%', padding: '0.5rem', fontSize: '1.2rem', marginBottom: '1rem' }}
+        className={styles.searchInput}
         autoFocus
       />
       {loading && <p>Loading index...</p>}
       {!loading && query && results.length === 0 && <p>No results found.</p>}
-      <ul style={{ listStyle: 'none', padding: 0 }}>
+      <ul className={styles.resultsList}>
         {results.map((doc) => {
           const inTitle = doc.title.toLowerCase().includes(query.toLowerCase());
           const snippet = getSnippet(doc.body, query);
           return (
-            <li key={doc.url} style={{ marginBottom: '1.5rem', borderBottom: '1px solid #444', paddingBottom: '1rem' }}>
-              <a href={doc.url} style={{ fontSize: '1.1rem', fontWeight: 600, color: '#3b82f6' }}>
+            <li key={doc.url} className={styles.resultItem}>
+              <a href={doc.url} className={styles.resultLink}>
                 {highlight(doc.title, query)}
               </a>
-              <p style={{ color: '#aaa', marginTop: '0.5rem' }}>{highlight(snippet, query)}</p>
+              <p className={styles.resultSnippet}>{highlight(snippet, query)}</p>
             </li>
           );
         })}

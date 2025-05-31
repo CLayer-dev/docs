@@ -82,3 +82,43 @@
     display: none;
   }
 }
+
+/* Additional responsive styles for smaller screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 8px 12px;
+  }
+
+  .container>p {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  .keys {
+    right: 8px;
+  }
+
+  .keys>svg:first-child {
+    margin-right: 2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 6px 10px;
+  }
+
+  .container>p {
+    font-size: 13px;
+    margin-left: 6px;
+  }
+
+  .keys {
+    right: 6px;
+  }
+
+  .keys svg {
+    width: 28px !important;
+    height: 20px !important;
+  }
+}

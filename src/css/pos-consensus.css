@@ -1499,6 +1499,48 @@
     }
 }
 
+/* Additional small mobile breakpoint */
+@media (max-width: 480px) {
+    .pos-hero {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .pos-hero h2 {
+        font-size: 1.6rem;
+    }
+
+    .pos-hero p {
+        font-size: 1rem;
+    }
+
+    .benefit-card {
+        padding: 1.5rem;
+    }
+
+    .metric-value {
+        font-size: 1.6rem;
+    }
+
+    .decentralization-stats,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .preset-buttons {
+        gap: 0.5rem;
+    }
+
+    .preset-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .action-btn {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+}
+
 /* --- THEME-AWARE COLORS FOR POS CONSENSUS (FINAL PASS) --- */
 
 .pos-hero {

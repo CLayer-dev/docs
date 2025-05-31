@@ -1292,6 +1292,58 @@
     }
 }
 
+/* Additional small mobile breakpoint */
+@media (max-width: 480px) {
+    .ai-security-hero {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .ai-security-hero h2 {
+        font-size: 1.6rem;
+    }
+
+    .ai-security-hero p {
+        font-size: 1rem;
+    }
+
+    .security-component,
+    .component-card {
+        padding: 1.5rem;
+    }
+
+    .component-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .monitoring-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .guarantee-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-box {
+        padding: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .response-step {
+        padding: 1rem;
+    }
+
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
+
 /* --- THEME-AWARE COLORS FOR AI SECURITY --- */
 .action-category h5,
 .action-category h6,

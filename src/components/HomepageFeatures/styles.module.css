@@ -33,3 +33,26 @@
 [data-theme="dark"] .feature-svg-detail {
   color: var(--ifm-color-primary-lightest);
 }
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .featureSvg {
+    height: 150px;
+    width: 150px;
+  }
+
+  .features {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .featureSvg {
+    height: 120px;
+    width: 120px;
+  }
+
+  .features {
+    padding: 1rem 0;
+  }
+}

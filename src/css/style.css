@@ -549,9 +549,9 @@ ul {
 	margin-left: 32px;
 }
 
-@media (min-width: 997) {
+@media (min-width: 997px) {
 	.navbar__item.navbar__link {
-		display: flex;
+		color: var(--ifm-navbar-item-color);
 	}
 }
 
@@ -721,30 +721,37 @@ ul {
 /* custom style for navbar - Change the Class name if you want stick with it (custom_algolia)  */
 .custom__algolia__search__container_xfkw>div>div {
 	width: 353px !important;
-	min-width: 353px !important;
+	min-width: 200px !important;
 	max-width: 353px !important;
 	height: 50px;
 }
 
 .custom__algolia__search__container_xfkw>div {
 	width: 353px !important;
-	min-width: 353px !important;
+	min-width: 200px !important;
 	max-width: 353px !important;
 	height: 50px;
 }
 
-@media screen and (min-width: 996px) {
-	.custom_algolia {
-		position: absolute;
-		left: 178px;
-		top: 200px;
-	}
+@media screen and (max-width: 480px) {
 
-	.custom_algolia>div {
-		display: block !important;
+	.custom__algolia__search__container_xfkw>div>div,
+	.custom__algolia__search__container_xfkw>div {
+		width: 280px !important;
+		min-width: 180px !important;
+		max-width: 280px !important;
 	}
 }
 
+@media screen and (max-width: 360px) {
+
+	.custom__algolia__search__container_xfkw>div>div,
+	.custom__algolia__search__container_xfkw>div {
+		width: 240px !important;
+		min-width: 150px !important;
+		max-width: 240px !important;
+	}
+}
 
 .search_container>div {
 	width: 268px !important;
@@ -1081,7 +1088,7 @@ ul {
 }
 
 .pagination-nav .pagination-nav__link {
-	max-width: 30% !important;
+	max-width: 100% !important;
 }
 
 .pagination-nav:has(.pagination-nav__link:first-child.pagination-nav__link--next) {

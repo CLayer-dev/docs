@@ -33,6 +33,7 @@
   line-height: 160%;
   letter-spacing: 0.28px;
 }
+
 [data-theme="dark"] .body {
   color: #e3e3e3;
 }
@@ -77,6 +78,7 @@
   letter-spacing: 1.1px;
   margin-top: 10px;
 }
+
 [data-theme="dark"] .bodySmall {
   color: #e3e3e3;
 }
@@ -93,4 +95,85 @@
 .responsiveCard {
   width: 100%;
   height: 100%;
+}
+
+/* Enhanced responsive breakpoints */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 16px 0;
+  }
+
+  .card {
+    max-width: 100%;
+    min-height: auto;
+    padding: 16px 20px 20px 20px;
+  }
+
+  .cardSmall {
+    width: 100%;
+    height: auto;
+    padding: 16px 20px 20px 20px;
+  }
+
+  .title {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .titleSmall {
+    font-size: 13px;
+  }
+
+  .body {
+    font-size: 0.8rem;
+  }
+
+  .bodySmall {
+    font-size: 0.8rem;
+    letter-spacing: 0.8px;
+  }
+
+  .readMore {
+    font-size: 0.7rem;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    gap: 16px;
+    padding: 12px 0;
+  }
+
+  .card,
+  .cardSmall {
+    padding: 12px 16px 16px 16px;
+  }
+
+  .title {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .titleSmall {
+    font-size: 12px;
+  }
+
+  .body,
+  .bodySmall {
+    font-size: 0.75rem;
+    line-height: 150%;
+  }
+
+  .bodySmall {
+    letter-spacing: 0.6px;
+    margin-top: 8px;
+  }
+
+  .readMore {
+    font-size: 0.65rem;
+    margin-top: 12px;
+  }
 }

@@ -898,3 +898,29 @@ body .mobile-target-cards {
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
+
+/* Search bar responsive adjustments */
+@media (max-width: 480px) {
+
+    .navbar__search,
+    .navbar__inner .search_container,
+    .navbar__inner .search_container>div {
+        min-width: 180px !important;
+        max-width: 250px !important;
+        margin-left: 0.5rem !important;
+        margin-right: 0.25rem !important;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .navbar__search,
+    .navbar__inner .search_container,
+    .navbar__inner .search_container>div {
+        min-width: 150px !important;
+        max-width: 200px !important;
+        margin-left: 0.25rem !important;
+        margin-right: 0.25rem !important;
+        padding: 0 12px !important;
+    }
+}
