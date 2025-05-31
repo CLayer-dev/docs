@@ -374,8 +374,6 @@ export default function Home(): ReactNode {
       <HeroSection />
       <main>
         <div className="container">
-          <Heading as="h1">Welcome to Circle Layer Documentation</Heading>
-
           <MetricsDashboard />
           <KeyFeatures />
           <WhyChooseSection />
