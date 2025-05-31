@@ -31,16 +31,10 @@ export default function NavbarLayout({ children }) {
         message: "Main",
         description: "The ARIA label for the main navigation",
       })}
-      style={{
-        height: 96,
-        paddingBottom: 24,
-        paddingLeft: 48,
-        paddingRight: 48,
-        paddingTop: 24,
-      }}
       className={clsx(
         "navbar",
         "navbar--fixed-top",
+        "responsive-navbar",
         hideOnScroll && [
           styles.navbarHideable,
           !isNavbarVisible && styles.navbarHidden,

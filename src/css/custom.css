@@ -129,6 +129,53 @@ h6[id] {
     overflow: hidden !important;
 }
 
+/* Responsive navbar styles */
+.responsive-navbar {
+    height: auto !important;
+    min-height: 60px !important;
+    padding: 12px 24px !important;
+}
+
+/* Desktop navbar sizing */
+@media (min-width: 997px) {
+    .responsive-navbar {
+        height: 96px !important;
+        padding: 24px 48px !important;
+    }
+}
+
+/* Tablet navbar sizing */
+@media (max-width: 996px) and (min-width: 769px) {
+    .responsive-navbar {
+        height: 70px !important;
+        padding: 16px 32px !important;
+    }
+}
+
+/* Mobile navbar sizing */
+@media (max-width: 768px) {
+    .responsive-navbar {
+        height: 60px !important;
+        padding: 8px 16px !important;
+    }
+}
+
+/* Very small mobile navbar sizing */
+@media (max-width: 480px) {
+    .responsive-navbar {
+        height: 56px !important;
+        padding: 6px 12px !important;
+    }
+}
+
+/* Ultra small mobile navbar sizing */
+@media (max-width: 360px) {
+    .responsive-navbar {
+        height: 52px !important;
+        padding: 4px 8px !important;
+    }
+}
+
 /* ========================================
    DESKTOP NAVBAR - CLEAN & PROFESSIONAL
    ======================================== */
@@ -316,15 +363,80 @@ h6[id] {
     .navbar-sidebar {
         background: var(--ifm-navbar-background-color) !important;
         border-right: 1px solid var(--ifm-color-emphasis-200) !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        height: 100vh !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 200 !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        transform: translateX(-100%) !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Show mobile sidebar when active */
+    .navbar-sidebar--show .navbar-sidebar {
+        transform: translateX(0) !important;
     }
 
     .navbar-sidebar__backdrop {
         background: rgba(0, 0, 0, 0.6) !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        z-index: 150 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    }
+
+    /* Show backdrop when sidebar is active */
+    .navbar-sidebar--show .navbar-sidebar__backdrop {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* Mobile sidebar header */
+    .navbar-sidebar .navbar-sidebar__brand {
+        padding: 1rem !important;
+        border-bottom: 1px solid var(--ifm-color-emphasis-200) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    /* Mobile sidebar close button */
+    .navbar-sidebar .navbar-sidebar__close {
+        background: none !important;
+        border: none !important;
+        font-size: 1.5rem !important;
+        color: var(--ifm-navbar-link-color) !important;
+        cursor: pointer !important;
+        padding: 0.5rem !important;
+        border-radius: 4px !important;
+        transition: background-color 0.2s ease !important;
+    }
+
+    .navbar-sidebar .navbar-sidebar__close:hover {
+        background-color: var(--ifm-color-emphasis-200) !important;
+    }
+
+    /* Mobile sidebar items container */
+    .navbar-sidebar .navbar-sidebar__items {
+        padding: 1rem !important;
+        max-height: calc(100vh - 80px) !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
     }
 
     /* Mobile menu items */
     .navbar-sidebar .navbar__item {
         margin: 0.5rem 0 !important;
+        width: 100% !important;
     }
 
     .navbar-sidebar .navbar__link {
@@ -332,10 +444,57 @@ h6[id] {
         font-size: 1.1rem !important;
         border-radius: 6px !important;
         transition: background-color 0.2s ease !important;
+        display: block !important;
+        width: 100% !important;
+        text-decoration: none !important;
+        color: var(--ifm-navbar-link-color) !important;
     }
 
     .navbar-sidebar .navbar__link:hover {
         background-color: var(--ifm-color-emphasis-100) !important;
+        color: var(--ifm-navbar-link-hover-color) !important;
+    }
+
+    /* Mobile sidebar menu sections */
+    .navbar-sidebar .menu {
+        padding: 0 !important;
+        margin: 1rem 0 !important;
+    }
+
+    .navbar-sidebar .menu__list {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .navbar-sidebar .menu__list-item {
+        margin: 0.25rem 0 !important;
+    }
+
+    .navbar-sidebar .menu__link {
+        padding: 0.5rem 1rem !important;
+        font-size: 1rem !important;
+        border-radius: 4px !important;
+        transition: background-color 0.2s ease !important;
+        color: var(--ifm-font-color-base) !important;
+    }
+
+    .navbar-sidebar .menu__link:hover,
+    .navbar-sidebar .menu__link--active {
+        background-color: var(--ifm-color-emphasis-100) !important;
+        color: var(--ifm-color-primary) !important;
+    }
+
+    /* Fix mobile sidebar scrolling issues */
+    .navbar-sidebar {
+        -webkit-overflow-scrolling: touch !important;
+        overscroll-behavior: contain !important;
+    }
+
+    /* Prevent body scroll when sidebar is open */
+    body.navbar-sidebar--show {
+        overflow: hidden !important;
+        position: fixed !important;
+        width: 100% !important;
     }
 }
 
@@ -1214,4 +1373,117 @@ body .mobile-target-cards {
 
 [data-theme="dark"] .energy-bar.circle .bar>div {
     background: #059669;
+}
+
+/* ========================================
+   RESPONSIVE CONTENT LAYOUT FIXES
+   ======================================== */
+
+/* Ensure content doesn't overlap with responsive navbar */
+.main-wrapper {
+    padding-top: var(--ifm-navbar-height) !important;
+}
+
+/* Desktop content positioning */
+@media (min-width: 997px) {
+    .main-wrapper {
+        padding-top: 96px !important;
+    }
+
+    :root {
+        --ifm-navbar-height: 96px !important;
+    }
+}
+
+/* Tablet content positioning */
+@media (max-width: 996px) and (min-width: 769px) {
+    .main-wrapper {
+        padding-top: 70px !important;
+    }
+
+    :root {
+        --ifm-navbar-height: 70px !important;
+    }
+}
+
+/* Mobile content positioning */
+@media (max-width: 768px) {
+    .main-wrapper {
+        padding-top: 60px !important;
+    }
+
+    :root {
+        --ifm-navbar-height: 60px !important;
+    }
+
+    /* Adjust doc sidebar for mobile */
+    .theme-doc-sidebar-container {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Mobile content adjustments */
+    .container {
+        padding: 0 1rem !important;
+        max-width: 100% !important;
+    }
+
+    .docMainContainer_gTbr {
+        padding: 1rem !important;
+    }
+
+    .theme-doc-markdown {
+        padding: 0 !important;
+    }
+}
+
+/* Very small mobile content positioning */
+@media (max-width: 480px) {
+    .main-wrapper {
+        padding-top: 56px !important;
+    }
+
+    :root {
+        --ifm-navbar-height: 56px !important;
+    }
+
+    .container {
+        padding: 0 0.5rem !important;
+    }
+
+    .docMainContainer_gTbr {
+        padding: 0.5rem !important;
+    }
+}
+
+/* Ultra small mobile content positioning */
+@media (max-width: 360px) {
+    .main-wrapper {
+        padding-top: 52px !important;
+    }
+
+    :root {
+        --ifm-navbar-height: 52px !important;
+    }
+
+    .container {
+        padding: 0 0.25rem !important;
+    }
+}
+
+/* Fix footer positioning with responsive navbar */
+.footer {
+    margin-top: 2rem !important;
+}
+
+/* Ensure proper scroll behavior */
+html {
+    scroll-padding-top: var(--ifm-navbar-height) !important;
+}
+
+/* Prevent horizontal overflow */
+html,
+body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
 }
