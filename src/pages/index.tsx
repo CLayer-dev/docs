@@ -106,7 +106,7 @@ function KeyFeatures() {
           <p><strong>2,000 TPS</strong> at launch, scaling to <strong>50,000 TPS</strong></p>
           <div className="feature-progress">
             <div className="progress-bar">
-              <div className="progress-fill" style={{ width: '40%' }}></div>
+              <div className="progress-fill" data-width="40"></div>
             </div>
             <span>40% of target achieved</span>
           </div>
@@ -130,15 +130,15 @@ function KeyFeatures() {
           <div className="compatibility-chart">
             <div className="compat-item">
               <span>Solidity</span>
-              <div className="compat-bar"><div style={{ width: '100%' }}></div></div>
+              <div className="compat-bar"><div data-width="100"></div></div>
             </div>
             <div className="compat-item">
               <span>Web3.js</span>
-              <div className="compat-bar"><div style={{ width: '100%' }}></div></div>
+              <div className="compat-bar"><div data-width="100"></div></div>
             </div>
             <div className="compat-item">
               <span>Metamask</span>
-              <div className="compat-bar"><div style={{ width: '100%' }}></div></div>
+              <div className="compat-bar"><div data-width="100"></div></div>
             </div>
           </div>
         </div>
@@ -150,12 +150,12 @@ function KeyFeatures() {
           <div className="energy-comparison">
             <div className="energy-bar ethereum">
               <span>Ethereum PoW</span>
-              <div className="bar" style={{ width: '100%' }}></div>
+              <div className="bar"><div data-width="100"></div></div>
               <span>100%</span>
             </div>
             <div className="energy-bar circle">
               <span>Circle Layer</span>
-              <div className="bar" style={{ width: '0.1%' }}></div>
+              <div className="bar"><div data-width="0.1"></div></div>
               <span>0.1%</span>
             </div>
           </div>

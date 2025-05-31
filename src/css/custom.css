@@ -924,3 +924,229 @@ body .mobile-target-cards {
         padding: 0 12px !important;
     }
 }
+
+/* --- RESPONSIVE PROGRESS BARS AND SLIDERS --- */
+
+/* Progress bars - responsive and theme-aware */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--ifm-color-emphasis-200);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--ifm-color-primary);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    /* Default widths for different progress levels */
+}
+
+.progress-fill[data-width="40"] {
+    width: 40%;
+}
+
+.progress-fill[data-width="70"] {
+    width: 70%;
+}
+
+.progress-fill[data-width="85"] {
+    width: 85%;
+}
+
+.progress-fill[data-width="95"] {
+    width: 95%;
+}
+
+.progress-fill[data-width="98"] {
+    width: 98%;
+}
+
+/* Compatibility bars */
+.compat-bar {
+    height: 6px;
+    background: var(--ifm-color-emphasis-200);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0.25rem 0;
+    position: relative;
+}
+
+.compat-bar>div {
+    height: 100%;
+    background: var(--ifm-color-success);
+    border-radius: 3px;
+    width: 100% !important;
+    /* Override inline styles */
+}
+
+/* Energy comparison bars */
+.energy-bar .bar {
+    height: 8px;
+    background: var(--ifm-color-emphasis-200);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.energy-bar.ethereum .bar>div,
+.energy-bar .bar[data-width="100"] {
+    width: 100% !important;
+    background: #ef4444;
+}
+
+.energy-bar.circle .bar>div,
+.energy-bar .bar[data-width="0.1"] {
+    width: 2px !important;
+    /* Minimum visible width */
+    background: #10b981;
+}
+
+/* Slider fills */
+.slider-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--ifm-color-emphasis-200);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-fill {
+    height: 100%;
+    background: var(--ifm-color-primary);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.slider-fill[data-width="30"] {
+    width: 30%;
+}
+
+.slider-fill[data-width="70"] {
+    width: 70%;
+}
+
+.slider-fill[data-width="25"] {
+    width: 25%;
+}
+
+.slider-fill[data-width="5"] {
+    width: 5%;
+}
+
+/* Bar fills for various progress indicators */
+.bar-fill {
+    height: 100%;
+    background: var(--ifm-color-primary);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.bar-fill[data-width="100"] {
+    width: 100%;
+}
+
+.bar-fill[data-width="0.1"] {
+    width: 2px;
+    /* Minimum visible width */
+}
+
+.bar-fill[data-width="70"] {
+    width: 70%;
+}
+
+.bar-fill[data-width="25"] {
+    width: 25%;
+}
+
+.bar-fill[data-width="5"] {
+    width: 5%;
+}
+
+.bar-progress {
+    height: 8px;
+    background: var(--ifm-color-primary);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.bar-progress[data-width="98"] {
+    width: 98%;
+}
+
+.bar-progress[data-width="85"] {
+    width: 85%;
+}
+
+.bar-progress[data-width="95"] {
+    width: 95%;
+}
+
+/* Responsive table columns */
+@media (max-width: 768px) {
+    .desktop-performance-table colgroup col {
+        width: auto !important;
+    }
+
+    .desktop-performance-table table {
+        min-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .desktop-performance-table th,
+    .desktop-performance-table td {
+        padding: 0.5rem !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Make all progress elements more visible on very small screens */
+    .progress-bar,
+    .compat-bar,
+    .energy-bar .bar,
+    .slider-bar {
+        height: 10px;
+    }
+
+    .progress-fill,
+    .compat-bar>div,
+    .energy-bar .bar>div,
+    .slider-fill,
+    .bar-fill,
+    .bar-progress {
+        min-width: 3px;
+        /* Ensure minimum visibility */
+    }
+}
+
+/* Dark theme adjustments for progress elements */
+[data-theme="dark"] .progress-bar,
+[data-theme="dark"] .compat-bar,
+[data-theme="dark"] .energy-bar .bar,
+[data-theme="dark"] .slider-bar {
+    background: var(--ifm-color-emphasis-800);
+}
+
+[data-theme="dark"] .progress-fill,
+[data-theme="dark"] .compat-bar>div,
+[data-theme="dark"] .slider-fill,
+[data-theme="dark"] .bar-fill,
+[data-theme="dark"] .bar-progress {
+    background: var(--ifm-color-primary);
+}
+
+[data-theme="dark"] .energy-bar.ethereum .bar>div {
+    background: #dc2626;
+}
+
+[data-theme="dark"] .energy-bar.circle .bar>div {
+    background: #059669;
+}
