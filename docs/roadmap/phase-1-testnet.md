@@ -1,178 +1,277 @@
 ---
 id: phase-1-testnet
-title: Phase 1 - Testnet Launch
-sidebar_label: Phase 1 - Testnet
+title: Circle Layer Development Roadmap
+sidebar_label: Development Roadmap
 ---
 
-# Phase 1 - Testnet Launch
+# Circle Layer Development Roadmap
 
-## Overview
+## Strategic Overview
 
-Circle Layer's Phase 1 testnet is now live and operational, providing developers and validators with a robust environment to test the network's capabilities.
+Circle Layer is building a robust, high-performance blockchain ecosystem through a carefully planned 2-phase development approach before mainnet launch. Our strategy focuses on comprehensive testing, ecosystem development, and security hardening to ensure a production-ready network.
 
-## Timeline
+## Phase 1: Token Launch & Core Infrastructure (Current)
 
-**Q1 2025 - Q2 2025** ✅ **LIVE**
+### Strategic Launch Approach
 
-## Current Network Status
+**🚀 ERC20 Token Stealth Launch**
+- Launch CLAYER token on Ethereum with minimal initial liquidity
+- Start small and grow organically through community building
+- Target progression: $10K → $100K → $1M → $10M → $100M+ → $1B+ market cap
+- Allow early community to achieve 100X-1000X gains before mainnet
+- Build strong holder base and community engagement before technical launch
 
-### Live Testnet Details
+**📈 Community Growth Strategy**
+- Stealth launch with organic discovery
+- Focus on utility and long-term value creation
+- Gradual market cap expansion through genuine adoption
+- Reward early believers with massive potential returns
+- Create anticipation for mainnet migration
+
+### Token Economics & Growth Potential
+
+**🎯 Market Cap Progression Strategy**
+- **Launch Phase**: $1K - $10K (Ultra-early discovery)
+- **Community Building**: $10K - $100K (Early adopters)
+- **Ecosystem Development**: $100K - $1M (Growing awareness)
+- **Pre-Mainnet Hype**: $1M - $10M (Major attention)
+- **Mainnet Preparation**: $10M - $100M+ (Institutional interest)
+
+**💎 Early Holder Benefits**
+- **100X Potential**: From $1K to $100K market cap
+- **1000X Potential**: From $1K to $1M market cap
+- **10,000X Potential**: From $1K to $10M+ market cap
+- **First-Mover Advantage**: Get in before major marketing
+- **Community Governance**: Early holders shape the future
+
+**🔄 Migration Strategy**
+- ERC20 holders automatically eligible for native token migration
+- 1:1 migration ratio maintained
+- Additional migration bonuses for long-term holders
+- Seamless transition to native chain
+- Continued value appreciation on native network
+
+### Technical Development Objectives
+- Build and test core blockchain infrastructure
+- Achieve 2,000 TPS on testnet with 3-second block times
+- Establish validator network and consensus mechanism
+- Create developer tooling and documentation
+- Prepare for eventual token migration to native chain
+
+### Current Development Status
+
+#### Core Infrastructure 🔧 IN DEVELOPMENT
+- ✅ DPoS consensus implementation (Completed)
+- ✅ EVM compatibility layer (Completed)
+- ✅ Network optimization (Completed)
+- 🔄 Advanced performance testing (Ongoing)
+- 🔄 Security auditing (Ongoing)
+
+#### Developer Infrastructure 🛠️ IN DEVELOPMENT
+- ✅ RPC endpoints (Ready for testing)
+- ✅ WebSocket endpoints (Ready for testing)
+- ✅ Web3 library compatibility (Verified)
+- ✅ Developer documentation (Comprehensive)
+- 🔄 API enhancements (Ongoing)
+- 🔄 Advanced tooling integration (Ongoing)
+
+<!-- 
+### Testnet Network Details (READY - WILL BE ACTIVATED)
 - **Network Name**: Circle Layer Testnet
 - **RPC URL**: https://rpc-testnet.circlelayer.com
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
 - **Block Explorer**: https://explorer-testnet.circlelayer.com/
 - **Faucet**: https://faucet.circlelayer.com
+-->
 
-### Current Performance Metrics
-- **Block Time**: 3 seconds (actual)
-- **Finality**: 1-3 seconds (actual)
-- **Network Uptime**: 99.95% (Last 30 days)
+### Target Performance Metrics
+- **Block Time**: 3 seconds
+- **Transaction Finality**: 1-3 seconds
+- **Current TPS Target**: 2,000 TPS
+- **Target Network Uptime**: 99.95%
 - **Gas Price**: Minimum 0.000021 CLAYER
-- **Block Gas Limit**: 10,000,000,000,000 per block
 
-## Key Milestones
+### Validator Network Specifications
+- **Minimum Stake**: 100,000 CLAYER
+- **Hardware Requirements**: 
+  - Ubuntu ≥ 20.04 LTS
+  - 32GB RAM recommended (8GB minimum)
+  - 100GB SSD storage recommended
+  - Required ports: 32668, 32669, 8545, 6060, 80, 22
 
-### Core Infrastructure ✅ COMPLETED
-- ✅ DPoS consensus implementation
-- ✅ EVM compatibility layer
-- ✅ Standard EVM security framework
-- ✅ Network optimization
-- ✅ Performance testing
+## Phase 2: Ecosystem Expansion & Security Hardening
 
-### Developer Tools ✅ COMPLETED
-- ✅ RPC endpoints (https://rpc-testnet.circlelayer.com)
-- ✅ WebSocket endpoint (wss://138.197.184.207:8545)
-- ✅ Web3 library support
-- ✅ Developer documentation
-- ✅ API documentation (https://testnet.circlelayer.com/api-docs)
-- ✅ GraphQL endpoint (https://testnet.circlelayer.com/graphiql)
 
-### Validator Network ✅ LIVE
-- ✅ Validator node software
-- ✅ Staking mechanism (100,000 CLAYER minimum)
-- ✅ Reward distribution (CLAYER rewards)
-- ✅ Network security (DPoS)
-- ✅ Active validator requirements (minimum 5 validators)
 
-## Features Included
+### Strategic Focus: Building Before Mainnet
 
-### Network Capabilities
-- **Block Time**: 3 seconds (actual performance)
-- **Finality**: 1-3 seconds (actual performance)
-- **Gas Fees**: Starting from 0.000021 CLAYER
-- **Consensus**: Delegated Proof of Stake (DPoS)
+Following successful testnet deployment, Phase 2 focuses on comprehensive ecosystem development to ensure a robust, battle-tested platform before mainnet launch. This approach helps us avoid major exploits and security issues by thoroughly testing all components.
 
-### Security Features
-- Standard EVM security implementation
-- DPoS consensus security
-- Network requires minimum 5 active validators
-- 25% gas fee burn mechanism (max 1,000,000 CLAYER)
+#### 🌉 Cross-Chain Infrastructure
+- **Native Bridge Development**
+  - Multi-chain bridge architecture
+  - Initial support for 4 major trading pairs
+  - Advanced security protocols
+  - Cross-chain governance integration
 
-### Developer Experience
-- Full Ethereum tooling compatibility
-- Comprehensive API documentation
-- Example contract: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
-- Community support
+#### 🏦 DeFi Infrastructure  
+- **Native DEX Platform**
+  - Automated Market Maker (AMM) design
+  - 4 primary trading pairs at launch
+  - Advanced liquidity mining protocols
+  - Integration with bridge infrastructure
 
-## Live Resources
+#### 📱 User Experience & Mobile Access
+- **Native Wallet Development**
+  - iOS application (App Store ready)
+  - Android application (Play Store ready)
+  - Advanced security features
+  - Seamless DeFi integration
+  - Multi-chain support
 
-### Network Endpoints
+#### 🚀 Ecosystem Growth & Partnerships
+- **Startup Onboarding Program**
+  - Developer incentive programs
+  - Technical support and mentorship
+  - Grant programs for innovative projects
+  - Integration assistance
+
+- **Community Engagement**
+  - Major hackathon participation
+  - Developer conferences and workshops
+  - Technical partnerships
+  - Educational content creation
+
+#### 🛡️ Advanced Security Layer (Inspired by Monad's Approach)
+
+**Agentic Smart Contract Security**
+- **Pre-deployment AI Auditing**
+  - Real-time vulnerability scanning
+  - Automated exploit detection
+  - Pattern recognition for common attack vectors
+  - Integration with deployment pipeline
+
+- **Continuous Monitoring**
+  - Live transaction analysis
+  - Suspicious activity detection
+  - Automatic threat response
+  - Community alert systems
+
+**Why This Approach**: Recent incidents in the Sui ecosystem and other L1s have shown the critical importance of comprehensive pre-mainnet testing. By building a full ecosystem on testnet first, we can identify and resolve potential issues before they affect real user funds.
+
+#### 📊 Performance Optimization (Monad-Inspired)
+- **Parallel Execution Engine**
+  - Multi-threaded transaction processing
+  - Optimistic execution with rollback capabilities
+  - Advanced state management
+  - Memory optimization
+
+- **Target: 50,000 TPS Before Mainnet**
+  - Incremental scaling approach
+  - Stress testing with real applications
+  - Performance monitoring and optimization
+  - Infrastructure scaling preparation
+
+## Phase 3: Mainnet Launch
+
+### Launch Criteria
+- ✅ Sustained 50,000 TPS performance on testnet
+- ✅ Complete ecosystem operational (Bridge, DEX, Wallets)
+- ✅ Security layer fully tested and verified
+- ✅ Multiple successful hackathons and audits
+- ✅ Thriving developer community and applications
+- ✅ Economic model validated through testnet operations
+
+### Initial Mainnet Focus
+- Genesis launch with 21 validators
+- Gradual performance scaling to 50,000 TPS
+- DeFi infrastructure activation
+- Mobile wallet deployment
+
+## Phase 4: Global Expansion & Innovation
+
+### Strategic Objectives
+- Achieve top 10 blockchain by market cap
+- 10M+ active users globally
+- 1,000+ enterprise clients
+- 100,000+ TPS performance
+- Global regulatory compliance
+
+### Innovation Areas
+- AI-blockchain integration 2.0
+- Cross-chain leadership (50+ blockchains)
+- Enterprise solutions
+- Gaming & metaverse platform
+- Quantum-resistant security
+
+## Key Differentiators
+
+### 🎯 **Comprehensive Pre-Mainnet Testing**
+Unlike many L1s that rush to mainnet, we're investing significant time in testnet ecosystem development to ensure production readiness.
+
+### 🤖 **AI-First Security**
+Our agentic security layer provides real-time protection that learns and adapts, preventing the types of exploits seen in other ecosystems.
+
+### ⚡ **Performance + Security Balance**
+Achieving 50,000 TPS while maintaining the highest security standards through extensive testing and optimization.
+
+### 🌍 **Full-Stack Ecosystem**
+Building every component (bridge, DEX, wallets) in-house ensures seamless integration and consistent user experience.
+
+## Development Resources
+
+<!-- 
+### Network Endpoints (READY FOR ACTIVATION)
 - **RPC**: https://rpc-testnet.circlelayer.com
 - **WebSocket**: wss://138.197.184.207:8545
 - **Explorer**: https://explorer-testnet.circlelayer.com/
 - **API Docs**: https://testnet.circlelayer.com/api-docs
 - **GraphQL**: https://testnet.circlelayer.com/graphiql
+- **Faucet**: https://faucet.circlelayer.com
+-->
 
-### Faucet Information
-- **URL**: https://faucet.circlelayer.com
-- **Daily Limit**: 1 CLAYER per day per address
-- **Supported**: EVM-based wallets
-- **Total Testnet Supply**: 10 Billion CLAYER
+### Technical Documentation
+- Complete developer guides
+- API documentation
+- Security best practices
+- Integration examples
 
-### Validator Requirements
-- **Minimum Stake**: 100,000 CLAYER
-- **Hardware**: Ubuntu ≥ 20.04 LTS, 8GB RAM minimum (32GB recommended), 25GB storage minimum (100GB SSD recommended)
-- **Ports**: 32668, 32669, 8545, 6060, 80, 22
-- **Firewall**: Not required
+### Community Support
+- Developer Discord channels
+- Technical workshops
+- Office hours with core team
+- Grant program applications
 
-## Testing Focus Areas
+## Inspiration: Learning from Monad
 
-1. **Performance Testing** ✅ ONGOING
-   - Block time: 3 seconds (achieved)
-   - Transaction finality: 1-3 seconds (achieved)
-   - Network uptime: 99.95% (achieved)
-   - Gas efficiency testing
+We're closely studying Monad's approach to high-performance blockchain development:
 
-2. **Security Testing** ✅ ONGOING
-   - DPoS consensus security
-   - Network attack resistance
-   - Smart contract deployment testing
-   - Validator network stability
+- **Parallel Execution**: Implementing similar multi-threaded transaction processing
+- **EVM Optimization**: Custom bytecode improvements for better performance
+- **State Management**: Advanced techniques for efficient state handling
+- **Testing Methodology**: Comprehensive testing before mainnet deployment
 
-3. **Compatibility Testing** ✅ VERIFIED
-   - Ethereum dApp migration (EVM compatible)
-   - Web3 library integration (Web3.js, Ethers.js)
-   - Wallet compatibility (MetaMask, WalletConnect)
-   - Development tool support (Hardhat, Truffle, Remix)
-
-## Participation
+## Get Involved
 
 ### For Developers
-- Deploy and test smart contracts using CLAYER for gas
-- Get testnet tokens from faucet (1 CLAYER/day)
-- Use example contract for reference: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
-- Follow same integration patterns as other EVM blockchains
+- Join our testnet development program
+- Contribute to ecosystem tools
+- Apply for developer grants
+- Participate in hackathons
 
 ### For Validators
-- Stake minimum 100,000 CLAYER
-- Run validator nodes with specified hardware requirements
-- Help maintain network security (minimum 5 validators required)
-- Earn CLAYER rewards
+- Early validator program participation
+- Network security contributions
+- Community governance involvement
+- Reward program participation
 
-### Integration Guides Available
-- MetaMask configuration with CLAYER symbol
-- WalletConnect setup (register and follow guidelines)
-- Hardhat configuration with CLAYER gas settings
-- Web3.js and Ethers.js examples
+### For Projects
+- Ecosystem grant applications
+- Technical integration support
+- Marketing and community support
+- Cross-promotion opportunities
 
-## Current Status & Metrics
+---
 
-### Network Health
-- ✅ Network uptime: 99.95% (30-day average)
-- ✅ Active validators: Meeting minimum requirements
-- ✅ Block production: Consistent 3-second intervals
-- ✅ Transaction processing: 1-3 second finality
-
-### Developer Adoption
-- ✅ API documentation available
-- ✅ Example contracts deployed
-- ✅ Integration guides published
-- ✅ Standard EVM tooling compatibility
-
-## Features in Development
-
-The following features are currently in development and will be available in future releases:
-
-### Smart Contract Infrastructure
-- **Staking Contract**: Currently using manual staking process, automated staking contract in development
-- **Governance Contract**: Decentralized governance system in development
-- **Bridge Contracts**: Cross-chain bridge infrastructure in development
-- **Oracle Contracts**: Decentralized oracle network in development
-
-### Network Monitoring & Analytics
-- **Status Page**: Real-time network status dashboard in development
-- **Monitoring Dashboard**: Comprehensive network analytics in development  
-- **Alert System**: Automated monitoring and alert system in development
-
-### API Enhancements
-- **Rate Limiting**: Enhanced rate limiting system in development (check API docs for current limits)
-
-## Next Phase
-
-Upon continued testnet success, we will proceed to Phase 2: Mainnet Preparation, focusing on:
-- Enhanced security audits
-- Performance optimization for higher TPS targets
-- Governance implementation
-- Economic model finalization
-- Mainnet deployment preparation 
+*This roadmap reflects our commitment to building a production-ready, secure, and high-performance blockchain ecosystem. All timelines are estimates and may be adjusted based on development progress and security considerations.* 

@@ -91,6 +91,9 @@ const sidebars: SidebarsConfig = {
       label: '🗺️ Roadmap',
       items: [
         'roadmap/phase-1-testnet',
+        'roadmap/phase-2-ecosystem',
+        'roadmap/phase-3-mainnet',
+        'roadmap/phase-4-expansion',
       ],
     },
     {

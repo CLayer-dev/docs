@@ -22,7 +22,7 @@ Yes, Circle Layer is fully EVM compatible, allowing Ethereum developers to easil
 ## Network Information
 
 ### What is the current network status?
-- **Status**: Testnet Live
+- **Status**: In Development
 - **Chain ID**: 28525
 - **Currency**: CLAYER
 - **Block Time**: 3 seconds

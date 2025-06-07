@@ -12,7 +12,7 @@ Circle Layer uses a decentralized governance model that allows token holders to 
 
 ### 1. Token Holders
 - Voting power based on token holdings
-- Minimum stake for voting: 1,000 CL
+- Minimum stake for voting: 1,000 CLAYER
 - Delegation options available
 
 ### 2. Validators
@@ -28,7 +28,7 @@ Circle Layer uses a decentralized governance model that allows token holders to 
 ## Governance Process
 
 ### 1. Proposal Creation
-- Minimum stake: 10,000 CL
+- Minimum stake: 10,000 CLAYER
 - Technical specification
 - Implementation plan
 - Resource requirements

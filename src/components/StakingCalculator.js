@@ -27,7 +27,7 @@ export default function StakingCalculator() {
             <h4>💰 Staking Calculator</h4>
             <div className="calculator-form">
                 <div className="input-group">
-                    <label>Stake Amount (CL)</label>
+                    <label>Stake Amount (CLAYER)</label>
                     <div className="input-with-buttons">
                         <input
                             type="number"
@@ -46,11 +46,11 @@ export default function StakingCalculator() {
                 <div className="calculator-results">
                     <div className="result-item">
                         <span>Annual Rewards</span>
-                        <span className="reward-value">{rewards.annual} CL</span>
+                        <span className="reward-value">{rewards.annual} CLAYER</span>
                     </div>
                     <div className="result-item">
                         <span>Monthly Rewards</span>
-                        <span className="reward-value">{rewards.monthly} CL</span>
+                        <span className="reward-value">{rewards.monthly} CLAYER</span>
                     </div>
                     <div className="result-item">
                         <span>APY</span>
@@ -58,7 +58,7 @@ export default function StakingCalculator() {
                     </div>
                     <div className="result-item total">
                         <span>Total After 1 Year</span>
-                        <span className="reward-value">{rewards.total} CL</span>
+                        <span className="reward-value">{rewards.total} CLAYER</span>
                     </div>
                 </div>
             </div>

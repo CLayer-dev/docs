@@ -62,9 +62,9 @@ Rate limiting information is not currently specified. Please check the [API docu
 - eth_blockNumber
 
 ### Circle Layer Specific Methods
-- cl_getValidatorInfo
-- cl_getStakingRewards
-- cl_getNetworkStats
+- clayer_getValidatorInfo
+- clayer_getStakingRewards
+- clayer_getNetworkStats
 
 ## Examples
 

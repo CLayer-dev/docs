@@ -89,11 +89,34 @@ The following tokenomics features are currently in development:
 
 ## Economic Incentives
 
-### Validator Incentives
+### Validator Incentives & Revenue Potential
 - **CLAYER Rewards**: Earned through block validation
 - **Network Security**: Stake-based security model
 - **Performance Requirements**: 24/7 uptime expectations
 - **Hardware Requirements**: Modest requirements (8GB RAM minimum)
+
+#### Expected Validator Revenue Streams
+1. **Block Rewards**: 2 CLAYER per block (base reward)
+   - Daily earnings: 8,640-12,000 CLAYER
+   - Uptime bonus: +20% for 99%+ availability
+   - Performance bonus: +15% for top quartile validators
+
+2. **Transaction Fee Revenue**: 50% share of network fees
+   - Conservative estimate: $50K-150K daily network fees
+   - Moderate estimate: $200K-600K daily network fees  
+   - Optimistic estimate: $1M+ daily network fees at peak adoption
+
+3. **Delegation Commission**: 5-15% from delegated stake
+   - Revenue scales with total delegated amount
+   - Competitive commission rates drive delegation
+   - Expected delegation: $500K-5M per validator at scale
+
+#### Annual Revenue Projections (Per Validator)
+- **Conservative Scenario**: 25,000-58,000 CLAYER ($25K-58K USD)
+- **Moderate Scenario**: 83,000-223,000 CLAYER ($83K-223K USD)
+- **Optimistic Scenario**: 328,000-1,342,000 CLAYER ($328K-1.34M USD)
+
+*Note: USD values assume $1/CLAYER price. Actual returns depend on network adoption, CLAYER price, and individual validator performance.*
 
 ### Developer Incentives
 - **Free Testnet Tokens**: Daily faucet distribution

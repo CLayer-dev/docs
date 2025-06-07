@@ -76,7 +76,7 @@ function MetricsDashboard() {
         <div className="metric-card">
           <div className="metric-value">50,000</div>
           <div className="metric-label">TPS Mainnet Goal</div>
-          <div className="metric-trend">🎯 2025 Roadmap</div>
+          <div className="metric-trend">🎯 Development Roadmap</div>
         </div>
 
         <div className="metric-card">
@@ -171,7 +171,7 @@ function WhyChooseSection() {
       <Tabs>
         <TabItem value="performance" label="🚀 Performance">
           <h3>Target Performance Metrics</h3>
-          <p><strong>🚧 Development Roadmap - Phase 1 Target: 50,000 TPS (In Development)</strong></p>
+          <p><strong>🚧 Development Roadmap - Target: 50,000 TPS (In Development)</strong></p>
 
           {/* Desktop Table */}
           <div className="desktop-performance-table">

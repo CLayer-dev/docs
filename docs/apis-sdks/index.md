@@ -78,14 +78,14 @@ const client = createPublicClient({
 - **Block Time**: 3 seconds
 - **Gas Price**: Minimum 0.000021 CLAYER
 
-## 📊 API Status
+## 📊 Development Status
 
-| Service | Status | Uptime |
-|---------|--------|--------|
-| RPC API | 🟢 Live | 99.95% |
-| WebSocket | 🟢 Live | 99.95% |
-| Block Explorer | 🟢 Live | 99.9% |
-| GraphQL | 🟡 Development | Coming Soon |
+| Service | Status | Readiness |
+|---------|--------|-----------|
+| RPC API | 🟡 Ready for Testing | Infrastructure Complete |
+| WebSocket | 🟡 Ready for Testing | Infrastructure Complete |
+| Block Explorer | 🟡 Ready for Testing | Infrastructure Complete |
+| GraphQL | 🔄 In Development | Coming Soon |
 
 ## 🆘 Support
 

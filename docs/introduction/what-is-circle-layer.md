@@ -6,7 +6,7 @@ sidebar_label: What is Circle Layer?
 
 # What is Circle Layer?
 
-Circle Layer is a high-performance, EVM-compatible, Delegated Proof of Stake (DPoS) Layer 1 blockchain designed to power decentralized applications with low fees, fast transactions, and exceptional scalability. The testnet is currently live with standard EVM security features and a robust validator network.
+Circle Layer is a high-performance, EVM-compatible, Delegated Proof of Stake (DPoS) Layer 1 blockchain designed to power decentralized applications with low fees, fast transactions, and exceptional scalability. We're building a comprehensive ecosystem through strategic development phases, focusing on thorough testing and security before mainnet launch.
 
 ## Core Technology
 
@@ -18,29 +18,42 @@ Circle Layer combines several cutting-edge technologies to deliver a superior bl
 - **Fast Performance**: 3-second block time with 1-3 second finality
 - **Low Energy Usage**: 99.9% less energy consumption than Proof of Work
 
-## Current Network Performance
+## Development Strategy
 
-### Live Testnet Metrics
-- **Chain ID**: 28525
-- **Currency**: CLAYER
-- **Block Time**: 3 seconds (actual)
-- **Transaction Finality**: 1-3 seconds (actual)
-- **Network Uptime**: 99.95% (Last 30 days)
-- **Consensus**: Delegated Proof of Stake (DPoS)
+### Our Approach: Building Before Launching
+Circle Layer follows a strategic 3-phase development approach:
 
-### Network Infrastructure
+**Phase 1: Core Infrastructure** (Current)
+- 2,000 TPS testnet development
+- DPoS consensus implementation
+- EVM compatibility & developer tools
+
+**Phase 2: Ecosystem Expansion**
+- Native Bridge & DEX (4 trading pairs)
+- iOS/Android wallets
+- Agentic AI security layer
+- 50,000 TPS optimization
+
+**Phase 3: Mainnet Launch**
+- Complete ecosystem operational
+- Security battle-tested
+- Production-ready performance
+
+<!-- 
+### Network Infrastructure (READY FOR ACTIVATION)
 - **RPC Endpoint**: https://rpc-testnet.circlelayer.com
 - **WebSocket**: wss://138.197.184.207:8545
 - **Block Explorer**: https://explorer-testnet.circlelayer.com/
 - **Faucet**: https://faucet.circlelayer.com
+-->
 
 ## Key Differentiators
 
-### Performance
-- **Current Block Time**: 3 seconds
-- **Current Finality**: 1-3 seconds
-- **Network Status**: Testnet Live
-- **Gas Fees**: Starting from 0.000021 CLAYER
+### Performance Targets
+- **Testnet Target**: 2,000 TPS with 3-second blocks
+- **Mainnet Goal**: 50,000 TPS with sub-second finality
+- **Development Status**: Building comprehensive ecosystem
+- **Gas Efficiency**: Ultra-low fees with CLAYER token
 
 ### Security
 - **DPoS Consensus**: Delegated Proof of Stake security model
@@ -54,27 +67,33 @@ Circle Layer combines several cutting-edge technologies to deliver a superior bl
 - **MetaMask Support**: Easy wallet configuration
 - **Example Contracts**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
 
-## Use Cases
+## Future Ecosystem
 
-Circle Layer testnet is particularly well-suited for:
+Circle Layer is designed to support a comprehensive blockchain ecosystem:
 
-1. **DeFi Applications**
-   - Decentralized exchanges using CLAYER for gas
-   - Lending platforms
-   - Yield farming protocols
-   - Token development and testing
+1. **Native DeFi Infrastructure**
+   - Built-in DEX with 4 major trading pairs
+   - Cross-chain bridge architecture
+   - Yield farming and liquidity protocols
+   - Advanced trading features
 
-2. **Smart Contract Development**
-   - Contract deployment and testing
-   - Gas optimization testing
-   - Integration testing with CLAYER
-   - Performance benchmarking
+2. **Developer-First Platform**
+   - Full EVM compatibility for easy migration
+   - Comprehensive SDK and API suite
+   - AI-powered security auditing tools
+   - Performance optimization frameworks
 
-3. **dApp Development**
-   - Frontend integration testing
-   - Wallet integration
-   - Transaction testing
-   - User experience optimization
+3. **User Experience Focus**
+   - Native iOS and Android wallets
+   - Seamless onboarding flows
+   - Instant transaction confirmations
+   - Multi-chain support integration
+
+4. **Enterprise & Startup Ecosystem**
+   - Dedicated startup onboarding programs
+   - Enterprise blockchain solutions
+   - Grant programs and hackathon sponsorships
+   - Technical partnership opportunities
 
 ## Network Architecture
 

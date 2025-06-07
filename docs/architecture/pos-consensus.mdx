@@ -117,7 +117,7 @@ graph TB
     <p>Low barriers to entry reduce centralization risks and promote participation</p>
     <div className="decentralization-stats">
       <div className="stat-item">
-        <span className="stat-number">10 CL</span>
+        <span className="stat-number">10 CLAYER</span>
         <span className="stat-label">Min Stake</span>
       </div>
       <div className="stat-item">
@@ -209,11 +209,11 @@ graph TB
           </div>
           <div className="stat-card">
             <div className="stat-number">15,423</div>
-            <div className="stat-label">Total Staked CL</div>
+            <div className="stat-label">Total Staked CLAYER</div>
             <div className="stat-change">+892 this week</div>
           </div>
           <div className="stat-card">
-            <div className="stat-number">99.8%</div>
+            <div className="stat-number">99.95%</div>
             <div className="stat-label">Network Uptime</div>
             <div className="stat-change">Excellent</div>
           </div>
@@ -383,7 +383,7 @@ graph TB
             <p>Selected validator proposes a new block</p>
             <div className="phase-details">
               <div>⏱️ Duration: 0.5s</div>
-              <div>🎯 Success Rate: 99.8%</div>
+              <div>🎯 Success Rate: 99.95%</div>
             </div>
           </div>
 
@@ -445,7 +445,7 @@ graph TB
       <StakingCalculator />
 
       <div className="reward-distribution">
-        <h4>📊 Reward Distribution</h4>
+        <h4>📊 Reward Distribution & Revenue Sharing</h4>
         <div className="distribution-chart">
           <div className="chart-section validators">
             <div className="section-header">
@@ -486,6 +486,138 @@ graph TB
             </div>
           </div>
         </div>
+
+        <div className="revenue-sharing-details">
+          <h5>💰 Revenue Sharing Breakdown</h5>
+          <div className="revenue-sources">
+            <div className="revenue-source">
+              <h6>🔥 Transaction Fees</h6>
+              <ul>
+                <li>Validators: 50% of transaction fees</li>
+                <li>Treasury: 30% for ecosystem development</li>
+                <li>Burn Mechanism: 25% (max 1M CLAYER per period)</li>
+                <li>Expected Fee Revenue: $50K-500K daily at peak usage</li>
+              </ul>
+            </div>
+            <div className="revenue-source">
+              <h6>🎁 Block Rewards</h6>
+              <ul>
+                <li>Base Block Reward: 2 CLAYER per block</li>
+                <li>Uptime Bonus: +20% for 99%+ uptime</li>
+                <li>Performance Bonus: +15% for top 25% validators</li>
+                <li>Expected Block Revenue: 8,640-12,000 CLAYER daily</li>
+              </ul>
+            </div>
+            <div className="revenue-source">
+              <h6>📈 Delegation Commission</h6>
+              <ul>
+                <li>Validator Commission: 5-15% from delegator rewards</li>
+                <li>Competitive Commission Range: Market-driven rates</li>
+                <li>Expected Delegation Revenue: 2-8% annual from delegated stake</li>
+                <li>Total Delegated Value: $500K-5M per validator at scale</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="expected-revenue">
+            <h5>💎 Expected Validator Revenue (Annual)</h5>
+            <div className="revenue-scenarios">
+              <div className="scenario conservative">
+                <h6>🟢 Conservative (Low Network Usage)</h6>
+                <div className="revenue-item">
+                  <span>Block Rewards:</span>
+                  <span>12,000-18,000 CLAYER</span>
+                </div>
+                <div className="revenue-item">
+                  <span>Transaction Fees:</span>
+                  <span>5,000-15,000 CLAYER</span>
+                </div>
+                <div className="revenue-item">
+                  <span>Delegation Commission:</span>
+                  <span>8,000-25,000 CLAYER</span>
+                </div>
+                <div className="revenue-total">
+                  <span>Total Annual Revenue:</span>
+                  <span>25,000-58,000 CLAYER</span>
+                </div>
+                <div className="revenue-usd">
+                  <span>USD Equivalent:</span>
+                  <span>$25K-58K (at $1/CLAYER)</span>
+                </div>
+              </div>
+
+              <div className="scenario moderate">
+                <h6>🟡 Moderate (Medium Network Usage)</h6>
+                <div className="revenue-item">
+                  <span>Block Rewards:</span>
+                  <span>18,000-28,000 CLAYER</span>
+                </div>
+                <div className="revenue-item">
+                  <span>Transaction Fees:</span>
+                  <span>25,000-75,000 CLAYER</span>
+                </div>
+                <div className="revenue-item">
+                  <span>Delegation Commission:</span>
+                  <span>40,000-120,000 CLAYER</span>
+                </div>
+                <div className="revenue-total">
+                  <span>Total Annual Revenue:</span>
+                  <span>83,000-223,000 CLAYER</span>
+                </div>
+                <div className="revenue-usd">
+                  <span>USD Equivalent:</span>
+                  <span>$83K-223K (at $1/CLAYER)</span>
+                </div>
+              </div>
+
+              <div className="scenario optimistic">
+                <h6>🔴 Optimistic (High Network Usage)</h6>
+                <div className="revenue-item">
+                  <span>Block Rewards:</span>
+                  <span>28,000-42,000 CLAYER</span>
+                </div>
+                <div className="revenue-item">
+                  <span>Transaction Fees:</span>
+                  <span>100,000-500,000 CLAYER</span>
+                </div>
+                <div className="revenue-item">
+                  <span>Delegation Commission:</span>
+                  <span>200,000-800,000 CLAYER</span>
+                </div>
+                <div className="revenue-total">
+                  <span>Total Annual Revenue:</span>
+                  <span>328,000-1,342,000 CLAYER</span>
+                </div>
+                <div className="revenue-usd">
+                  <span>USD Equivalent:</span>
+                  <span>$328K-1.34M (at $1/CLAYER)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="revenue-factors">
+            <h5>📊 Revenue Factors</h5>
+            <div className="factors-grid">
+              <div className="factor-item">
+                <span>🔥 Network Activity</span>
+                <p>Higher transaction volume = more fee revenue</p>
+              </div>
+              <div className="factor-item">
+                <span>⚡ Validator Performance</span>
+                <p>Better uptime and performance = bonus rewards</p>
+              </div>
+              <div className="factor-item">
+                <span>🤝 Delegation Amount</span>
+                <p>More delegated stake = higher commission earnings</p>
+              </div>
+              <div className="factor-item">
+                <span>💰 Token Price</span>
+                <p>CLAYER price appreciation increases USD value</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="staking-options">
@@ -499,7 +631,7 @@ graph TB
             <div className="option-content">
               <div className="requirement">
                 <span>Min Stake:</span>
-                <span>10 CL</span>
+                <span>100,000 CLAYER</span>
               </div>
               <div className="requirement">
                 <span>Hardware:</span>
@@ -525,7 +657,7 @@ graph TB
             <div className="option-content">
               <div className="requirement">
                 <span>Min Stake:</span>
-                <span>1 CL</span>
+                <span>1 CLAYER</span>
               </div>
               <div className="requirement">
                 <span>Hardware:</span>
@@ -551,7 +683,7 @@ graph TB
             <div className="option-content">
               <div className="requirement">
                 <span>Min Stake:</span>
-                <span>0.1 CL</span>
+                <span>0.1 CLAYER</span>
               </div>
               <div className="requirement">
                 <span>Liquidity:</span>
@@ -651,7 +783,7 @@ graph TB
       <div className="incentive-breakdown">
         <div className="incentive-item">
           <span>Block Rewards</span>
-          <span>2 CL/block</span>
+          <span>2 CLAYER/block</span>
         </div>
         <div className="incentive-item">
           <span>Transaction Fees</span>
