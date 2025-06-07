@@ -26,6 +26,22 @@
     margin: 0 0 2rem 0;
 }
 
+/* Hero Badge */
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .hero-logo-glow {
     display: flex;
     justify-content: center;
@@ -243,6 +259,16 @@ h3 {
     box-shadow: var(--shadow-medium);
 }
 
+[data-theme="dark"] .feature-card {
+    background: var(--ifm-color-emphasis-100);
+    border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+[data-theme="dark"] .feature-card:hover {
+    background: var(--ifm-color-emphasis-200);
+    border: 1px solid var(--ifm-color-emphasis-400);
+}
+
 .feature-card.highlight {
     border: 2px solid var(--ifm-color-primary);
     background: linear-gradient(135deg, var(--ifm-background-color) 0%, var(--ifm-color-primary-lightest) 100%);
@@ -269,6 +295,11 @@ h3 {
     display: block;
 }
 
+[data-theme="dark"] .feature-card p,
+[data-theme="dark"] .feature-description {
+    color: var(--ifm-color-emphasis-800);
+}
+
 /* Progress Bars */
 .feature-progress {
     margin-top: 1rem;
@@ -292,7 +323,8 @@ h3 {
 
 /* Security Badges */
 .security-badges,
-.performance-badges {
+.performance-badges,
+.feature-badges {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -308,6 +340,11 @@ h3 {
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+[data-theme="dark"] .badge {
+    background: var(--ifm-color-primary-darker);
+    color: var(--ifm-color-primary-lightest);
 }
 
 /* Compatibility Chart */
@@ -1125,6 +1162,11 @@ table tbody tr:nth-child(2) td:first-child {
     border-radius: var(--border-radius);
 }
 
+[data-theme="dark"] .ecosystem-stats {
+    background: var(--ifm-color-emphasis-200);
+    border: 1px solid var(--ifm-color-emphasis-300);
+}
+
 .stat-item {
     text-align: center;
     padding: 1rem;
@@ -1133,8 +1175,18 @@ table tbody tr:nth-child(2) td:first-child {
     transition: transform 0.3s ease;
 }
 
+[data-theme="dark"] .stat-item {
+    background: var(--ifm-color-emphasis-100);
+    border: 1px solid var(--ifm-color-emphasis-300);
+}
+
 .stat-item:hover {
     transform: scale(1.05);
+}
+
+[data-theme="dark"] .stat-item:hover {
+    background: var(--ifm-color-emphasis-200);
+    border: 1px solid var(--ifm-color-emphasis-400);
 }
 
 .stat-number {
@@ -1150,6 +1202,10 @@ table tbody tr:nth-child(2) td:first-child {
     color: var(--ifm-color-emphasis-600);
     font-weight: 600;
     text-transform: uppercase;
+}
+
+[data-theme="dark"] .stat-label {
+    color: var(--ifm-color-emphasis-800);
 }
 
 /* Architecture Section */
@@ -1598,4 +1654,23 @@ table tbody tr:nth-child(2) td:first-child {
 
 [data-theme="dark"] .performance-metrics {
     background: var(--ifm-color-emphasis-100);
+}
+
+.ecosystem-target-badge {
+    background: var(--ifm-color-info-light) !important;
+    color: var(--ifm-color-info-darkest) !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    margin-left: 0.75rem;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 6px !important;
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+[data-theme="dark"] .ecosystem-target-badge {
+    background: var(--ifm-color-info-darker) !important;
+    color: var(--ifm-color-info-lightest) !important;
 }

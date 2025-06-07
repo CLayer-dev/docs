@@ -75,15 +75,14 @@ import '@site/src/css/intro.css';
 ## ✨ Key Features
 
 <div className="features-grid">
-  <div className="feature-card highlight">
+  <div className="feature-card">
     <div className="feature-icon">🚀</div>
     <h3>High Performance</h3>
     <span className="feature-description"><strong>2,000 TPS</strong> on testnet, targeting <strong>50,000 TPS</strong> for mainnet</span>
-    <div className="feature-progress">
-      <div className="progress-bar">
-        <div className="progress-fill" data-width="15"></div>
-      </div>
-      <span>Building towards target</span>
+    <div className="feature-badges">
+      <span className="badge">2,000 TPS Testnet</span>
+      <span className="badge">50,000 TPS Target</span>
+      <span className="badge">3s Block Time</span>
     </div>
   </div>
   
@@ -91,7 +90,7 @@ import '@site/src/css/intro.css';
     <div className="feature-icon">🔒</div>
     <h3>AI Security</h3>
     <span className="feature-description">Real-time smart contract auditing and threat detection</span>
-    <div className="security-badges">
+    <div className="feature-badges">
       <span className="badge">Real-time Auditing</span>
       <span className="badge">Threat Detection</span>
       <span className="badge">Auto-Protection</span>
@@ -102,19 +101,10 @@ import '@site/src/css/intro.css';
     <div className="feature-icon">⚡</div>
     <h3>EVM Compatible</h3>
     <span className="feature-description">Seamless migration from Ethereum</span>
-    <div className="compatibility-chart">
-      <div className="compat-item">
-        <span>Solidity</span>
-        <div className="compat-bar"><div data-width="100"></div></div>
-      </div>
-      <div className="compat-item">
-        <span>Web3.js</span>
-        <div className="compat-bar"><div data-width="100"></div></div>
-      </div>
-      <div className="compat-item">
-        <span>Metamask</span>
-        <div className="compat-bar"><div data-width="100"></div></div>
-      </div>
+    <div className="feature-badges">
+      <span className="badge">Solidity Ready</span>
+      <span className="badge">Web3.js Support</span>
+      <span className="badge">Metamask Compatible</span>
     </div>
   </div>
   
@@ -122,17 +112,10 @@ import '@site/src/css/intro.css';
     <div className="feature-icon">🌱</div>
     <h3>Energy Efficient</h3>
     <span className="feature-description">Proof of Stake consensus mechanism</span>
-    <div className="energy-comparison">
-      <div className="energy-bar ethereum">
-        <span>Ethereum PoW</span>
-        <div className="bar"><div data-width="100"></div></div>
-        <span>100%</span>
-      </div>
-      <div className="energy-bar circle">
-        <span>Circle Layer</span>
-        <div className="bar"><div data-width="0.1"></div></div>
-        <span>0.1%</span>
-      </div>
+    <div className="feature-badges">
+      <span className="badge">99.9% Less Energy</span>
+      <span className="badge">PoS Consensus</span>
+      <span className="badge">Eco-Friendly</span>
     </div>
   </div>
 </div>
@@ -360,18 +343,22 @@ flowchart TD
     
 ### Growing Ecosystem
 
+<div className="badge ecosystem-target-badge">Phase 3 Targets</div>
+
+*Projected ecosystem growth before mainnet launch*
+
 <div className="ecosystem-stats">
   <div className="stat-item">
     <div className="stat-number">150+</div>
-    <div className="stat-label">Active Validators</div>
+    <div className="stat-label">Target Validators</div>
   </div>
   <div className="stat-item">
     <div className="stat-number">25+</div>
-    <div className="stat-label">DApps Built</div>
+    <div className="stat-label">DApps in Development</div>
   </div>
   <div className="stat-item">
     <div className="stat-number">10K+</div>
-    <div className="stat-label">Community Members</div>
+    <div className="stat-label">Community Target</div>
   </div>
 </div>
 

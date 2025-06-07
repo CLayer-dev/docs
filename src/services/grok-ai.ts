@@ -15,44 +15,37 @@ class GrokAI {
 
     constructor() {
         this.docsLoader = new DocumentationLoader();
-        // Don't initialize during SSG - do it lazily when needed
+        this.initialize();
     }
 
-    /**
-     * Initialize Grok API when needed (lazy loading)
-     */
-    private initializeGrok(): void {
-        if (this.apiKey || this.isInitialized) return;
-
+    private async initialize() {
         try {
             // Get API key from environment (client-side compatible)
             let apiKey = getEnvVar('GROK_API_KEY');
 
-            // Also try direct process.env access as fallback
-            if (!apiKey && typeof process !== 'undefined') {
-                // @ts-ignore - webpack DefinePlugin should have injected this
-                apiKey = process.env.GROK_API_KEY;
-            }
-
-            console.log('🔍 DEBUG: Checking Grok API key availability...');
-            console.log('🔍 DEBUG: GROK_API_KEY length:', apiKey ? apiKey.length : 'undefined');
-            console.log('🔍 DEBUG: API key starts with xai-:', apiKey ? apiKey.startsWith('xai-') : false);
-
+            // Also try direct process.env access as fallback (only if webpack has injected it)
             if (!apiKey) {
-                console.error('❌ Grok API key not found in environment variables - AI features will be disabled');
-                console.error('❌ Please ensure GROK_API_KEY is set in your .env file');
-                this.isInitialized = true;
-                return;
+                try {
+                    // @ts-ignore - webpack DefinePlugin should have injected this
+                    const processEnvKey = process.env.GROK_API_KEY;
+                    if (processEnvKey && processEnvKey !== '' && processEnvKey !== 'undefined') {
+                        apiKey = processEnvKey;
+                    }
+                } catch (error) {
+                    // process.env not available in client-side, which is expected
+                }
             }
 
-            console.log('✅ Grok API key loaded from environment, initializing...');
-            this.apiKey = apiKey;
-            this.loadDocs();
-            this.isInitialized = true;
-            console.log('✅ Grok AI service initialized successfully!');
+            if (apiKey && apiKey !== 'undefined' && apiKey !== '') {
+                this.apiKey = apiKey;
+                this.isInitialized = true;
+            } else {
+                console.warn('⚠️ Grok AI: API key not found');
+                this.isInitialized = false;
+            }
         } catch (error) {
-            console.error('❌ Failed to initialize Grok AI:', error);
-            this.isInitialized = true;
+            console.error('❌ Grok AI initialization error:', error);
+            this.isInitialized = false;
         }
     }
 
@@ -247,7 +240,7 @@ Return numbers only (e.g., 0, 5, 12):`;
 
 Rules:
 - Circle Layer topics only
-- 200-300 words max
+- Use clear, helpful explanations
 - Use markdown (##, \`\`\`, bullets)
 - If non-Circle Layer: "I help with Circle Layer blockchain only. Ask about Circle Layer development, staking, or setup."
 
@@ -316,9 +309,6 @@ Please provide a helpful answer based on the Circle Layer documentation provided
                 console.log('✅ Returning cached response for:', userQuery);
                 return cached.response;
             }
-
-            // Initialize Grok if not already done
-            this.initializeGrok();
 
             // Check if Grok is available
             if (!this.apiKey) {
@@ -405,15 +395,6 @@ Please provide a helpful answer based on the Circle Layer documentation provided
      */
     async getHealthStatus(): Promise<{ status: 'healthy' | 'degraded'; message: string }> {
         try {
-            this.initializeGrok();
-
-            if (!this.apiKey) {
-                return {
-                    status: 'degraded',
-                    message: 'Grok API key not configured'
-                };
-            }
-
             // Test Grok connection with a simple request
             await this.callGrok([
                 { role: 'user', content: 'test' }

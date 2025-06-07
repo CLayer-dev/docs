@@ -3,13 +3,13 @@
    ======================================== */
 
 .ai-security-hero {
-    background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-lightest) 100%);
-    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+    color: white;
     text-align: center;
-    color: var(--ifm-font-color-base);
+    padding: 4rem 2rem;
+    margin: -2rem -2rem 3rem -2rem;
     position: relative;
     overflow: hidden;
-    margin: -2rem -2rem 3rem -2rem;
 }
 
 .ai-security-hero::before {
@@ -19,41 +19,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="90" r="2.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
-    background-size: 100px 100px;
-    animation: float 20s ease-in-out infinite;
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-/* Badge styles using theme variables */
-.security-badge,
-.ai-badge,
-.step-badge {
-    background: var(--badge-ready-bg);
-    color: var(--badge-ready-text);
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-    backdrop-filter: blur(10px);
-}
-
-.step-badge {
-    background: var(--badge-medium-bg);
-    color: var(--badge-medium-text);
+    background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .ai-security-hero h2 {
@@ -64,7 +31,46 @@
 
 .ai-security-hero p {
     font-size: 1.25rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Badge styles with consistent colors */
+.security-badge,
+.ai-badge,
+.step-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    backdrop-filter: blur(10px);
+}
+
+.step-badge {
+    background: var(--ifm-color-secondary);
+    color: var(--ifm-color-secondary-contrast-foreground);
+    border: 1px solid var(--ifm-color-secondary-dark);
+}
+
+.ai-security-hero h2 {
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ai-security-hero p {
+    font-size: 1.25rem;
+    color: white;
+    opacity: 0.95;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -72,12 +78,23 @@
 
 /* Dark theme specific adjustments for AI Security */
 [data-theme="dark"] .ai-security-hero {
-    background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-color-primary) 100%);
-    color: var(--ifm-font-color-base);
+    background: linear-gradient(135deg, var(--ifm-color-primary-dark) 0%, var(--ifm-color-primary-darker) 100%);
 }
 
 [data-theme="dark"] .ai-security-hero h2 {
-    color: var(--ifm-color-primary);
+    color: white;
+}
+
+[data-theme="dark"] .ai-security-hero p {
+    color: white;
+    opacity: 0.95;
+}
+
+[data-theme="dark"] .security-badge,
+[data-theme="dark"] .ai-badge {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.25);
 }
 
 /* System Architecture Section */
@@ -109,6 +126,7 @@
     background: var(--ifm-background-color);
     border-radius: 8px;
     border: 1px solid var(--ifm-color-emphasis-200);
+    color: var(--ifm-font-color-base);
 }
 
 [data-theme="dark"] .architecture-diagram {
@@ -120,7 +138,7 @@
 /* Security Components Grid */
 .security-components {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin: 3rem 0;
 }
@@ -168,10 +186,12 @@
     justify-content: center;
     background: var(--ifm-color-primary-lightest);
     border-radius: 50%;
+    color: var(--ifm-color-primary-dark);
 }
 
 [data-theme="dark"] .component-icon {
     background: var(--ifm-color-primary-darkest);
+    color: var(--ifm-color-primary-light);
 }
 
 .component-title h4 {
@@ -183,6 +203,10 @@
     font-size: 0.9rem;
     color: var(--ifm-color-emphasis-600);
     margin: 0;
+}
+
+[data-theme="dark"] .component-subtitle {
+    color: var(--ifm-color-emphasis-700);
 }
 
 .component-metrics {
@@ -232,7 +256,7 @@
 
 .component-card .component-metrics {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1rem;
     margin: 1.5rem 0;
 }
@@ -287,6 +311,10 @@
     color: var(--ifm-color-emphasis-600);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+[data-theme="dark"] .metric-label {
+    color: var(--ifm-color-emphasis-700);
 }
 
 /* Tabbed Interface Styles */
@@ -375,6 +403,10 @@
     color: var(--ifm-color-emphasis-600);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+[data-theme="dark"] .stat-label {
+    color: var(--ifm-color-emphasis-700);
 }
 
 .monitoring-features {
@@ -487,14 +519,14 @@
 
 .threat-types {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
 }
 
 .threat-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
 }
@@ -582,7 +614,7 @@
 
 .algorithm-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1rem;
 }
 
@@ -674,8 +706,8 @@
 /* Automated Response Tab */
 .response-flow {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
     margin: 2rem 0;
     align-items: center;
 }
@@ -738,15 +770,23 @@
 .response-step::after {
     content: '→';
     position: absolute;
-    right: -0.5rem;
+    right: -0.75rem;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.5rem;
     color: var(--ifm-color-primary);
+    z-index: 1;
 }
 
 .response-step:last-child::after {
     display: none;
+}
+
+/* Hide arrows on single column layouts */
+@media (max-width: 768px) {
+    .response-step::after {
+        display: none;
+    }
 }
 
 .step-number {
@@ -773,7 +813,7 @@
 
 .action-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
 }
 
@@ -872,7 +912,7 @@
 
 .integration-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
 }
@@ -970,7 +1010,7 @@
 /* User Features */
 .user-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
 }
@@ -1198,8 +1238,8 @@
 
 .guarantee-metrics {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
     margin: 2rem 0;
 }
 
@@ -1230,20 +1270,21 @@
     letter-spacing: 0.5px;
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .ai-security-hero {
-        padding: 2rem 1rem;
+        padding: 2.5rem 1rem;
         margin: -1rem -1rem 2rem -1rem;
     }
 
     .ai-security-hero h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .security-components {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     .component-metrics {
@@ -1252,58 +1293,58 @@
 
     .monitoring-stats {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 
-    .threat-categories {
+    .threat-categories,
+    .algorithm-list,
+    .action-categories {
         grid-template-columns: 1fr;
     }
 
     .response-flow {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .response-step::after {
         content: '↓';
-        right: 50%;
+        position: absolute;
+        left: 50%;
         top: 100%;
-        transform: translateX(50%);
+        right: auto;
+        transform: translateX(-50%);
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
     }
 
     .response-step:last-child::after {
         display: none;
     }
 
+    .guarantee-metrics,
+    .user-features,
     .integration-steps {
         grid-template-columns: 1fr;
     }
 
-    .guarantee-metrics {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-
-    .user-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .config-options,
-    .dashboard-preview {
-        flex-direction: column;
+    .security-component,
+    .component-card {
+        padding: 1.75rem;
     }
 }
 
-/* Additional small mobile breakpoint */
 @media (max-width: 480px) {
     .ai-security-hero {
         padding: 1.5rem 0.75rem;
     }
 
     .ai-security-hero h2 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
-    .ai-security-hero p {
-        font-size: 1rem;
+    .monitoring-stats {
+        grid-template-columns: 1fr;
     }
 
     .security-component,
@@ -1311,36 +1352,8 @@
         padding: 1.5rem;
     }
 
-    .component-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-    }
-
-    .monitoring-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .guarantee-metrics {
-        grid-template-columns: 1fr;
-    }
-
     .stat-box {
         padding: 1rem;
-    }
-
-    .stat-number {
-        font-size: 1.5rem;
-    }
-
-    .response-step {
-        padding: 1rem;
-    }
-
-    .step-number {
-        width: 30px;
-        height: 30px;
-        font-size: 1rem;
     }
 }
 

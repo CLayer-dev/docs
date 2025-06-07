@@ -138,6 +138,38 @@
 	color: var(--ifm-footer-color) !important;
 }
 
+/* Ensure copyright text is visible in both themes */
+[data-theme="light"] .footer__copyright.footer__copyright__custom {
+	color: #1c1e21 !important;
+	/* Dark text for light theme */
+}
+
+[data-theme="dark"] .footer__copyright.footer__copyright__custom {
+	color: #ffffff !important;
+	/* White text for dark theme */
+}
+
+/* Copyright link styling for better visibility */
+[data-theme="light"] .footer__copyright.footer__copyright__custom a {
+	color: #495057 !important;
+	/* Darker gray for links in light theme */
+}
+
+[data-theme="light"] .footer__copyright.footer__copyright__custom a:hover {
+	color: #1a73e8 !important;
+	/* Primary color on hover */
+}
+
+[data-theme="dark"] .footer__copyright.footer__copyright__custom a {
+	color: #e9ecef !important;
+	/* Light gray for links in dark theme */
+}
+
+[data-theme="dark"] .footer__copyright.footer__copyright__custom a:hover {
+	color: #4189ed !important;
+	/* Lighter primary color on hover */
+}
+
 [data-theme="light"] {
 	--ifm-color-primary: #1a73e8;
 	--ifm-color-primary-dark: #1557c7;

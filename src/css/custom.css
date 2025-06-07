@@ -1,5 +1,8 @@
+/* Main CSS imports for Circle Layer documentation */
 @import url("./style.css");
+/* Core styling and theme colors */
 @import url("./responsive.css");
+/* Responsive design rules */
 
 /* ========================================
    SCROLL MARGIN FIX
