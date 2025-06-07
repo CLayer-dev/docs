@@ -10,24 +10,35 @@ Learn how to use Circle Layer's testnet faucet to obtain test tokens for develop
 
 ## Faucet Access
 
-- URL: https://faucet.circlelayer.org
-- Supported Networks: Testnet
-- Token Type: tCIRCLE
+- **URL**: https://faucet.circlelayer.com
+- **Supported Networks**: Circle Layer Testnet
+- **Token Type**: CLAYER
+- **Supported Wallet Formats**: EVM-based wallets
 
 ## How to Use
 
-1. Connect your wallet
-2. Enter your wallet address
-3. Request test tokens
+1. Copy your wallet address
+2. Paste your wallet address in the text box on the faucet page
+3. Click on "Get 1 CLAYER coin" button
 4. Wait for confirmation
-5. Verify balance
+5. Verify balance in your wallet
 
 ## Faucet Limits
 
-- Daily limit: 100 tCIRCLE
-- Request interval: 24 hours
-- Maximum balance: 1000 tCIRCLE
+- **Daily limit**: 1 CLAYER per day per address
+- **Request interval**: 24 hours
+- **Distribution**: From treasury wallet
+
+## Token Information
+
+- **Token Symbol**: CLAYER
+- **Testnet Total Supply**: 10 Billion CLAYER
+- **Decimals**: 18
 
 ## Troubleshooting
 
-Common issues and solutions for faucet usage.
+Common issues and solutions for faucet usage:
+
+- Ensure you're using an EVM-compatible wallet address
+- Wait 24 hours between requests
+- Check that your wallet is configured for Circle Layer Testnet

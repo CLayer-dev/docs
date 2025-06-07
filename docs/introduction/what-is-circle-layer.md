@@ -6,81 +6,113 @@ sidebar_label: What is Circle Layer?
 
 # What is Circle Layer?
 
-Circle Layer is a high-performance, EVM-compatible, Proof of Stake (POS) Layer 1 blockchain designed to power decentralized finance (DeFi) applications with low fees, fast transactions, and exceptional scalability. It stands out with its innovative AI security layer, which performs on-chain smart contract audits, ensuring a secure and robust ecosystem.
+Circle Layer is a high-performance, EVM-compatible, Delegated Proof of Stake (DPoS) Layer 1 blockchain designed to power decentralized applications with low fees, fast transactions, and exceptional scalability. The testnet is currently live with standard EVM security features and a robust validator network.
 
 ## Core Technology
 
 Circle Layer combines several cutting-edge technologies to deliver a superior blockchain experience:
 
 - **EVM Compatibility**: Full compatibility with Ethereum's virtual machine, allowing seamless migration of existing dApps
-- **Proof of Stake**: Energy-efficient consensus mechanism with enhanced security
-- **AI Security Layer**: Real-time smart contract auditing and threat detection
-- **High Throughput**: 2,000 TPS at launch, scaling to 50,000 TPS
-- **Low Latency**: 2-second block time with sub-10-second finality
+- **Delegated Proof of Stake (DPoS)**: Energy-efficient consensus mechanism with enhanced security
+- **Standard EVM Security**: Proven security implementations across the network
+- **Fast Performance**: 3-second block time with 1-3 second finality
+- **Low Energy Usage**: 99.9% less energy consumption than Proof of Work
+
+## Current Network Performance
+
+### Live Testnet Metrics
+- **Chain ID**: 28525
+- **Currency**: CLAYER
+- **Block Time**: 3 seconds (actual)
+- **Transaction Finality**: 1-3 seconds (actual)
+- **Network Uptime**: 99.95% (Last 30 days)
+- **Consensus**: Delegated Proof of Stake (DPoS)
+
+### Network Infrastructure
+- **RPC Endpoint**: https://rpc-testnet.circlelayer.com
+- **WebSocket**: wss://138.197.184.207:8545
+- **Block Explorer**: https://explorer-testnet.circlelayer.com/
+- **Faucet**: https://faucet.circlelayer.com
 
 ## Key Differentiators
 
 ### Performance
-- Initial TPS: 2,000 transactions per second
-- Target TPS: 50,000 transactions per second
-- Block Time: 2 seconds
-- Transaction Finality: < 10 seconds
+- **Current Block Time**: 3 seconds
+- **Current Finality**: 1-3 seconds
+- **Network Status**: Testnet Live
+- **Gas Fees**: Starting from 0.000021 CLAYER
 
 ### Security
-- AI-powered smart contract auditing
-- Real-time threat detection
-- Automated vulnerability assessment
-- Continuous security monitoring
+- **DPoS Consensus**: Delegated Proof of Stake security model
+- **Validator Requirements**: Minimum 5 active validators for network security
+- **Staking**: 100,000 CLAYER minimum stake requirement
+- **Burn Mechanism**: 25% from gas fees (maximum 1,000,000 CLAYER)
 
 ### Developer Experience
-- Full EVM compatibility
-- Comprehensive SDK and API support
-- Extensive documentation
-- Developer-friendly tools
+- **Full EVM Compatibility**: Same as other EVM blockchains
+- **Standard Integration**: Works with Web3.js, Ethers.js, and existing tools
+- **MetaMask Support**: Easy wallet configuration
+- **Example Contracts**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
 
 ## Use Cases
 
-Circle Layer is particularly well-suited for:
+Circle Layer testnet is particularly well-suited for:
 
 1. **DeFi Applications**
-   - Decentralized exchanges
+   - Decentralized exchanges using CLAYER for gas
    - Lending platforms
    - Yield farming protocols
-   - Stablecoins
+   - Token development and testing
 
-2. **Enterprise Solutions**
-   - Supply chain management
-   - Identity verification
-   - Asset tokenization
-   - Cross-border payments
+2. **Smart Contract Development**
+   - Contract deployment and testing
+   - Gas optimization testing
+   - Integration testing with CLAYER
+   - Performance benchmarking
 
-3. **Gaming and NFTs**
-   - In-game assets
-   - Digital collectibles
-   - Play-to-earn mechanics
-   - Virtual economies
+3. **dApp Development**
+   - Frontend integration testing
+   - Wallet integration
+   - Transaction testing
+   - User experience optimization
 
 ## Network Architecture
 
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│  Application    │     │  Consensus      │     │  AI Security    │
+│  Application    │     │  DPoS Consensus │     │  EVM Security   │
 │    Layer        │────▶│    Layer        │────▶│    Layer        │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
         │                       │                       │
         ▼                       ▼                       ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                     Network Layer                           │
+│                  Testnet Network Layer                      │
 └─────────────────────────────────────────────────────────────┘
 ```
 
+## 🚧 Features in Development
+
+The following features are currently being developed:
+
+### Smart Contract Infrastructure
+- Automated staking contracts (currently manual process)
+- On-chain governance system
+- Cross-chain bridge contracts
+- Decentralized oracle network
+
+### Network Monitoring
+- Real-time status dashboard
+- Advanced analytics platform
+- Automated alert system
+- Enhanced API features
+
 ## Getting Started
 
-To begin using Circle Layer:
+To begin using Circle Layer testnet:
 
-1. Set up a compatible wallet
-2. Connect to the testnet
-3. Obtain test tokens from the faucet
+1. [Set up a compatible wallet](/docs/getting-started/set-up-wallet)
+2. [Connect to the testnet](/docs/getting-started/connect-testnet)
+3. [Obtain test tokens from the faucet](/docs/getting-started/use-faucet)
 4. Start building or using applications
 
 For detailed instructions, refer to the [Getting Started](/docs/getting-started/set-up-wallet) section. 

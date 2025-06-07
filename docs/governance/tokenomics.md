@@ -6,77 +6,134 @@ sidebar_position: 2
 
 ## Overview
 
-Circle Layer's tokenomics model is designed to ensure long-term sustainability and growth.
+Circle Layer's tokenomics model is designed to ensure long-term sustainability and growth. The current testnet provides insight into the economic mechanisms that will support the network.
 
-## Token Distribution
+## Current Testnet Token Information
 
-### 1. Initial Distribution
-- Community: 40%
-- Development: 20%
-- Validators: 15%
-- Treasury: 15%
-- Team: 10%
+### Token Details
+- **Token Symbol**: CLAYER
+- **Decimals**: 18
+- **Testnet Total Supply**: 10 Billion CLAYER
+- **Chain ID**: 28525
+- **Network**: Circle Layer Testnet
 
-### 2. Vesting Schedule
-- Team tokens: 2-year vesting
-- Development fund: 4-year release
-- Treasury: Controlled by governance
+### Current Economic Parameters
+- **Minimum Gas Price**: 0.000021 CLAYER (1 Gwei)
+- **Block Gas Limit**: 10,000,000,000,000 per block
+- **Validator Minimum Stake**: 100,000 CLAYER
+- **Faucet Distribution**: 1 CLAYER per day per address
 
-### 3. Emission Schedule
-- Initial supply: 1 billion CL
-- Annual inflation: 2%
-- Staking rewards: 5-15% APY
+## Validator Economics
 
-## Token Utility
+### Staking Requirements
+- **Minimum Stake**: 100,000 CLAYER
+- **Staking Method**: Currently manual process
+- **Validator Network**: Minimum 5 active validators required
+- **Rewards**: CLAYER tokens
 
-### 1. Network Security
-- Staking for validators
-- Delegation to validators
-- Slashing protection
+### Network Security
+- **Consensus**: Delegated Proof of Stake (DPoS)
+- **Security Model**: Standard EVM + DPoS consensus
+- **Minimum Validators**: 5 active validators for network security
 
-### 2. Governance
-- Proposal creation
-- Voting rights
-- Delegation
+## Fee Structure
 
-### 3. Transaction Fees
-- Gas payments
-- Network operations
-- Smart contract execution
+### Gas Economics
+- **Gas Price Calculation**: Standard Ethereum method (gas price × gas amount)
+- **Base Gas Price**: 0.000000001 CLAYER (1 Gwei)
+- **Minimum Gas Price**: 0.000021 CLAYER
+- **Fee Payment**: CLAYER tokens
 
-## Economic Model
+### Fee Distribution
+- **Burn Mechanism**: 25% from gas fees
+- **Maximum Burn Limit**: 1,000,000 CLAYER
+- **Validator Rewards**: CLAYER tokens
+- **Treasury**: From faucet wallet distribution
 
-### 1. Staking Rewards
-- Validator rewards: 70%
-- Delegator rewards: 30%
-- Dynamic APY based on:
-  - Total stake
-  - Network usage
-  - Validator performance
+## 🚧 Features in Development
 
-### 2. Fee Distribution
-- Validators: 50%
-- Treasury: 30%
-- Burn: 20%
+### Automated Staking System
+The following tokenomics features are currently in development:
 
-### 3. Token Burning
-- Transaction fees
-- Governance penalties
-- Network operations
+**Smart Contract Staking**
+- Automated staking contracts (replacing manual process)
+- Smart contract-based delegation system
+- Automated reward distribution
+- Slashing conditions implementation
 
-## Market Dynamics
+**Enhanced Economics**
+- Dynamic fee structures
+- Advanced burn mechanisms
+- Governance token mechanics
+- Cross-chain token economics
 
-### 1. Supply Control
-- Controlled emission
-- Burn mechanisms
-- Staking locks
+### Governance Integration
+- **On-chain Governance**: Voting and proposal systems in development
+- **Token-based Voting**: CLAYER-based governance rights
+- **Delegation Mechanisms**: Stake delegation for governance
+- **Treasury Management**: Community-controlled treasury
 
-### 2. Demand Drivers
-- Network usage
-- Staking rewards
-- Governance participation
+## Network Operations
 
-### 3. Price Stability
-- Fee burning
-- Staking incentives
-- Treasury operations
+### Current Testnet Metrics
+- **Network Uptime**: 99.95% (Last 30 days)
+- **Block Time**: 3 seconds
+- **Transaction Finality**: 1-3 seconds
+- **Energy Efficiency**: 99.9% less than Proof of Work
+
+### Token Distribution (Testnet)
+- **Faucet**: Daily distribution of 1 CLAYER per address
+- **Treasury Wallet**: Distribution source for testnet tokens
+- **Validator Staking**: Manual 100,000 CLAYER requirement
+- **Testing Supply**: 10 Billion CLAYER available for testing
+
+## Economic Incentives
+
+### Validator Incentives
+- **CLAYER Rewards**: Earned through block validation
+- **Network Security**: Stake-based security model
+- **Performance Requirements**: 24/7 uptime expectations
+- **Hardware Requirements**: Modest requirements (8GB RAM minimum)
+
+### Developer Incentives
+- **Free Testnet Tokens**: Daily faucet distribution
+- **Low Gas Costs**: Affordable testing environment
+- **Example Contracts**: Reference implementation at 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
+- **Development Tools**: Full EVM compatibility
+
+## Future Economic Model
+
+### Planned Features
+The following economic features are planned for future releases:
+
+**Enhanced Tokenomics**
+- Advanced staking mechanisms
+- Governance-based fee adjustments
+- Cross-chain economic models
+- Oracle-based pricing mechanisms
+
+**Ecosystem Growth**
+- DeFi protocol incentives
+- Developer grant programs
+- Community governance participation
+- Network effect economics
+
+### Migration Path
+- Current testnet economics provide testing ground
+- Lessons learned will inform mainnet economics
+- Community feedback integration
+- Security audit requirements
+
+## Integration Economics
+
+### For Developers
+- **Gas Costs**: Predictable CLAYER-based fees
+- **Testing**: Free testnet environment
+- **Tools**: Standard EVM development costs
+- **Migration**: Minimal costs from other EVM chains
+
+### For Users
+- **Transaction Costs**: Low CLAYER fees
+- **Wallet Setup**: Standard EVM wallet compatibility
+- **Token Acquisition**: Faucet for testing, future exchanges for mainnet
+- **Network Access**: Standard EVM interaction patterns
