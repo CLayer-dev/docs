@@ -152,7 +152,7 @@ const config: Config = {
       },
       items: [
         {
-          to: '/docs/intro',
+          to: '/docs/',
           label: 'Overview',
           position: 'left',
         },
@@ -202,7 +202,7 @@ const config: Config = {
             },
             {
               label: 'APIs & SDKs',
-              to: '/docs/apis-sdks/index',
+              to: '/docs/apis-sdks/',
             },
             {
               label: 'RPC Endpoints',
@@ -385,7 +385,7 @@ const config: Config = {
             },
             {
               label: 'APIs & SDKs',
-              to: '/docs/apis-sdks/index',
+              to: '/docs/apis-sdks/',
             },
           ],
         },
