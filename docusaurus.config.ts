@@ -152,16 +152,32 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'docs',
+          to: '/docs/intro',
+          label: 'Overview',
           position: 'left',
-          label: 'Docs',
-          className: 'navbar-docs-btn',
         },
         {
-          to: '/docs/getting-started/set-up-wallet',
-          label: 'Quick Start',
+          type: 'dropdown',
+          label: 'Getting Started',
           position: 'left',
+          items: [
+            {
+              label: 'What is Circle Layer?',
+              to: '/docs/introduction/what-is-circle-layer',
+            },
+            {
+              label: 'Set Up Wallet',
+              to: '/docs/getting-started/set-up-wallet',
+            },
+            {
+              label: 'Connect to Testnet',
+              to: '/docs/getting-started/connect-testnet',
+            },
+            {
+              label: 'Use Faucet',
+              to: '/docs/getting-started/use-faucet',
+            },
+          ],
         },
         {
           type: 'dropdown',
@@ -173,12 +189,28 @@ const config: Config = {
               to: '/docs/development/writing-smart-contracts',
             },
             {
+              label: 'Deploy Contracts',
+              to: '/docs/development/deploying-contracts',
+            },
+            {
+              label: 'Interact with Contracts',
+              to: '/docs/development/interacting-with-contracts',
+            },
+            {
               label: 'Web3 Integration',
               to: '/docs/development/web3-integration',
             },
             {
               label: 'APIs & SDKs',
+              to: '/docs/apis-sdks/index',
+            },
+            {
+              label: 'RPC Endpoints',
               to: '/docs/apis-sdks/rpc-endpoints',
+            },
+            {
+              label: 'Web3 Libraries',
+              to: '/docs/apis-sdks/web3-libraries',
             },
           ],
         },
@@ -188,32 +220,118 @@ const config: Config = {
           position: 'left',
           items: [
             {
-              label: 'Architecture',
+              label: 'Architecture Overview',
               to: '/docs/architecture/pos-consensus',
             },
             {
-              label: 'Validators',
-              to: '/docs/nodes-validation/becoming-validator',
+              label: 'EVM Compatibility',
+              to: '/docs/architecture/evm-compatibility',
+            },
+            {
+              label: 'High TPS',
+              to: '/docs/architecture/high-tps',
             },
             {
               label: 'AI Security',
               to: '/docs/ai-security/how-it-works',
             },
+            {
+              label: 'Security Benefits',
+              to: '/docs/ai-security/benefits',
+            },
           ],
         },
         {
-          to: '/docs/roadmap/phase-1-testnet',
-          label: 'Roadmap',
+          type: 'dropdown',
+          label: 'Validators',
           position: 'left',
+          items: [
+            {
+              label: 'Become a Validator',
+              to: '/docs/nodes-validation/becoming-validator',
+            },
+            {
+              label: 'Run Full Node',
+              to: '/docs/nodes-validation/running-full-node',
+            },
+            {
+              label: 'Node Security',
+              to: '/docs/nodes-validation/node-security',
+            },
+            {
+              label: 'Node Monitoring',
+              to: '/docs/nodes-validation/node-monitoring',
+            },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Governance',
+          position: 'left',
+          items: [
+            {
+              label: 'Governance Model',
+              to: '/docs/governance/governance-model',
+            },
+            {
+              label: 'Tokenomics',
+              to: '/docs/governance/tokenomics',
+            },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Resources',
+          position: 'left',
+          items: [
+            {
+              label: 'Roadmap',
+              to: '/docs/roadmap/phase-1-testnet',
+            },
+            {
+              label: 'Feature Comparison',
+              to: '/docs/comparison/feature-comparison',
+            },
+            {
+              label: 'Key Advantages',
+              to: '/docs/comparison/key-advantages',
+            },
+            {
+              label: 'Use Cases',
+              to: '/docs/introduction/use-cases',
+            },
+            {
+              label: 'FAQ',
+              to: '/docs/faqs/common-questions',
+            },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Community',
+          position: 'left',
+          items: [
+            {
+              label: 'Forums & Social Media',
+              to: '/docs/community/forums-social-media',
+            },
+            {
+              label: 'Contribution Guidelines',
+              to: '/docs/community/contribution-guidelines',
+            },
+            {
+              label: 'Telegram',
+              href: 'https://t.me/circlelayer',
+            },
+            {
+              label: 'X (Twitter)',
+              href: 'https://x.com/circlelayer',
+            },
+          ],
         },
         {
           href: 'https://github.com/Circle-layer-org/docs',
           label: 'GitHub',
-          position: 'right',
-        },
-        {
-          href: 'https://t.me/circlelayer',
-          label: 'Telegram',
           position: 'right',
         },
       ],
@@ -224,6 +342,14 @@ const config: Config = {
         {
           title: 'Getting Started',
           items: [
+            {
+              label: 'What is Circle Layer?',
+              to: '/docs/introduction/what-is-circle-layer',
+            },
+            {
+              label: 'Key Features',
+              to: '/docs/introduction/key-features',
+            },
             {
               label: 'Set Up Wallet',
               to: '/docs/getting-started/set-up-wallet',
@@ -242,37 +368,70 @@ const config: Config = {
           title: 'Development',
           items: [
             {
-              label: 'Write Smart Contracts',
+              label: 'Smart Contracts',
               to: '/docs/development/writing-smart-contracts',
+            },
+            {
+              label: 'Deploy Contracts',
+              to: '/docs/development/deploying-contracts',
+            },
+            {
+              label: 'Interact with Contracts',
+              to: '/docs/development/interacting-with-contracts',
             },
             {
               label: 'Web3 Integration',
               to: '/docs/development/web3-integration',
             },
             {
-              label: 'RPC Endpoints',
-              to: '/docs/apis-sdks/rpc-endpoints',
-            },
-            {
-              label: 'Web3 Libraries',
-              to: '/docs/apis-sdks/web3-libraries',
+              label: 'APIs & SDKs',
+              to: '/docs/apis-sdks/index',
             },
           ],
         },
         {
-          title: 'Network',
+          title: 'Network & Security',
           items: [
             {
-              label: 'Architecture',
+              label: 'PoS Consensus',
               to: '/docs/architecture/pos-consensus',
             },
+            {
+              label: 'EVM Compatibility',
+              to: '/docs/architecture/evm-compatibility',
+            },
+            {
+              label: 'High TPS',
+              to: '/docs/architecture/high-tps',
+            },
+            {
+              label: 'AI Security',
+              to: '/docs/ai-security/how-it-works',
+            },
+            {
+              label: 'Security Benefits',
+              to: '/docs/ai-security/benefits',
+            },
+          ],
+        },
+        {
+          title: 'Validators & Governance',
+          items: [
             {
               label: 'Become a Validator',
               to: '/docs/nodes-validation/becoming-validator',
             },
             {
-              label: 'AI Security',
-              to: '/docs/ai-security/how-it-works',
+              label: 'Run Full Node',
+              to: '/docs/nodes-validation/running-full-node',
+            },
+            {
+              label: 'Node Security',
+              to: '/docs/nodes-validation/node-security',
+            },
+            {
+              label: 'Governance Model',
+              to: '/docs/governance/governance-model',
             },
             {
               label: 'Tokenomics',
@@ -281,10 +440,35 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Community & Resources',
           items: [
             {
-              label: 'Forums & Social',
+              label: 'Community Guidelines',
+              to: '/docs/community/contribution-guidelines',
+            },
+            {
+              label: 'FAQ',
+              to: '/docs/faqs/common-questions',
+            },
+            {
+              label: 'Roadmap',
+              to: '/docs/roadmap/phase-1-testnet',
+            },
+            {
+              label: 'Feature Comparison',
+              to: '/docs/comparison/feature-comparison',
+            },
+            {
+              label: 'Use Cases',
+              to: '/docs/introduction/use-cases',
+            },
+          ],
+        },
+        {
+          title: 'Social & Links',
+          items: [
+            {
+              label: 'Forums & Social Media',
               to: '/docs/community/forums-social-media',
             },
             {
@@ -298,23 +482,6 @@ const config: Config = {
             {
               label: 'GitHub',
               href: 'https://github.com/Circle-layer-org/docs',
-            },
-          ],
-        },
-        {
-          title: 'Resources',
-          items: [
-            {
-              label: 'FAQ',
-              to: '/docs/faqs/common-questions',
-            },
-            {
-              label: 'Roadmap',
-              to: '/docs/roadmap/phase-1-testnet',
-            },
-            {
-              label: 'Feature Comparison',
-              to: '/docs/comparison/feature-comparison',
             },
             {
               label: 'Testnet Explorer',

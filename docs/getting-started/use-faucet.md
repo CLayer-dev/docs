@@ -10,7 +10,8 @@ Learn about Circle Layer's planned testnet faucet for future development and tes
 
 ## Faucet Access
 
-- **URL**: https://faucet.circlelayer.com
+<!-- - **URL**: https://faucet.circlelayer.com -->
+- **URL**: *Coming soon*
 - **Supported Networks**: Circle Layer Testnet
 - **Token Type**: CLAYER
 - **Supported Wallet Formats**: EVM-based wallets

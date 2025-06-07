@@ -31,7 +31,7 @@ Circle Layer follows a strategic 3-phase development approach:
 **Phase 2: Ecosystem Expansion**
 - Native Bridge & DEX (4 trading pairs)
 - iOS/Android wallets
-- Agentic AI security layer
+- **Agentic AI security layer** (in development)
 - 50,000 TPS optimization
 
 **Phase 3: Mainnet Launch**
@@ -80,7 +80,7 @@ Circle Layer is designed to support a comprehensive blockchain ecosystem:
 2. **Developer-First Platform**
    - Full EVM compatibility for easy migration
    - Comprehensive SDK and API suite
-   - AI-powered security auditing tools
+   - **AI-powered security auditing tools** (Phase 2)
    - Performance optimization frameworks
 
 3. **User Experience Focus**

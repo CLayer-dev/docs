@@ -11,11 +11,15 @@ Learn how to integrate Web3 libraries with Circle Layer testnet. Circle Layer fo
 ## Network Configuration
 
 ### Circle Layer Testnet
-- **RPC URL**: https://rpc-testnet.circlelayer.com
-- **WebSocket**: wss://138.197.184.207:8545
+*Configuration ready for testnet deployment:*
+<!-- - **RPC URL**: https://rpc-testnet.circlelayer.com -->
+<!-- - **WebSocket**: wss://138.197.184.207:8545 -->
+- **RPC URL**: *Coming soon*
+- **WebSocket**: *Coming soon*
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
-- **Block Explorer**: https://explorer-testnet.circlelayer.com/
+<!-- - **Block Explorer**: https://explorer-testnet.circlelayer.com/ -->
+- **Block Explorer**: *Coming soon*
 
 ## Web3.js Integration
 

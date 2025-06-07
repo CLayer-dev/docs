@@ -4,9 +4,13 @@ sidebar_position: 1
 
 # AI Security Benefits
 
+:::info Phase 2 Development
+🚧 **Coming in Phase 2**: AI Security features are currently in development and will be available in Phase 2 of our roadmap.
+:::
+
 ## Overview
 
-Circle Layer's AI-powered security features provide several key benefits for developers and users:
+Circle Layer's planned AI-powered security features will provide several key benefits for developers and users:
 
 ## Key Benefits
 

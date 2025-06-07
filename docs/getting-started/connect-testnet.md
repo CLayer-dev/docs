@@ -10,13 +10,18 @@ Learn about Circle Layer's testnet configuration for future development and test
 
 ## Testnet Details
 
+*Configuration ready for when testnet launches:*
+
 - **Network Name**: Circle Layer Testnet
-- **RPC URL**: https://rpc-testnet.circlelayer.com
-- **WebSocket Endpoint**: wss://138.197.184.207:8545
+<!-- - **RPC URL**: https://rpc-testnet.circlelayer.com -->
+<!-- - **WebSocket Endpoint**: wss://138.197.184.207:8545 -->
+- **RPC URL**: *Coming soon*
+- **WebSocket Endpoint**: *Coming soon*
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
 - **Currency Decimals**: 18
-- **Block Explorer**: https://explorer-testnet.circlelayer.com/
+<!-- - **Block Explorer**: https://explorer-testnet.circlelayer.com/ -->
+- **Block Explorer**: *Coming soon*
 
 ## Network Performance
 - **Block Time**: 3 seconds per block
@@ -37,5 +42,6 @@ When the testnet becomes available, you will be able to:
 ## Testnet Faucet (Coming Soon)
 
 The testnet faucet will provide test tokens for development and testing.
-Planned URL: https://faucet.circlelayer.com
+<!-- Planned URL: https://faucet.circlelayer.com -->
+Planned URL: *Coming soon*
 Daily limit: 1 CLAYER per address

@@ -27,11 +27,13 @@ Learn how to prepare your wallet configuration for future Circle Layer testnet a
 
 ### Testnet Network Settings
 - **Network Name**: Circle Layer Testnet
-- **RPC URL**: https://rpc-testnet.circlelayer.com
+<!-- - **RPC URL**: https://rpc-testnet.circlelayer.com -->
+- **RPC URL**: *Coming soon*
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
 - **Currency Decimals**: 18
-- **Block Explorer**: https://explorer-testnet.circlelayer.com/
+<!-- - **Block Explorer**: https://explorer-testnet.circlelayer.com/ -->
+- **Block Explorer**: *Coming soon*
 
 ### Adding Network to MetaMask (When Available)
 When the testnet becomes available:
