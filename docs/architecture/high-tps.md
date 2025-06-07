@@ -4,6 +4,8 @@ title: Performance Architecture
 sidebar_label: Performance Architecture
 ---
 
+import '@site/src/css/comparison.css';
+
 # Performance Architecture
 
 Learn about Circle Layer's current performance capabilities and the architecture that enables fast, reliable transaction processing.
@@ -65,6 +67,80 @@ Learn about Circle Layer's current performance capabilities and the architecture
 | Ethereum | 12s | 6-10min |
 | Polygon | 2s | 2-3s |
 | BSC | 3s | 3s |
+
+<div className="mobile-table-cards">
+  <div className="section-header-card">
+    <h4>Block Time Comparison</h4>
+  </div>
+  
+  <div className="comparison-card circle-layer">
+    <div className="card-header">
+      <div className="card-title">Circle Layer Testnet</div>
+      <div className="network-badge">Our Network</div>
+    </div>
+    <div className="card-content">
+      <div className="feature-row">
+        <div className="feature-label">Block Time</div>
+        <div className="feature-value highlight">3s</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Finality</div>
+        <div className="feature-value highlight">1-3s</div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="comparison-card">
+    <div className="card-header">
+      <div className="card-title">Ethereum</div>
+      <div className="network-badge">Mainnet</div>
+    </div>
+    <div className="card-content">
+      <div className="feature-row">
+        <div className="feature-label">Block Time</div>
+        <div className="feature-value">12s</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Finality</div>
+        <div className="feature-value">6-10min</div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="comparison-card">
+    <div className="card-header">
+      <div className="card-title">Polygon</div>
+      <div className="network-badge">Mainnet</div>
+    </div>
+    <div className="card-content">
+      <div className="feature-row">
+        <div className="feature-label">Block Time</div>
+        <div className="feature-value">2s</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Finality</div>
+        <div className="feature-value">2-3s</div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="comparison-card">
+    <div className="card-header">
+      <div className="card-title">BSC</div>
+      <div className="network-badge">Mainnet</div>
+    </div>
+    <div className="card-content">
+      <div className="feature-row">
+        <div className="feature-label">Block Time</div>
+        <div className="feature-value">3s</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Finality</div>
+        <div className="feature-value">3s</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### Network Reliability
 - **Consistent Performance**: 99.95% uptime

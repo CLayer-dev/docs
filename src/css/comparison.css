@@ -1,0 +1,440 @@
+/* ========================================
+   COMPARISON PAGES - MOBILE RESPONSIVE TABLES
+   ======================================== */
+
+/* ========================================
+   GLOBAL VARIABLES
+   ======================================== */
+:root {
+    --primary-blue: #1a73e8;
+    --primary-teal: #18b6a4;
+    --border-radius: 12px;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   DESKTOP TABLE STYLES
+   ======================================== */
+
+table {
+    margin: 2rem 0 !important;
+    border-radius: var(--border-radius) !important;
+    overflow: hidden !important;
+    box-shadow: var(--shadow-light) !important;
+    border: none !important;
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    table-layout: auto !important;
+}
+
+table thead {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%) !important;
+}
+
+table th {
+    background: transparent !important;
+    color: white !important;
+    font-weight: 700 !important;
+    padding: 1rem !important;
+    border: none !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+table th:first-child {
+    text-align: left !important;
+    font-weight: 800 !important;
+}
+
+table td {
+    padding: 0.8rem 1rem !important;
+    border-bottom: 1px solid var(--ifm-color-emphasis-200) !important;
+    border-right: none !important;
+    border-left: none !important;
+    background: var(--ifm-background-color) !important;
+    color: var(--ifm-font-color-base) !important;
+    text-align: center !important;
+}
+
+table td:first-child {
+    text-align: left !important;
+    font-weight: 600 !important;
+    color: var(--ifm-color-emphasis-800) !important;
+}
+
+table tbody tr:nth-child(odd) {
+    background: var(--ifm-color-emphasis-100) !important;
+}
+
+table tbody tr:hover {
+    background: var(--ifm-color-emphasis-200) !important;
+}
+
+/* Highlight Circle Layer rows */
+table tbody tr:first-child,
+table tbody tr:nth-child(2) {
+    background: linear-gradient(135deg, rgba(26, 115, 232, 0.1) 0%, rgba(24, 182, 164, 0.1) 100%) !important;
+    border-left: 4px solid var(--primary-blue) !important;
+}
+
+table tbody tr:first-child td:first-child,
+table tbody tr:nth-child(2) td:first-child {
+    color: var(--primary-blue) !important;
+    font-weight: 800 !important;
+}
+
+/* ========================================
+   MOBILE CARD ALTERNATIVES - HIDE BY DEFAULT
+   ======================================== */
+
+.mobile-table-cards {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+/* ========================================
+   DESKTOP - HIDE MOBILE CARDS
+   ======================================== */
+@media screen and (min-width: 769px) {
+
+    /* Keep mobile cards hidden on desktop */
+    .mobile-table-cards,
+    .mobile-comparison-cards,
+    .mobile-feature-cards {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        position: absolute !important;
+        left: -9999px !important;
+        top: -9999px !important;
+        z-index: -999 !important;
+        clip: rect(0, 0, 0, 0) !important;
+        -webkit-clip-path: inset(50%) !important;
+        clip-path: inset(50%) !important;
+    }
+
+    /* Ensure tables are visible on desktop */
+    table {
+        display: table !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        width: 100% !important;
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        z-index: auto !important;
+        clip: auto !important;
+        -webkit-clip-path: none !important;
+        clip-path: none !important;
+    }
+}
+
+/* ========================================
+   MOBILE - HIDE TABLES, SHOW CARDS
+   ======================================== */
+@media screen and (max-width: 768px) {
+
+    /* FORCE hide all tables on mobile */
+    table,
+    .markdown table,
+    .theme-doc-markdown table,
+    [role="tabpanel"] table,
+    html table,
+    body table,
+    html body table {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        position: absolute !important;
+        left: -9999px !important;
+        top: -9999px !important;
+        z-index: -999 !important;
+    }
+
+    /* FORCE show mobile cards */
+    .mobile-table-cards,
+    .mobile-comparison-cards,
+    .mobile-feature-cards {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        margin: 2rem 0 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        width: auto !important;
+        overflow: visible !important;
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        z-index: auto !important;
+        clip: auto !important;
+        -webkit-clip-path: none !important;
+        clip-path: none !important;
+    }
+}
+
+/* ========================================
+   MOBILE CARD STYLES
+   ======================================== */
+
+.section-header-card {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+    color: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(26, 115, 232, 0.3);
+    margin-bottom: 1rem;
+}
+
+.section-header-card h4 {
+    margin: 0 !important;
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    color: white !important;
+}
+
+.comparison-card {
+    background: var(--ifm-background-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.comparison-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-blue);
+}
+
+.comparison-card.circle-layer {
+    border-left: 4px solid var(--primary-blue);
+    background: linear-gradient(135deg, rgba(26, 115, 232, 0.05) 0%, rgba(24, 182, 164, 0.05) 100%);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--ifm-color-emphasis-200);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ifm-color-emphasis-800);
+}
+
+.circle-layer .card-title {
+    color: var(--primary-blue);
+}
+
+.network-badge {
+    background: var(--ifm-color-emphasis-100);
+    color: var(--ifm-color-emphasis-600);
+    padding: 0.3rem 0.8rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.circle-layer .network-badge {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.card-content {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.feature-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0;
+    border-bottom: 1px dotted var(--ifm-color-emphasis-300);
+}
+
+.feature-row:last-child {
+    border-bottom: none;
+}
+
+.feature-label {
+    font-weight: 600;
+    color: var(--ifm-color-emphasis-700);
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+.feature-value {
+    font-weight: 700;
+    color: var(--ifm-color-emphasis-800);
+    text-align: right;
+    font-size: 0.95rem;
+}
+
+.circle-layer .feature-value {
+    color: var(--primary-blue);
+}
+
+.feature-value.highlight {
+    background: var(--primary-blue);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   PERFORMANCE COMPARISON CARDS
+   ======================================== */
+
+.performance-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.metric-comparison-card {
+    background: var(--ifm-background-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: 12px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.metric-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--ifm-color-emphasis-200);
+}
+
+.metric-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ifm-color-emphasis-800);
+    margin: 0;
+}
+
+.networks-comparison {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.network-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    background: var(--ifm-color-emphasis-100);
+    border-radius: 8px;
+    border-left: 4px solid var(--ifm-color-emphasis-300);
+}
+
+.network-item.circle-layer {
+    background: linear-gradient(135deg, rgba(26, 115, 232, 0.1) 0%, rgba(24, 182, 164, 0.1) 100%);
+    border-left-color: var(--primary-blue);
+}
+
+.network-name {
+    font-weight: 600;
+    color: var(--ifm-color-emphasis-700);
+}
+
+.circle-layer .network-name {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.network-value {
+    font-weight: 700;
+    color: var(--ifm-color-emphasis-800);
+    font-size: 0.95rem;
+}
+
+.circle-layer .network-value {
+    color: var(--primary-blue);
+}
+
+/* ========================================
+   DARK THEME SUPPORT
+   ======================================== */
+
+[data-theme="dark"] .section-header-card {
+    background: linear-gradient(135deg, #1557c7 0%, #158a7a 100%);
+}
+
+[data-theme="dark"] .comparison-card {
+    background: var(--ifm-color-emphasis-100);
+    border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme="dark"] .comparison-card.circle-layer {
+    background: rgba(26, 115, 232, 0.1);
+}
+
+[data-theme="dark"] .metric-comparison-card {
+    background: var(--ifm-color-emphasis-100);
+    border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme="dark"] .network-item {
+    background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme="dark"] .network-item.circle-layer {
+    background: rgba(26, 115, 232, 0.15);
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 480px) {
+    .comparison-card {
+        padding: 1rem;
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .network-badge {
+        align-self: flex-end;
+    }
+
+    .feature-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    .feature-value {
+        text-align: left;
+    }
+}

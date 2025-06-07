@@ -4,6 +4,8 @@ title: Key Features
 sidebar_label: Key Features
 ---
 
+import '@site/src/css/comparison.css';
+
 # Key Features
 
 Circle Layer offers a comprehensive suite of features designed to meet the needs of modern blockchain applications and users. Our platform combines cutting-edge technology with user-friendly design to create a powerful and accessible blockchain ecosystem.
@@ -90,6 +92,126 @@ Circle Layer offers a comprehensive suite of features designed to meet the needs
 | Bridges | N/A | Cross-chain |
 | Oracles | N/A | Decentralized |
 
+<div className="mobile-table-cards">
+  <div className="section-header-card">
+    <h4>Current vs Future Comparison</h4>
+  </div>
+  
+  <div className="performance-grid">
+    <div className="metric-comparison-card">
+      <div className="metric-header">
+        <h4 className="metric-title">Block Time</h4>
+      </div>
+      <div className="networks-comparison">
+        <div className="network-item circle-layer">
+          <div className="network-name">Current Testnet</div>
+          <div className="network-value">3s</div>
+        </div>
+        <div className="network-item">
+          <div className="network-name">In Development</div>
+          <div className="network-value">Optimized</div>
+        </div>
+      </div>
+    </div>
+    
+    <div className="metric-comparison-card">
+      <div className="metric-header">
+        <h4 className="metric-title">Finality</h4>
+      </div>
+      <div className="networks-comparison">
+        <div className="network-item circle-layer">
+          <div className="network-name">Current Testnet</div>
+          <div className="network-value">1-3s</div>
+        </div>
+        <div className="network-item">
+          <div className="network-name">In Development</div>
+          <div className="network-value">Enhanced</div>
+        </div>
+      </div>
+    </div>
+    
+    <div className="metric-comparison-card">
+      <div className="metric-header">
+        <h4 className="metric-title">Consensus</h4>
+      </div>
+      <div className="networks-comparison">
+        <div className="network-item circle-layer">
+          <div className="network-name">Current Testnet</div>
+          <div className="network-value">DPoS</div>
+        </div>
+        <div className="network-item">
+          <div className="network-name">In Development</div>
+          <div className="network-value">Advanced DPoS</div>
+        </div>
+      </div>
+    </div>
+    
+    <div className="metric-comparison-card">
+      <div className="metric-header">
+        <h4 className="metric-title">Staking</h4>
+      </div>
+      <div className="networks-comparison">
+        <div className="network-item circle-layer">
+          <div className="network-name">Current Testnet</div>
+          <div className="network-value">Manual</div>
+        </div>
+        <div className="network-item">
+          <div className="network-name">In Development</div>
+          <div className="network-value">Smart Contracts</div>
+        </div>
+      </div>
+    </div>
+    
+    <div className="metric-comparison-card">
+      <div className="metric-header">
+        <h4 className="metric-title">Governance</h4>
+      </div>
+      <div className="networks-comparison">
+        <div className="network-item circle-layer">
+          <div className="network-name">Current Testnet</div>
+          <div className="network-value">Manual</div>
+        </div>
+        <div className="network-item">
+          <div className="network-name">In Development</div>
+          <div className="network-value">On-chain</div>
+        </div>
+      </div>
+    </div>
+    
+    <div className="metric-comparison-card">
+      <div className="metric-header">
+        <h4 className="metric-title">Bridges</h4>
+      </div>
+      <div className="networks-comparison">
+        <div className="network-item circle-layer">
+          <div className="network-name">Current Testnet</div>
+          <div className="network-value">N/A</div>
+        </div>
+        <div className="network-item">
+          <div className="network-name">In Development</div>
+          <div className="network-value">Cross-chain</div>
+        </div>
+      </div>
+    </div>
+    
+    <div className="metric-comparison-card">
+      <div className="metric-header">
+        <h4 className="metric-title">Oracles</h4>
+      </div>
+      <div className="networks-comparison">
+        <div className="network-item circle-layer">
+          <div className="network-name">Current Testnet</div>
+          <div className="network-value">N/A</div>
+        </div>
+        <div className="network-item">
+          <div className="network-name">In Development</div>
+          <div className="network-value">Decentralized</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## Network Comparison
 
 | Feature | Circle Layer | Ethereum | Polygon | BSC |
@@ -100,6 +222,144 @@ Circle Layer offers a comprehensive suite of features designed to meet the needs
 | EVM Compatible | Yes | Native | Yes | Yes |
 | Gas Fees | Low (CLAYER) | High (ETH) | Low (MATIC) | Low (BNB) |
 | Chain ID | 28525 | 1 | 137 | 56 |
+
+<div className="mobile-table-cards">
+  <div className="section-header-card">
+    <h4>Network Comparison</h4>
+  </div>
+  
+  <div className="comparison-card circle-layer">
+    <div className="card-header">
+      <div className="card-title">Circle Layer</div>
+      <div className="network-badge">Our Network</div>
+    </div>
+    <div className="card-content">
+      <div className="feature-row">
+        <div className="feature-label">Block Time</div>
+        <div className="feature-value highlight">3s</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Finality</div>
+        <div className="feature-value highlight">1-3s</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Consensus</div>
+        <div className="feature-value highlight">DPoS</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">EVM Compatible</div>
+        <div className="feature-value highlight">Yes</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Gas Fees</div>
+        <div className="feature-value">Low (CLAYER)</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Chain ID</div>
+        <div className="feature-value">28525</div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="comparison-card">
+    <div className="card-header">
+      <div className="card-title">Ethereum</div>
+      <div className="network-badge">Mainnet</div>
+    </div>
+    <div className="card-content">
+      <div className="feature-row">
+        <div className="feature-label">Block Time</div>
+        <div className="feature-value">12s</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Finality</div>
+        <div className="feature-value">6-10min</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Consensus</div>
+        <div className="feature-value">PoW→PoS</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">EVM Compatible</div>
+        <div className="feature-value">Native</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Gas Fees</div>
+        <div className="feature-value">High (ETH)</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Chain ID</div>
+        <div className="feature-value">1</div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="comparison-card">
+    <div className="card-header">
+      <div className="card-title">Polygon</div>
+      <div className="network-badge">Mainnet</div>
+    </div>
+    <div className="card-content">
+      <div className="feature-row">
+        <div className="feature-label">Block Time</div>
+        <div className="feature-value">2s</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Finality</div>
+        <div className="feature-value">2-3s</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Consensus</div>
+        <div className="feature-value">PoS</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">EVM Compatible</div>
+        <div className="feature-value">Yes</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Gas Fees</div>
+        <div className="feature-value">Low (MATIC)</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Chain ID</div>
+        <div className="feature-value">137</div>
+      </div>
+    </div>
+  </div>
+  
+  <div className="comparison-card">
+    <div className="card-header">
+      <div className="card-title">BSC</div>
+      <div className="network-badge">Mainnet</div>
+    </div>
+    <div className="card-content">
+      <div className="feature-row">
+        <div className="feature-label">Block Time</div>
+        <div className="feature-value">3s</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Finality</div>
+        <div className="feature-value">3s</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Consensus</div>
+        <div className="feature-value">PoA</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">EVM Compatible</div>
+        <div className="feature-value">Yes</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Gas Fees</div>
+        <div className="feature-value">Low (BNB)</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Chain ID</div>
+        <div className="feature-value">56</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## 🚧 Features in Development
 

@@ -1,5 +1,5 @@
 // Auto-generated documentation index
-// Generated at: 2025-06-07T19:43:21.859Z
+// Generated at: 2025-06-07T20:10:08.766Z
 // Source: Circle Layer documentation files
 
 import { DocumentationIndex } from '../types/docs';
@@ -387,7 +387,7 @@ export const DOCS_INDEX: DocumentationIndex = {
 } as const;
 
 export const DOCS_METADATA = {
-  generatedAt: '2025-06-07T19:43:21.859Z',
+  generatedAt: '2025-06-07T20:10:08.766Z',
   totalDocs: 34,
   categories: ["ai-security","apis-sdks","architecture","community","comparison","development","faqs","getting-started","governance","general","introduction","nodes-validation","roadmap"]
 } as const;

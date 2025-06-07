@@ -6,11 +6,10 @@ import DocItemPaginator from '@theme/DocItem/Paginator';
 import DocVersionBanner from '@theme/DocVersionBanner';
 import DocVersionBadge from '@theme/DocVersionBadge';
 import DocItemFooter from '@theme/DocItem/Footer';
-import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
-import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 import DocItemContent from '@theme/DocItem/Content';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import Unlisted from '@theme/Unlisted';
+import TOC from '@theme/TOC';
 import styles from './styles.module.css';
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
@@ -20,10 +19,10 @@ function useDocTOC() {
 	const windowSize = useWindowSize();
 	const hidden = frontMatter.hide_table_of_contents;
 	const canRender = !hidden && toc.length > 0;
-	const mobile = canRender ? <DocItemTOCMobile /> : undefined;
+	const mobile = canRender && windowSize === 'mobile' ? <TOC toc={toc} /> : undefined;
 	const desktop =
 		canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? (
-			<DocItemTOCDesktop />
+			<TOC toc={toc} />
 		) : undefined;
 	return {
 		hidden,
