@@ -227,6 +227,6 @@ class CircleLayerService {
 - **ABI**: [Contract ABI](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 
 ### Additional Guides
-- [Web3 Integration Guide](/docs/development/web3-integration)
-- [Contract Deployment](/docs/development/deploying-contracts)
-- [Network Setup](/docs/getting-started/connect-testnet)
+- [Web3 Integration Guide](/development/web3-integration)
+- [Contract Deployment](/development/deploying-contracts)
+- [Network Setup](/getting-started/connect-testnet)

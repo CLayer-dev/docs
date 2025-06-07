@@ -129,9 +129,9 @@ The following features are currently being developed:
 
 To begin using Circle Layer testnet:
 
-1. [Set up a compatible wallet](/docs/getting-started/set-up-wallet)
-2. [Connect to the testnet](/docs/getting-started/connect-testnet)
-3. [Obtain test tokens from the faucet](/docs/getting-started/use-faucet)
+1. [Set up a compatible wallet](/getting-started/set-up-wallet)
+2. [Connect to the testnet](/getting-started/connect-testnet)
+3. [Obtain test tokens from the faucet](/getting-started/use-faucet)
 4. Start building or using applications
 
-For detailed instructions, refer to the [Getting Started](/docs/getting-started/set-up-wallet) section. 
+For detailed instructions, refer to the [Getting Started](/getting-started/set-up-wallet) section. 

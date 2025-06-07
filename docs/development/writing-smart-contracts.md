@@ -95,6 +95,6 @@ contract MyContract {
 - **Contract ABI**: [View ABI](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 
 ### Integration Guides
-- [Deploying Contracts](/docs/development/deploying-contracts)
-- [Web3 Integration](/docs/development/web3-integration)
-- [Contract Interaction](/docs/development/interacting-with-contracts)
+- [Deploying Contracts](/development/deploying-contracts)
+- [Web3 Integration](/development/web3-integration)
+- [Contract Interaction](/development/interacting-with-contracts)

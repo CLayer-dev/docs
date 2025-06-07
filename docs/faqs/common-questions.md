@@ -88,7 +88,7 @@ Yes, Circle Layer is fully EVM compatible, allowing Ethereum developers to easil
 ## Development Questions
 
 ### How do I deploy a smart contract?
-See our [Deployment Guide](/docs/development/deploying-contracts) with Hardhat and Truffle configurations for Circle Layer testnet.
+See our [Deployment Guide](/development/deploying-contracts) with Hardhat and Truffle configurations for Circle Layer testnet.
 
 ### What development tools are available?
 - **Hardhat** (with Circle Layer testnet configuration)
@@ -97,7 +97,7 @@ See our [Deployment Guide](/docs/development/deploying-contracts) with Hardhat a
 - **Web3.js / Ethers.js** (standard EVM integration)
 
 ### How do I interact with contracts?
-See our [Web3 Integration Guide](/docs/development/web3-integration) for detailed instructions. 
+See our [Web3 Integration Guide](/development/web3-integration) for detailed instructions. 
 <!-- Example contract when testnet is live: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB -->
 
 ### What are the gas requirements?
@@ -126,7 +126,7 @@ See our [Web3 Integration Guide](/docs/development/web3-integration) for detaile
 ## Network Questions
 
 ### How do I become a validator?
-See our [Validator Guide](/docs/nodes-validation/becoming-validator)
+See our [Validator Guide](/nodes-validation/becoming-validator)
 
 ### What are the current staking requirements?
 - **Minimum Stake**: 100,000 CLAYER
@@ -153,7 +153,7 @@ See our [Validator Guide](/docs/nodes-validation/becoming-validator)
 - **Firewall**: Not required
 
 ### How do I run a node?
-See our [Node Guide](/docs/nodes-validation/running-full-node) with current hardware and software requirements.
+See our [Node Guide](/nodes-validation/running-full-node) with current hardware and software requirements.
 
 ## Integration Questions
 

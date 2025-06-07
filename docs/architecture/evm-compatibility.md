@@ -139,7 +139,7 @@ await window.ethereum.request({
 - **ABI**: [Contract ABI](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 
 ### Integration Guides
-- [Smart Contract Development](/docs/development/writing-smart-contracts)
-- [Contract Deployment](/docs/development/deploying-contracts)
-- [Web3 Integration](/docs/development/web3-integration)
-- [Wallet Setup](/docs/getting-started/set-up-wallet)
+- [Smart Contract Development](/development/writing-smart-contracts)
+- [Contract Deployment](/development/deploying-contracts)
+- [Web3 Integration](/development/web3-integration)
+- [Wallet Setup](/getting-started/set-up-wallet)

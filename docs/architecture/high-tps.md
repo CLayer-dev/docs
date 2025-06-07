@@ -115,6 +115,6 @@ Learn about Circle Layer's current performance capabilities and the architecture
 - **Multiple Endpoints**: Redundant connectivity
 
 For detailed integration guides, see:
-- [Network Configuration](/docs/getting-started/connect-testnet)
-- [Performance Monitoring](/docs/nodes-validation/node-monitoring)
-- [Development Setup](/docs/development/deploying-contracts)
+- [Network Configuration](/getting-started/connect-testnet)
+- [Performance Monitoring](/nodes-validation/node-monitoring)
+- [Development Setup](/development/deploying-contracts)
