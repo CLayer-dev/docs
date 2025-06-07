@@ -10,7 +10,7 @@ Learn about Circle Layer's current performance capabilities and the architecture
 
 ## Current Testnet Performance
 
-### Live Network Metrics
+### Target Network Metrics
 - **Block Time**: 3 seconds (actual performance)
 - **Transaction Finality**: 1-3 seconds (actual performance)
 - **Network Uptime**: 99.95% (Last 30 days)
@@ -50,7 +50,7 @@ Learn about Circle Layer's current performance capabilities and the architecture
 - **Integration Testing**: Real-time transaction confirmation
 - **Gas Optimization**: Cost-effective testing environment
 
-### Live Applications
+### Target Applications
 - **DeFi Protocols**: Fast transaction settlement
 - **Token Development**: Quick deployment and testing
 - **Wallet Integration**: Seamless user experience

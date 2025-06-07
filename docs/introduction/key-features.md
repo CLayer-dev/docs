@@ -6,11 +6,11 @@ sidebar_label: Key Features
 
 # Key Features
 
-Circle Layer offers a comprehensive suite of features designed to meet the needs of modern blockchain applications and users. Our live testnet platform combines proven blockchain technology with user-friendly design to create a powerful and accessible blockchain ecosystem.
+Circle Layer offers a comprehensive suite of features designed to meet the needs of modern blockchain applications and users. Our platform combines cutting-edge technology with user-friendly design to create a powerful and accessible blockchain ecosystem.
 
 ## Current Network Features
 
-### Live Testnet Performance
+### Target Network Performance
 - **Block Time**: 3 seconds (actual performance)
 - **Transaction Finality**: 1-3 seconds (actual performance)
 - **Network Uptime**: 99.95% (Last 30 days)
@@ -59,7 +59,7 @@ Circle Layer offers a comprehensive suite of features designed to meet the needs
 - **Mobile Wallets**: Same as EVM integration
 
 ### Network Access
-- **Live Testnet**: Currently operational
+- **Network Status**: In development and testing
 - **Faucet**: https://faucet.circlelayer.com (1 CLAYER per day)
 - **Block Explorer**: Real-time transaction tracking
 - **Network Monitoring**: 99.95% uptime tracking
@@ -109,11 +109,11 @@ Circle Layer offers a comprehensive suite of features designed to meet the needs
 
 ## Development Roadmap
 
-### Current Phase: Testnet Live ✅
-- ✅ Core network functionality operational
-- ✅ DPoS consensus active
-- ✅ Developer tools available
-- ✅ Community testing ongoing
+### Current Phase: Development & Testing ✅
+- ✅ Core network functionality in testing
+- ✅ DPoS consensus implemented
+- ✅ Developer tools in development
+- ✅ Community engagement building
 
 ### Next Phase: Enhanced Features 🚧
 - 🚧 Smart contract infrastructure

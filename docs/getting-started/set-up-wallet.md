@@ -6,7 +6,7 @@ sidebar_label: Set Up a Wallet
 
 # Set Up a Wallet
 
-Learn how to set up and configure your wallet to interact with Circle Layer.
+Learn how to prepare your wallet configuration for future Circle Layer testnet access.
 
 ## Supported Wallets
 
@@ -15,13 +15,13 @@ Learn how to set up and configure your wallet to interact with Circle Layer.
 - **Custom Wallets** (Same as EVM integration)
 - **Mobile Wallets** (Same as EVM integration)
 
-## Installation Steps
+## Preparation Steps
 
 1. Choose your preferred wallet
 2. Install the wallet extension or application
 3. Create a new wallet or import existing
-4. Configure network settings
-5. Add Circle Layer testnet
+4. Prepare network configuration settings
+5. Be ready to add Circle Layer testnet when available
 
 ## MetaMask Configuration
 
@@ -33,7 +33,8 @@ Learn how to set up and configure your wallet to interact with Circle Layer.
 - **Currency Decimals**: 18
 - **Block Explorer**: https://explorer-testnet.circlelayer.com/
 
-### Adding Network to MetaMask
+### Adding Network to MetaMask (When Available)
+When the testnet becomes available:
 1. Open MetaMask
 2. Click on the network dropdown
 3. Select "Add Network"

@@ -6,7 +6,7 @@ sidebar_label: Use the Faucet
 
 # Use the Faucet
 
-Learn how to use Circle Layer's testnet faucet to obtain test tokens for development and testing.
+Learn about Circle Layer's planned testnet faucet for future development and testing.
 
 ## Faucet Access
 
@@ -15,7 +15,9 @@ Learn how to use Circle Layer's testnet faucet to obtain test tokens for develop
 - **Token Type**: CLAYER
 - **Supported Wallet Formats**: EVM-based wallets
 
-## How to Use
+## How to Use (When Available)
+
+When the testnet faucet becomes available, you will:
 
 1. Copy your wallet address
 2. Paste your wallet address in the text box on the faucet page

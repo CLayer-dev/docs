@@ -10,7 +10,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 
 ## Technical Features
 
-### Performance (Current Live Networks)
+### Performance (Target vs Live Networks)
 | Feature | Circle Layer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Block Time | 3s | 12s | 2s | 3s |
@@ -73,7 +73,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 ### Ecosystem Status
 | Feature | Circle Layer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
-| Status | Testnet Live | Mainnet | Mainnet | Mainnet |
+| Status | In Development | Mainnet | Mainnet | Mainnet |
 | DApps | Testing Phase | 3000+ | 1000+ | 500+ |
 | Example Contracts | 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB | Many | Many | Many |
 

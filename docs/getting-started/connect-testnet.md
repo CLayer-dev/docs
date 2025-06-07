@@ -6,7 +6,7 @@ sidebar_label: Connect to Testnet
 
 # Connect to Testnet
 
-Learn how to connect to Circle Layer's testnet for development and testing purposes.
+Learn about Circle Layer's testnet configuration for future development and testing purposes.
 
 ## Testnet Details
 
@@ -24,7 +24,9 @@ Learn how to connect to Circle Layer's testnet for development and testing purpo
 - **Network Uptime**: 99.95% (Last 30 days with minor downtime due to maintenance)
 - **Gas Price Range**: Minimum 0.000021 CLAYER (depending on network consumption and function calls)
 
-## Connection Steps
+## Future Connection Steps
+
+When the testnet becomes available, you will be able to:
 
 1. Configure your wallet with testnet settings
 2. Switch to the testnet network
@@ -32,7 +34,8 @@ Learn how to connect to Circle Layer's testnet for development and testing purpo
 4. Check testnet status
 5. Start testing your applications
 
-## Testnet Faucet
+## Testnet Faucet (Coming Soon)
 
-Access the testnet faucet to receive test tokens for development and testing.
-Visit: https://faucet.circlelayer.com
+The testnet faucet will provide test tokens for development and testing.
+Planned URL: https://faucet.circlelayer.com
+Daily limit: 1 CLAYER per address
