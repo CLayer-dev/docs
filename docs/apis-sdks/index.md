@@ -1,102 +1,104 @@
 ---
-sidebar_position: 1
 title: APIs & SDKs Overview
-description: Explore Circle Layer's comprehensive APIs and development tools for building decentralized applications.
+description: Complete guide to Circle Layer APIs, SDKs, and developer tools
 ---
 
-# 🔧 APIs & SDKs
+# APIs & SDKs Overview
 
-Welcome to Circle Layer's developer resources! This section provides comprehensive documentation for integrating with Circle Layer using various APIs, SDKs, and development tools.
+Circle Layer provides comprehensive APIs and SDKs to help developers build and integrate with our blockchain network. This section covers all the tools and endpoints you need for development.
 
-## 🚀 Quick Start
+## 🔧 Available APIs
 
-Circle Layer is fully EVM-compatible, which means you can use existing Ethereum tools and libraries to interact with our network. All your familiar development workflows will work seamlessly.
+### JSON-RPC API
+- **Endpoint**: `https://rpc-testnet.circlelayer.com`
+- **Purpose**: Core blockchain interactions
+- **Compatibility**: Ethereum JSON-RPC compatible
+- **Use Cases**: Transaction submission, contract deployment, balance queries
 
-## 📚 Available Resources
+### WebSocket API
+- **Endpoint**: `wss://138.197.184.207:8545`
+- **Purpose**: Real-time blockchain events
+- **Features**: Block subscriptions, transaction notifications
+- **Use Cases**: Live updates, event monitoring
 
-### 🌐 [RPC Endpoints](./rpc-endpoints)
-- Complete JSON-RPC API reference
-- Network endpoints and configurations
-- Authentication methods (GET)
-- Example requests and responses
-- Smart contract interaction examples
+### GraphQL API (In Development)
+- **Endpoint**: `https://testnet.circlelayer.com/graphiql`
+- **Purpose**: Flexible data queries
+- **Status**: Coming soon with enhanced filtering
 
-### 📦 [Web3 Libraries](./web3-libraries)
-- Web3.js integration guide
-- Ethers.js setup and usage
-- React and Vue.js integration examples
-- Mobile integration patterns
-- Code examples with CLAYER transactions
+## 📚 Web3 Libraries
 
-## 🎯 Developer Tools
+Circle Layer is fully compatible with popular Web3 libraries:
 
-- **Hardhat**: Full compatibility with Circle Layer testnet configuration
-- **Truffle**: Deploy and test smart contracts with CLAYER gas
-- **Remix**: Browser-based development environment (Injected Provider - MetaMask)
-- **MetaMask**: Easy wallet integration with testnet configuration
+### Web3.js
+```javascript
+const Web3 = require('web3');
+const web3 = new Web3('https://rpc-testnet.circlelayer.com');
+```
 
-## 🔗 Current Network Information
+### Ethers.js
+```javascript
+const { ethers } = require('ethers');
+const provider = new ethers.providers.JsonRpcProvider('https://rpc-testnet.circlelayer.com');
+```
 
-**Circle Layer Testnet** (Currently Live)
-- **Network Name**: Circle Layer Testnet
-- **Chain ID**: `28525`
-- **RPC URL**: `https://rpc-testnet.circlelayer.com`
-- **WebSocket**: `wss://138.197.184.207:8545`
-- **Currency Symbol**: `CLAYER`
-- **Currency Decimals**: `18`
-- **Explorer**: `https://explorer-testnet.circlelayer.com/`
-- **Faucet**: `https://faucet.circlelayer.com`
+### Viem
+```javascript
+import { createPublicClient, http } from 'viem';
 
-## 📊 API Documentation
+const client = createPublicClient({
+  transport: http('https://rpc-testnet.circlelayer.com')
+});
+```
 
-- **REST API**: [https://testnet.circlelayer.com/api-docs](https://testnet.circlelayer.com/api-docs)
-- **GraphQL**: [https://testnet.circlelayer.com/graphiql](https://testnet.circlelayer.com/graphiql)
+## 🛠️ Development Tools
 
-## 📝 Smart Contract Examples
+### Smart Contract Development
+- **Hardhat**: Full development environment
+- **Truffle**: Development framework
+- **Remix**: Browser-based IDE
+- **Foundry**: Rust-based toolkit
 
-Explore our deployed example contract for reference:
-- **Contract Address**: `0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB`
-- **Source Code**: [View on Explorer](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- **ABI**: [Contract ABI](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+### Testing & Deployment
+- **Local Development**: Use Hardhat or Truffle
+- **Testnet Deployment**: Direct to Circle Layer testnet
+- **Contract Verification**: Via block explorer
 
-## ⚡ Network Performance
+## 📖 Quick Start Guides
 
+1. **[RPC Endpoints](./rpc-endpoints)** - Complete API reference
+2. **[Web3 Libraries](./web3-libraries)** - Integration examples
+3. **[Smart Contract Development](../development/writing-smart-contracts)** - Build contracts
+4. **[Web3 Integration](../development/web3-integration)** - Frontend integration
+
+## 🌐 Network Information
+
+- **Chain ID**: 28525
+- **Currency**: CLAYER
 - **Block Time**: 3 seconds
-- **Transaction Finality**: 1-3 seconds
-- **Network Uptime**: 99.95% (Last 30 days)
 - **Gas Price**: Minimum 0.000021 CLAYER
 
-## 🔧 Integration Patterns
+## 📊 API Status
 
-Circle Layer follows standard EVM integration patterns:
-- Same as other EVM blockchain integrations
-- Compatible with existing Ethereum development tools
-- Support for Web3.js, Ethers.js, and other standard libraries
-- MetaMask and WalletConnect compatible
-
-## 🚧 Features in Development
-
-The following advanced features are currently in development:
-
-### Smart Contract Infrastructure
-- **Staking Contracts**: Automated staking and delegation system
-- **Governance Contracts**: On-chain governance and voting mechanisms
-- **Bridge Contracts**: Cross-chain interoperability solutions
-- **Oracle Contracts**: Decentralized data feeds and price oracles
-
-### Developer Tools & Analytics
-- **Network Status Dashboard**: Real-time network health monitoring
-- **Advanced Analytics Dashboard**: Comprehensive network metrics and insights
-- **Alert System**: Automated monitoring and notification system
-- **Enhanced Rate Limiting**: Advanced API rate limiting and throttling
+| Service | Status | Uptime |
+|---------|--------|--------|
+| RPC API | 🟢 Live | 99.95% |
+| WebSocket | 🟢 Live | 99.95% |
+| Block Explorer | 🟢 Live | 99.9% |
+| GraphQL | 🟡 Development | Coming Soon |
 
 ## 🆘 Support
 
-Need help? Join our developer community:
-- [Discord](https://discord.gg/circlelayer)
-- [Telegram](https://t.me/circlelayer)
-- [GitHub](https://github.com/circle-layer)
+Need help with API integration?
 
----
+- 📖 Check our [comprehensive guides](../development/web3-integration)
+- 💬 Join our [Telegram community](https://t.me/circlelayer)
+- 🐛 Report issues on [GitHub](https://github.com/Circle-layer-org/docs)
 
-Ready to start building? Check out our [Getting Started Guide](/docs/getting-started/set-up-wallet) for a step-by-step tutorial. 
+## Next Steps
+
+Ready to start building? Check out our development guides:
+
+- [Writing Smart Contracts](../development/writing-smart-contracts)
+- [Web3 Integration Examples](../development/web3-integration)
+- [RPC API Reference](./rpc-endpoints) 

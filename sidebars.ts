@@ -16,7 +16,7 @@ const sidebars: SidebarsConfig = {
   docs: [
     {
       type: 'category',
-      label: 'Introduction',
+      label: '📚 Introduction',
       items: [
         'introduction/what-is-circle-layer',
         'introduction/key-features',
@@ -25,7 +25,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Getting Started',
+      label: '🚀 Getting Started',
       items: [
         'getting-started/set-up-wallet',
         'getting-started/connect-testnet',
@@ -34,7 +34,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Architecture',
+      label: '🏗️ Architecture',
       items: [
         'architecture/pos-consensus',
         'architecture/evm-compatibility',
@@ -43,7 +43,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'AI Security',
+      label: '🔒 AI Security',
       items: [
         'ai-security/how-it-works',
         'ai-security/benefits',
@@ -51,34 +51,36 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Development',
+      label: '💻 Development',
       items: [
         'development/writing-smart-contracts',
         'development/deploying-contracts',
         'development/interacting-with-contracts',
+        'development/web3-integration',
       ],
     },
     {
       type: 'category',
-      label: 'APIs & SDKs',
+      label: '🔧 APIs & SDKs',
       items: [
+        'apis-sdks/index',
         'apis-sdks/rpc-endpoints',
         'apis-sdks/web3-libraries',
       ],
     },
     {
       type: 'category',
-      label: 'Nodes & Validation',
+      label: '🎯 Nodes & Validation',
       items: [
-        'nodes-validation/running-full-node',
         'nodes-validation/becoming-validator',
+        'nodes-validation/running-full-node',
         'nodes-validation/node-security',
         'nodes-validation/node-monitoring',
       ],
     },
     {
       type: 'category',
-      label: 'Governance',
+      label: '🏛️ Governance',
       items: [
         'governance/governance-model',
         'governance/tokenomics',
@@ -86,14 +88,14 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Roadmap',
+      label: '🗺️ Roadmap',
       items: [
         'roadmap/phase-1-testnet',
       ],
     },
     {
       type: 'category',
-      label: 'Comparison',
+      label: '📊 Comparison',
       items: [
         'comparison/feature-comparison',
         'comparison/key-advantages',
@@ -101,7 +103,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Community',
+      label: '👥 Community',
       items: [
         'community/forums-social-media',
         'community/contribution-guidelines',
@@ -109,7 +111,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'FAQs',
+      label: '❓ FAQs',
       items: [
         'faqs/common-questions',
       ],

@@ -159,18 +159,51 @@ const config: Config = {
           className: 'navbar-docs-btn',
         },
         {
-          to: '/docs/introduction/what-is-circle-layer',
-          label: 'Introduction',
+          to: '/docs/getting-started/set-up-wallet',
+          label: 'Quick Start',
           position: 'left',
         },
         {
-          to: '/docs/architecture/pos-consensus',
-          label: 'Architecture',
+          type: 'dropdown',
+          label: 'Developers',
           position: 'left',
+          items: [
+            {
+              label: 'Smart Contracts',
+              to: '/docs/development/writing-smart-contracts',
+            },
+            {
+              label: 'Web3 Integration',
+              to: '/docs/development/web3-integration',
+            },
+            {
+              label: 'APIs & SDKs',
+              to: '/docs/apis-sdks/rpc-endpoints',
+            },
+          ],
         },
         {
-          to: '/docs/development/writing-smart-contracts',
-          label: 'Ecosystem',
+          type: 'dropdown',
+          label: 'Network',
+          position: 'left',
+          items: [
+            {
+              label: 'Architecture',
+              to: '/docs/architecture/pos-consensus',
+            },
+            {
+              label: 'Validators',
+              to: '/docs/nodes-validation/becoming-validator',
+            },
+            {
+              label: 'AI Security',
+              to: '/docs/ai-security/how-it-works',
+            },
+          ],
+        },
+        {
+          to: '/docs/roadmap/phase-1-testnet',
+          label: 'Roadmap',
           position: 'left',
         },
         {
@@ -189,19 +222,61 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Documentation',
+          title: 'Getting Started',
           items: [
             {
-              label: 'Getting Started',
+              label: 'Set Up Wallet',
               to: '/docs/getting-started/set-up-wallet',
             },
+            {
+              label: 'Connect to Testnet',
+              to: '/docs/getting-started/connect-testnet',
+            },
+            {
+              label: 'Use Faucet',
+              to: '/docs/getting-started/use-faucet',
+            },
+          ],
+        },
+        {
+          title: 'Development',
+          items: [
+            {
+              label: 'Write Smart Contracts',
+              to: '/docs/development/writing-smart-contracts',
+            },
+            {
+              label: 'Web3 Integration',
+              to: '/docs/development/web3-integration',
+            },
+            {
+              label: 'RPC Endpoints',
+              to: '/docs/apis-sdks/rpc-endpoints',
+            },
+            {
+              label: 'Web3 Libraries',
+              to: '/docs/apis-sdks/web3-libraries',
+            },
+          ],
+        },
+        {
+          title: 'Network',
+          items: [
             {
               label: 'Architecture',
               to: '/docs/architecture/pos-consensus',
             },
             {
-              label: 'Development',
-              to: '/docs/development/writing-smart-contracts',
+              label: 'Become a Validator',
+              to: '/docs/nodes-validation/becoming-validator',
+            },
+            {
+              label: 'AI Security',
+              to: '/docs/ai-security/how-it-works',
+            },
+            {
+              label: 'Tokenomics',
+              to: '/docs/governance/tokenomics',
             },
           ],
         },
@@ -209,11 +284,15 @@ const config: Config = {
           title: 'Community',
           items: [
             {
+              label: 'Forums & Social',
+              to: '/docs/community/forums-social-media',
+            },
+            {
               label: 'Telegram',
               href: 'https://t.me/circlelayer',
             },
             {
-              label: 'X',
+              label: 'X (Twitter)',
               href: 'https://x.com/circlelayer',
             },
             {
@@ -223,15 +302,23 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: 'Resources',
           items: [
+            {
+              label: 'FAQ',
+              to: '/docs/faqs/common-questions',
+            },
             {
               label: 'Roadmap',
               to: '/docs/roadmap/phase-1-testnet',
             },
             {
-              label: 'FAQ',
-              to: '/docs/faqs/common-questions',
+              label: 'Feature Comparison',
+              to: '/docs/comparison/feature-comparison',
+            },
+            {
+              label: 'Testnet Explorer',
+              href: 'https://explorer-testnet.circlelayer.com/',
             },
           ],
         },
