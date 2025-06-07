@@ -135,7 +135,7 @@
 }
 
 .footer__copyright.footer__copyright__custom {
-	color: var(--grey-100) !important;
+	color: var(--ifm-footer-color) !important;
 }
 
 [data-theme="light"] {

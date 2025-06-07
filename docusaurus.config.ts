@@ -3,6 +3,9 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import type { Configuration } from 'webpack';
 
+// Load environment variables from .env file
+require('dotenv').config();
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
@@ -13,6 +16,7 @@ const config: Config = {
   // Client modules for default theme setting
   clientModules: [
     require.resolve('./src/clientModules/setDefaultTheme.js'),
+    require.resolve('./src/clientModules/env.ts'),
   ],
 
   // Enable Mermaid diagrams
@@ -79,7 +83,7 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         'http-equiv': 'Content-Security-Policy',
-        content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://api.fontshare.com; img-src 'self' data: https:; font-src 'self' https://api.fontshare.com https://*.fontshare.com; connect-src 'self';"
+        content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://api.fontshare.com; img-src 'self' data: https:; font-src 'self' https://api.fontshare.com https://*.fontshare.com; connect-src 'self' https://api.x.ai;"
       },
     },
     {
@@ -113,6 +117,30 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [
+    // Custom plugin to inject environment variables
+    function injectEnvironmentVariables() {
+      return {
+        name: 'inject-environment-variables',
+        configureWebpack(config: Configuration) {
+          console.log('🔍 DEBUG: Loading environment variables...');
+          console.log('🔍 DEBUG: GROK_API_KEY exists:', !!process.env.GROK_API_KEY);
+          console.log('🔍 DEBUG: GROK_API_KEY length:', process.env.GROK_API_KEY ? process.env.GROK_API_KEY.length : 'undefined');
+
+          return {
+            plugins: [
+              new (require('webpack')).DefinePlugin({
+                'process.env.GROK_API_KEY': JSON.stringify(process.env.GROK_API_KEY || ''),
+                'window.__GROK_API_KEY__': JSON.stringify(process.env.GROK_API_KEY || ''),
+                '__GROK_API_KEY__': JSON.stringify(process.env.GROK_API_KEY || ''),
+              }),
+            ],
+          };
+        },
+      };
+    },
+  ],
+
   presets: [
     [
       'classic',
@@ -123,7 +151,9 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/circle-layer/docs/tree/main/',
           showLastUpdateTime: false,
+          routeBasePath: '/', // Make docs the homepage
         },
+        blog: false, // Disable blog since docs are now at root
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -132,6 +162,8 @@ const config: Config = {
   ],
 
   themes: ['@docusaurus/theme-mermaid'],
+
+  // plugins: [], // Will implement AI chat as navbar component instead
 
   themeConfig: {
     // Replace with your project's social card
@@ -152,182 +184,8 @@ const config: Config = {
       },
       items: [
         {
-          to: '/docs/',
-          label: 'Overview',
-          position: 'left',
-        },
-        {
-          type: 'dropdown',
-          label: 'Getting Started',
-          position: 'left',
-          items: [
-            {
-              label: 'What is Circle Layer?',
-              to: '/docs/introduction/what-is-circle-layer',
-            },
-            {
-              label: 'Set Up Wallet',
-              to: '/docs/getting-started/set-up-wallet',
-            },
-            {
-              label: 'Connect to Testnet',
-              to: '/docs/getting-started/connect-testnet',
-            },
-            {
-              label: 'Use Faucet',
-              to: '/docs/getting-started/use-faucet',
-            },
-          ],
-        },
-        {
-          type: 'dropdown',
-          label: 'Developers',
-          position: 'left',
-          items: [
-            {
-              label: 'Smart Contracts',
-              to: '/docs/development/writing-smart-contracts',
-            },
-            {
-              label: 'Deploy Contracts',
-              to: '/docs/development/deploying-contracts',
-            },
-            {
-              label: 'Interact with Contracts',
-              to: '/docs/development/interacting-with-contracts',
-            },
-            {
-              label: 'Web3 Integration',
-              to: '/docs/development/web3-integration',
-            },
-            {
-              label: 'APIs & SDKs',
-              to: '/docs/apis-sdks/',
-            },
-            {
-              label: 'RPC Endpoints',
-              to: '/docs/apis-sdks/rpc-endpoints',
-            },
-            {
-              label: 'Web3 Libraries',
-              to: '/docs/apis-sdks/web3-libraries',
-            },
-          ],
-        },
-        {
-          type: 'dropdown',
-          label: 'Network',
-          position: 'left',
-          items: [
-            {
-              label: 'Architecture Overview',
-              to: '/docs/architecture/pos-consensus',
-            },
-            {
-              label: 'EVM Compatibility',
-              to: '/docs/architecture/evm-compatibility',
-            },
-            {
-              label: 'High TPS',
-              to: '/docs/architecture/high-tps',
-            },
-            {
-              label: 'AI Security',
-              to: '/docs/ai-security/how-it-works',
-            },
-            {
-              label: 'Security Benefits',
-              to: '/docs/ai-security/benefits',
-            },
-          ],
-        },
-        {
-          type: 'dropdown',
-          label: 'Validators',
-          position: 'left',
-          items: [
-            {
-              label: 'Become a Validator',
-              to: '/docs/nodes-validation/becoming-validator',
-            },
-            {
-              label: 'Run Full Node',
-              to: '/docs/nodes-validation/running-full-node',
-            },
-            {
-              label: 'Node Security',
-              to: '/docs/nodes-validation/node-security',
-            },
-            {
-              label: 'Node Monitoring',
-              to: '/docs/nodes-validation/node-monitoring',
-            },
-          ],
-        },
-        {
-          type: 'dropdown',
-          label: 'Governance',
-          position: 'left',
-          items: [
-            {
-              label: 'Governance Model',
-              to: '/docs/governance/governance-model',
-            },
-            {
-              label: 'Tokenomics',
-              to: '/docs/governance/tokenomics',
-            },
-          ],
-        },
-        {
-          type: 'dropdown',
-          label: 'Resources',
-          position: 'left',
-          items: [
-            {
-              label: 'Roadmap',
-              to: '/docs/roadmap/phase-1-testnet',
-            },
-            {
-              label: 'Feature Comparison',
-              to: '/docs/comparison/feature-comparison',
-            },
-            {
-              label: 'Key Advantages',
-              to: '/docs/comparison/key-advantages',
-            },
-            {
-              label: 'Use Cases',
-              to: '/docs/introduction/use-cases',
-            },
-            {
-              label: 'FAQ',
-              to: '/docs/faqs/common-questions',
-            },
-          ],
-        },
-        {
-          type: 'dropdown',
-          label: 'Community',
-          position: 'left',
-          items: [
-            {
-              label: 'Forums & Social Media',
-              to: '/docs/community/forums-social-media',
-            },
-            {
-              label: 'Contribution Guidelines',
-              to: '/docs/community/contribution-guidelines',
-            },
-            {
-              label: 'Telegram',
-              href: 'https://t.me/circlelayer',
-            },
-            {
-              label: 'X (Twitter)',
-              href: 'https://x.com/circlelayer',
-            },
-          ],
+          type: 'custom-askAI',
+          position: 'right',
         },
         {
           href: 'https://github.com/Circle-layer-org/docs',
@@ -344,15 +202,15 @@ const config: Config = {
           items: [
             {
               label: 'Introduction',
-              to: '/docs/',
+              to: '/',
             },
             {
               label: 'Circle Layer for Developers',
-              to: '/docs/development/writing-smart-contracts',
+              to: '/development/writing-smart-contracts',
             },
             {
               label: 'Circle Layer for Users',
-              to: '/docs/introduction/what-is-circle-layer',
+              to: '/introduction/what-is-circle-layer',
             },
           ],
         },
@@ -399,7 +257,7 @@ const config: Config = {
     },
   ],
 
-  // Add webpack configuration
+  // Add webpack configuration for TypeScript and dynamic loading
   webpack: {
     jsLoader: (isServer) => ({
       loader: require.resolve('swc-loader'),
@@ -409,7 +267,7 @@ const config: Config = {
             syntax: 'typescript',
             tsx: true,
           },
-          target: 'es2020',
+          target: 'es2017',
         },
         module: {
           type: isServer ? 'commonjs' : 'es6',
@@ -417,6 +275,7 @@ const config: Config = {
       },
     }),
   },
+
 };
 
 export default config;

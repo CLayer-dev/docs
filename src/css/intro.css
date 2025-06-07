@@ -261,10 +261,12 @@ h3 {
     font-size: 1.3rem !important;
 }
 
-.feature-card p {
+.feature-card p,
+.feature-description {
     color: var(--ifm-color-emphasis-700);
     line-height: 1.6;
     margin-bottom: 1rem;
+    display: block;
 }
 
 /* Progress Bars */
@@ -1049,6 +1051,13 @@ table tbody tr:nth-child(2) td:first-child {
     text-align: left !important;
 }
 
+.card-description {
+    margin: 1rem 0;
+    color: var(--ifm-color-secondary-darkest);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
 .difficulty {
     padding: 0.3rem 0.6rem;
     border-radius: 8px;
@@ -1229,6 +1238,14 @@ table tbody tr:nth-child(2) td:first-child {
     opacity: 0.9;
 }
 
+.step-description {
+    color: var(--ifm-color-emphasis-600);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
 .step-card a {
     display: inline-flex;
     align-items: center;
@@ -1279,11 +1296,12 @@ table tbody tr:nth-child(2) td:first-child {
     border: 1px solid var(--ifm-color-emphasis-200);
 }
 
-.intro-footer-cta p {
+.intro-footer-cta span {
     font-size: 1.1rem !important;
     font-weight: 500 !important;
     color: var(--ifm-color-emphasis-700) !important;
     margin: 0 !important;
+    display: block;
 }
 
 /* Dark Theme Support */
@@ -1479,7 +1497,7 @@ table tbody tr:nth-child(2) td:first-child {
 
 .feature-card p,
 .stat-label,
-.intro-footer-cta p,
+.intro-footer-cta span,
 .step-card p,
 .architecture-section,
 .next-steps,
@@ -1494,7 +1512,7 @@ table tbody tr:nth-child(2) td:first-child {
 
 [data-theme="dark"] .feature-card p,
 [data-theme="dark"] .stat-label,
-[data-theme="dark"] .intro-footer-cta p,
+[data-theme="dark"] .intro-footer-cta span,
 [data-theme="dark"] .step-card p,
 [data-theme="dark"] .architecture-section,
 [data-theme="dark"] .next-steps,
