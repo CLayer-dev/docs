@@ -340,137 +340,25 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Getting Started',
+          title: 'Docs',
           items: [
             {
-              label: 'What is Circle Layer?',
-              to: '/docs/introduction/what-is-circle-layer',
+              label: 'Introduction',
+              to: '/docs/',
             },
             {
-              label: 'Key Features',
-              to: '/docs/introduction/key-features',
-            },
-            {
-              label: 'Set Up Wallet',
-              to: '/docs/getting-started/set-up-wallet',
-            },
-            {
-              label: 'Connect to Testnet',
-              to: '/docs/getting-started/connect-testnet',
-            },
-            {
-              label: 'Use Faucet',
-              to: '/docs/getting-started/use-faucet',
-            },
-          ],
-        },
-        {
-          title: 'Development',
-          items: [
-            {
-              label: 'Smart Contracts',
+              label: 'Circle Layer for Developers',
               to: '/docs/development/writing-smart-contracts',
             },
             {
-              label: 'Deploy Contracts',
-              to: '/docs/development/deploying-contracts',
-            },
-            {
-              label: 'Interact with Contracts',
-              to: '/docs/development/interacting-with-contracts',
-            },
-            {
-              label: 'Web3 Integration',
-              to: '/docs/development/web3-integration',
-            },
-            {
-              label: 'APIs & SDKs',
-              to: '/docs/apis-sdks/',
+              label: 'Circle Layer for Users',
+              to: '/docs/introduction/what-is-circle-layer',
             },
           ],
         },
         {
-          title: 'Network & Security',
+          title: 'Community',
           items: [
-            {
-              label: 'PoS Consensus',
-              to: '/docs/architecture/pos-consensus',
-            },
-            {
-              label: 'EVM Compatibility',
-              to: '/docs/architecture/evm-compatibility',
-            },
-            {
-              label: 'High TPS',
-              to: '/docs/architecture/high-tps',
-            },
-            {
-              label: 'AI Security',
-              to: '/docs/ai-security/how-it-works',
-            },
-            {
-              label: 'Security Benefits',
-              to: '/docs/ai-security/benefits',
-            },
-          ],
-        },
-        {
-          title: 'Validators & Governance',
-          items: [
-            {
-              label: 'Become a Validator',
-              to: '/docs/nodes-validation/becoming-validator',
-            },
-            {
-              label: 'Run Full Node',
-              to: '/docs/nodes-validation/running-full-node',
-            },
-            {
-              label: 'Node Security',
-              to: '/docs/nodes-validation/node-security',
-            },
-            {
-              label: 'Governance Model',
-              to: '/docs/governance/governance-model',
-            },
-            {
-              label: 'Tokenomics',
-              to: '/docs/governance/tokenomics',
-            },
-          ],
-        },
-        {
-          title: 'Community & Resources',
-          items: [
-            {
-              label: 'Community Guidelines',
-              to: '/docs/community/contribution-guidelines',
-            },
-            {
-              label: 'FAQ',
-              to: '/docs/faqs/common-questions',
-            },
-            {
-              label: 'Roadmap',
-              to: '/docs/roadmap/phase-1-testnet',
-            },
-            {
-              label: 'Feature Comparison',
-              to: '/docs/comparison/feature-comparison',
-            },
-            {
-              label: 'Use Cases',
-              to: '/docs/introduction/use-cases',
-            },
-          ],
-        },
-        {
-          title: 'Social & Links',
-          items: [
-            {
-              label: 'Forums & Social Media',
-              to: '/docs/community/forums-social-media',
-            },
             {
               label: 'Telegram',
               href: 'https://t.me/circlelayer',
@@ -479,6 +367,11 @@ const config: Config = {
               label: 'X (Twitter)',
               href: 'https://x.com/circlelayer',
             },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
             {
               label: 'GitHub',
               href: 'https://github.com/Circle-layer-org/docs',
@@ -490,7 +383,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Circle Layer. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Circle Layer Foundation. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
