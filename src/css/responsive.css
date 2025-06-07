@@ -233,18 +233,21 @@
    TOC (Table of Contents) RESPONSIVE
    ======================================== */
 
-@media screen and (max-width: 1320px) {
+/* Desktop TOC */
+@media screen and (min-width: 997px) {
     .table-of-contents {
-        display: none !important;
-    }
-}
-
-@media screen and (min-width: 1321px) {
-    .table-of-contents {
+        display: block !important;
         position: sticky !important;
         top: calc(var(--ifm-navbar-height) + 2rem) !important;
         max-height: calc(100vh - var(--ifm-navbar-height) - 4rem) !important;
         overflow-y: auto !important;
+    }
+}
+
+/* Hide desktop TOC on mobile - mobile TOC component will handle this */
+@media screen and (max-width: 996px) {
+    .table-of-contents {
+        display: none !important;
     }
 }
 
