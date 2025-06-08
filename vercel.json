@@ -1,6 +1,0 @@
-{
-    "env": {
-        "GROK_API_KEY": "@grok_api_key",
-        "Circle_Layer_Docs_API_KEY": "@circle_layer_docs_api_key"
-    }
-}
