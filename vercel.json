@@ -1,9 +1,16 @@
 {
-    "functions": {
-        "api/*.ts": {
-            "runtime": "@vercel/node@18.x"
+    "builds": [
+        {
+            "src": "api/**/*.ts",
+            "use": "@vercel/node"
         }
-    },
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/$1"
+        }
+    ],
     "buildCommand": "npm run build",
     "outputDirectory": "build",
     "env": {
