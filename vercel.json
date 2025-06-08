@@ -1,23 +1,6 @@
 {
-    "builds": [
-        {
-            "src": "package.json",
-            "use": "@vercel/static-build",
-            "config": {
-                "distDir": "build"
-            }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/api/(.*)",
-            "dest": "/api/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/build/$1"
-        }
-    ],
+    "buildCommand": "npm run build",
+    "outputDirectory": "build",
     "env": {
         "GROK_API_KEY": "@grok_api_key",
         "Circle_Layer_Docs_API_KEY": "@circle_layer_docs_api_key"
