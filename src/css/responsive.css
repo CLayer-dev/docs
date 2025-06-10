@@ -63,7 +63,7 @@
 
     /* Ensure the custom mobile layout takes precedence */
     .navbar__inner {
-        display: block !important;
+        /* display: block !important; */
         position: relative !important;
     }
 
