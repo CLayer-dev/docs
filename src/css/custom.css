@@ -111,7 +111,7 @@ h6[id],
 }
 
 /* Mobile navbar */
-@media (max-width: 996px) {
+/* @media (max-width: 996px) {
     .navbar__inner {
         height: 58px !important;
         padding: 0 1rem !important;
@@ -176,7 +176,7 @@ h6[id],
     .navbar__toggle:active {
         background: var(--ifm-color-emphasis-200) !important;
     }
-}
+} */
 
 /* Small mobile navbar */
 @media (max-width: 480px) {

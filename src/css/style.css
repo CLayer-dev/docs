@@ -1426,9 +1426,9 @@ p>a>img[loading="lazy"] {
 }
 
 
-.theme-doc-sidebar-menu.menu__list li:first-child>div {
+/* .theme-doc-sidebar-menu.menu__list li:first-child>div {
 	display: none !important;
-}
+} */
 
 .navbar .navbar__inner .navbar__items .navbar__brand {
 	display: flex;

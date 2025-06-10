@@ -72,10 +72,10 @@
         display: none !important;
     }
 
-    .navbar__toggle {
+    /* .navbar__toggle {
         margin-left: auto !important;
         order: 999 !important;
-    }
+    } */
 }
 
 /* ========================================
