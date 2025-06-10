@@ -688,6 +688,54 @@
 }
 
 /* Advanced mobile responsiveness */
+
+/* Mobile navbar Ask AI button optimizations */
+@media (max-width: 996px) {
+    .askButton {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+        border-radius: 18px !important;
+        gap: 8px !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+        margin-right: 0.75rem !important;
+    }
+
+    .aiIcon {
+        width: 16px !important;
+        height: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .askButton {
+        padding: 8px 14px !important;
+        font-size: 12px !important;
+        border-radius: 16px !important;
+        gap: 6px !important;
+        margin-right: 0.5rem !important;
+    }
+
+    .aiIcon {
+        width: 14px !important;
+        height: 14px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .askButton {
+        padding: 8px 12px !important;
+        font-size: 11px !important;
+        gap: 4px !important;
+        margin-right: 0.4rem !important;
+    }
+
+    .aiIcon {
+        width: 14px !important;
+        height: 14px !important;
+    }
+}
+
 @media (max-width: 480px) {
     .responsiveText {
         font-size: 13px;

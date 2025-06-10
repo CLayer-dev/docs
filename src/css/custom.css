@@ -1,8 +1,11 @@
-/* Main CSS imports for Circle Layer documentation */
 @import url("./style.css");
-/* Core styling and theme colors */
 @import url("./responsive.css");
+@import url("./intro.css");
+
+/* Main CSS imports for Circle Layer documentation */
+/* Core styling and theme colors */
 /* Responsive design rules */
+/* Introduction page styles */
 
 /* ========================================
    SCROLL MARGIN FIX
@@ -114,15 +117,37 @@ h6[id],
         padding: 0 1rem !important;
         min-height: 58px !important;
         position: relative !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow: hidden !important;
     }
 
     .navbar__items {
-        gap: 0.75rem !important;
+        gap: 0.5rem !important;
+        flex-wrap: nowrap !important;
+        min-width: 0 !important;
+    }
+
+    .navbar__items--left {
+        flex: 0 0 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+    }
+
+    .navbar__items--right {
+        gap: 0.3rem !important;
+        flex-wrap: nowrap !important;
+        overflow: hidden !important;
+        flex: 1 1 auto !important;
+        justify-content: flex-end !important;
+        min-width: 0 !important;
     }
 
     .navbar__logo {
         height: 38px !important;
-        margin-left: 0.5rem !important;
+        margin: 0 0.25rem 0 0 !important;
+        flex-shrink: 0 !important;
     }
 
     .navbar__logo img {
@@ -134,13 +159,14 @@ h6[id],
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        width: 44px !important;
-        height: 44px !important;
-        padding: 8px !important;
+        width: 40px !important;
+        height: 40px !important;
+        padding: 6px !important;
         border-radius: 6px !important;
         background: transparent !important;
         transition: background-color 0.2s ease !important;
-        margin: 0 !important;
+        margin: 0 0.25rem 0 0 !important;
+        flex-shrink: 0 !important;
     }
 
     .navbar__toggle:hover {
@@ -149,10 +175,6 @@ h6[id],
 
     .navbar__toggle:active {
         background: var(--ifm-color-emphasis-200) !important;
-    }
-
-    .navbar__items--right {
-        gap: 0.5rem !important;
     }
 }
 
@@ -165,12 +187,20 @@ h6[id],
     }
 
     .navbar__items {
-        gap: 0.5rem !important;
+        gap: 0.25rem !important;
+    }
+
+    .navbar__items--left {
+        gap: 0.25rem !important;
+    }
+
+    .navbar__items--right {
+        gap: 0.2rem !important;
     }
 
     .navbar__logo {
         height: 34px !important;
-        margin-left: 0.25rem !important;
+        margin: 0 0.2rem 0 0 !important;
     }
 
     .navbar__logo img {
@@ -178,13 +208,10 @@ h6[id],
     }
 
     .navbar__toggle {
-        width: 40px !important;
-        height: 40px !important;
-        padding: 6px !important;
-    }
-
-    .navbar__items--right {
-        gap: 0.25rem !important;
+        width: 36px !important;
+        height: 36px !important;
+        padding: 5px !important;
+        margin: 0 0.2rem 0 0 !important;
     }
 }
 
@@ -195,9 +222,21 @@ h6[id],
         padding: 0 0.5rem !important;
     }
 
+    .navbar__items {
+        gap: 0.15rem !important;
+    }
+
+    .navbar__items--left {
+        gap: 0.15rem !important;
+    }
+
+    .navbar__items--right {
+        gap: 0.1rem !important;
+    }
+
     .navbar__logo {
         height: 32px !important;
-        margin-left: 0.25rem !important;
+        margin: 0 0.15rem 0 0 !important;
     }
 
     .navbar__logo img {
@@ -205,9 +244,10 @@ h6[id],
     }
 
     .navbar__toggle {
-        width: 38px !important;
-        height: 38px !important;
-        padding: 5px !important;
+        width: 34px !important;
+        height: 34px !important;
+        padding: 4px !important;
+        margin: 0 0.15rem 0 0 !important;
     }
 }
 
@@ -435,4 +475,248 @@ html,
 body {
     overflow-x: hidden !important;
     max-width: 100vw !important;
+}
+
+/* ========================================
+   GLOBAL LINK UNDERLINE FIXES
+   ======================================== */
+
+/* Fix all link underlines globally */
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    text-decoration: none !important;
+}
+
+/* Ensure specific components don't have underlines */
+.button,
+.navbar__link,
+.menu__link,
+.breadcrumbs__link,
+.footer__link-item,
+.pagination-nav__link,
+.table-of-contents__link,
+.hero-cta-primary,
+.hero-cta-secondary,
+.card-link,
+.card a,
+.step-card a,
+.next-steps a {
+    text-decoration: none !important;
+}
+
+.button:hover,
+.navbar__link:hover,
+.menu__link:hover,
+.breadcrumbs__link:hover,
+.footer__link-item:hover,
+.pagination-nav__link:hover,
+.table-of-contents__link:hover,
+.hero-cta-primary:hover,
+.hero-cta-secondary:hover,
+.card-link:hover,
+.card a:hover,
+.step-card a:hover,
+.next-steps a:hover {
+    text-decoration: none !important;
+}
+
+/* Extra specific rule for the Connect button */
+a[href="/community/forums-social-media"],
+a[href="/community/forums-social-media"]:hover,
+a[href="/community/forums-social-media"]:focus,
+a[href="/community/forums-social-media"]:active,
+a[href="/community/forums-social-media"]:visited {
+    text-decoration: none !important;
+}
+
+/* ========================================
+   HERO BUTTON OVERRIDES (FINAL SPECIFICITY)
+   ======================================== */
+
+/* Override any conflicting styles from style.css */
+.hero-cta-primary,
+.hero-cta-secondary {
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    font-variant-numeric: tabular-nums !important;
+    text-transform: none !important;
+    text-shadow: none !important;
+}
+
+.hero-cta-primary:hover,
+.hero-cta-primary:focus,
+.hero-cta-primary:active,
+.hero-cta-primary:visited {
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+    font-weight: 750 !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    text-shadow: none !important;
+}
+
+.hero-cta-secondary:hover,
+.hero-cta-secondary:focus,
+.hero-cta-secondary:active,
+.hero-cta-secondary:visited {
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+    font-weight: 750 !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    text-shadow: none !important;
+}
+
+/* Ensure center alignment with higher specificity */
+.hero-cta-container .hero-cta-primary,
+.hero-cta-container .hero-cta-secondary {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+/* Mobile responsive overrides */
+@media (max-width: 768px) {
+
+    .hero-cta-primary,
+    .hero-cta-secondary {
+        font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-cta-primary,
+    .hero-cta-secondary {
+        font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 0.95rem !important;
+        text-align: center !important;
+    }
+}
+
+/* ========================================
+   ULTIMATE HERO BUTTON OVERRIDES (MAXIMUM SPECIFICITY)
+   ======================================== */
+
+/* Maximum specificity selectors to ensure styles take precedence */
+.hero-gradient .hero-cta-container .hero-cta-primary,
+.hero-gradient .hero-cta-container .hero-cta-secondary,
+a.hero-cta-primary,
+a.hero-cta-secondary {
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    text-transform: none !important;
+    text-shadow: none !important;
+    font-variant-numeric: tabular-nums !important;
+    font-style: normal !important;
+    font-stretch: normal !important;
+}
+
+/* Hover states with maximum specificity */
+.hero-gradient .hero-cta-container .hero-cta-primary:hover,
+.hero-gradient .hero-cta-container .hero-cta-secondary:hover,
+a.hero-cta-primary:hover,
+a.hero-cta-secondary:hover,
+.hero-gradient .hero-cta-container .hero-cta-primary:focus,
+.hero-gradient .hero-cta-container .hero-cta-secondary:focus,
+a.hero-cta-primary:focus,
+a.hero-cta-secondary:focus {
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    text-shadow: none !important;
+}
+
+/* Force center alignment with maximum specificity */
+.hero-gradient .hero-cta-container .hero-cta-primary,
+.hero-gradient .hero-cta-container .hero-cta-secondary {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+/* Override any inherited styles from parent elements */
+.hero-gradient .hero-cta-container .hero-cta-primary *,
+.hero-gradient .hero-cta-container .hero-cta-secondary * {
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    text-align: center !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+/* Additional center alignment rules */
+.hero-gradient .hero-cta-container .hero-cta-primary span,
+.hero-gradient .hero-cta-container .hero-cta-secondary span,
+.hero-gradient .hero-cta-container .hero-cta-primary div,
+.hero-gradient .hero-cta-container .hero-cta-secondary div {
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    flex: 1 !important;
+}
+
+/* Ensure emoji and text are properly aligned */
+.hero-gradient .hero-cta-container .hero-cta-primary,
+.hero-gradient .hero-cta-container .hero-cta-secondary {
+    gap: 0.6rem !important;
+    white-space: nowrap !important;
+}
+
+/* Force center alignment on all child elements */
+.hero-gradient .hero-cta-container .hero-cta-primary>*,
+.hero-gradient .hero-cta-container .hero-cta-secondary>* {
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+/* Responsive overrides with maximum specificity */
+@media (max-width: 768px) {
+
+    .hero-gradient .hero-cta-container .hero-cta-primary,
+    .hero-gradient .hero-cta-container .hero-cta-secondary,
+    a.hero-cta-primary,
+    a.hero-cta-secondary {
+        font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-gradient .hero-cta-container .hero-cta-primary,
+    .hero-gradient .hero-cta-container .hero-cta-secondary,
+    a.hero-cta-primary,
+    a.hero-cta-secondary {
+        font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 0.95rem !important;
+        text-align: center !important;
+    }
 }

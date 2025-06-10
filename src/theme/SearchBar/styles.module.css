@@ -97,6 +97,7 @@
         width: 38px;
         height: 38px;
         border-radius: 7px;
+        margin: 0 !important;
     }
 
     .searchIconButton svg {
@@ -111,6 +112,7 @@
         width: 36px;
         height: 36px;
         border-radius: 6px;
+        margin: 0 !important;
     }
 
     .searchIconButton svg {
@@ -125,6 +127,7 @@
         width: 34px;
         height: 34px;
         border-radius: 6px;
+        margin: 0 !important;
     }
 
     .searchIconButton svg {

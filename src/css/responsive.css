@@ -104,8 +104,8 @@
         font-size: var(--mobile-h3) !important;
     }
 
-    p,
-    li {
+    p:not(.hero-cta-primary):not(.hero-cta-secondary),
+    li:not(.hero-cta-primary):not(.hero-cta-secondary) {
         font-size: var(--mobile-text) !important;
     }
 
@@ -294,8 +294,8 @@
         font-size: var(--tablet-h3) !important;
     }
 
-    p,
-    li {
+    p:not(.hero-cta-primary):not(.hero-cta-secondary),
+    li:not(.hero-cta-primary):not(.hero-cta-secondary) {
         font-size: var(--tablet-text) !important;
     }
 
@@ -335,8 +335,8 @@
         font-size: var(--desktop-h3) !important;
     }
 
-    p,
-    li {
+    p:not(.hero-cta-primary):not(.hero-cta-secondary),
+    li:not(.hero-cta-primary):not(.hero-cta-secondary) {
         font-size: var(--desktop-text) !important;
     }
 

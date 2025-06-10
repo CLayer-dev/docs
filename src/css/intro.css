@@ -82,43 +82,238 @@
 /* Hero CTA */
 .hero-cta-container {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
+    text-align: center;
 }
 
 .hero-cta-primary {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    text-decoration: none;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+    color: #1a202c;
+    padding: 0.9rem 1.8rem;
+    border-radius: 16px;
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    text-decoration: none !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.9);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.12),
+        0 1px 3px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-width: 170px;
+    justify-content: center;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+    text-transform: none;
+    text-shadow: none;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.hero-cta-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.hero-cta-primary:hover::before {
+    left: 100%;
 }
 
 .hero-cta-primary:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-    color: white;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(248, 250, 252, 1));
+    transform: translateY(-2px) scale(1.01);
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.18),
+        0 2px 8px rgba(0, 0, 0, 0.12);
+    color: #0f172a;
+    border-color: rgba(255, 255, 255, 1);
+    text-shadow: none;
+    font-weight: 750;
+    text-decoration: none !important;
 }
 
 .hero-cta-secondary {
-    background: transparent;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    text-decoration: none;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.95), rgba(139, 92, 246, 0.95));
+    color: #ffffff;
+    padding: 0.9rem 1.8rem;
+    border-radius: 16px;
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    text-decoration: none !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0 4px 20px rgba(99, 102, 241, 0.25),
+        0 1px 3px rgba(99, 102, 241, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-width: 170px;
+    justify-content: center;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+    text-transform: none;
+    text-shadow: none;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.hero-cta-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.hero-cta-secondary:hover::before {
+    left: 100%;
 }
 
 .hero-cta-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 1), rgba(124, 58, 237, 1));
+    transform: translateY(-2px) scale(1.01);
+    box-shadow:
+        0 8px 30px rgba(99, 102, 241, 0.35),
+        0 2px 8px rgba(99, 102, 241, 0.25);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.35);
+    text-shadow: none;
+    font-weight: 750;
+    text-decoration: none !important;
+}
+
+/* Remove all underlines for all states */
+.hero-cta-primary,
+.hero-cta-primary:hover,
+.hero-cta-primary:focus,
+.hero-cta-primary:active,
+.hero-cta-primary:visited,
+.hero-cta-secondary,
+.hero-cta-secondary:hover,
+.hero-cta-secondary:focus,
+.hero-cta-secondary:active,
+.hero-cta-secondary:visited {
+    text-decoration: none !important;
+}
+
+/* Enhanced center alignment for button text */
+.hero-cta-primary,
+.hero-cta-secondary {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.hero-cta-primary>*,
+.hero-cta-secondary>* {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* Focus states for accessibility */
+.hero-cta-primary:focus,
+.hero-cta-secondary:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.6);
+    outline-offset: 2px;
+    text-decoration: none !important;
+}
+
+/* Active states */
+.hero-cta-primary:active {
+    transform: translateY(-1px) scale(0.98);
+    transition: all 0.1s ease;
+}
+
+.hero-cta-secondary:active {
+    transform: translateY(-1px) scale(0.98);
+    transition: all 0.1s ease;
+}
+
+/* Improved shimmer animation */
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Responsive CTA buttons */
+@media (max-width: 768px) {
+    .hero-cta-container {
+        gap: 1rem;
+        margin: 2rem 0;
+        padding: 0 1rem;
+    }
+
+    .hero-cta-primary,
+    .hero-cta-secondary {
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.005em !important;
+        min-width: 160px;
+        border-radius: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-cta-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 1.5rem 0;
+    }
+
+    .hero-cta-primary,
+    .hero-cta-secondary {
+        width: 100%;
+        max-width: 280px;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0 !important;
+        line-height: 1.4 !important;
+        border-radius: 12px;
+    }
+
+    .hero-cta-primary:hover,
+    .hero-cta-secondary:hover {
+        transform: translateY(-2px) scale(1.01);
+    }
 }
 
 /* Hero Stats */
@@ -796,14 +991,13 @@ table tbody tr:nth-child(2) td:first-child {
 /* Roadmap Section */
 .roadmap-container {
     margin: 3rem 0;
-    background: linear-gradient(135deg, var(--ifm-background-color) 0%, var(--ifm-color-emphasis-100) 100%);
+    background: var(--ifm-background-color);
     color: var(--ifm-font-color-base);
-    border-radius: 20px;
+    border-radius: 16px;
     padding: 3rem;
     position: relative;
-    box-shadow: 0 10px 40px rgba(26, 115, 232, 0.1);
-    border: 2px solid var(--ifm-color-primary);
-    border: 2px solid var(--primary-blue);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--ifm-color-emphasis-200);
     overflow: hidden;
 }
 
@@ -813,21 +1007,21 @@ table tbody tr:nth-child(2) td:first-child {
     top: 0;
     left: 0;
     right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
+    height: 3px;
+    background: var(--ifm-color-primary);
 }
 
 .roadmap-container::after {
     content: '🎯';
     position: absolute;
-    top: -20px;
+    top: -15px;
     right: 3rem;
-    background: white;
-    padding: 1rem;
-    font-size: 2rem;
+    background: var(--ifm-background-color);
+    padding: 0.8rem;
+    font-size: 1.5rem;
     border-radius: 50%;
-    border: 3px solid var(--primary-blue);
-    box-shadow: 0 4px 15px rgba(26, 115, 232, 0.2);
+    border: 2px solid var(--ifm-color-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .roadmap-header {
@@ -859,12 +1053,11 @@ table tbody tr:nth-child(2) td:first-child {
 }
 
 .roadmap-section {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 16px;
-    padding: 2.5rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
+    background: var(--ifm-background-surface-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--ifm-color-emphasis-200);
 }
 
 .roadmap-content {
@@ -1309,7 +1502,7 @@ table tbody tr:nth-child(2) td:first-child {
     color: white;
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-teal) 100%);
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: none !important;
     padding: 0.8rem 1.8rem;
     border: none;
     border-radius: 25px;
@@ -1340,6 +1533,7 @@ table tbody tr:nth-child(2) td:first-child {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(26, 115, 232, 0.4);
     color: white;
+    text-decoration: none !important;
 }
 
 /* Footer CTA */
@@ -1365,6 +1559,43 @@ table tbody tr:nth-child(2) td:first-child {
     background: linear-gradient(120deg, #1247b8 0%, #4189ed 60%, #18b6a4 100%);
     color: #e1e1e3;
     box-shadow: 0 8px 32px 0 rgba(18, 71, 184, 0.18);
+}
+
+/* Dark theme CTA buttons */
+[data-theme="dark"] .hero-cta-primary {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(51, 65, 85, 0.9));
+    color: #f8fafc;
+    border-color: rgba(148, 163, 184, 0.3);
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.25),
+        0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .hero-cta-primary:hover {
+    background: linear-gradient(135deg, rgba(51, 65, 85, 1), rgba(71, 85, 105, 1));
+    color: #ffffff;
+    border-color: rgba(148, 163, 184, 0.5);
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.35),
+        0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .hero-cta-secondary {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(139, 92, 246, 0.9));
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow:
+        0 4px 20px rgba(99, 102, 241, 0.3),
+        0 1px 3px rgba(99, 102, 241, 0.2);
+}
+
+[data-theme="dark"] .hero-cta-secondary:hover {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 1), rgba(124, 58, 237, 1));
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow:
+        0 8px 30px rgba(99, 102, 241, 0.4),
+        0 2px 8px rgba(99, 102, 241, 0.3);
 }
 
 [data-theme="dark"] .metrics-dashboard {
@@ -1532,7 +1763,6 @@ table tbody tr:nth-child(2) td:first-child {
 /* --- THEME-AWARE COLORS & GRADIENTS FOR ALL ELEMENTS --- */
 
 .roadmap-container {
-    background: linear-gradient(135deg, var(--ifm-color-primary-lightest, #f8fafc) 0%, var(--ifm-color-emphasis-100, #e2e8f0) 100%);
     color: var(--ifm-font-color-base);
 }
 
