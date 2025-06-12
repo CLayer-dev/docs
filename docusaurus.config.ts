@@ -11,7 +11,7 @@ require('dotenv').config();
 const config: Config = {
   title: 'Circle Layer Documentation',
   tagline: 'Official documentation for Circle Layer, an EVM-compatible POS Layer 1 blockchain',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/CL_favicon.png',
 
   // Client modules for default theme setting
   clientModules: [
@@ -96,7 +96,7 @@ const config: Config = {
   ],
 
   // Set the production url of your site here
-  url: process.env.SITE_URL || 'https://docs.circlelayer.org',
+  url: process.env.SITE_URL || 'https://docs.circlelayer.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.BASE_URL || '/',
