@@ -68,7 +68,7 @@ class GrokAI {
     /**
      * Make API call to Grok (Budget-optimized)
      */
-    private async callGrok(messages: Array<{ role: string, content: string }>, maxTokens: number = 400): Promise<string> {
+    private async callGrok(messages: Array<{ role: string, content: string }>, maxTokens: number = 700): Promise<string> {
         if (!this.apiKey) {
             throw new Error('Grok API key not available');
         }
@@ -122,7 +122,7 @@ Return numbers only (e.g., 0, 5, 12):`;
 
             const selectionResponse = await this.callGrok([
                 { role: 'user', content: selectionPrompt }
-            ], 30); // Reduced tokens further
+            ], 70); // Increased tokens for document selection
 
             // Parse the AI response to get section numbers
             const selectedIndices = this.parseSelectedIndices(selectionResponse);
@@ -230,11 +230,11 @@ Return numbers only (e.g., 0, 5, 12):`;
      * STEP 2: Create system prompt with Grok-selected relevant documentation
      */
     private createSystemPrompt(relevantDocs: DocumentationContent[]): string {
-        // Budget-optimized: Combine docs with tighter token limits
+        // Combine docs with reasonable token limits for complete responses
         const contextContent = relevantDocs
-            .map(doc => `${doc.title}:\n${doc.content.substring(0, 2000)}`) // Limit each doc content
+            .map(doc => `${doc.title}:\n${doc.content.substring(0, 3000)}`) // Increased doc content limit
             .join('\n\n')
-            .substring(0, 8000); // Reduced overall limit for budget savings
+            .substring(0, 10000); // Increased overall limit for better context
 
         return `Circle Layer blockchain assistant. Answer ONLY Circle Layer questions using provided docs.
 
@@ -242,6 +242,7 @@ Rules:
 - Circle Layer topics only
 - Use clear, helpful explanations
 - Use markdown (##, \`\`\`, bullets)
+- Provide COMPLETE answers - don't truncate responses
 - If non-Circle Layer: "I help with Circle Layer blockchain only. Ask about Circle Layer development, staking, or setup."
 
 Circle Layer Documentation:
@@ -347,7 +348,7 @@ Please provide a helpful answer based on the Circle Layer documentation provided
             const response = await this.callGrok([
                 { role: 'system', content: systemPrompt },
                 { role: 'user', content: userPrompt }
-            ], 800); // Reduced tokens for budget savings
+            ], 1400); // Increased tokens for complete responses
 
             console.log('✅ Grok response generated successfully');
 
