@@ -9,9 +9,9 @@ class GrokAI {
     private apiKey: string | null = null;
     private readonly baseURL = 'https://api.x.ai/v1/chat/completions';
 
-    // Budget optimization: Simple response cache
+    // Budget optimization: Extended response cache
     private responseCache: Map<string, { response: AIResponse; timestamp: number }> = new Map();
-    private readonly CACHE_DURATION = 10 * 60 * 1000; // 10 minutes
+    private readonly CACHE_DURATION = 30 * 60 * 1000; // 30 minutes - longer cache for budget savings
 
     constructor() {
         this.docsLoader = new DocumentationLoader();
@@ -67,6 +67,12 @@ class GrokAI {
 
     /**
      * Make API call to Grok (Budget-optimized)
+     * Budget optimizations:
+     * - Default 700 tokens for general queries
+     * - Extended 30min cache (vs 10min)
+     * - Larger cache size (100 vs 50 entries)
+     * - Optimized context length (8K vs 10K chars)
+     * - Reduced per-doc content (2.5K vs 3K chars)
      */
     private async callGrok(messages: Array<{ role: string, content: string }>, maxTokens: number = 700): Promise<string> {
         if (!this.apiKey) {
@@ -122,7 +128,7 @@ Return numbers only (e.g., 0, 5, 12):`;
 
             const selectionResponse = await this.callGrok([
                 { role: 'user', content: selectionPrompt }
-            ], 70); // Increased tokens for document selection
+            ], 100); // Adequate tokens for document selection
 
             // Parse the AI response to get section numbers
             const selectedIndices = this.parseSelectedIndices(selectionResponse);
@@ -230,11 +236,11 @@ Return numbers only (e.g., 0, 5, 12):`;
      * STEP 2: Create system prompt with Grok-selected relevant documentation
      */
     private createSystemPrompt(relevantDocs: DocumentationContent[]): string {
-        // Combine docs with reasonable token limits for complete responses
+        // Combine docs with optimized token limits for budget-friendly responses
         const contextContent = relevantDocs
-            .map(doc => `${doc.title}:\n${doc.content.substring(0, 3000)}`) // Increased doc content limit
+            .map(doc => `${doc.title}:\n${doc.content.substring(0, 2500)}`) // Optimized doc content limit
             .join('\n\n')
-            .substring(0, 10000); // Increased overall limit for better context
+            .substring(0, 8000); // Optimized overall limit for budget efficiency
 
         return `Circle Layer blockchain assistant. Answer ONLY Circle Layer questions using provided docs.
 
@@ -242,7 +248,8 @@ Rules:
 - Circle Layer topics only (including content updates and documentation) any other that makes sense
 - Use clear, helpful explanations
 - Use markdown (##, \`\`\`, bullets)
-- Provide COMPLETE answers - don't truncate responses
+- CRITICAL: Provide COMPLETE answers - NEVER truncate or cut off responses mid-sentence
+- Always finish your thoughts and complete all sentences
 - If non-Circle Layer: "I help with Circle Layer blockchain only. Ask about Circle Layer development, staking, or setup."
 
 Circle Layer Documentation:
@@ -391,7 +398,7 @@ Please provide a helpful answer based on the Circle Layer documentation provided
             const response = await this.callGrok([
                 { role: 'system', content: systemPrompt },
                 { role: 'user', content: userPrompt }
-            ], 1400); // Increased tokens for complete responses
+            ], 2000); // Optimized tokens for complete responses while budget-friendly
 
             console.log('✅ Grok response generated successfully');
 
@@ -406,8 +413,8 @@ Please provide a helpful answer based on the Circle Layer documentation provided
             // Budget optimization: Cache the response
             this.responseCache.set(cacheKey, { response: aiResponse, timestamp: Date.now() });
 
-            // Keep cache size reasonable
-            if (this.responseCache.size > 50) {
+            // Keep cache size optimized for budget savings
+            if (this.responseCache.size > 100) {
                 const oldestKey = Array.from(this.responseCache.keys())[0];
                 this.responseCache.delete(oldestKey);
             }
