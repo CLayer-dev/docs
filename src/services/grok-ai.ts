@@ -239,7 +239,7 @@ Return numbers only (e.g., 0, 5, 12):`;
         return `Circle Layer blockchain assistant. Answer ONLY Circle Layer questions using provided docs.
 
 Rules:
-- Circle Layer topics only
+- Circle Layer topics only (including content updates and documentation) any other that makes sense
 - Use clear, helpful explanations
 - Use markdown (##, \`\`\`, bullets)
 - Provide COMPLETE answers - don't truncate responses
@@ -263,11 +263,54 @@ Please provide a helpful answer based on the Circle Layer documentation provided
      */
     private isCircleLayerRelated(query: string): boolean {
         const circleLayerTerms = [
+            // Direct Circle Layer references
             'circle layer', 'circlelayer', 'clayer', 'circle-layer',
+
+            // Network and infrastructure
             'testnet', 'mainnet', 'blockchain', 'validator', 'staking',
             'rpc', 'network', 'deploy', 'contract', 'gas', 'node',
             'consensus', 'development', 'smart contract', 'evm',
-            'hardhat', 'web3', 'ethers', 'getting started'
+            'hardhat', 'web3', 'ethers', 'getting started',
+
+            // Content-related terms
+            'content', 'documentation', 'docs', 'website', 'update',
+            'text', 'description', 'page', 'section', 'guide', 'tutorial',
+
+            // DeFi and trading
+            'defi', 'dex', 'swap', 'liquidity', 'pool', 'yield', 'farming',
+            'bridge', 'cross-chain', 'token', 'wallet', 'metamask',
+
+            // Performance and features
+            'tps', 'speed', 'fast', 'performance', 'scalability', 'throughput',
+            'block time', 'finality', 'transaction', 'fee', 'cost', 'energy',
+
+            // Security and AI
+            'security', 'audit', 'ai', 'protection', 'threat', 'vulnerability',
+            'safe', 'secure', 'monitoring', 'detection',
+
+            // Technical development
+            'solidity', 'remix', 'truffle', 'ganache', 'opensea', 'api',
+            'sdk', 'library', 'integration', 'migration', 'port',
+
+            // User experience
+            'setup', 'install', 'configure', 'connect', 'add network',
+            'faucet', 'explorer', 'transaction hash', 'address',
+
+            // Community and ecosystem
+            'roadmap', 'phase', 'launch', 'community', 'discord', 'telegram',
+            'github', 'partnership', 'collaboration', 'ecosystem',
+
+            // Economic terms
+            'tokenomics', 'governance', 'voting', 'rewards', 'incentives',
+            'economics', 'fee structure', 'burn', 'supply',
+
+            // Comparison terms
+            'ethereum', 'polygon', 'bsc', 'avalanche', 'solana', 'vs',
+            'compare', 'comparison', 'difference', 'better', 'alternative',
+
+            // General blockchain concepts
+            'dapp', 'protocol', 'layer 1', 'l1', 'pos', 'proof of stake',
+            'consensus mechanism', 'cryptocurrency', 'crypto', 'digital asset'
         ];
 
         const queryLower = query.toLowerCase();
