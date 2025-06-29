@@ -7,6 +7,7 @@ const matter = require('gray-matter');
 
 const DOCS_DIR = path.join(__dirname, '../docs');
 const OUTPUT_FILE = path.join(__dirname, '../src/data/docs-index.ts');
+const STATIC_JSON_FILE = path.join(__dirname, '../static/docs-index.json');
 
 function getAllMarkdownFiles(dir) {
     const files = [];
@@ -45,6 +46,11 @@ function parseDocumentationFile(filePath) {
             .replace(/[/\\]/g, '-')
             .toLowerCase();
 
+        // Generate proper URL for Docusaurus routing (without /docs prefix)
+        let url = '/' + relativePath
+            .replace(/\.(md|mdx)$/, '')
+            .replace(/[\\]/g, '/'); // Use forward slashes for URLs
+
         // Clean content for AI processing
         const cleanContent = markdownContent
             // Remove import statements
@@ -74,7 +80,8 @@ function parseDocumentationFile(filePath) {
             content: cleanContent,
             frontmatter,
             filePath: relativePath.replace(/\\/g, '/'), // Use forward slashes for consistency
-            category
+            category,
+            url
         };
     } catch (error) {
         console.error(`Error parsing file ${filePath}:`, error);
@@ -91,25 +98,40 @@ function generateDocsIndex() {
         fs.mkdirSync(outputDir, { recursive: true });
     }
 
+    // Ensure static directory exists
+    const staticDir = path.dirname(STATIC_JSON_FILE);
+    if (!fs.existsSync(staticDir)) {
+        fs.mkdirSync(staticDir, { recursive: true });
+    }
+
     // Find all markdown files
     const markdownFiles = getAllMarkdownFiles(DOCS_DIR);
     console.log(`Found ${markdownFiles.length} documentation files`);
 
     // Parse all files
     const docsIndex = {};
+    const searchIndex = [];
     let processedCount = 0;
 
     for (const filePath of markdownFiles) {
         const docData = parseDocumentationFile(filePath);
         if (docData) {
             docsIndex[docData.id] = docData;
+
+            // Create simplified version for search
+            searchIndex.push({
+                title: docData.title,
+                body: docData.content,
+                url: docData.url
+            });
+
             processedCount++;
         }
     }
 
     console.log(`Successfully processed ${processedCount} files`);
 
-    // Generate TypeScript file
+    // Generate TypeScript file for internal use
     const timestamp = new Date().toISOString();
     const tsContent = `// Auto-generated documentation index
 // Generated at: ${timestamp}
@@ -126,9 +148,14 @@ export const DOCS_METADATA = {
 } as const;
 `;
 
-    // Write the file
+    // Write the TypeScript file
     fs.writeFileSync(OUTPUT_FILE, tsContent, 'utf8');
-    console.log(`✅ Documentation index generated: ${OUTPUT_FILE}`);
+    console.log(`✅ TypeScript index generated: ${OUTPUT_FILE}`);
+
+    // Generate JSON file for static serving (used by search components)
+    fs.writeFileSync(STATIC_JSON_FILE, JSON.stringify(searchIndex, null, 2), 'utf8');
+    console.log(`✅ Static JSON index generated: ${STATIC_JSON_FILE}`);
+
     console.log(`📊 Total documents: ${processedCount}`);
     console.log(`📁 Categories: ${[...new Set(Object.values(docsIndex).map(doc => doc.category))].join(', ')}`);
 }

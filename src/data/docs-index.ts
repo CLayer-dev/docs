@@ -1,5 +1,5 @@
 // Auto-generated documentation index
-// Generated at: 2025-06-11T12:47:42.464Z
+// Generated at: 2025-06-29T12:14:21.738Z
 // Source: Circle Layer documentation files
 
 import { DocumentationIndex } from '../types/docs';
@@ -13,7 +13,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 1
     },
     "filePath": "ai-security/benefits.md",
-    "category": "ai-security"
+    "category": "ai-security",
+    "url": "/ai-security/benefits"
   },
   "ai-security-how-it-works": {
     "id": "ai-security-how-it-works",
@@ -27,7 +28,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "description": "Discover Circle Layer's advanced AI-powered security system that protects your blockchain transactions in real-time."
     },
     "filePath": "ai-security/how-it-works.mdx",
-    "category": "ai-security"
+    "category": "ai-security",
+    "url": "/ai-security/how-it-works"
   },
   "apis-sdks-index": {
     "id": "apis-sdks-index",
@@ -38,7 +40,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "description": "Complete guide to Circle Layer APIs, SDKs, and developer tools"
     },
     "filePath": "apis-sdks/index.md",
-    "category": "apis-sdks"
+    "category": "apis-sdks",
+    "url": "/apis-sdks/index"
   },
   "apis-sdks-rpc-endpoints": {
     "id": "apis-sdks-rpc-endpoints",
@@ -48,7 +51,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 1
     },
     "filePath": "apis-sdks/rpc-endpoints.md",
-    "category": "apis-sdks"
+    "category": "apis-sdks",
+    "url": "/apis-sdks/rpc-endpoints"
   },
   "apis-sdks-web3-libraries": {
     "id": "apis-sdks-web3-libraries",
@@ -58,7 +62,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 2
     },
     "filePath": "apis-sdks/web3-libraries.md",
-    "category": "apis-sdks"
+    "category": "apis-sdks",
+    "url": "/apis-sdks/web3-libraries"
   },
   "architecture-evm-compatibility": {
     "id": "architecture-evm-compatibility",
@@ -70,7 +75,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_label": "EVM Compatibility"
     },
     "filePath": "architecture/evm-compatibility.md",
-    "category": "architecture"
+    "category": "architecture",
+    "url": "/architecture/evm-compatibility"
   },
   "architecture-high-tps": {
     "id": "architecture-high-tps",
@@ -82,7 +88,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_label": "Performance Architecture"
     },
     "filePath": "architecture/high-tps.md",
-    "category": "architecture"
+    "category": "architecture",
+    "url": "/architecture/high-tps"
   },
   "architecture-pos-consensus": {
     "id": "architecture-pos-consensus",
@@ -96,7 +103,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "description": "Learn about Circle Layer's advanced Proof of Stake consensus mechanism, validator selection, and reward system."
     },
     "filePath": "architecture/pos-consensus.mdx",
-    "category": "architecture"
+    "category": "architecture",
+    "url": "/architecture/pos-consensus"
   },
   "community-contribution-guidelines": {
     "id": "community-contribution-guidelines",
@@ -106,7 +114,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 1
     },
     "filePath": "community/contribution-guidelines.md",
-    "category": "community"
+    "category": "community",
+    "url": "/community/contribution-guidelines"
   },
   "community-forums-social-media": {
     "id": "community-forums-social-media",
@@ -116,7 +125,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 2
     },
     "filePath": "community/forums-social-media.md",
-    "category": "community"
+    "category": "community",
+    "url": "/community/forums-social-media"
   },
   "comparison-feature-comparison": {
     "id": "comparison-feature-comparison",
@@ -126,7 +136,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 1
     },
     "filePath": "comparison/feature-comparison.md",
-    "category": "comparison"
+    "category": "comparison",
+    "url": "/comparison/feature-comparison"
   },
   "comparison-key-advantages": {
     "id": "comparison-key-advantages",
@@ -136,7 +147,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 2
     },
     "filePath": "comparison/key-advantages.md",
-    "category": "comparison"
+    "category": "comparison",
+    "url": "/comparison/key-advantages"
   },
   "development-deploying-contracts": {
     "id": "development-deploying-contracts",
@@ -146,7 +158,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 3
     },
     "filePath": "development/deploying-contracts.md",
-    "category": "development"
+    "category": "development",
+    "url": "/development/deploying-contracts"
   },
   "development-interacting-with-contracts": {
     "id": "development-interacting-with-contracts",
@@ -156,7 +169,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 2
     },
     "filePath": "development/interacting-with-contracts.md",
-    "category": "development"
+    "category": "development",
+    "url": "/development/interacting-with-contracts"
   },
   "development-web3-integration": {
     "id": "development-web3-integration",
@@ -166,7 +180,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 4
     },
     "filePath": "development/web3-integration.md",
-    "category": "development"
+    "category": "development",
+    "url": "/development/web3-integration"
   },
   "development-writing-smart-contracts": {
     "id": "development-writing-smart-contracts",
@@ -176,7 +191,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 1
     },
     "filePath": "development/writing-smart-contracts.md",
-    "category": "development"
+    "category": "development",
+    "url": "/development/writing-smart-contracts"
   },
   "faqs-common-questions": {
     "id": "faqs-common-questions",
@@ -186,7 +202,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 1
     },
     "filePath": "faqs/common-questions.md",
-    "category": "faqs"
+    "category": "faqs",
+    "url": "/faqs/common-questions"
   },
   "getting-started-connect-testnet": {
     "id": "getting-started-connect-testnet",
@@ -198,7 +215,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_label": "Connect to Testnet"
     },
     "filePath": "getting-started/connect-testnet.md",
-    "category": "getting-started"
+    "category": "getting-started",
+    "url": "/getting-started/connect-testnet"
   },
   "getting-started-set-up-wallet": {
     "id": "getting-started-set-up-wallet",
@@ -210,7 +228,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_label": "Set Up a Wallet"
     },
     "filePath": "getting-started/set-up-wallet.md",
-    "category": "getting-started"
+    "category": "getting-started",
+    "url": "/getting-started/set-up-wallet"
   },
   "getting-started-use-faucet": {
     "id": "getting-started-use-faucet",
@@ -222,7 +241,19 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_label": "Use the Faucet"
     },
     "filePath": "getting-started/use-faucet.md",
-    "category": "getting-started"
+    "category": "getting-started",
+    "url": "/getting-started/use-faucet"
+  },
+  "governance-coin-distribution": {
+    "id": "governance-coin-distribution",
+    "title": "CLAYER Token Distribution",
+    "content": "# CLAYER Token Distribution\n\nThe Circle Layer network was designed from the ground up as the foundation for a new high-performance digital ecosystem—one that is secured by AI, governed by its participants, and built for the next generation of decentralized applications.\n\n## Reference Documents\n- [Circle Layer Primer](/intro): Why we created Circle Layer – and what makes it different\n- [Technical Architecture](/architecture/pos-consensus): Deep dive into the unique DPoS consensus architecture  \n- [Token Economics](/governance/tokenomics): Sustainable foundation for the digital economy\n- [Development Roadmap](/roadmap/phase-1-testnet): Comprehensive development strategy\n\n## CLAYER Token Use Cases\n\nThe CLAYER token is the native currency of the Circle Layer network. It is essential for the functioning of the network and all applications built on top of it. CLAYER is designed as both a payment method and a long-term reserve asset within the ecosystem.\n\n- Used by validators, developers, and users to earn rewards\n- Transfers fees across the network  \n- Serves as collateral for secondary tokens\n- Pays for storage and computation\n- Enables participation in network governance\n- Powers AI security layer operations\n\n## Current Development Phase: Testnet to Mainnet Strategy\n\n### Phase 1: ERC20 Community Building (Current)\nCircle Layer launched as an ERC20 token on Ethereum to bootstrap community engagement and establish strong foundations before mainnet deployment. This community-first approach ensures:\n\n- **Developer Ecosystem Growth**: Building a robust developer community\n- **Technical Innovation Focus**: Concentrating on breakthrough blockchain technology\n- **Comprehensive Testing**: Extensive testnet validation before mainnet\n- **Community Governance**: Early community shapes development priorities\n- **Migration Infrastructure**: Seamless transition protocols for all holders\n\n### Phase 2: Testnet Ecosystem Development  \nOur testnet (Chain ID: 28525) provides a complete testing environment with:\n\n- **Current Performance**: 2,000 TPS with 3-second block time\n- **Target Performance**: 50,000 TPS before mainnet launch\n- **AI Security Testing**: Real-time smart contract auditing and threat detection\n- **Full EVM Compatibility**: Seamless migration from Ethereum\n- **Comprehensive Infrastructure**: Native DEX, bridge, and mobile wallets\n\n### Phase 3: Mainnet Launch & Migration\nUpon mainnet launch, all ERC20 CLAYER holders will be eligible for seamless migration:\n\n- **1:1 Migration Ratio**: Every ERC20 CLAYER becomes 1 native CLAYER\n- **Value Preservation**: All community-built value and momentum maintained\n- **Migration Bonuses**: Long-term holders receive additional native tokens\n- **Enhanced Utility**: Full access to native chain features including staking and governance\n\n## Token Utility & Network Operations\n\n### Validator Rewards & Staking\nValidator rewards are designed for the testnet and will be fully activated on mainnet launch. These tokens provide immediate utility upon network participation.\n\n**Key Features:**\n- **Block Rewards**: 2 CLAYER per block with performance bonuses\n- **Staking Rewards**: 5-15% APY for network validators and delegators\n- **No Dilution**: Only active participants receive new token issuance\n- **Minimum Stake**: 100,000 CLAYER required for validator participation\n- **Dynamic Rewards**: Inflation adjusts based on network utility and performance\n\n**Expected Validator Revenue Streams:**\n- **Block Production**: 8,640-12,000 CLAYER daily earnings\n- **Transaction Fees**: 50% share of network fees ($50K-500K daily at peak)\n- **Delegation Commission**: 5-15% from delegated stake revenue\n- **Performance Bonuses**: Up to 35% additional rewards for top validators\n\nOver time, Circle Layer aims to rely more on transaction fees and less on new token issuance. Higher network activity will naturally reduce annual issuance rates while maintaining attractive validator rewards.\n\n### AI Security Layer Operations  \nCLAYER tokens power Circle Layer's unique AI security infrastructure:\n\n- **Real-time Contract Auditing**: AI-powered vulnerability scanning\n- **Threat Detection & Response**: Automated security monitoring\n- **Community Protection**: Smart contract exploit prevention\n- **Security Staking**: Additional rewards for security node operators\n\n## Ecosystem Development & Treasury Allocation\n\n### Community Development Fund\nA significant portion of CLAYER tokens is allocated for ecosystem development to support a diverse and accessible community:\n\n**Support Recipients:**\n- **Developer Programs**: $10M+ in grants and incentives\n- **Educational Institutions**: Academic partnerships and research programs  \n- **Entrepreneurial Organizations**: Startup accelerators and incubators\n- **Open Source Projects**: Community-driven development initiatives\n- **Hackathons & Events**: Major blockchain conference participation\n\nThese programs focus on sustainable value creation rather than speculation. Distribution includes appropriate lockups and restrictions to ensure long-term ecosystem alignment.\n\n### Development Team & Core Contributors\nThe Circle Layer development team brings innovation and interdisciplinary expertise from leading blockchain projects. Team token allocations are vested over multiple years to align incentives across all stakeholders and ensure continued development excellence.\n\n**Key Principles:**\n- **Long-term Vesting**: Multi-year vesting schedules for team allocations\n- **Performance Milestones**: Vesting tied to development achievements\n- **Community Alignment**: Team incentives aligned with ecosystem success\n- **Transparency**: Clear communication of all allocation details\n\n## Network Launch Strategy\n\n### Genesis Block & Initial Distribution\nThe Circle Layer mainnet genesis block will initialize with a carefully planned token distribution:\n\n**Pre-Launch Validation:**\n- **Technical Readiness**: 50,000 TPS sustained performance on testnet\n- **Security Validation**: AI layer protecting 1,000+ contracts with zero exploits\n- **Ecosystem Maturity**: Native DEX with $100M+ TVL and 100+ active projects\n- **Community Strength**: 1,000+ developers and comprehensive mobile wallet deployment\n\n**Genesis Validators:**\n- **Initial Set**: 21 pre-approved validators for network bootstrap\n- **Geographic Distribution**: Global validator network for decentralization\n- **Minimum Stake**: 100,000 CLAYER per validator\n- **Security**: Multi-signature genesis ceremony with community oversight\n\n### Migration Incentives & Community Rewards\nCircle Layer rewards early supporters and long-term community members:\n\n**Migration Bonus Structure:**\n- **6+ Month Holders**: 5% bonus native tokens\n- **12+ Month Holders**: 10% bonus native tokens  \n- **18+ Month Holders**: 15% bonus native tokens\n- **Community Leaders**: Additional governance token allocation\n- **Developer Contributors**: Special recognition and enhanced rewards\n\n**Post-Migration Benefits:**\n- **Staking Participation**: Earn network validation rewards\n- **Governance Rights**: Vote on protocol upgrades and treasury management\n- **DeFi Access**: Native DEX and cross-chain bridge utilization\n- **Enhanced Security**: AI-powered smart contract protection\n- **Ecosystem Growth**: Participate in a thriving, high-performance blockchain ecosystem\n\n## Economic Model & Fee Structure\n\n### Current Testnet Economics\nOur testnet provides insight into the economic mechanisms supporting the network:\n\n**Fee Structure:**\n- **Minimum Gas Price**: 0.000021 CLAYER  \n- **Fee Distribution**: 50% to validators, 30% to treasury, 25% burned (max 1M CLAYER)\n- **Block Gas Limit**: 10,000,000,000,000 per block\n- **Energy Efficiency**: 99.9% less energy than Proof of Work\n\n### Mainnet Economic Projections\n**Validator Economics (Annual Projections):**\n- **Conservative Scenario**: $25K-58K USD equivalent in CLAYER\n- **Moderate Scenario**: $83K-223K USD equivalent in CLAYER  \n- **Optimistic Scenario**: $328K-1.34M USD equivalent in CLAYER\n\n*Projections based on network adoption, transaction volume, and token utility. Actual returns depend on network growth and individual validator performance.*\n\n## Technical Innovation & Performance\n\n### High-Performance Infrastructure\nCircle Layer achieves industry-leading performance through innovative architecture:\n\n- **Current Testnet**: 2,000 TPS with 1-3 second finality\n- **Mainnet Target**: 50,000 TPS with sub-second finality  \n- **EVM Compatibility**: 100% Ethereum bytecode compatibility\n- **Parallel Processing**: Multi-threaded transaction execution\n- **State Management**: Advanced optimization for maximum throughput\n\n### AI-Powered Security\nUnique security features powered by CLAYER tokens:\n\n- **Agentic Security Layer**: Real-time smart contract vulnerability detection\n- **Predictive Threat Analysis**: AI-powered exploit prevention\n- **Continuous Monitoring**: 24/7 network security surveillance\n- **Community Protection**: Automatic threat response and alert systems\n\n## Future Development & Expansion\n\n### Roadmap to Global Adoption\nCircle Layer's strategic vision includes:\n\n**Phase 4 Objectives:**\n- **Top 10 Blockchain**: By technical innovation and ecosystem adoption\n- **10M+ Active Users**: Global user base through superior performance\n- **1,000+ Enterprise Clients**: Business adoption via robust solutions\n- **100,000+ TPS**: Next-generation performance capabilities\n- **Global Compliance**: Regulatory leadership and standards development\n\n### Innovation Leadership\nContinued investment in breakthrough technologies:\n\n- **Quantum-Resistant Security**: Post-quantum cryptography implementation\n- **Cross-Chain Leadership**: Universal interoperability across 50+ blockchains  \n- **Enterprise Solutions**: Bank-grade security and compliance\n- **Gaming & Metaverse**: High-performance infrastructure for next-gen applications\n\n## Community Participation & Governance\n\n### Decentralized Governance Model\nCLAYER tokens enable community participation in network governance:\n\n- **Proposal Creation**: Community-driven development proposals\n- **Voting Rights**: Token-weighted governance participation\n- **Treasury Management**: Community-controlled fund allocation\n- **Technical Decisions**: Validator and developer community input\n- **Economic Parameters**: Dynamic adjustment based on network performance\n\n### Getting Involved\nMultiple pathways for community participation:\n\n**For Developers:**\n- **Testnet Development**: Join our comprehensive testing program\n- **Grant Applications**: Access developer funding and support\n- **Hackathon Participation**: Compete in ecosystem building events\n- **Technical Contributions**: Contribute to open-source development\n\n**For Validators:**\n- **Early Validator Program**: Participate in network security\n- **Community Leadership**: Help shape network governance\n- **Technical Expertise**: Contribute to consensus development\n- **Economic Participation**: Earn rewards while securing the network\n\n**For Community Members:**\n- **Education & Advocacy**: Learn and share Circle Layer technology\n- **Ambassador Program**: Represent Circle Layer globally\n- **Governance Participation**: Vote on important network decisions\n- **Ecosystem Building**: Support project development and adoption\n\n---\n\n*Circle Layer represents the next evolution in blockchain technology, combining high performance, AI-powered security, and community governance. The CLAYER token distribution strategy ensures sustainable growth while rewarding early supporters and long-term ecosystem participants.*",
+    "frontmatter": {
+      "sidebar_position": 3
+    },
+    "filePath": "governance/coin-distribution.md",
+    "category": "governance",
+    "url": "/governance/coin-distribution"
   },
   "governance-governance-model": {
     "id": "governance-governance-model",
@@ -232,7 +263,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 1
     },
     "filePath": "governance/governance-model.md",
-    "category": "governance"
+    "category": "governance",
+    "url": "/governance/governance-model"
   },
   "governance-tokenomics": {
     "id": "governance-tokenomics",
@@ -242,7 +274,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 2
     },
     "filePath": "governance/tokenomics.md",
-    "category": "governance"
+    "category": "governance",
+    "url": "/governance/tokenomics"
   },
   "intro": {
     "id": "intro",
@@ -255,7 +288,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "description": "Circle Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain with AI security features."
     },
     "filePath": "intro.mdx",
-    "category": "general"
+    "category": "general",
+    "url": "/intro"
   },
   "introduction-key-features": {
     "id": "introduction-key-features",
@@ -267,7 +301,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_label": "Key Features"
     },
     "filePath": "introduction/key-features.md",
-    "category": "introduction"
+    "category": "introduction",
+    "url": "/introduction/key-features"
   },
   "introduction-use-cases": {
     "id": "introduction-use-cases",
@@ -279,7 +314,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_label": "Use Cases"
     },
     "filePath": "introduction/use-cases.md",
-    "category": "introduction"
+    "category": "introduction",
+    "url": "/introduction/use-cases"
   },
   "introduction-what-is-circle-layer": {
     "id": "introduction-what-is-circle-layer",
@@ -291,7 +327,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_label": "What is Circle Layer?"
     },
     "filePath": "introduction/what-is-circle-layer.md",
-    "category": "introduction"
+    "category": "introduction",
+    "url": "/introduction/what-is-circle-layer"
   },
   "nodes-validation-becoming-validator": {
     "id": "nodes-validation-becoming-validator",
@@ -301,7 +338,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 1
     },
     "filePath": "nodes-validation/becoming-validator.md",
-    "category": "nodes-validation"
+    "category": "nodes-validation",
+    "url": "/nodes-validation/becoming-validator"
   },
   "nodes-validation-node-monitoring": {
     "id": "nodes-validation-node-monitoring",
@@ -311,7 +349,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 4
     },
     "filePath": "nodes-validation/node-monitoring.md",
-    "category": "nodes-validation"
+    "category": "nodes-validation",
+    "url": "/nodes-validation/node-monitoring"
   },
   "nodes-validation-node-security": {
     "id": "nodes-validation-node-security",
@@ -321,7 +360,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 3
     },
     "filePath": "nodes-validation/node-security.md",
-    "category": "nodes-validation"
+    "category": "nodes-validation",
+    "url": "/nodes-validation/node-security"
   },
   "nodes-validation-running-full-node": {
     "id": "nodes-validation-running-full-node",
@@ -331,7 +371,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 2
     },
     "filePath": "nodes-validation/running-full-node.md",
-    "category": "nodes-validation"
+    "category": "nodes-validation",
+    "url": "/nodes-validation/running-full-node"
   },
   "roadmap-phase-1-testnet": {
     "id": "roadmap-phase-1-testnet",
@@ -343,7 +384,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_label": "Development Roadmap"
     },
     "filePath": "roadmap/phase-1-testnet.md",
-    "category": "roadmap"
+    "category": "roadmap",
+    "url": "/roadmap/phase-1-testnet"
   },
   "roadmap-phase-2-ecosystem": {
     "id": "roadmap-phase-2-ecosystem",
@@ -356,7 +398,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 2
     },
     "filePath": "roadmap/phase-2-ecosystem.md",
-    "category": "roadmap"
+    "category": "roadmap",
+    "url": "/roadmap/phase-2-ecosystem"
   },
   "roadmap-phase-3-mainnet": {
     "id": "roadmap-phase-3-mainnet",
@@ -369,7 +412,8 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 3
     },
     "filePath": "roadmap/phase-3-mainnet.md",
-    "category": "roadmap"
+    "category": "roadmap",
+    "url": "/roadmap/phase-3-mainnet"
   },
   "roadmap-phase-4-expansion": {
     "id": "roadmap-phase-4-expansion",
@@ -382,12 +426,13 @@ export const DOCS_INDEX: DocumentationIndex = {
       "sidebar_position": 4
     },
     "filePath": "roadmap/phase-4-expansion.md",
-    "category": "roadmap"
+    "category": "roadmap",
+    "url": "/roadmap/phase-4-expansion"
   }
 } as const;
 
 export const DOCS_METADATA = {
-  generatedAt: '2025-06-11T12:47:42.464Z',
-  totalDocs: 34,
+  generatedAt: '2025-06-29T12:14:21.738Z',
+  totalDocs: 35,
   categories: ["ai-security","apis-sdks","architecture","community","comparison","development","faqs","getting-started","governance","general","introduction","nodes-validation","roadmap"]
 } as const;
