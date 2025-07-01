@@ -11,15 +11,14 @@ Learn how to integrate Web3 libraries with Circle Layer testnet. Circle Layer fo
 ## Network Configuration
 
 ### Circle Layer Testnet
-*Configuration ready for testnet deployment:*
-<!-- - **RPC URL**: https://rpc-testnet.circlelayer.com -->
-<!-- - **WebSocket**: wss://138.197.184.207:8545 -->
-- **RPC URL**: *Coming soon*
-- **WebSocket**: *Coming soon*
+*Configuration for testnet deployment:*
+
+- **RPC URL**: https://testnet-rpc.circlelayer.com
+- **WebSocket**: wss://testnet-rpc.circlelayer.com
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
-<!-- - **Block Explorer**: https://explorer-testnet.circlelayer.com/ -->
-- **Block Explorer**: *Coming soon*
+
+- **Block Explorer**: https://explorer-testnet.circlelayer.com
 
 ## Web3.js Integration
 
@@ -33,10 +32,10 @@ npm install web3
 const Web3 = require('web3');
 
 // HTTP Provider
-const web3 = new Web3('https://rpc-testnet.circlelayer.com');
+const web3 = new Web3('https://testnet-rpc.circlelayer.com');
 
 // WebSocket Provider
-const web3WS = new Web3('wss://138.197.184.207:8545');
+const web3WS = new Web3('wss://testnet-rpc.circlelayer.com');
 
 // Network Configuration
 const networkConfig = {
@@ -115,10 +114,10 @@ npm install ethers
 const { ethers } = require('ethers');
 
 // Provider setup
-const provider = new ethers.providers.JsonRpcProvider('https://rpc-testnet.circlelayer.com');
+const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
 
 // WebSocket Provider
-const wsProvider = new ethers.providers.WebSocketProvider('wss://138.197.184.207:8545');
+const wsProvider = new ethers.providers.WebSocketProvider('wss://testnet-rpc.circlelayer.com');
 
 // Network configuration
 const network = {
@@ -213,7 +212,7 @@ const useCircleLayer = () => {
               symbol: 'CLAYER',
               decimals: 18
             },
-            rpcUrls: ['https://rpc-testnet.circlelayer.com'],
+            rpcUrls: ['https://testnet-rpc.circlelayer.com'],
             blockExplorerUrls: ['https://explorer-testnet.circlelayer.com/']
           }]
         });
@@ -302,7 +301,7 @@ Circle Layer testnet can be integrated into mobile applications using the same E
 import { ethers } from 'ethers';
 
 // Provider setup for mobile
-const provider = new ethers.providers.JsonRpcProvider('https://rpc-testnet.circlelayer.com');
+const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
 
 // Mobile wallet integration follows standard EVM patterns
 const connectMobileWallet = async () => {

@@ -16,7 +16,7 @@ Circle Layer provides comprehensive APIs and SDKs to help developers build and i
 - **Use Cases**: Transaction submission, contract deployment, balance queries
 
 ### WebSocket API
-- **Endpoint**: `wss://138.197.184.207:8545`
+- **Endpoint**: `wss://testnet-rpc.circlelayer.com`
 - **Purpose**: Real-time blockchain events
 - **Features**: Block subscriptions, transaction notifications
 - **Use Cases**: Live updates, event monitoring

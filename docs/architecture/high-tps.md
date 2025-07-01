@@ -33,8 +33,8 @@ Learn about Circle Layer's current performance capabilities and the architecture
 - **Finality**: Fast confirmation through DPoS mechanism
 
 ### Network Infrastructure
-- **RPC Endpoint**: https://rpc-testnet.circlelayer.com
-- **WebSocket**: wss://138.197.184.207:8545
+- **RPC Endpoint**: https://testnet-rpc.circlelayer.com
+- **WebSocket**: wss://testnet-rpc.circlelayer.com
 - **Multiple Ports**: 32668, 32669, 8545, 6060, 80, 22
 - **Geographic Distribution**: Support for multiple RPC endpoints
 

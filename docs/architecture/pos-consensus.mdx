@@ -29,8 +29,8 @@ import '@site/src/css/intro.css';
       <div className="hero-stat-label">Finality</div>
     </div>
     <div className="hero-stat">
-      <div className="hero-stat-value">100K</div>
-      <div className="hero-stat-label">Min Stake</div>
+      <div className="hero-stat-value">32</div>
+      <div className="hero-stat-label">Min Stake (Testnet)</div>
     </div>
   </div>
 
@@ -137,7 +137,7 @@ graph TB
     <p>Low barriers to entry reduce centralization risks and promote participation</p>
     <div className="decentralization-stats">
       <div className="stat-item">
-        <span className="stat-number">10 CLAYER</span>
+        <span className="stat-number">32 CLAYER</span>
         <span className="stat-label">Min Stake</span>
       </div>
       <div className="stat-item">
@@ -164,15 +164,15 @@ graph TB
           <div className="step-icon">💰</div>
           <div className="step-content">
             <h5>Stake Requirement</h5>
-            <p>Validators must stake a minimum of <strong>100,000 CLAYER tokens</strong> to participate in consensus</p>
+            <p>Validators must stake a minimum of <strong>32 CLAYER tokens (testnet)</strong> or <strong>100,000 CLAYER tokens (mainnet)</strong> to participate in consensus</p>
             <div className="stake-details">
               <div className="detail-item">
-                <span>Minimum Stake:</span>
-                <span>100,000 CLAYER</span>
+                <span>Testnet Min Stake:</span>
+                <span>32 CLAYER</span>
               </div>
               <div className="detail-item">
-                <span>Optimal Stake:</span>
-                <span>100,000+ CLAYER</span>
+                <span>Mainnet Min Stake:</span>
+                <span>100,000 CLAYER</span>
               </div>
               <div className="detail-item">
                 <span>Lock Period:</span>
@@ -470,10 +470,10 @@ graph TB
           <div className="chart-section validators">
             <div className="section-header">
               <span>👥 Validators</span>
-              <span>70%</span>
+              <span>30%</span>
             </div>
             <div className="section-bar">
-              <div className="bar-fill" data-width="70"></div>
+              <div className="bar-fill" data-width="30"></div>
             </div>
             <div className="section-details">
               <span>For block production and validation</span>
@@ -483,10 +483,10 @@ graph TB
           <div className="chart-section delegators">
             <div className="section-header">
               <span>🤝 Delegators</span>
-              <span>25%</span>
+              <span>45%</span>
             </div>
             <div className="section-bar">
-              <div className="bar-fill" data-width="25"></div>
+              <div className="bar-fill" data-width="45"></div>
             </div>
             <div className="section-details">
               <span>Shared with token delegators</span>
@@ -495,14 +495,14 @@ graph TB
 
           <div className="chart-section treasury">
             <div className="section-header">
-              <span>🏛️ Treasury</span>
-              <span>5%</span>
+              <span>🔥 Burn</span>
+              <span>25%</span>
             </div>
             <div className="section-bar">
-              <div className="bar-fill" data-width="5"></div>
+              <div className="bar-fill" data-width="25"></div>
             </div>
             <div className="section-details">
-              <span>For ecosystem development</span>
+              <span>Burned (stops at 1M CLAYER threshold)</span>
             </div>
           </div>
         </div>
@@ -513,9 +513,9 @@ graph TB
             <div className="revenue-source">
               <h6>🔥 Transaction Fees</h6>
               <ul>
-                <li>Validators: 50% of transaction fees</li>
-                <li>Treasury: 30% for ecosystem development</li>
-                <li>Burn Mechanism: 25% (max 1M CLAYER per period)</li>
+                <li>Validators: 30% of transaction fees</li>
+                <li>Delegators: 45% of transaction fees</li>
+                <li>Burn Mechanism: 25% (max 1M CLAYER threshold)</li>
                 <li>Expected Fee Revenue: $50K-500K daily at peak usage</li>
               </ul>
             </div>
@@ -677,7 +677,7 @@ graph TB
             <div className="option-content">
               <div className="requirement">
                 <span>Min Stake:</span>
-                <span>1 CLAYER</span>
+                <span>32 CLAYER</span>
               </div>
               <div className="requirement">
                 <span>Hardware:</span>

@@ -34,25 +34,21 @@ Yes, Circle Layer is fully EVM compatible, allowing Ethereum developers to easil
 - **Target Uptime**: 99.95%
 
 ### Where can I find network resources?
-*The following resources will be available when testnet launches:*
-<!-- - **RPC**: https://rpc-testnet.circlelayer.com -->
-<!-- - **Explorer**: https://explorer-testnet.circlelayer.com/ -->
-<!-- - **Faucet**: https://faucet.circlelayer.com -->
-<!-- - **API Docs**: https://testnet.circlelayer.com/api-docs -->
+*Circle Layer testnet resources:*
 
-- **RPC**: *Coming soon*
-- **Explorer**: *Coming soon*
-- **Faucet**: *Coming soon*
-- **API Docs**: *Coming soon*
+- **RPC**: https://testnet-rpc.circlelayer.com
+- **Explorer**: https://explorer-testnet.circlelayer.com
+- **Faucet**: https://faucet.circlelayer.com
+- **Faucet API**: https://faucet-api.circlelayer.com
 
 ## Technical Questions
 
 ### How do I connect to Circle Layer testnet?
-*Configuration for when testnet becomes available:*
+*Configuration for Circle Layer testnet:*
 
 ```javascript
 // Using ethers.js
-// const provider = new ethers.providers.JsonRpcProvider('https://rpc-testnet.circlelayer.com');
+const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
 
 // Network configuration for MetaMask
 {
@@ -63,10 +59,8 @@ Yes, Circle Layer is fully EVM compatible, allowing Ethereum developers to easil
     symbol: 'CLAYER',
     decimals: 18
   },
-  // rpcUrls: ['https://rpc-testnet.circlelayer.com'],
-  // blockExplorerUrls: ['https://explorer-testnet.circlelayer.com/']
-  rpcUrls: ['*Coming soon*'],
-  blockExplorerUrls: ['*Coming soon*']
+  rpcUrls: ['https://testnet-rpc.circlelayer.com'],
+  blockExplorerUrls: ['https://explorer-testnet.circlelayer.com']
 }
 ```
 
@@ -77,10 +71,9 @@ Yes, Circle Layer is fully EVM compatible, allowing Ethereum developers to easil
 - **Mobile Wallets** (Same as EVM integration)
 
 ### How do I get testnet tokens?
-*When testnet launches, the faucet will be available with the following process:*
+*Circle Layer testnet faucet:*
 
-<!-- 1. Visit the faucet: https://faucet.circlelayer.com -->
-1. Visit the faucet: *Coming soon*
+1. Visit the faucet: https://faucet.circlelayer.com
 2. Paste your EVM wallet address
 3. Click "Get 1 CLAYER coin"
 4. Wait 24 hours between requests (1 CLAYER per day limit)
@@ -129,7 +122,10 @@ See our [Web3 Integration Guide](/development/web3-integration) for detailed ins
 See our [Validator Guide](/nodes-validation/becoming-validator)
 
 ### What are the current staking requirements?
-- **Minimum Stake**: 100,000 CLAYER
+- **Testnet Validator Minimum Stake**: 32 CLAYER
+- **Mainnet Validator Minimum Stake**: 100,000 CLAYER
+- **Delegator Minimum Stake**: 32 CLAYER
+- **Maximum Validators**: 21 (testnet), 10,000 (mainnet)
 - **Hardware**: Ubuntu ≥ 20.04 LTS, 8GB RAM minimum (32GB recommended)
 - **Storage**: 25GB minimum (100GB SSD recommended)
 - **Network**: Multiple RPC endpoints required
@@ -138,8 +134,13 @@ See our [Validator Guide](/nodes-validation/becoming-validator)
 ### What can validators earn?
 **Revenue Sources:**
 - **Block Rewards**: 2 CLAYER per block + performance bonuses
-- **Transaction Fees**: 50% of network transaction fees
+- **Transaction Fees**: 30% of network transaction fees
 - **Delegation Commission**: 5-20% from delegated stakes
+
+**Fee Distribution:**
+- **Delegators**: 45% of gas fees
+- **Validators**: 30% of gas fees  
+- **Burn Mechanism**: 25% of gas fees (stops at 1,000,000 CLAYER threshold)
 
 **Expected Annual Revenue (estimates):**
 - **Conservative**: $25,000 - $58,000

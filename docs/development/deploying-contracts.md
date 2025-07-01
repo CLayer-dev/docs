@@ -11,7 +11,7 @@ Learn how to deploy smart contracts to Circle Layer testnet.
 ## Network Configuration
 
 ### Circle Layer Testnet
-- **RPC URL**: https://rpc-testnet.circlelayer.com
+- **RPC URL**: https://testnet-rpc.circlelayer.com
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
 - **Gas Price**: Minimum 0.000021 CLAYER (adjusts based on network consumption)
@@ -29,7 +29,7 @@ module.exports = {
   solidity: "0.8.19",
   networks: {
     circleLayerTestnet: {
-      url: "https://rpc-testnet.circlelayer.com",
+      url: "https://testnet-rpc.circlelayer.com",
       chainId: 28525,
       accounts: [process.env.PRIVATE_KEY],
       gasPrice: 21000000000, // 0.000021 CLAYER in wei
@@ -71,13 +71,13 @@ module.exports = {
   networks: {
     circleLayerTestnet: {
       provider: () => new HDWalletProvider(
-        process.env.PRIVATE_KEY, 
-        "https://rpc-testnet.circlelayer.com"
+        process.env.PRIVATE_KEY,
+        'https://testnet-rpc.circlelayer.com'
       ),
       network_id: 28525,
       gas: 10000000000000,
       gasPrice: 21000000000, // 0.000021 CLAYER in wei
-      confirmations: 1,
+      confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
     }
@@ -167,4 +167,3 @@ With current parameters:
 - Monitor contract activity on explorer
 - Update documentation
 - Plan for upgrades
-```

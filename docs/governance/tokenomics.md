@@ -14,27 +14,34 @@ Circle Layer's tokenomics model is designed to ensure long-term sustainability a
 - **Token Symbol**: CLAYER
 - **Decimals**: 18
 - **Testnet Total Supply**: 10 Billion CLAYER
+- **Mainnet Total Supply**: 1 Billion CLAYER
 - **Chain ID**: 28525
 - **Network**: Circle Layer Testnet
 
 ### Current Economic Parameters
 - **Minimum Gas Price**: 0.000021 CLAYER (1 Gwei)
 - **Block Gas Limit**: 10,000,000,000,000 per block
-- **Validator Minimum Stake**: 100,000 CLAYER
+- **Testnet Validator Minimum Stake**: 32 CLAYER
+- **Mainnet Validator Minimum Stake**: 100,000 CLAYER
+- **Delegator Minimum Stake**: 32 CLAYER
+- **Maximum Validators**: 21 (testnet), 10,000 (mainnet)
 - **Faucet Distribution**: 1 CLAYER per day per address
 
 ## Validator Economics
 
 ### Staking Requirements
-- **Minimum Stake**: 100,000 CLAYER
+- **Testnet Validator Minimum Stake**: 32 CLAYER
+- **Mainnet Validator Minimum Stake**: 100,000 CLAYER
+- **Delegator Minimum Stake**: 32 CLAYER
+- **Maximum Validators**: 21 (testnet), 10,000 (mainnet)
 - **Staking Method**: Currently manual process
-- **Validator Network**: Minimum 5 active validators required
 - **Rewards**: CLAYER tokens
 
 ### Network Security
 - **Consensus**: Delegated Proof of Stake (DPoS)
 - **Security Model**: Standard EVM + DPoS consensus
 - **Minimum Validators**: 5 active validators for network security
+- **Maximum Validators**: 21 (testnet), 10,000 (mainnet)
 
 ## Fee Structure
 
@@ -45,10 +52,10 @@ Circle Layer's tokenomics model is designed to ensure long-term sustainability a
 - **Fee Payment**: CLAYER tokens
 
 ### Fee Distribution
+- **Delegator Rewards**: 45% from gas fees
+- **Validator Rewards**: 30% from gas fees
 - **Burn Mechanism**: 25% from gas fees
-- **Maximum Burn Limit**: 1,000,000 CLAYER
-- **Validator Rewards**: CLAYER tokens
-- **Treasury**: From faucet wallet distribution
+- **Maximum Burn Limit**: 1,000,000 CLAYER (burning stops after this threshold)
 
 ## 🚧 Features in Development
 
@@ -80,11 +87,14 @@ The following tokenomics features are currently in development:
 - **Block Time**: 3 seconds
 - **Transaction Finality**: 1-3 seconds
 - **Energy Efficiency**: 99.9% less than Proof of Work
+- **Current TPS**: 2,000 (done)
+- **Target TPS**: 50,000 (in development)
 
 ### Token Distribution (Testnet)
 - **Faucet**: Daily distribution of 1 CLAYER per address
 - **Treasury Wallet**: Distribution source for testnet tokens
-- **Validator Staking**: Manual 100,000 CLAYER requirement
+- **Validator Staking**: Manual 32 CLAYER requirement
+- **Delegator Staking**: Manual 32 CLAYER minimum
 - **Testing Supply**: 10 Billion CLAYER available for testing
 
 ## Economic Incentives
@@ -101,7 +111,7 @@ The following tokenomics features are currently in development:
    - Uptime bonus: +20% for 99%+ availability
    - Performance bonus: +15% for top quartile validators
 
-2. **Transaction Fee Revenue**: 50% share of network fees
+2. **Transaction Fee Revenue**: 30% share of network fees
    - Conservative estimate: $50K-150K daily network fees
    - Moderate estimate: $200K-600K daily network fees  
    - Optimistic estimate: $1M+ daily network fees at peak adoption
@@ -110,6 +120,13 @@ The following tokenomics features are currently in development:
    - Revenue scales with total delegated amount
    - Competitive commission rates drive delegation
    - Expected delegation: $500K-5M per validator at scale
+
+### Delegator Incentives
+- **Minimum Stake**: 32 CLAYER tokens
+- **Reward Share**: 45% of gas fees distributed to delegators
+- **No Hardware Required**: Pure stake-based participation
+- **Flexible Delegation**: Can delegate to any validator
+- **Governance Rights**: Participate in network decisions
 
 #### Annual Revenue Projections (Per Validator)
 - **Conservative Scenario**: 25,000-58,000 CLAYER ($25K-58K USD)

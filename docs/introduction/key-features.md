@@ -20,18 +20,13 @@ Circle Layer offers a comprehensive suite of features designed to meet the needs
 - **Currency**: CLAYER tokens
 
 ### Network Infrastructure
-*Configuration ready for testnet deployment:*
-<!-- - **RPC Endpoint**: https://rpc-testnet.circlelayer.com -->
-<!-- - **WebSocket**: wss://138.197.184.207:8545 -->
-<!-- - **Block Explorer**: https://explorer-testnet.circlelayer.com/ -->
-<!-- - **API Documentation**: https://testnet.circlelayer.com/api-docs -->
-<!-- - **GraphQL**: https://testnet.circlelayer.com/graphiql -->
+*Configuration for testnet deployment:*
 
-- **RPC Endpoint**: *Coming soon*
-- **WebSocket**: *Coming soon*
-- **Block Explorer**: *Coming soon*
-- **API Documentation**: *Coming soon*
-- **GraphQL**: *Coming soon*
+- **RPC Endpoint**: https://testnet-rpc.circlelayer.com
+- **WebSocket**: wss://testnet-rpc.circlelayer.com
+- **Block Explorer**: https://explorer-testnet.circlelayer.com
+- **Faucet**: https://faucet.circlelayer.com
+- **Faucet API**: https://faucet-api.circlelayer.com
 
 ### Cost Efficiency
 - **Minimum Gas Price**: 0.000021 CLAYER
@@ -69,9 +64,8 @@ Circle Layer offers a comprehensive suite of features designed to meet the needs
 
 ### Network Access
 - **Network Status**: Development & testing phase
-<!-- - **Faucet**: https://faucet.circlelayer.com (1 CLAYER per day) -->
-- **Faucet**: *Coming soon* (1 CLAYER per day)
-- **Block Explorer**: *Coming soon* - Real-time transaction tracking
+- **Faucet**: https://faucet.circlelayer.com (1 CLAYER per day)
+- **Block Explorer**: https://explorer-testnet.circlelayer.com - Real-time transaction tracking
 - **Network Monitoring**: 99.95% uptime target
 
 ### Documentation

@@ -11,8 +11,8 @@ Circle Layer supports various Web3 libraries for interacting with the testnet. A
 ## Network Configuration
 
 ### Circle Layer Testnet
-- **RPC URL**: https://rpc-testnet.circlelayer.com
-- **WebSocket**: wss://138.197.184.207:8545
+- **RPC URL**: https://testnet-rpc.circlelayer.com
+- **WebSocket**: wss://testnet-rpc.circlelayer.com
 - **Chain ID**: 28525
 - **Currency**: CLAYER
 
@@ -26,7 +26,7 @@ import { ethers } from 'ethers';
 const provider = new ethers.providers.JsonRpcProvider('https://rpc-testnet.circlelayer.com');
 
 // WebSocket Provider
-const wsProvider = new ethers.providers.WebSocketProvider('wss://138.197.184.207:8545');
+const wsProvider = new ethers.providers.WebSocketProvider('wss://testnet-rpc.circlelayer.com');
 
 // Wallet setup
 const wallet = new ethers.Wallet(privateKey, provider);
@@ -44,7 +44,7 @@ import Web3 from 'web3';
 const web3 = new Web3('https://rpc-testnet.circlelayer.com');
 
 // WebSocket Provider
-const webSocketWeb3 = new Web3('wss://138.197.184.207:8545');
+const webSocketWeb3 = new Web3('wss://testnet-rpc.circlelayer.com');
 
 // Account setup
 const account = web3.eth.accounts.privateKeyToAccount(privateKey);

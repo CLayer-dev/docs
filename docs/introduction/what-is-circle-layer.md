@@ -39,13 +39,7 @@ Circle Layer follows a strategic 3-phase development approach:
 - Security battle-tested
 - Production-ready performance
 
-<!-- 
-### Network Infrastructure (READY FOR ACTIVATION)
-- **RPC Endpoint**: https://rpc-testnet.circlelayer.com
-- **WebSocket**: wss://138.197.184.207:8545
-- **Block Explorer**: https://explorer-testnet.circlelayer.com/
-- **Faucet**: https://faucet.circlelayer.com
--->
+
 
 ## Key Differentiators
 

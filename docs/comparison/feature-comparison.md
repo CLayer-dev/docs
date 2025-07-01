@@ -241,11 +241,12 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 </div>
 
 ### Validator Requirements
-| Feature | Circle Layer Testnet | Ethereum 2.0 | Polygon | BSC |
-|---------|---------------------|---------------|---------|-----|
-| Min Stake | 100,000 CLAYER | 32 ETH | 1 MATIC | N/A |
-| Min Validators | 5 active | Various | 100+ | 21 |
-| Staking Method | Manual | Smart Contract | Smart Contract | N/A |
+| Feature | Circle Layer Testnet | Circle Layer Mainnet | Ethereum 2.0 | Polygon | BSC |
+|---------|---------------------|---------------------|---------------|---------|-----|
+| Min Stake | 32 CLAYER | 100,000 CLAYER | 32 ETH | 1 MATIC | N/A |
+| Min Validators | 5 active | 5 active | Various | 100+ | 21 |
+| Max Validators | 21 active | 10,000 active | Unlimited | Unlimited | 21 |
+| Staking Method | Manual | Smart Contract | Smart Contract | Smart Contract | N/A |
 
 <div className="mobile-table-cards">
   <div className="section-header-card">
@@ -260,6 +261,31 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
     <div className="card-content">
       <div className="feature-row">
         <div className="feature-label">Min Stake</div>
+        <div className="feature-value">32 CLAYER</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Min Validators</div>
+        <div className="feature-value">5 active</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Max Validators</div>
+        <div className="feature-value">21 active</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Staking Method</div>
+        <div className="feature-value">Manual</div>
+      </div>
+    </div>
+  </div>
+
+  <div className="comparison-card circle-layer">
+    <div className="card-header">
+      <div className="card-title">Circle Layer Mainnet</div>
+      <div className="network-badge">Mainnet</div>
+    </div>
+    <div className="card-content">
+      <div className="feature-row">
+        <div className="feature-label">Min Stake</div>
         <div className="feature-value">100,000 CLAYER</div>
       </div>
       <div className="feature-row">
@@ -267,8 +293,12 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
         <div className="feature-value">5 active</div>
       </div>
       <div className="feature-row">
+        <div className="feature-label">Max Validators</div>
+        <div className="feature-value">10,000 active</div>
+      </div>
+      <div className="feature-row">
         <div className="feature-label">Staking Method</div>
-        <div className="feature-value">Manual</div>
+        <div className="feature-value">Smart Contract</div>
       </div>
     </div>
   </div>
@@ -286,6 +316,10 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       <div className="feature-row">
         <div className="feature-label">Min Validators</div>
         <div className="feature-value">Various</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Max Validators</div>
+        <div className="feature-value">Unlimited</div>
       </div>
       <div className="feature-row">
         <div className="feature-label">Staking Method</div>
@@ -309,6 +343,10 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
         <div className="feature-value">100+</div>
       </div>
       <div className="feature-row">
+        <div className="feature-label">Max Validators</div>
+        <div className="feature-value">Unlimited</div>
+      </div>
+      <div className="feature-row">
         <div className="feature-label">Staking Method</div>
         <div className="feature-value">Smart Contract</div>
       </div>
@@ -327,6 +365,10 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="feature-row">
         <div className="feature-label">Min Validators</div>
+        <div className="feature-value">21</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Max Validators</div>
         <div className="feature-value">21</div>
       </div>
       <div className="feature-row">

@@ -187,7 +187,7 @@ npx hardhat run scripts/deploy.js --network circlelayer`,
 ## Validator Rewards
 
 - **Block Rewards**: 2 CLAYER per block
-- **Transaction Fees**: 50% of transaction fees
+- **Transaction Fees**: 45% of transaction fees (delegators)
 - **Burn Mechanism**: 25% of gas fees are burned (max 1M CLAYER)
 
 ## Staking Process

@@ -89,6 +89,7 @@ We launch only when our ecosystem is battle-tested, secure, and ready for global
 **Validator Network Bootstrap**
 - **Genesis Validators**: 21 pre-approved validators
 - **Minimum Stake**: 100,000 CLAYER per validator
+- **Maximum Validators**: 10,000 (mainnet capacity)
 - **Geographic Distribution**: Global validator set
 - **Security**: Multi-sig genesis ceremony
 

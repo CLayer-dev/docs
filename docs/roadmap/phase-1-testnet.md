@@ -60,20 +60,26 @@ Circle Layer is building a robust, high-performance blockchain ecosystem through
 
 ### Current Development Status
 
-#### Core Infrastructure 🔧 IN DEVELOPMENT
-- ✅ DPoS consensus implementation (Completed)
-- ✅ EVM compatibility layer (Completed)
-- ✅ Network optimization (Completed)
-- 🔄 Advanced performance testing (Ongoing)
-- 🔄 Security auditing (Ongoing)
+#### Core Infrastructure 🚀 LIVE
+- ✅ DPoS consensus implementation (Live)
+- ✅ EVM compatibility layer (Live)
+- ✅ Network optimization (Live)
+- ✅ 2,000 TPS achievement (Live)
+- ✅ Testnet network operational (Live)
 
-#### Developer Infrastructure 🛠️ IN DEVELOPMENT
-- ✅ RPC endpoints (Ready for testing)
-- ✅ WebSocket endpoints (Ready for testing)
-- ✅ Web3 library compatibility (Verified)
-- ✅ Developer documentation (Comprehensive)
-- 🔄 API enhancements (Ongoing)
-- 🔄 Advanced tooling integration (Ongoing)
+#### Developer Infrastructure 🛠️ LIVE
+- ✅ RPC endpoints (https://testnet-rpc.circlelayer.com)
+- ✅ WebSocket endpoints (wss://testnet-rpc.circlelayer.com)
+- ✅ Block explorer (https://explorer-testnet.circlelayer.com)
+- ✅ Faucet service (https://faucet.circlelayer.com)
+- ✅ Web3 library compatibility (Live)
+- ✅ Developer documentation (Complete)
+
+#### Ecosystem Development 🔄 COMING SOON
+- 🔄 ERC20 token deployment (Deploying Soon)
+- 🔄 Native wallet app development (In Progress)
+- 🔄 Native DEX development (In Progress)
+- 🔄 Native bridge development (In Progress)
 
 <!-- 
 ### Testnet Network Details (READY - WILL BE ACTIVATED)
@@ -93,7 +99,9 @@ Circle Layer is building a robust, high-performance blockchain ecosystem through
 - **Gas Price**: Minimum 0.000021 CLAYER
 
 ### Validator Network Specifications
-- **Minimum Stake**: 100,000 CLAYER
+- **Testnet Minimum Stake**: 32 CLAYER
+- **Mainnet Minimum Stake**: 100,000 CLAYER
+- **Maximum Validators**: 21 (testnet), 10,000 (mainnet)
 - **Hardware Requirements**: 
   - Ubuntu ≥ 20.04 LTS
   - 32GB RAM recommended (8GB minimum)
@@ -223,10 +231,10 @@ Building every component (bridge, DEX, wallets) in-house ensures seamless integr
 
 <!-- 
 ### Network Endpoints (READY FOR ACTIVATION)
-- **RPC**: https://rpc-testnet.circlelayer.com
-- **WebSocket**: wss://138.197.184.207:8545
-- **Explorer**: https://explorer-testnet.circlelayer.com/
-- **API Docs**: https://testnet.circlelayer.com/api-docs
+- **RPC**: https://testnet-rpc.circlelayer.com
+- **WebSocket**: wss://testnet-rpc.circlelayer.com
+- **Explorer**: https://explorer-testnet.circlelayer.com
+- **Faucet**: https://faucet.circlelayer.com
 - **GraphQL**: https://testnet.circlelayer.com/graphiql
 - **Faucet**: https://faucet.circlelayer.com
 -->

@@ -13,19 +13,19 @@ Circle Layer provides multiple RPC endpoints for interacting with the network:
 ### Testnet
 ```bash
 # HTTP RPC
-https://rpc-testnet.circlelayer.com
+https://testnet-rpc.circlelayer.com
 
 # WebSocket
-wss://138.197.184.207:8545
+wss://testnet-rpc.circlelayer.com
 
 # Block Explorer
-https://explorer-testnet.circlelayer.com/
+https://explorer-testnet.circlelayer.com
 
-# API Documentation
-https://testnet.circlelayer.com/api-docs
+# Faucet
+https://faucet.circlelayer.com
 
-# GraphQL Endpoint  
-https://testnet.circlelayer.com/graphiql
+# Faucet API
+https://faucet-api.circlelayer.com
 ```
 
 ## Network Configuration
@@ -39,18 +39,18 @@ https://testnet.circlelayer.com/graphiql
 
 ## Authentication
 
-API endpoints use GET method authentication. For detailed authentication methods, refer to the [API documentation](https://testnet.circlelayer.com/api-docs).
+API endpoints use standard authentication methods. For detailed authentication methods, refer to the API documentation.
 
 ## Rate Limits
 
-Rate limiting information is not currently specified. Please check the [API documentation](https://testnet.circlelayer.com/api-docs) for current limits.
+Rate limiting information is not currently specified. Please check the API documentation for current limits.
 
 ## Smart Contract Examples
 
 ### Deployed Example Contract
 - **Contract Address**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
-- **Source Code**: [View on Explorer](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- **ABI**: [Contract ABI](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+- **Source Code**: [View on Explorer](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- **ABI**: [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 - **Deployment**: Manual Deploy
 
 ## Methods
@@ -70,7 +70,7 @@ Rate limiting information is not currently specified. Please check the [API docu
 
 ### Get Balance
 ```javascript
-const response = await fetch('https://rpc-testnet.circlelayer.com', {
+const response = await fetch('https://testnet-rpc.circlelayer.com', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ const response = await fetch('https://rpc-testnet.circlelayer.com', {
 
 ### Subscribe to Events
 ```javascript
-const ws = new WebSocket('wss://138.197.184.207:8545');
+const ws = new WebSocket('wss://testnet-rpc.circlelayer.com');
 ws.send(JSON.stringify({
   jsonrpc: '2.0',
   method: 'eth_subscribe',
@@ -101,7 +101,7 @@ ws.send(JSON.stringify({
 const contractAddress = '0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB';
 
 // Get contract interaction examples
-const response = await fetch('https://rpc-testnet.circlelayer.com', {
+const response = await fetch('https://testnet-rpc.circlelayer.com', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -116,7 +116,4 @@ const response = await fetch('https://rpc-testnet.circlelayer.com', {
     id: 1,
   }),
 });
-```
-
-// ... existing code ...
 ```

@@ -6,19 +6,19 @@ sidebar_label: Use the Faucet
 
 # Use the Faucet
 
-Learn about Circle Layer's planned testnet faucet for future development and testing.
+Learn about Circle Layer's testnet faucet for development and testing.
 
 ## Faucet Access
 
-<!-- - **URL**: https://faucet.circlelayer.com -->
-- **URL**: *Coming soon*
+- **URL**: https://faucet.circlelayer.com
+- **API URL**: https://faucet-api.circlelayer.com
 - **Supported Networks**: Circle Layer Testnet
 - **Token Type**: CLAYER
 - **Supported Wallet Formats**: EVM-based wallets
 
-## How to Use (When Available)
+## How to Use
 
-When the testnet faucet becomes available, you will:
+To use the Circle Layer testnet faucet:
 
 1. Copy your wallet address
 2. Paste your wallet address in the text box on the faucet page

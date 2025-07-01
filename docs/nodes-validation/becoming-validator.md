@@ -23,7 +23,8 @@ Learn how to become a validator on Circle Layer and help secure the network.
 - Monitoring Tools
 
 ### 3. Token Requirements
-- **Minimum stake**: 100,000 CLAYER
+- **Testnet Minimum Stake**: 32 CLAYER
+- **Mainnet Minimum Stake**: 100,000 CLAYER
 - Additional for operations
 - Emergency fund
 
@@ -31,6 +32,7 @@ Learn how to become a validator on Circle Layer and help secure the network.
 - **Ports**: 32668, 32669, 8545, 6060, 80, 22
 - **Firewall**: Not required
 - **Minimum Active Validators**: 5 validators required for security and active blockchain
+- **Maximum Active Validators**: 21 (testnet), 10,000 (mainnet)
 - **Multiple RPC**: Required for redundancy
 
 ## Economic Parameters
@@ -42,14 +44,17 @@ Learn how to become a validator on Circle Layer and help secure the network.
 
 ### Validator Rewards
 - **Reward Token**: CLAYER
+- **Fee Share**: 30% of gas fees
 - **Burn Mechanism**: 25% from gas fees (maximum limit 1,000,000 CLAYER)
+- **Delegator Share**: 45% of gas fees
 
 ## Security Features
 
 ### Current Implementation
 - **Security Model**: Standard EVM security applied
 - **Consensus**: DPoS (Delegated Proof of Stake)
-- **Limitations**: Minimum 5 validators active required for security
+- **Minimum Validators**: 5 validators active required for security
+- **Maximum Validators**: 21 (testnet), 10,000 (mainnet)
 
 ## Setup Process
 
@@ -73,7 +78,7 @@ network: testnet
 port: 32668
 rpc_port: 8545
 validator_key: "your-key"
-stake_amount: 100000
+stake_amount: 32
 chain_id: 28525
 ```
 
@@ -141,4 +146,3 @@ The following validator-related features are currently in development:
 - Regular backups
 - Emergency procedures
 - Community support
-```
