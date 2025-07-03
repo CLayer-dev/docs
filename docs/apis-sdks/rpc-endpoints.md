@@ -799,6 +799,8 @@ const result = await makeSignedRequest(
 - **Enhanced Tier**: 1000 requests/minute with API key
 - **WebSocket Connections**: 10 concurrent connections per IP
 - **Batch Requests**: Maximum 10 requests per batch
+
+```javascript
 const ws = new WebSocket('wss://testnet-rpc.circlelayer.com');
 ws.send(JSON.stringify({
   jsonrpc: '2.0',

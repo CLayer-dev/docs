@@ -35,12 +35,12 @@ Circle Layer validators require specific ports to be open and properly configure
 
 ```bash
 # Required Validator Ports
-# 32668 - Validator P2P communication
-# 32669 - Validator consensus protocol
-# 8545  - JSON-RPC endpoint (EVM compatibility)
-# 6060  - pprof profiling endpoint
-# 80    - HTTP endpoint (web interface)
-# 22    - SSH access (remote management)
+# Port 32668 - Validator P2P communication
+# Port 32669 - Validator consensus protocol
+# Port 8545  - JSON-RPC endpoint (EVM compatibility)
+# Port 6060  - pprof profiling endpoint
+# Port 80    - HTTP endpoint (web interface)
+# Port 22    - SSH access (remote management)
 
 # Configure firewall for validator
 sudo ufw allow 32668/tcp comment 'Validator P2P'
@@ -57,7 +57,7 @@ sudo ufw enable
 - **Minimum Active Validators**: 5 validators required for security and active blockchain
 - **Maximum Active Validators**: 21 (testnet), 10,000 (mainnet)
 - **Multiple RPC**: Required for redundancy and high availability
-- **Network Latency**: <100ms to other validators
+- **Network Latency**: Under 100ms to other validators
 - **Bandwidth**: Minimum 1Gbps for validators
 - **Connection Limits**: Support 10,000+ concurrent connections
 
@@ -156,7 +156,7 @@ The following validator-related features are currently in development:
 ## Best Practices
 
 ### 1. Security
-- Configure required ports (32668, 32669, 8545, 6060, 80, 22)
+- Configure required ports (ports 32668, 32669, 8545, 6060, 80, 22)
 - Regular updates
 - Backup keys
 - Monitor logs
