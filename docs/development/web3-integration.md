@@ -348,7 +348,7 @@ if (network.chainId !== 28525) {
 
 ## Resources
 
-- **API Documentation**: https://testnet.circlelayer.com/api-docs
-- **GraphQL Endpoint**: https://testnet.circlelayer.com/graphiql
+- **API Documentation**: https://explorer-testnet.circlelayer.com/api-docs
+- **GraphQL Endpoint**: https://explorer-testnet.circlelayer.com/graphiql
 - **Block Explorer**: https://explorer-testnet.circlelayer.com/
 - **Example Contract**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB 

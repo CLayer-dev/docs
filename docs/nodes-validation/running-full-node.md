@@ -1,319 +1,481 @@
 ---
 sidebar_position: 2
+title: Running a Full Node
+description: Complete guide for operating Circle Layer blockchain full nodes
 ---
 
 # Running a Full Node
 
+Learn how to run and operate a full node on Circle Layer blockchain network.
+
 ## Overview
 
-Learn how to run a full node on Circle Layer to participate in the network.
+Circle Layer is an Ethereum-compatible blockchain that uses Geth (Go Ethereum) as its base. Running a full node allows you to participate in the network, validate transactions, and support decentralization.
 
 ## Prerequisites
 
-### 1. System Requirements
-- CPU: 4+ cores
-- RAM: 16GB+
-- Storage: 500GB+ SSD
-- Network: 50Mbps+
+### System Requirements
 
-### 2. Software Requirements
-- Linux OS (Ubuntu 20.04+)
-- Docker
-- Circle Layer Node Software
-- Basic monitoring tools
+#### Minimum Requirements
+- **CPU:** 8 cores
+- **RAM:** 16GB
+- **Storage:** SSD with IOPS > 5,000
+- **Network:** 100 Mbps symmetric
+- **OS:** Linux (Ubuntu 20.04+)
 
-### 3. Network Requirements
-- Static IP
-- Open ports:
-  - 26656 (P2P)
-  - 26657 (RPC)
-  - 26658 (API)
+#### Recommended Requirements
+- **CPU:** 16 cores  
+- **RAM:** 32GB
+- **Storage:** NVMe SSD with IOPS > 5,000
+- **Network:** 1 Gbps symmetric
 
-## Installation
+#### Critical Requirements
+- **SSD is required** - Traditional HDDs will not work
+- **External IP Address** - Static public IP recommended
+- **Port TCP/UDP: 32668** - Must be open and accessible
 
-### 1. System Setup
+### Software Requirements
+- **Golang** 1.19+ (for compilation)
+- **Git** for source code
+- **systemd** for service management
+
+## Node Setup
+
+### 1. Download and Compile
+
 ```bash
-# Update system
-sudo apt update
-sudo apt upgrade -y
+# Clone the repository
+git clone https://github.com/Circle-layer-org/testnet-core-blockchain
+cd /path/to/core-blockchain
 
-# Install dependencies
-sudo apt install -y docker.io
-sudo systemctl enable docker
-```
-```
-```
+# Compile the node
+make geth
+
+# Binary will be available at build/bin/geth
 ```
 
-### 2. Node Installation
-```
-```
-```
+### 2. Directory Structure
+
+Create the recommended directory structure:
+
 ```bash
-# Create directory
-mkdir -p ~/.circlelayer
+sudo mkdir -p /data/circlelayer/{data,logs}
+sudo chown -R $USER:$USER /data/circlelayer
+```
 
-# Download node software
-curl -sSL https://get.circlelayer.com | bash
-
-# Initialize node
-circlelayer init --chain-id circlelayer-1
+Expected structure:
 ```
-```
-```
+/data/circlelayer/
+├── geth-linux-amd64          # Compiled binary
+├── config.toml               # Node configuration
+├── run.sh                    # Startup script
+├── data/                     # Blockchain data
+│   ├── geth/                 # Node data
+│   └── .ethash/              # Ethash cache
+└── logs/                     # Log files
+    └── systemd_chain_console.out
 ```
 
 ### 3. Configuration
 
-#### Detailed Port Configuration
-Circle Layer requires specific ports to be open and properly configured:
+#### config.toml
+
+Create the main configuration file at `/data/circlelayer/config.toml`:
+
+```toml
+[Eth]
+SyncMode = "fast"
+DiscoveryURLs = []
+TrieCleanCacheRejournal = 300000000000
+
+[Eth.Miner]
+GasFloor = 8000000
+GasCeil = 8000000
+GasPrice = 0
+Recommit = 3000000000
+Noverify = false
+
+[Eth.Ethash]
+CacheDir = "ethash"
+CachesInMem = 2
+CachesOnDisk = 3
+CachesLockMmap = false
+DatasetDir = "/data/circlelayer/data/.ethash"
+DatasetsInMem = 1
+DatasetsOnDisk = 2
+DatasetsLockMmap = false
+PowMode = 0
+
+[Eth.TxPool]
+Locals = []
+NoLocals = false
+Journal = "transactions.rlp"
+Rejournal = 3600000000000
+PriceLimit = 1
+PriceBump = 10
+AccountSlots = 16
+GlobalSlots = 4096
+AccountQueue = 64
+GlobalQueue = 1024
+Lifetime = 10800000000000
+
+[Node]
+DataDir = "/data/circlelayer/data"
+InsecureUnlockAllowed = true
+NoUSB = true
+IPCPath = "geth.ipc"
+HTTPHost = "0.0.0.0"
+HTTPPort = 8545
+HTTPCors = ["*"]
+HTTPVirtualHosts = ["*"]
+HTTPModules = ['eth', 'net', 'web3']
+
+WSHost = "0.0.0.0"
+WSPort = 8546
+WSModules = ['eth', 'net', 'web3']
+
+GraphQLVirtualHosts = ["localhost"]
+
+[Node.P2P]
+MaxPeers = 50
+NoDiscovery = false
+ListenAddr = "32668"
+EnableMsgEvents = false
+
+[Node.HTTPTimeouts]
+ReadTimeout = 30000000000
+WriteTimeout = 30000000000
+IdleTimeout = 120000000000
+```
+
+#### Sync Mode Options
+
+**Fast Sync (Recommended)**
+```toml
+SyncMode = "fast"
+```
+Downloads block headers and recent state data for faster initial sync.
+
+**Full Sync (Complete History)**
+```toml
+SyncMode = "full"
+```
+Downloads and validates all blocks from genesis.
+
+## Running the Node
+
+### 1. Startup Script
+
+Create `/data/circlelayer/run.sh`:
 
 ```bash
-# Required Ports for Circle Layer Node
-# 26656 - P2P communication between nodes
-# 26657 - RPC endpoint for client connections  
-# 26658 - API endpoint for REST queries
-# 26659 - gRPC endpoint (optional)
-# 26660 - Prometheus metrics (optional)
-
-# Open required ports
-sudo ufw allow 26656/tcp comment 'Circle Layer P2P'
-sudo ufw allow 26657/tcp comment 'Circle Layer RPC'
-sudo ufw allow 26658/tcp comment 'Circle Layer API'
-sudo ufw allow 26659/tcp comment 'Circle Layer gRPC'
-sudo ufw allow 26660/tcp comment 'Circle Layer Metrics'
+#!/usr/bin/env bash
+/data/circlelayer/geth-linux-amd64 \
+--config /data/circlelayer/config.toml  \
+--logpath /data/circlelayer/logs \
+--verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
 ```
 
-#### config.toml Configuration
-```toml
-# Circle Layer Node Configuration
-
-# Node Identity
-moniker = "your-node-name"
-proxy_app = "tcp://127.0.0.1:26658"
-priv_validator_key_file = "config/priv_validator_key.json"
-priv_validator_state_file = "data/priv_validator_state.json"
-node_key_file = "config/node_key.json"
-abci = "socket"
-filter_peers = false
-
-# Network Configuration
-[p2p]
-laddr = "tcp://0.0.0.0:26656"
-external_address = ""
-seeds = "seed1.circlelayer.com:26656,seed2.circlelayer.com:26656"
-persistent_peers = ""
-upnp = false
-addr_book_file = "config/addrbook.json"
-addr_book_strict = true
-max_num_inbound_peers = 40
-max_num_outbound_peers = 10
-seed_mode = false
-pex = true
-allow_duplicate_ip = false
-
-# RPC Configuration
-[rpc]
-laddr = "tcp://0.0.0.0:26657"
-cors_allowed_origins = ["*"]
-cors_allowed_methods = ["HEAD", "GET", "POST"]
-cors_allowed_headers = ["Origin", "Accept", "Content-Type", "X-Requested-With"]
-grpc_laddr = ""
-grpc_max_open_connections = 900
-unsafe = false
-max_open_connections = 900
-max_subscription_clients = 100
-max_subscriptions_per_client = 5
-
-# Consensus Configuration
-[consensus]
-wal_file = "data/cs.wal/wal"
-timeout_propose = "3s"
-timeout_propose_delta = "500ms"
-timeout_prevote = "1s"
-timeout_prevote_delta = "500ms"
-timeout_precommit = "1s"
-timeout_precommit_delta = "500ms"
-timeout_commit = "3s"
-double_sign_check_height = 0
-skip_timeout_commit = false
-create_empty_blocks = true
-create_empty_blocks_interval = "3s"
-
-# Storage Configuration
-[storage]
-discard_abci_responses = false
-
-# Transaction Indexer
-[tx_index]
-indexer = "kv"
-
-# Instrumentation
-[instrumentation]
-prometheus = true
-prometheus_listen_addr = ":26660"
-max_open_connections = 3
-namespace = "circlelayer"
-```
-
-#### app.toml Configuration
-```toml
-# Circle Layer Application Configuration
-
-# Base Configuration
-minimum-gas-prices = "0.000021aclayer"
-pruning = "default"
-pruning-keep-recent = "100"
-pruning-keep-every = "0"
-pruning-interval = "10"
-halt-height = 0
-halt-time = 0
-min-retain-blocks = 0
-inter-block-cache = true
-
-# API Configuration
-[api]
-enable = true
-swagger = true
-address = "tcp://0.0.0.0:1317"
-max-open-connections = 1000
-rpc-read-timeout = 10
-rpc-write-timeout = 0
-rpc-max-body-bytes = 1000000
-enabled-unsafe-cors = false
-
-# gRPC Configuration
-[grpc]
-enable = true
-address = "0.0.0.0:9090"
-max-recv-msg-size = "10485760"
-max-send-msg-size = "2147483647"
-
-# State Sync Configuration
-[state-sync]
-snapshot-interval = 1000
-snapshot-keep-recent = 2
-```
-
-#### System Management Configuration
+Make it executable:
 ```bash
-# Create systemd service file for automated management
-sudo tee /etc/systemd/system/circlelayer.service > /dev/null <<EOF
+chmod +x /data/circlelayer/run.sh
+```
+
+### 2. Network Selection
+
+**Mainnet (Default)**
+```bash
+# No additional flags needed - connects to mainnet by default
+/data/circlelayer/run.sh
+```
+
+**Testnet**
+```bash
+# Add --testnet flag to connect to testnet
+#!/usr/bin/env bash
+/data/circlelayer/geth-linux-amd64 \
+--config /data/circlelayer/config.toml  \
+--testnet \
+--logpath /data/circlelayer/logs \
+--verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+```
+
+### 3. Archive Node
+
+For complete historical data:
+
+```bash
+#!/usr/bin/env bash
+/data/circlelayer/geth-linux-amd64 \
+--config /data/circlelayer/config.toml  \
+--logpath /data/circlelayer/logs \
+--syncmode full \
+--gcmode archive \
+--verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+```
+
+## Service Management
+
+### systemd Configuration
+
+Create `/etc/systemd/system/circlelayer.service`:
+
+```ini
 [Unit]
-Description=Circle Layer Node
-After=network-online.target
+Description=circlelayer Blockchain service
 
 [Service]
-User=$USER
-ExecStart=/usr/local/bin/circlelayer start
-Restart=always
-RestartSec=3
-LimitNOFILE=65535
-Environment="DAEMON_HOME=$HOME/.circlelayer"
-Environment="DAEMON_NAME=circlelayer"
-Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
+Type=simple
+ExecStart=/bin/sh /data/circlelayer/run.sh
+
+Restart=on-failure
+RestartSec=5s
+
+LimitNOFILE=65536
 
 [Install]
 WantedBy=multi-user.target
-EOF
+```
 
-# Enable and start service
+### Service Commands
+
+```bash
+# Reload systemd configuration
 sudo systemctl daemon-reload
+
+# Enable service to start on boot
 sudo systemctl enable circlelayer.service
+
+# Start the service
 sudo systemctl start circlelayer.service
+
+# Check service status
+sudo systemctl status circlelayer.service
+
+# View service logs
+sudo journalctl -u circlelayer.service -f
+
+# Stop the service
+sudo systemctl stop circlelayer.service
+
+# Restart the service
+sudo systemctl restart circlelayer.service
 ```
 
-#### Network Specifications
+## Network Configuration
+
+### Firewall Setup
+
 ```bash
-# Network Performance Targets
-# Block Time: 3 seconds
-# Transaction Finality: 1-3 seconds
-# Minimum Gas Price: 0.000021 CLAYER
-# Block Gas Limit: 10,000,000,000,000
-# Chain ID: 28525 (testnet)
+# Open required port
+sudo ufw allow 32668/tcp
+sudo ufw allow 32668/udp
 
-# Network Connectivity Requirements
-# Bandwidth: Minimum 100 Mbps symmetric
-# Latency: <100ms to other validators
-# Uptime: Target 99.95%
-# Connection Limit: Support 1000+ concurrent connections
+# Or with iptables
+sudo iptables -A INPUT -p tcp --dport 32668 -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 32668 -j ACCEPT
 ```
 
-## Operation
+### API Access (Optional)
 
-### 1. Starting the Node
-```
-```
-```
+If you need external API access:
+
 ```bash
-# Start node
-circlelayer start
+# Allow RPC port (use with caution)
+sudo ufw allow 8545/tcp
 
-# Check status
-circlelayer status
-```
-```
-```
+# Allow WebSocket port
+sudo ufw allow 8546/tcp
 ```
 
-### 2. Syncing
-- Initial sync
-- State sync
-- Fast sync
-- Archive node
+**Warning:** Only open API ports if absolutely necessary and implement proper security measures.
 
-### 3. Maintenance
-- Regular updates
-- Backup data
-- Monitor resources
-- Check logs
+## Monitoring and Maintenance
 
-## Monitoring
+### Health Checks
 
-### 1. Basic Monitoring
-```
-```
-```
 ```bash
+# Check if node process is running
+ps aux | grep geth
+
+# Check network connectivity
+netstat -tlnp | grep 32668
+
+# Check disk space
+df -h /data/circlelayer
+
+# Check memory usage
+free -h
+```
+
+### Log Monitoring
+
+```bash
+# Real-time log monitoring
+tail -f /data/circlelayer/logs/systemd_chain_console.out
+
+# Search for errors
+grep -i error /data/circlelayer/logs/systemd_chain_console.out
+
 # Check sync status
-circlelayer status
-
-# View logs
-tail -f ~/.circlelayer/logs/node.log
-```
-```
-```
+grep -i "block" /data/circlelayer/logs/systemd_chain_console.out | tail -20
 ```
 
-### 2. Advanced Monitoring
-- Prometheus metrics
-- Grafana dashboards
-- Alert manager
-- Log aggregation
+### RPC Commands
 
-### 3. Health Checks
-- Node status
-- Sync status
-- Resource usage
-- Network connectivity
+Check node status using RPC:
+
+```bash
+# Get current block number
+curl -H "Content-Type: application/json" \
+  -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' \
+  http://localhost:8545
+
+# Check peer count
+curl -H "Content-Type: application/json" \
+  -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' \
+  http://localhost:8545
+
+# Check sync status
+curl -H "Content-Type: application/json" \
+  -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}' \
+  http://localhost:8545
+```
+
+### Performance Monitoring
+
+```bash
+# Monitor system resources
+top -p $(pgrep geth)
+
+# Check I/O performance
+iostat -x 1
+
+# Monitor network connections
+ss -tulpn | grep 32668
+```
 
 ## Troubleshooting
 
-### 1. Common Issues
-- Sync problems
-- Resource constraints
-- Network issues
-- Configuration errors
+### Common Issues
 
-### 2. Solutions
-- Check logs
-- Verify config
-- Update software
-- Contact support
+#### Sync Problems
+```bash
+# Check peer connections
+curl -H "Content-Type: application/json" \
+  -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' \
+  http://localhost:8545
 
-### 3. Recovery
-- Backup restore
-- State reset
-- Re-sync
-- Emergency procedures
+# Restart sync if stuck
+sudo systemctl restart circlelayer.service
 ```
+
+#### Performance Issues
+```bash
+# Check system resources
+top -p $(pgrep geth)
+iostat -x 1
+
+# Check disk IOPS
+sudo iotop -a
+```
+
+#### Connection Issues
+```bash
+# Test port connectivity
+telnet <your-ip> 32668
+
+# Check firewall
+sudo ufw status
+sudo iptables -L
+```
+
+#### Storage Issues
+```bash
+# Check disk space
+df -h /data/circlelayer
+
+# Check inode usage
+df -i /data/circlelayer
+
+# Monitor disk performance
+sudo iotop
+```
+
+### Getting Help
+
+For additional support:
+- Check the [official documentation](/docs/intro)
+- Join the [community forums](/community/social-media)
+- Review [GitHub issues](https://github.com/Circle-layer-org/testnet-core-blockchain/issues)
+
+### Command Reference
+
+```bash
+# Get all available options
+./build/bin/geth --help
+
+# Or short form
+./build/bin/geth -h
+```
+
+For detailed command-line options, refer to [Geth Command-line Options](https://geth.ethereum.org/docs/interface/command-line-options).
+
+## Security Considerations
+
+### File Permissions
+
+```bash
+# Create dedicated user
+sudo useradd -r -s /bin/false circlelayer
+
+# Set ownership
+sudo chown -R circlelayer:circlelayer /data/circlelayer
+
+# Set secure permissions
+sudo chmod 755 /data/circlelayer
+sudo chmod 600 /data/circlelayer/config.toml
+sudo chmod 755 /data/circlelayer/run.sh
+```
+
+### Network Security
+
+- Use firewall to restrict access
+- Only expose necessary ports
+- Consider VPN for remote management
+- Monitor for unusual activity
+- Keep system updated
+
+## Backup and Recovery
+
+### Important Files to Backup
+
+```bash
+# Backup configuration and keystore
+tar -czf circlelayer-backup-$(date +%Y%m%d).tar.gz \
+    /data/circlelayer/config.toml \
+    /data/circlelayer/data/keystore/ \
+    /etc/systemd/system/circlelayer.service
+```
+
+### Recovery Procedures
+
+```bash
+# Stop service
+sudo systemctl stop circlelayer.service
+
+# Restore from backup
+tar -xzf circlelayer-backup-YYYYMMDD.tar.gz -C /
+
+# Restart service
+sudo systemctl start circlelayer.service
+```
+
+---
+
+## Next Steps
+
+After your node is running successfully:
+- Set up [monitoring](/nodes-validation/node-monitoring)
+- Implement [security best practices](/nodes-validation/node-security)
+- Consider [becoming a validator](/nodes-validation/becoming-validator)

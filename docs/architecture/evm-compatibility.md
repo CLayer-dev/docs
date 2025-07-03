@@ -41,14 +41,14 @@ Circle Layer maintains full compatibility with the Ethereum Virtual Machine (EVM
 1. **Change Network Configuration**
    ```javascript
    // Update RPC endpoint
-   const provider = new ethers.providers.JsonRpcProvider('https://rpc-testnet.circlelayer.com');
+   const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
    
    // Update network configuration
    {
      chainId: 28525,
      name: 'Circle Layer Testnet',
      currency: 'CLAYER',
-     rpcUrl: 'https://rpc-testnet.circlelayer.com'
+     rpcUrl: 'https://testnet-rpc.circlelayer.com'
    }
    ```
 
@@ -79,7 +79,7 @@ Migration from Polygon, BSC, or other EVM chains follows the same pattern:
 module.exports = {
   networks: {
     circleLayerTestnet: {
-      url: "https://rpc-testnet.circlelayer.com",
+      url: "https://testnet-rpc.circlelayer.com",
       chainId: 28525,
       accounts: [process.env.PRIVATE_KEY],
       gasPrice: 21000000000, // 0.000021 CLAYER
@@ -91,7 +91,7 @@ module.exports = {
 ### Web3.js Integration
 ```javascript
 const Web3 = require('web3');
-const web3 = new Web3('https://rpc-testnet.circlelayer.com');
+const web3 = new Web3('https://testnet-rpc.circlelayer.com');
 
 // Same API as Ethereum
 const balance = await web3.eth.getBalance(address);
@@ -111,7 +111,7 @@ await window.ethereum.request({
       symbol: 'CLAYER',
       decimals: 18
     },
-    rpcUrls: ['https://rpc-testnet.circlelayer.com'],
+    rpcUrls: ['https://testnet-rpc.circlelayer.com'],
     blockExplorerUrls: ['https://explorer-testnet.circlelayer.com/']
   }]
 });
@@ -135,8 +135,8 @@ await window.ethereum.request({
 
 ### Example Implementation
 - **Reference Contract**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
-- **Source Code**: [View on Explorer](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- **ABI**: [Contract ABI](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+- **Source Code**: [View on Explorer](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- **ABI**: [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 
 ### Integration Guides
 - [Smart Contract Development](/development/writing-smart-contracts)

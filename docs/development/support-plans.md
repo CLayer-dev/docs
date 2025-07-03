@@ -19,7 +19,7 @@ Circle Layer offers various forms of financial assistance to support developer s
 - **Eligibility**: Projects building innovative solutions on Circle Layer
 - **Application Process**: Submit proposal through official channels
 - **Funding Range**: Varies based on project scope and potential impact
-- **Contact**: developers@circlelayer.com
+- **Contact**: support@circlelayer.com
 
 #### Competition Programs
 - **Hackathons**: Regular hackathon events with substantial prize pools
@@ -98,7 +98,7 @@ Comprehensive resource allocation to accelerate project development:
 
 #### 1. Initial Application
 ```
-Contact: developers@circlelayer.com
+Contact: support@circlelayer.com
 Subject: Support Plan Application - [Project Name]
 
 Required Information:
@@ -192,10 +192,10 @@ Required Information:
 ## Contact Information
 
 ### Support Team Contacts
-- **General Inquiries**: developers@circlelayer.com
-- **Financial Support**: grants@circlelayer.com
+- **General Inquiries**: support@circlelayer.com
+- **Financial Support**: marketing@circlelayer.com
 - **Marketing Support**: marketing@circlelayer.com
-- **Technical Support**: tech-support@circlelayer.com
+- **Technical Support**: support@circlelayer.com
 
 ### Response Times
 - **Initial Response**: Within 48 hours

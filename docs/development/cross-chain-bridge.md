@@ -86,7 +86,7 @@ graph TD
 To apply for token bridging support, projects must follow this process:
 
 1. **Initial Application**
-   - Contact: contact@circlelayer.com
+   - Contact: support@circlelayer.com
    - Submit project details and technical specifications
    - Provide tokenomics and security audit information
 
@@ -252,6 +252,6 @@ function BridgeComponent() {
 
 ### Support
 - **Developer Telegram**: Real-time developer support
-- **Technical Support**: contact@circlelayer.com
-- **Security Issues**: security@circlelayer.com
+- **Technical Support**: support@circlelayer.com
+- **Security Issues**: admin@circlelayer.com
 - **Bug Reports**: GitHub issues and bug tracking 

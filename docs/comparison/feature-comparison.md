@@ -599,7 +599,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 |---------|---------------------|----------|---------|-----|
 | Block Explorer | explorer-testnet.circlelayer.com | etherscan.io | polygonscan.com | bscscan.com |
 | Faucet | 1 CLAYER/day | Various | Yes | Yes |
-| API Docs | testnet.circlelayer.com/api-docs | Various | docs.polygon.technology | docs.bnbchain.org |
+| API Docs | explorer-testnet.circlelayer.com/api-docs | Various | docs.polygon.technology | docs.bnbchain.org |
 | GraphQL | Yes | Yes | Yes | Yes |
 
 <div className="mobile-table-cards">
@@ -623,7 +623,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="feature-row">
         <div className="feature-label">API Docs</div>
-        <div className="feature-value">testnet.circlelayer.com/api-docs</div>
+        <div className="feature-value">explorer-testnet.circlelayer.com/api-docs</div>
       </div>
       <div className="feature-row">
         <div className="feature-label">GraphQL</div>

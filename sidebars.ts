@@ -37,6 +37,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: '🏗️ Architecture',
       items: [
+        'architecture/genesis',
         'architecture/pos-consensus',
         'architecture/evm-compatibility',
         'architecture/high-tps',
@@ -77,6 +78,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'nodes-validation/becoming-validator',
         'nodes-validation/running-full-node',
+        'nodes-validation/node-deployment',
         'nodes-validation/node-security',
         'nodes-validation/node-monitoring',
       ],

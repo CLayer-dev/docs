@@ -1,174 +1,455 @@
 ---
 sidebar_position: 1
+title: Becoming a Validator
+description: Learn how to become a validator on Circle Layer and help secure the network
 ---
 
 # Becoming a Validator
 
+Learn how to become a validator on Circle Layer and help secure the network while earning rewards.
+
 ## Overview
 
-Learn how to become a validator on Circle Layer and help secure the network.
+Circle Layer validators play a crucial role in securing the network through Delegated Proof of Stake (DPoS) consensus. Validators are responsible for producing blocks, validating transactions, and maintaining network security.
 
 ## Requirements
 
-### 1. Hardware Requirements
-- **Operating System**: Ubuntu >= 20.04 LTS
-- **RAM**: 8GB minimum, 32GB recommended
-- **Persistent Storage**: 25GB minimum, 100GB high-speed SSD recommended
-- **Network**: 100Mbps+
+### Hardware Requirements
 
-### 2. Software Requirements
-- Linux OS (Ubuntu 20.04+)
-- Docker
-- Circle Layer Node Software
-- Monitoring Tools
+#### Minimum Requirements
+- **CPU:** 8 cores
+- **RAM:** 16GB
+- **Storage:** SSD with IOPS > 5,000
+- **Network:** 100 Mbps symmetric
+- **OS:** Linux (Ubuntu 20.04+)
 
-### 3. Token Requirements
+#### Recommended Requirements
+- **CPU:** 16 cores
+- **RAM:** 32GB
+- **Storage:** NVMe SSD with IOPS > 5,000
+- **Network:** 1 Gbps symmetric
+
+#### Critical Requirements
+- **SSD is required** - Traditional HDDs will not work
+- **External IP Address** - Static public IP recommended
+- **Port TCP/UDP: 32668** - Must be open and accessible
+
+### Software Requirements
+- **Golang** 1.19+ (for compilation)
+- **Git** for source code
+- **systemd** for service management
+
+### Token Requirements
 - **Testnet Minimum Stake**: 32 CLAYER
 - **Mainnet Minimum Stake**: 100,000 CLAYER
-- Additional for operations
-- Emergency fund
+- **Additional for operations** and emergency fund
 
-### 4. Network Requirements
+## Network Configuration
 
-#### Port Configuration
-Circle Layer validators require specific ports to be open and properly configured:
+### Required Ports
 
 ```bash
-# Required Validator Ports
-# Port 32668 - Validator P2P communication
-# Port 32669 - Validator consensus protocol
-# Port 8545  - JSON-RPC endpoint (EVM compatibility)
-# Port 6060  - pprof profiling endpoint
-# Port 80    - HTTP endpoint (web interface)
-# Port 22    - SSH access (remote management)
+# Open required port for Circle Layer
+sudo ufw allow 32668/tcp
+sudo ufw allow 32668/udp
 
-# Configure firewall for validator
-sudo ufw allow 32668/tcp comment 'Validator P2P'
-sudo ufw allow 32669/tcp comment 'Validator Consensus'
-sudo ufw allow 8545/tcp comment 'JSON-RPC'
-sudo ufw allow 6060/tcp comment 'pprof Profiling'
-sudo ufw allow 80/tcp comment 'HTTP Interface'
-sudo ufw allow 22/tcp comment 'SSH Access'
+# Optional: Allow RPC access (only if needed externally)
+sudo ufw allow 8545/tcp
+sudo ufw allow 8546/tcp
+
+# Allow SSH for management
+sudo ufw allow 22/tcp
+
+# Enable firewall
 sudo ufw enable
 ```
 
-#### Network Specifications
-- **Firewall**: Custom configuration required (not disabled)
-- **Minimum Active Validators**: 5 validators required for security and active blockchain
+### Network Specifications
+- **Primary Port**: 32668 (TCP/UDP)
+- **RPC Port**: 8545 (HTTP)
+- **WebSocket Port**: 8546 (WS)
+- **Minimum Active Validators**: 5 validators required for security
 - **Maximum Active Validators**: 21 (testnet), 10,000 (mainnet)
-- **Multiple RPC**: Required for redundancy and high availability
-- **Network Latency**: Under 100ms to other validators
-- **Bandwidth**: Minimum 1Gbps for validators
-- **Connection Limits**: Support 10,000+ concurrent connections
 
 ## Economic Parameters
 
 ### Gas & Fees
-- **Base Gas Price**: 0.000000001 CLAYER (1 Gwei)
-- **Gas Limit**: 10,000,000,000,000 per block
-- **Fee Calculation**: gas price × gas amount (Ethereum standard method)
+- **Minimum Gas Price**: 0.000021 CLAYER
+- **Block Gas Limit**: 10,000,000,000,000 per block
+- **Fee Calculation**: gas price × gas amount (Ethereum standard)
 
 ### Validator Rewards
 - **Reward Token**: CLAYER
 - **Fee Share**: 30% of gas fees
-- **Burn Mechanism**: 25% from gas fees (maximum limit 1,000,000 CLAYER)
+- **Burn Mechanism**: 25% from gas fees (maximum 1,000,000 CLAYER)
 - **Delegator Share**: 45% of gas fees
-
-## Security Features
-
-### Current Implementation
-- **Security Model**: Standard EVM security applied
-- **Consensus**: DPoS (Delegated Proof of Stake)
-- **Minimum Validators**: 5 validators active required for security
-- **Maximum Validators**: 21 (testnet), 10,000 (mainnet)
 
 ## Setup Process
 
-### 1. Initial Setup
+### 1. Download and Compile
+
 ```bash
-# Install dependencies
-sudo apt update
-sudo apt install -y docker.io
+# Clone the repository
+git clone https://github.com/Circle-layer-org/testnet-core-blockchain
+cd /path/to/core-blockchain
 
-# Pull node image
-docker pull circlelayer/node:latest
+# Compile the node
+make geth
 
-# Create config
-mkdir -p ~/.circlelayer
+# Binary will be available at build/bin/geth
 ```
 
-### 2. Node Configuration
-```yaml
-# config.yaml
-network: testnet
-port: 32668
-rpc_port: 8545
-validator_key: "your-key"
-stake_amount: 32
-chain_id: 28525
+### 2. Directory Setup
+
+```bash
+# Create directory structure
+sudo mkdir -p /data/circlelayer/{data,logs}
+sudo chown -R $USER:$USER /data/circlelayer
+
+# Copy compiled binary
+sudo cp build/bin/geth /data/circlelayer/geth-linux-amd64
+sudo chmod +x /data/circlelayer/geth-linux-amd64
 ```
 
-### 3. Start Node
+### 3. Configuration
+
+Create the validator configuration file at `/data/circlelayer/config.toml`:
+
+```toml
+[Eth]
+SyncMode = "fast"
+DiscoveryURLs = []
+TrieCleanCacheRejournal = 300000000000
+
+[Eth.Miner]
+GasFloor = 8000000
+GasCeil = 8000000
+GasPrice = 0
+Recommit = 3000000000
+Noverify = false
+
+[Eth.Ethash]
+CacheDir = "ethash"
+CachesInMem = 2
+CachesOnDisk = 3
+CachesLockMmap = false
+DatasetDir = "/data/circlelayer/data/.ethash"
+DatasetsInMem = 1
+DatasetsOnDisk = 2
+DatasetsLockMmap = false
+PowMode = 0
+
+[Eth.TxPool]
+Locals = []
+NoLocals = false
+Journal = "transactions.rlp"
+Rejournal = 3600000000000
+PriceLimit = 1
+PriceBump = 10
+AccountSlots = 16
+GlobalSlots = 4096
+AccountQueue = 64
+GlobalQueue = 1024
+Lifetime = 10800000000000
+
+[Node]
+DataDir = "/data/circlelayer/data"
+InsecureUnlockAllowed = true
+NoUSB = true
+IPCPath = "geth.ipc"
+HTTPHost = "0.0.0.0"
+HTTPPort = 8545
+HTTPCors = ["*"]
+HTTPVirtualHosts = ["*"]
+HTTPModules = ['eth', 'net', 'web3']
+
+WSHost = "0.0.0.0"
+WSPort = 8546
+WSModules = ['eth', 'net', 'web3']
+
+GraphQLVirtualHosts = ["localhost"]
+
+[Node.P2P]
+MaxPeers = 50
+NoDiscovery = false
+ListenAddr = "32668"
+EnableMsgEvents = false
+
+[Node.HTTPTimeouts]
+ReadTimeout = 30000000000
+WriteTimeout = 30000000000
+IdleTimeout = 120000000000
+```
+
+### 4. Startup Script
+
+Create `/data/circlelayer/run.sh`:
+
 ```bash
-docker run -d \
-  --name circlelayer-node \
-  -p 32668:32668 \
-  -p 8545:8545 \
-  -v ~/.circlelayer:/root/.circlelayer \
-  circlelayer/node:latest
+#!/usr/bin/env bash
+/data/circlelayer/geth-linux-amd64 \
+--config /data/circlelayer/config.toml  \
+--logpath /data/circlelayer/logs \
+--verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+```
+
+Make it executable:
+```bash
+chmod +x /data/circlelayer/run.sh
+```
+
+### 5. Network Selection
+
+#### Testnet (Default for Testing)
+```bash
+#!/usr/bin/env bash
+/data/circlelayer/geth-linux-amd64 \
+--config /data/circlelayer/config.toml  \
+--testnet \
+--logpath /data/circlelayer/logs \
+--verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+```
+
+#### Mainnet (Production)
+```bash
+#!/usr/bin/env bash
+/data/circlelayer/geth-linux-amd64 \
+--config /data/circlelayer/config.toml  \
+--logpath /data/circlelayer/logs \
+--verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+```
+
+### 6. Service Management
+
+Create systemd service at `/etc/systemd/system/circlelayer.service`:
+
+```ini
+[Unit]
+Description=circlelayer Blockchain service
+
+[Service]
+Type=simple
+ExecStart=/bin/sh /data/circlelayer/run.sh
+
+Restart=on-failure
+RestartSec=5s
+
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Enable and start the service:
+
+```bash
+# Reload systemd configuration
+sudo systemctl daemon-reload
+
+# Enable service to start on boot
+sudo systemctl enable circlelayer.service
+
+# Start the service
+sudo systemctl start circlelayer.service
+
+# Check service status
+sudo systemctl status circlelayer.service
 ```
 
 ## Monitoring
 
 ### 1. Node Status
-```bash
-# Check node status
-circlelayer status
 
-# View logs
-docker logs circlelayer-node
+```bash
+# Check if process is running
+ps aux | grep geth
+
+# Check service status
+sudo systemctl status circlelayer.service
+
+# View service logs
+sudo journalctl -u circlelayer.service -f
+
+# Real-time log monitoring
+tail -f /data/circlelayer/logs/systemd_chain_console.out
 ```
 
-### 2. Performance Metrics
-- CPU usage
-- Memory usage
-- Network traffic
-- Block production (every 3 seconds)
+### 2. RPC Commands
 
-### 3. Maintenance
-- **Maintenance Schedules**: Depends on server provider requirements
-- **Network Uptime**: 99.95% (Last 30 days)
+```bash
+# Get current block number
+curl -H "Content-Type: application/json" \
+  -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' \
+  http://localhost:8545
 
-## 🚧 Advanced Features in Development
+# Check peer count
+curl -H "Content-Type: application/json" \
+  -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' \
+  http://localhost:8545
 
-The following validator-related features are currently in development:
+# Check sync status
+curl -H "Content-Type: application/json" \
+  -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}' \
+  http://localhost:8545
+```
 
-### Smart Contract Infrastructure
-- **Automated Staking Contract**: Smart contract-based staking system (currently manual process)
-- **Governance System**: On-chain validator governance and voting mechanisms
-- **Advanced Monitoring**: Real-time validator performance dashboards
+### 3. Performance Metrics
 
-### Network Infrastructure
-- **Status Page**: Public network status and validator performance tracking
-- **Alert System**: Automated validator monitoring and alert notifications
-- **Analytics Dashboard**: Comprehensive validator metrics and insights
+Monitor these key metrics:
+- **CPU usage**: Should be below 80%
+- **Memory usage**: Monitor RAM consumption
+- **Network traffic**: Track P2P connections
+- **Block production**: Every 3 seconds
+- **Disk I/O**: Monitor SSD performance
 
-## Best Practices
+### 4. Health Checks
 
-### 1. Security
-- Configure required ports (ports 32668, 32669, 8545, 6060, 80, 22)
-- Regular updates
-- Backup keys
-- Monitor logs
+```bash
+# Check disk space
+df -h /data/circlelayer
 
-### 2. Performance
+# Check memory usage  
+free -h
+
+# Monitor network connectivity
+netstat -tlnp | grep 32668
+
+# Check system resources
+top -p $(pgrep geth)
+```
+
+## Security Considerations
+
+### File Permissions
+
+```bash
+# Create dedicated user
+sudo useradd -r -s /bin/false circlelayer
+
+# Set ownership
+sudo chown -R circlelayer:circlelayer /data/circlelayer
+
+# Set secure permissions
+sudo chmod 755 /data/circlelayer
+sudo chmod 600 /data/circlelayer/config.toml
+sudo chmod 755 /data/circlelayer/run.sh
+```
+
+### Network Security
+
+- Use firewall to restrict access
+- Only expose necessary ports (32668)
+- Consider VPN for remote management
+- Monitor for unusual activity
+- Keep system updated
+
+### Backup Strategy
+
+```bash
+# Backup critical files
+tar -czf validator-backup-$(date +%Y%m%d).tar.gz \
+    /data/circlelayer/config.toml \
+    /data/circlelayer/data/keystore/ \
+    /etc/systemd/system/circlelayer.service
+```
+
+## Troubleshooting
+
+### Common Issues
+
+#### Sync Problems
+```bash
+# Check peer connections
+curl -H "Content-Type: application/json" \
+  -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' \
+  http://localhost:8545
+
+# Restart service if stuck
+sudo systemctl restart circlelayer.service
+```
+
+#### Port Issues
+```bash
+# Test port connectivity
+telnet <your-ip> 32668
+
+# Check if port is open
+sudo netstat -tlnp | grep 32668
+
+# Verify firewall
+sudo ufw status
+```
+
+#### Performance Issues
+```bash
+# Check system resources
+top -p $(pgrep geth)
+
+# Monitor disk I/O
+sudo iotop -a
+
+# Check memory
+free -h
+```
+
+## Validator Operations
+
+### Starting Your Validator
+
+1. **Initial Setup**: Complete node installation and configuration
+2. **Sync Network**: Let node fully sync with the network
+3. **Stake Tokens**: Stake minimum required CLAYER tokens
+4. **Monitor Performance**: Ensure consistent uptime and performance
+5. **Community Engagement**: Join validator community channels
+
+### Best Practices
+
+#### Security
+- Configure required ports only (32668)
+- Regular security updates
+- Backup validator keys
+- Monitor logs continuously
+- Use dedicated hardware
+
+#### Performance
 - Use recommended hardware specifications
-- Regular maintenance
-- Monitor metrics
-- Update software
+- Regular maintenance schedules
+- Monitor system metrics
+- Keep software updated
+- Optimize disk performance
 
-### 3. Operations
-- 24/7 monitoring
-- Regular backups
-- Emergency procedures
-- Community support
+#### Operations
+- 24/7 monitoring setup
+- Automated backup procedures
+- Emergency response procedures
+- Community support channels
+- Performance optimization
+
+## Getting Help
+
+For validator support:
+- Check the [official documentation](/)
+- Join [community forums](/community/social-media)
+- Review [GitHub issues](https://github.com/Circle-layer-org/testnet-core-blockchain/issues)
+- Monitor network status and announcements
+
+### Command Reference
+
+```bash
+# Get all available options
+./build/bin/geth --help
+
+# Or short form
+./build/bin/geth -h
+```
+
+For detailed command-line options, refer to [Geth Command-line Options](https://geth.ethereum.org/docs/interface/command-line-options).
+
+---
+
+## Next Steps
+
+After setting up your validator:
+- Learn about [node monitoring](/nodes-validation/node-monitoring)
+- Review [security best practices](/nodes-validation/node-security)
+- Understand [deployment strategies](/nodes-validation/node-deployment)

@@ -1,0 +1,299 @@
+/* Genesis Page Styles */
+
+/* System Contracts Grid */
+.system-contracts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.contract-card {
+    background: var(--ifm-card-background-color);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contract-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--ifm-color-primary);
+}
+
+.contract-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--ifm-color-primary);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contract-card code {
+    background: var(--ifm-code-background);
+    color: var(--ifm-code-color);
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    display: block;
+    margin: 1rem 0;
+    word-break: break-all;
+    border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.contract-card p {
+    margin: 0;
+    color: var(--ifm-color-content-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Feature Highlights */
+.feature-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.highlight-item {
+    background: linear-gradient(135deg, var(--ifm-color-primary-lightest) 0%, var(--ifm-color-primary-lighter) 100%);
+    border: 1px solid var(--ifm-color-primary-light);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-item strong {
+    color: var(--ifm-color-primary-dark);
+    font-size: 1.1rem;
+}
+
+/* Mainnet Status */
+.mainnet-status {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--ifm-color-warning-lightest) 0%, var(--ifm-color-warning-lighter) 100%);
+    border-radius: 12px;
+    margin: 2rem 0;
+    border: 2px dashed var(--ifm-color-warning);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.status-badge.coming-soon {
+    background: var(--ifm-color-warning);
+    color: white;
+}
+
+.mainnet-status p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--ifm-color-warning-dark);
+}
+
+/* Genesis Footer */
+.genesis-footer {
+    background: var(--ifm-color-primary-lightest);
+    border: 1px solid var(--ifm-color-primary-light);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.genesis-footer p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--ifm-color-primary-dark);
+}
+
+.genesis-footer a {
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.genesis-footer a:hover {
+    border-bottom-color: var(--ifm-color-primary);
+}
+
+/* Table Styling */
+.markdown table {
+    margin: 2rem 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.markdown table th {
+    background: var(--ifm-color-primary-lightest);
+    color: var(--ifm-color-primary-dark);
+    font-weight: 600;
+    padding: 1rem;
+    border: 1px solid var(--ifm-color-primary-light);
+}
+
+.markdown table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    vertical-align: top;
+}
+
+.markdown table tr:nth-child(even) {
+    background: var(--ifm-color-emphasis-100);
+}
+
+.markdown table code {
+    background: var(--ifm-code-background);
+    color: var(--ifm-code-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Code Block Improvements */
+.prism-code {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.prism-code .token-line {
+    min-height: 1.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .system-contracts-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-highlights {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .contract-card {
+        padding: 1rem;
+    }
+
+    .contract-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .contract-card code {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+
+    .mainnet-status {
+        padding: 2rem 1rem;
+    }
+
+    .genesis-footer {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contract-card h3 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .highlight-item {
+        padding: 0.75rem;
+    }
+
+    .status-badge {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Dark Mode Adjustments */
+[data-theme='dark'] .contract-card {
+    background: var(--ifm-background-color);
+    border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .contract-card:hover {
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .feature-highlights .highlight-item {
+    background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-color-primary-darker) 100%);
+    border-color: var(--ifm-color-primary-dark);
+}
+
+[data-theme='dark'] .mainnet-status {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.2) 100%);
+    border-color: var(--ifm-color-warning-dark);
+}
+
+[data-theme='dark'] .genesis-footer {
+    background: var(--ifm-color-primary-darkest);
+    border-color: var(--ifm-color-primary-dark);
+}
+
+/* Info Admonition Customization */
+.admonition-info .admonition-heading h5 {
+    color: var(--ifm-color-info);
+}
+
+.admonition-note .admonition-heading h5 {
+    color: var(--ifm-color-secondary);
+}
+
+/* Genesis Page Specific Tabs */
+.tabs__item--active {
+    color: var(--ifm-color-primary) !important;
+    border-bottom-color: var(--ifm-color-primary) !important;
+}
+
+.tabpanel h3 {
+    color: var(--ifm-color-primary);
+    margin-top: 1.5rem;
+}
+
+/* JSON Code Block Special Styling */
+.language-json .prism-code {
+    background: var(--ifm-code-background);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 8px;
+}
+
+.language-javascript .prism-code {
+    background: var(--ifm-code-background);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 8px;
+}
+
+/* Special styling for parameter tables */
+.markdown table th:first-child {
+    width: 30%;
+}
+
+.markdown table th:last-child {
+    width: 70%;
+}

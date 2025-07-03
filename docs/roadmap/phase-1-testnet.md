@@ -84,7 +84,7 @@ Circle Layer is building a robust, high-performance blockchain ecosystem through
 <!-- 
 ### Testnet Network Details (READY - WILL BE ACTIVATED)
 - **Network Name**: Circle Layer Testnet
-- **RPC URL**: https://rpc-testnet.circlelayer.com
+- **RPC URL**: https://testnet-rpc.circlelayer.com
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
 - **Block Explorer**: https://explorer-testnet.circlelayer.com/
@@ -235,7 +235,7 @@ Building every component (bridge, DEX, wallets) in-house ensures seamless integr
 - **WebSocket**: wss://testnet-rpc.circlelayer.com
 - **Explorer**: https://explorer-testnet.circlelayer.com
 - **Faucet**: https://faucet.circlelayer.com
-- **GraphQL**: https://testnet.circlelayer.com/graphiql
+- **GraphQL**: https://explorer-testnet.circlelayer.com/graphiql
 - **Faucet**: https://faucet.circlelayer.com
 -->
 

@@ -219,9 +219,9 @@ const { chains, publicClient } = configureChains(
 - **Sync Issues**: Try refreshing wallet or switching networks
 
 ### Support Contacts
-- **Technical Support**: tech-support@circlelayer.com
-- **Wallet Issues**: wallet-support@circlelayer.com
-- **Documentation**: docs-feedback@circlelayer.com
+- **Technical Support**: support@circlelayer.com
+- **Wallet Issues**: support@circlelayer.com
+- **Documentation**: support@circlelayer.com
 
 ## Development Integration
 Circle Layer follows standard EVM integration patterns, making it compatible with existing Ethereum development tools and wallets.

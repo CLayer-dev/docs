@@ -7,7 +7,7 @@ sidebar_position: 2
 ## Community Channels
 
 ### Social Media Platforms
-- [X (Twitter)](https://twitter.com/circlelayer)
+- [X (Twitter)](https://x.com/circlelayer)
 - [Telegram](https://t.me/circlelayer)
 
 ## Community Guidelines

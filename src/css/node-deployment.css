@@ -1,0 +1,310 @@
+/* Node Deployment Page Styles - Clean & Simple */
+
+/* Code Block Enhancements */
+.prism-code {
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.prism-code[data-language="bash"] {
+    border-left: 4px solid var(--ifm-color-primary);
+}
+
+.prism-code[data-language="toml"] {
+    border-left: 4px solid var(--ifm-color-success);
+}
+
+.prism-code[data-language="ini"] {
+    border-left: 4px solid var(--ifm-color-info);
+}
+
+.prism-code[data-language="powershell"] {
+    border-left: 4px solid var(--ifm-color-secondary);
+}
+
+/* Tabs Styling */
+.tabs__item {
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+}
+
+.tabs__item--active {
+    color: var(--ifm-color-primary) !important;
+    border-bottom-color: var(--ifm-color-primary) !important;
+    font-weight: 600;
+}
+
+.tabpanel {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 0 8px 8px 8px;
+}
+
+/* Admonition Customization */
+.admonition {
+    margin: 1.5rem 0;
+}
+
+.admonition-info {
+    background: linear-gradient(135deg, var(--ifm-color-info-lightest) 0%, rgba(54, 162, 235, 0.05) 100%);
+    border-left: 4px solid var(--ifm-color-info);
+}
+
+.admonition-tip {
+    background: linear-gradient(135deg, var(--ifm-color-success-lightest) 0%, rgba(25, 135, 84, 0.05) 100%);
+    border-left: 4px solid var(--ifm-color-success);
+}
+
+.admonition-warning {
+    background: linear-gradient(135deg, var(--ifm-color-warning-lightest) 0%, rgba(255, 193, 7, 0.05) 100%);
+    border-left: 4px solid var(--ifm-color-warning);
+}
+
+.admonition-content {
+    padding: 1rem 1.5rem;
+}
+
+.admonition-heading {
+    margin-bottom: 0.5rem;
+}
+
+.admonition-heading h5 {
+    margin: 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.admonition-info .admonition-heading h5 {
+    color: var(--ifm-color-info-dark);
+}
+
+.admonition-tip .admonition-heading h5 {
+    color: var(--ifm-color-success-dark);
+}
+
+.admonition-warning .admonition-heading h5 {
+    color: var(--ifm-color-warning-dark);
+}
+
+/* Configuration Lists */
+.admonition ul {
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.5rem;
+}
+
+.admonition li {
+    margin-bottom: 0.5rem;
+    color: var(--ifm-color-content);
+}
+
+.admonition li strong {
+    color: var(--ifm-color-emphasis-800);
+    font-weight: 600;
+}
+
+/* Directory Structure Styling */
+pre[class*="language-"] {
+    position: relative;
+}
+
+pre[class*="language-"]::before {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    color: var(--ifm-color-emphasis-600);
+    opacity: 0.7;
+}
+
+pre.language-toml::before {
+    content: "TOML Config";
+}
+
+pre.language-bash::before {
+    content: "Shell Script";
+}
+
+pre.language-ini::before {
+    content: "Service Config";
+}
+
+/* Command Code Blocks */
+.language-bash .prism-code {
+    background: var(--ifm-code-background);
+}
+
+.language-bash .prism-code::before {
+    content: "💻";
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem;
+    font-size: 1rem;
+}
+
+/* Table Styling */
+table {
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background: var(--ifm-color-emphasis-100);
+    color: var(--ifm-color-emphasis-800);
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    text-align: left;
+}
+
+td {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background: var(--ifm-color-emphasis-50);
+}
+
+/* Link Styling */
+a[href^="http"] {
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+a[href^="http"]:hover {
+    border-bottom-color: var(--ifm-color-primary);
+}
+
+/* Section Spacing */
+h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--ifm-color-primary);
+    border-bottom: 2px solid var(--ifm-color-emphasis-300);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--ifm-color-primary-dark);
+}
+
+h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--ifm-color-emphasis-800);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tabpanel {
+        padding: 0.75rem;
+        margin-top: 0.75rem;
+    }
+
+    .tabs__item {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .admonition-content {
+        padding: 0.75rem 1rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 0.5rem 0.75rem;
+    }
+
+    h2 {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        margin-top: 1.5rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .prism-code {
+        font-size: 0.8rem;
+    }
+
+    .tabs__item {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .admonition ul {
+        padding-left: 1rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th,
+    td {
+        padding: 0.4rem 0.5rem;
+    }
+}
+
+/* Dark Mode Adjustments */
+[data-theme='dark'] .tabpanel {
+    background: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .admonition-info {
+    background: linear-gradient(135deg, rgba(54, 162, 235, 0.1) 0%, rgba(54, 162, 235, 0.05) 100%);
+}
+
+[data-theme='dark'] .admonition-tip {
+    background: linear-gradient(135deg, rgba(25, 135, 84, 0.1) 0%, rgba(25, 135, 84, 0.05) 100%);
+}
+
+[data-theme='dark'] .admonition-warning {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.05) 100%);
+}
+
+[data-theme='dark'] th {
+    background: var(--ifm-color-emphasis-200);
+    color: var(--ifm-color-content);
+}
+
+[data-theme='dark'] tr:nth-child(even) {
+    background: var(--ifm-color-emphasis-100);
+}
+
+/* Print Styles */
+@media print {
+    .admonition {
+        break-inside: avoid;
+    }
+
+    .prism-code {
+        break-inside: avoid;
+    }
+
+    h2,
+    h3,
+    h4 {
+        break-after: avoid;
+    }
+}

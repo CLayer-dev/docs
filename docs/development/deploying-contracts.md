@@ -108,8 +108,8 @@ module.exports = function(deployer) {
 
 For reference, here's an example contract deployed on Circle Layer testnet:
 - **Contract Address**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
-- **Explorer**: [View Contract](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- **ABI**: [Contract ABI](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+- **Explorer**: [View Contract](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- **ABI**: [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 
 ## Deployment Checklist
 

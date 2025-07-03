@@ -1,0 +1,350 @@
+---
+sidebar_position: 5
+title: Node Deployment & Compilation
+description: Complete guide for compiling, deploying, and configuring Circle Layer blockchain nodes from source
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Node Deployment & Compilation
+
+## Compile and Run
+
+### Download
+
+Download source code via git:
+
+```bash
+git clone https://github.com/Circle-layer-org/testnet-core-blockchain
+```
+
+### Install Golang
+
+**Reference**: [Go Download and install](https://golang.org/doc/install)
+
+### Compile
+
+```bash
+cd /path/to/core-blockchain
+make geth
+```
+
+If you want to use cross compile, like compiling on Mac for Linux, use `make geth-linux`, `make geth-linux-amd64`, etc.
+
+After compilation completed, the generated binary is in the folder `build/bin`.
+
+### Run
+
+By running `./build/bin/geth --help`, we can get all option info. Specific usage can refer to [Command-line Options](https://geth.ethereum.org/docs/interface/command-line-options).
+
+## Deployment
+
+**SSD is required**
+
+### Network
+
+Program will connect into mainnet after started. If want to connect the public testnet, you can add option `--testnet` to command when starting.
+
+## Hardware
+
+### Minimum
+- **8 cores**
+- **16GB RAM**
+- **SSD IOPS > 5k**
+
+### Recommended
+- **16 cores**
+- **32GB RAM**
+- **SSD IOPS > 5k**
+
+### Network & Port
+- **External IP Address**
+- **Port TCP/UDP: 32668**
+
+## Chain Node Configuration
+
+### config.toml
+
+```toml
+[Eth]
+SyncMode = "fast"
+DiscoveryURLs = []
+TrieCleanCacheRejournal = 300000000000
+
+[Eth.Miner]
+GasFloor = 8000000
+GasCeil = 8000000
+GasPrice = 0
+Recommit = 3000000000
+Noverify = false
+
+[Eth.Ethash]
+CacheDir = "ethash"
+CachesInMem = 2
+CachesOnDisk = 3
+CachesLockMmap = false
+DatasetDir = "/data/circlelayer/data/.ethash"
+DatasetsInMem = 1
+DatasetsOnDisk = 2
+DatasetsLockMmap = false
+PowMode = 0
+
+[Eth.TxPool]
+Locals = []
+NoLocals = false
+Journal = "transactions.rlp"
+Rejournal = 3600000000000
+PriceLimit = 1
+PriceBump = 10
+AccountSlots = 16
+GlobalSlots = 4096
+AccountQueue = 64
+GlobalQueue = 1024
+Lifetime = 10800000000000
+
+[Node]
+DataDir = "/data/circlelayer/data"
+InsecureUnlockAllowed = true
+NoUSB = true
+IPCPath = "geth.ipc"
+HTTPHost = "0.0.0.0"
+HTTPPort = 8545
+HTTPCors = ["*"]
+HTTPVirtualHosts = ["*"]
+HTTPModules = ['eth', 'net', 'web3']
+
+WSHost = "0.0.0.0"
+WSPort = 8546
+WSModules = ['eth', 'net', 'web3']
+
+GraphQLVirtualHosts = ["localhost"]
+
+[Node.P2P]
+MaxPeers = 50
+NoDiscovery = false
+ListenAddr = "32668"
+EnableMsgEvents = false
+
+[Node.HTTPTimeouts]
+ReadTimeout = 30000000000
+WriteTimeout = 30000000000
+IdleTimeout = 120000000000
+```
+
+### Sync Mode Configuration
+
+Use fast sync in the config, if full needed, change this line:
+
+```toml
+SyncMode = "fast"
+```
+
+to:
+
+```toml
+SyncMode = "full"
+```
+
+## Start Scripts
+
+To show full detail help info of all flags, type `geth help` or `geth -h`.
+
+### run.sh
+
+```bash
+#!/usr/bin/env bash
+/data/circlelayer/geth-linux-amd64 \
+--config /data/circlelayer/config.toml  \
+--logpath /data/circlelayer/logs \
+--verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+```
+
+### Archive Node
+
+If you need to use it as archive node, add:
+
+```bash
+--syncmode full \
+--gcmode archive \
+```
+
+So:
+
+```bash
+#!/usr/bin/env bash
+/data/circlelayer/geth-linux-amd64 \
+--config /data/circlelayer/config.toml  \
+--logpath /data/circlelayer/logs \
+--syncmode full \
+--gcmode archive \
+--verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+```
+
+### Network Selection
+
+If no any network flags were provided, the node will connect the circlelayer Blockchain-mainnet by default. If you want to connect to circlelayer Blockchain-testnet, add:
+
+```bash
+--testnet
+```
+
+## Systemd Configuration
+
+```ini
+[Unit]
+Description=circlelayer Blockchain service
+
+[Service]
+Type=simple
+ExecStart=/bin/sh /data/circlelayer/run.sh
+
+Restart=on-failure
+RestartSec=5s
+
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+```
+
+## Directory Structure
+
+Recommended directory structure for Circle Layer node deployment:
+
+```
+/data/circlelayer/
+├── geth-linux-amd64          # Compiled binary
+├── config.toml               # Main configuration
+├── run.sh                    # Startup script
+├── data/                     # Blockchain data
+│   ├── geth/                 # Node data
+│   └── .ethash/              # Ethash cache
+└── logs/                     # Log files
+    ├── geth.log
+    └── systemd_chain_console.out
+```
+
+## Security Considerations
+
+### File Permissions
+
+Set appropriate permissions for security:
+
+```bash
+# Create dedicated user
+sudo useradd -r -s /bin/false circlelayer
+
+# Set ownership
+sudo chown -R circlelayer:circlelayer /data/circlelayer
+
+# Set permissions
+sudo chmod 755 /data/circlelayer
+sudo chmod 600 /data/circlelayer/config.toml
+sudo chmod 755 /data/circlelayer/run.sh
+```
+
+### Firewall Configuration
+
+Configure firewall to allow only necessary ports:
+
+```bash
+# Allow SSH (if needed)
+sudo ufw allow 22/tcp
+
+# Allow Circle Layer P2P port
+sudo ufw allow 32668
+
+# Allow RPC (only if needed externally)
+sudo ufw allow 8545/tcp
+
+# Enable firewall
+sudo ufw enable
+```
+
+## Monitoring & Maintenance
+
+### Log Monitoring
+
+Monitor node logs for issues:
+
+```bash
+# Real-time log monitoring
+tail -f /data/circlelayer/logs/systemd_chain_console.out
+
+# Search for errors
+grep -i error /data/circlelayer/logs/systemd_chain_console.out
+
+# Check sync status
+grep -i "block" /data/circlelayer/logs/systemd_chain_console.out | tail -20
+```
+
+### Health Checks
+
+Regular health check commands:
+
+```bash
+# Check if process is running
+ps aux | grep geth
+
+# Check network connectivity
+netstat -tlnp | grep 32668
+
+# Check disk space
+df -h /data/circlelayer
+
+# Check memory usage
+free -h
+```
+
+### Backup Strategy
+
+Important files to backup:
+
+```bash
+# Backup keystore and configuration
+tar -czf circlelayer-backup-$(date +%Y%m%d).tar.gz \
+    /data/circlelayer/config.toml \
+    /data/circlelayer/data/keystore/ \
+    /etc/systemd/system/circlelayer.service
+```
+
+## Troubleshooting
+
+### Common Issues
+
+#### Sync Problems
+```bash
+# Check peer connections
+curl -H "Content-Type: application/json" \
+  -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' \
+  http://localhost:8545
+```
+
+#### Performance Issues
+```bash
+# Check system resources
+top -p $(pgrep geth)
+iostat -x 1
+```
+
+#### Connection Issues
+```bash
+# Test port connectivity
+telnet <your-ip> 32668
+```
+
+### Getting Help
+
+For additional support:
+- Join the [community forums](/community/social-media)
+- Review [GitHub issues](https://github.com/Circle-layer-org/testnet-core-blockchain/issues)
+
+---
+
+:::tip Next Steps
+After deploying your node, consider:
+- Setting up [monitoring](/nodes-validation/node-monitoring)
+- Implementing [security best practices](/nodes-validation/node-security)
+- Becoming a [validator](/nodes-validation/becoming-validator)
+::: 

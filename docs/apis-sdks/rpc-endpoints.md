@@ -780,17 +780,16 @@ const result = await makeSignedRequest(
 ## Resources
 
 ### Official Documentation
-- **API Reference**: https://docs.circlelayer.com/api
+- **API Reference**: https://explorer-testnet.circlelayer.com/api-docs
 - **SDK Documentation**: https://docs.circlelayer.com/sdk
 - **WebSocket API**: https://docs.circlelayer.com/websocket
 
 ### Development Tools
-- **RPC Playground**: https://playground.circlelayer.com
+- **GraphQL Endpoint**: https://explorer-testnet.circlelayer.com/graphiql
 - **API Testing**: Use Postman collection or curl examples
-- **Network Status**: https://status.circlelayer.com
 
 ### Community & Support
-- **X (Twitter)**: https://twitter.com/circlelayer
+- **X (Twitter)**: https://x.com/circlelayer
 - **Telegram**: https://t.me/circlelayer
 - **GitHub Issues**: https://github.com/circle-layer-org/rpc-issues
 

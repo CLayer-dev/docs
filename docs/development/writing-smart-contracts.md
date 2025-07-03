@@ -19,7 +19,7 @@ Learn how to write and deploy smart contracts on Circle Layer.
 ### Network Configuration
 - **Network**: Circle Layer Testnet
 - **Chain ID**: 28525
-- **RPC URL**: https://rpc-testnet.circlelayer.com
+- **RPC URL**: https://testnet-rpc.circlelayer.com
 - **Currency**: CLAYER
 - **Block Explorer**: https://explorer-testnet.circlelayer.com/
 
@@ -91,8 +91,8 @@ contract MyContract {
 
 ### Reference Implementation
 - **Example Contract**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
-- **View on Explorer**: [Contract Details](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- **Contract ABI**: [View ABI](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+- **View on Explorer**: [Contract Details](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- **Contract ABI**: [View ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 
 ### Integration Guides
 - [Deploying Contracts](/development/deploying-contracts)

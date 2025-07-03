@@ -10,7 +10,7 @@ Circle Layer provides comprehensive APIs and SDKs to help developers build and i
 ## 🔧 Available APIs
 
 ### JSON-RPC API
-- **Endpoint**: `https://rpc-testnet.circlelayer.com`
+- **Endpoint**: `https://testnet-rpc.circlelayer.com`
 - **Purpose**: Core blockchain interactions
 - **Compatibility**: Ethereum JSON-RPC compatible
 - **Use Cases**: Transaction submission, contract deployment, balance queries
@@ -33,13 +33,13 @@ Circle Layer is fully compatible with popular Web3 libraries:
 ### Web3.js
 ```javascript
 const Web3 = require('web3');
-const web3 = new Web3('https://rpc-testnet.circlelayer.com');
+const web3 = new Web3('https://testnet-rpc.circlelayer.com');
 ```
 
 ### Ethers.js
 ```javascript
 const { ethers } = require('ethers');
-const provider = new ethers.providers.JsonRpcProvider('https://rpc-testnet.circlelayer.com');
+const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
 ```
 
 ### Viem
@@ -47,7 +47,7 @@ const provider = new ethers.providers.JsonRpcProvider('https://rpc-testnet.circl
 import { createPublicClient, http } from 'viem';
 
 const client = createPublicClient({
-  transport: http('https://rpc-testnet.circlelayer.com')
+  transport: http('https://testnet-rpc.circlelayer.com')
 });
 ```
 

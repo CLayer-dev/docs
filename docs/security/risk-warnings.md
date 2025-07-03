@@ -128,7 +128,7 @@ Circle Layer maintains the highest standards of business conduct:
 If you encounter suspicious activity or security concerns:
 
 #### Report To
-- **Security Issues**: compliance@circlelayer.com
+- **Security Issues**: admin@circlelayer.com
 - **Provide Details**: Include as much detail as possible
 - **Contact Information**: Provide your contact details for follow-up
 - **Confidentiality**: All reports handled with strict confidentiality

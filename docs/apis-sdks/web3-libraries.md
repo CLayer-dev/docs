@@ -23,7 +23,7 @@ Circle Layer supports various Web3 libraries for interacting with the testnet. A
 import { ethers } from 'ethers';
 
 // HTTP Provider
-const provider = new ethers.providers.JsonRpcProvider('https://rpc-testnet.circlelayer.com');
+const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
 
 // WebSocket Provider
 const wsProvider = new ethers.providers.WebSocketProvider('wss://testnet-rpc.circlelayer.com');
@@ -41,7 +41,7 @@ console.log('Balance:', ethers.utils.formatEther(balance), 'CLAYER');
 import Web3 from 'web3';
 
 // HTTP Provider
-const web3 = new Web3('https://rpc-testnet.circlelayer.com');
+const web3 = new Web3('https://testnet-rpc.circlelayer.com');
 
 // WebSocket Provider
 const webSocketWeb3 = new Web3('wss://testnet-rpc.circlelayer.com');
@@ -60,7 +60,7 @@ console.log('Balance:', web3.utils.fromWei(balance, 'ether'), 'CLAYER');
 from web3 import Web3
 
 # HTTP Provider
-w3 = Web3(Web3.HTTPProvider('https://rpc-testnet.circlelayer.com'))
+w3 = Web3(Web3.HTTPProvider('https://testnet-rpc.circlelayer.com'))
 
 # Account setup
 account = w3.eth.account.from_key(private_key)
@@ -151,7 +151,7 @@ try {
 ```javascript
 // Use environment variables
 const provider = new ethers.providers.JsonRpcProvider(
-  process.env.CIRCLE_LAYER_RPC || 'https://rpc-testnet.circlelayer.com'
+  process.env.CIRCLE_LAYER_RPC || 'https://testnet-rpc.circlelayer.com'
 );
 ```
 
@@ -183,7 +183,7 @@ function useCircleLayer() {
               symbol: 'CLAYER',
               decimals: 18
             },
-            rpcUrls: ['https://rpc-testnet.circlelayer.com'],
+            rpcUrls: ['https://testnet-rpc.circlelayer.com'],
             blockExplorerUrls: ['https://explorer-testnet.circlelayer.com/']
           }]
         });
@@ -203,7 +203,7 @@ const { ethers } = require('ethers');
 
 class CircleLayerService {
   constructor() {
-    this.provider = new ethers.providers.JsonRpcProvider('https://rpc-testnet.circlelayer.com');
+    this.provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
     this.wallet = new ethers.Wallet(process.env.PRIVATE_KEY, this.provider);
   }
 
@@ -223,8 +223,8 @@ class CircleLayerService {
 
 ### Example Contract
 - **Address**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
-- **Explorer**: [View Contract](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- **ABI**: [Contract ABI](https://testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+- **Explorer**: [View Contract](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- **ABI**: [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 
 ### Additional Guides
 - [Web3 Integration Guide](/development/web3-integration)
