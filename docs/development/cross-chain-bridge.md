@@ -251,7 +251,7 @@ function BridgeComponent() {
 - **Integration Guides**: Step-by-step integration tutorials
 
 ### Support
-- **Developer Discord**: Real-time developer support
+- **Developer Telegram**: Real-time developer support
 - **Technical Support**: contact@circlelayer.com
 - **Security Issues**: security@circlelayer.com
 - **Bug Reports**: GitHub issues and bug tracking 

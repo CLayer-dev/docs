@@ -231,6 +231,10 @@ const config: Config = {
           title: 'More',
           items: [
             {
+              label: 'Website',
+              href: 'https://circlelayer.com',
+            },
+            {
               label: 'GitHub',
               href: 'https://github.com/Circle-layer-org/docs',
             },

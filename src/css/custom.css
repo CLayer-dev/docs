@@ -524,11 +524,11 @@ a:visited {
 }
 
 /* Extra specific rule for the Connect button */
-a[href="/community/forums-social-media"],
-a[href="/community/forums-social-media"]:hover,
-a[href="/community/forums-social-media"]:focus,
-a[href="/community/forums-social-media"]:active,
-a[href="/community/forums-social-media"]:visited {
+a[href="/community/social-media"],
+a[href="/community/social-media"]:hover,
+a[href="/community/social-media"]:focus,
+a[href="/community/social-media"]:active,
+a[href="/community/social-media"]:visited {
     text-decoration: none !important;
 }
 

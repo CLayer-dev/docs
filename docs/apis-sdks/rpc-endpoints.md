@@ -790,7 +790,7 @@ const result = await makeSignedRequest(
 - **Network Status**: https://status.circlelayer.com
 
 ### Community & Support
-- **Discord**: https://discord.gg/circlelayer
+- **X (Twitter)**: https://twitter.com/circlelayer
 - **Telegram**: https://t.me/circlelayer
 - **GitHub Issues**: https://github.com/circle-layer-org/rpc-issues
 

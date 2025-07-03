@@ -60,7 +60,7 @@ Circle Layer **ONLY** announces official information through verified channels:
 - **Unofficial Websites**: Similar-looking but different domain names
 - **Unverified Social Media**: Accounts without official verification
 - **Email Scams**: Emails from non-@circlelayer.com addresses
-- **Discord/Telegram Scams**: Unverified community servers
+- **Social Media Scams**: Unverified community channels and impersonators
 
 ### Website Security
 

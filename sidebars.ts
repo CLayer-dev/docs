@@ -111,7 +111,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: '👥 Community',
       items: [
-        'community/forums-social-media',
+        'community/social-media',
         'community/contribution-guidelines',
       ],
     },

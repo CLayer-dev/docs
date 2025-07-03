@@ -190,7 +190,7 @@ graph TD
 - **Comprehensive Documentation**: Complete API and SDK docs
 - **Video Tutorials**: Step-by-step development guides
 - **Sample Applications**: Full-stack example projects
-- **24/7 Support**: Developer Discord with core team presence
+- **24/7 Support**: Developer Telegram with core team presence
 
 ### Community Building
 - **Ambassador Program**: Global community leaders

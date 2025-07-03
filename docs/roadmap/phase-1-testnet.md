@@ -246,7 +246,7 @@ Building every component (bridge, DEX, wallets) in-house ensures seamless integr
 - Integration examples
 
 ### Community Support
-- Developer Discord channels
+- Developer Telegram community
 - Technical workshops
 - Office hours with core team
 - Grant program applications

@@ -127,7 +127,7 @@ groups:
 ### 2. Notification Channels
 - Email
 - Slack
-- Discord
+- Telegram
 - PagerDuty
 
 ### 3. Alert Management

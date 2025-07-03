@@ -61,7 +61,7 @@ Welcome to the Circle Layer community! This guide will help you contribute to ou
 
 ## Getting Help
 
-- Join our Discord
+- Join our Telegram community
 - Check the FAQ
 - Read the documentation
-- Ask in the forums
+- Follow us on X for updates

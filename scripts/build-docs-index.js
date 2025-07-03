@@ -51,6 +51,11 @@ function parseDocumentationFile(filePath) {
             .replace(/\.(md|mdx)$/, '')
             .replace(/[\\]/g, '/'); // Use forward slashes for URLs
 
+        // Check for custom slug in frontmatter (used by Docusaurus routing)
+        if (frontmatter.slug) {
+            url = frontmatter.slug;
+        }
+
         // Clean content for AI processing
         const cleanContent = markdownContent
             // Remove import statements
