@@ -716,7 +716,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 | MetaMask | Yes (testnet config) | Yes | Yes | Yes |
 | WalletConnect | Yes (register required) | Yes | Yes | Yes |
 | Mobile Wallets | Yes (EVM standard) | Yes | Yes | Yes |
-| Hardware Wallets | Yes (EVM standard) | Yes | Yes | Yes |
+| Hardware Wallets | Limited (No Ledger) | Yes | Yes | Yes |
 
 <div className="mobile-table-cards">
   <div className="section-header-card">
@@ -743,7 +743,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="feature-row">
         <div className="feature-label">Hardware Wallets</div>
-        <div className="feature-value highlight">Yes (EVM standard)</div>
+        <div className="feature-value">Limited (No Ledger)</div>
       </div>
     </div>
   </div>

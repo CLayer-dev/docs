@@ -749,6 +749,14 @@ graph TB
           <span>Long Range Attack</span>
           <span className="penalty">100% Stake</span>
         </div>
+        <div className="rule-item">
+          <span>Extended Downtime</span>
+          <span className="penalty">1% Stake</span>
+        </div>
+        <div className="rule-item">
+          <span>Invalid Proposals</span>
+          <span className="penalty">0.5% Stake</span>
+        </div>
       </div>
     </div>
   </div>
@@ -818,10 +826,430 @@ graph TB
   </div>
 </div>
 
+## 🛡️ DPoS Punishment System
+
+### Comprehensive Slashing Conditions
+
+Circle Layer implements a sophisticated punishment system to maintain network integrity and security:
+
+<div className="punishment-system">
+  <div className="punishment-category">
+    <h4>💀 Critical Violations (Severe Penalties)</h4>
+    <div className="violation-list">
+      <div className="violation-item critical">
+        <div className="violation-header">
+          <span className="violation-name">Double Signing Attack</span>
+          <span className="violation-penalty">5% Stake Slashed</span>
+        </div>
+        <div className="violation-details">
+          <p>Validator signs two conflicting blocks at the same height</p>
+          <div className="violation-specs">
+            <span>⏱️ Detection: Immediate</span>
+            <span>🔒 Jail Time: 30 days</span>
+            <span>💰 Recovery: Requires re-staking</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="violation-item critical">
+        <div className="violation-header">
+          <span className="violation-name">Long Range Attack</span>
+          <span className="violation-penalty">100% Stake Slashed</span>
+        </div>
+        <div className="violation-details">
+          <p>Attempting to reorganize the blockchain from an old state</p>
+          <div className="violation-specs">
+            <span>⏱️ Detection: 24-48 hours</span>
+            <span>🔒 Jail Time: Permanent</span>
+            <span>💰 Recovery: Not possible</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="violation-item critical">
+        <div className="violation-header">
+          <span className="violation-name">Nothing at Stake</span>
+          <span className="violation-penalty">2% Stake Slashed</span>
+        </div>
+        <div className="violation-details">
+          <p>Validator participates in multiple competing chains simultaneously</p>
+          <div className="violation-specs">
+            <span>⏱️ Detection: 6-12 hours</span>
+            <span>🔒 Jail Time: 14 days</span>
+            <span>💰 Recovery: Partial re-staking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="punishment-category">
+    <h4>⚠️ Performance Violations (Moderate Penalties)</h4>
+    <div className="violation-list">
+      <div className="violation-item moderate">
+        <div className="violation-header">
+          <span className="violation-name">Extended Downtime</span>
+          <span className="violation-penalty">1% Stake Slashed</span>
+        </div>
+        <div className="violation-details">
+          <p>Validator offline for more than 12 consecutive hours</p>
+          <div className="violation-specs">
+            <span>⏱️ Detection: 12 hours</span>
+            <span>🔒 Jail Time: 7 days</span>
+            <span>💰 Recovery: Automatic after jail</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="violation-item moderate">
+        <div className="violation-header">
+          <span className="violation-name">Invalid Block Proposals</span>
+          <span className="violation-penalty">0.5% Stake Slashed</span>
+        </div>
+        <div className="violation-details">
+          <p>Proposing blocks with invalid transactions or format</p>
+          <div className="violation-specs">
+            <span>⏱️ Detection: Immediate</span>
+            <span>🔒 Jail Time: 3 days</span>
+            <span>💰 Recovery: Automatic after jail</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="violation-item moderate">
+        <div className="violation-header">
+          <span className="violation-name">Repeated Missed Proposals</span>
+          <span className="violation-penalty">0.1% per incident</span>
+        </div>
+        <div className="violation-details">
+          <p>Missing 5+ consecutive block proposal opportunities</p>
+          <div className="violation-specs">
+            <span>⏱️ Detection: 15 minutes</span>
+            <span>🔒 Jail Time: 24 hours</span>
+            <span>💰 Recovery: Warning system</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### System Contracts for Validator Management
+
+Circle Layer uses a comprehensive system of smart contracts to manage validator operations:
+
+<div className="system-contracts">
+  <div className="contract-category">
+    <h4>🏛️ Core Validator Contracts</h4>
+    
+    <div className="contract-item">
+      <div className="contract-header">
+        <h5>ValidatorRegistry Contract</h5>
+        <span className="contract-status">Active</span>
+      </div>
+      <div className="contract-functions">
+        <div className="function-group">
+          <h6>Registration Functions</h6>
+          <ul>
+            <li><code>registerValidator()</code> - Register new validator with minimum stake</li>
+            <li><code>updateValidatorInfo()</code> - Update validator metadata and commission</li>
+            <li><code>deactivateValidator()</code> - Voluntarily exit from validator set</li>
+          </ul>
+        </div>
+        <div className="function-group">
+          <h6>Status Management</h6>
+          <ul>
+            <li><code>getValidatorStatus()</code> - Query current validator state</li>
+            <li><code>isValidatorActive()</code> - Check if validator is in active set</li>
+            <li><code>getValidatorMetrics()</code> - Performance and uptime data</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div className="contract-item">
+      <div className="contract-header">
+        <h5>StakingManager Contract</h5>
+        <span className="contract-status">Active</span>
+      </div>
+      <div className="contract-functions">
+        <div className="function-group">
+          <h6>Staking Operations</h6>
+          <ul>
+            <li><code>stakeTokens(validatorAddress, amount)</code> - Delegate stake to validator</li>
+            <li><code>unstakeTokens(validatorAddress, amount)</code> - Initiate unstaking process</li>
+            <li><code>restakeRewards(validatorAddress)</code> - Compound staking rewards</li>
+          </ul>
+        </div>
+        <div className="function-group">
+          <h6>Reward Distribution</h6>
+          <ul>
+            <li><code>claimRewards(validatorAddress)</code> - Claim accumulated rewards</li>
+            <li><code>distributeRewards()</code> - Automated reward distribution</li>
+            <li><code>calculateRewards(address)</code> - Preview pending rewards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div className="contract-item">
+      <div className="contract-header">
+        <h5>SlashingManager Contract</h5>
+        <span className="contract-status">Active</span>
+      </div>
+      <div className="contract-functions">
+        <div className="function-group">
+          <h6>Slashing Operations</h6>
+          <ul>
+            <li><code>slashValidator(validator, evidence, penalty)</code> - Execute slashing</li>
+            <li><code>jailValidator(validator, duration)</code> - Jail validator temporarily</li>
+            <li><code>submitEvidence(evidence)</code> - Submit slashing evidence</li>
+          </ul>
+        </div>
+        <div className="function-group">
+          <h6>Recovery Functions</h6>
+          <ul>
+            <li><code>unjailValidator(validator)</code> - Release from jail after term</li>
+            <li><code>appealSlashing(validator, appeal)</code> - Appeal slashing decision</li>
+            <li><code>getSlashingHistory(validator)</code> - Query slashing record</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="contract-category">
+    <h4>⚖️ Governance & Dispute Contracts</h4>
+    
+    <div className="contract-item">
+      <div className="contract-header">
+        <h5>DisputeResolution Contract</h5>
+        <span className="contract-status">Development</span>
+      </div>
+      <div className="contract-description">
+        <p>Handles appeals and disputes related to validator slashing and punishment decisions.</p>
+        <div className="contract-features">
+          <span>📋 Evidence submission</span>
+          <span>🗳️ Community voting</span>
+          <span>⚖️ Arbitration system</span>
+          <span>💰 Appeal bonds</span>
+        </div>
+      </div>
+    </div>
+
+    <div className="contract-item">
+      <div className="contract-header">
+        <h5>ParameterGovernance Contract</h5>
+        <span className="contract-status">Development</span>
+      </div>
+      <div className="contract-description">
+        <p>Manages changes to staking parameters, slashing conditions, and network settings.</p>
+        <div className="contract-features">
+          <span>🎛️ Parameter updates</span>
+          <span>⏰ Time-locked changes</span>
+          <span>🔐 Multi-sig approval</span>
+          <span>📊 Impact analysis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Detailed Staking & Unstaking Mechanics
+
+<div className="staking-mechanics">
+  <div className="mechanism-section">
+    <h4>🔐 Staking Process</h4>
+    
+    <div className="process-flow">
+      <div className="process-step">
+        <div className="step-number">1</div>
+        <div className="step-content">
+          <h5>Stake Preparation</h5>
+          <ul>
+            <li>Minimum stake: 32 CLAYER (testnet) / 100,000 CLAYER (mainnet)</li>
+            <li>Wallet balance verification</li>
+            <li>Gas fee preparation (≈0.01 CLAYER for staking transaction)</li>
+            <li>Validator selection and due diligence</li>
+          </ul>
+          <div className="step-timeline">⏱️ Duration: Immediate</div>
+        </div>
+      </div>
+
+      <div className="process-step">
+        <div className="step-number">2</div>
+        <div className="step-content">
+          <h5>Transaction Execution</h5>
+          <ul>
+            <li>Call <code>stakeTokens(validatorAddress, amount)</code></li>
+            <li>Tokens transferred to staking contract</li>
+            <li>Staking record created with timestamp</li>
+            <li>Validator delegation pool updated</li>
+          </ul>
+          <div className="step-timeline">⏱️ Duration: 3-9 seconds (1-3 blocks)</div>
+        </div>
+      </div>
+
+      <div className="process-step">
+        <div className="step-number">3</div>
+        <div className="step-content">
+          <h5>Activation Period</h5>
+          <ul>
+            <li>Staking amount enters "pending" state</li>
+            <li>Becomes active in next epoch (≈24 hours)</li>
+            <li>Starts earning rewards after activation</li>
+            <li>Delegation shows in validator's total stake</li>
+          </ul>
+          <div className="step-timeline">⏱️ Duration: Up to 24 hours</div>
+        </div>
+      </div>
+
+      <div className="process-step">
+        <div className="step-number">4</div>
+        <div className="step-content">
+          <h5>Active Staking</h5>
+          <ul>
+            <li>Rewards accrue automatically per block</li>
+            <li>Can claim rewards without unstaking</li>
+            <li>Voting power proportional to stake</li>
+            <li>Subject to slashing if validator misbehaves</li>
+          </ul>
+          <div className="step-timeline">⏱️ Duration: Ongoing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="mechanism-section">
+    <h4>🔓 Unstaking Process</h4>
+    
+    <div className="process-flow">
+      <div className="process-step">
+        <div className="step-number">1</div>
+        <div className="step-content">
+          <h5>Unstaking Initiation</h5>
+          <ul>
+            <li>Call <code>unstakeTokens(validatorAddress, amount)</code></li>
+            <li>Specify amount to unstake (minimum 1 CLAYER)</li>
+            <li>Tokens enter "unbonding" state immediately</li>
+            <li>Stop earning rewards from this block</li>
+          </ul>
+          <div className="step-timeline">⏱️ Duration: 3-9 seconds (1-3 blocks)</div>
+        </div>
+      </div>
+
+      <div className="process-step">
+        <div className="step-number">2</div>
+        <div className="step-content">
+          <h5>Unbonding Period</h5>
+          <ul>
+            <li>Mandatory waiting period: <strong>21 days</strong></li>
+            <li>Tokens locked and cannot be transferred</li>
+            <li>Still subject to slashing if validator misbehaves</li>
+            <li>No rewards earned during unbonding</li>
+          </ul>
+          <div className="step-timeline">⏱️ Duration: 21 days (518,400 blocks)</div>
+        </div>
+      </div>
+
+      <div className="process-step">
+        <div className="step-number">3</div>
+        <div className="step-content">
+          <h5>Release & Withdrawal</h5>
+          <ul>
+            <li>Automatic release after 21 days</li>
+            <li>Tokens become transferable</li>
+            <li>Can be withdrawn to wallet or re-staked</li>
+            <li>No longer subject to slashing</li>
+          </ul>
+          <div className="step-timeline">⏱️ Duration: Immediate after unbonding</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="mechanism-section">
+    <h4>⚡ Emergency Mechanisms</h4>
+    
+    <div className="emergency-features">
+      <div className="emergency-item">
+        <h5>🚨 Emergency Unstaking</h5>
+        <p>Available during severe validator misconduct or network emergencies</p>
+        <div className="emergency-specs">
+          <span>⏱️ Reduced unbonding: 7 days</span>
+          <span>💰 Emergency fee: 0.5% of stake</span>
+          <span>🔒 Governance approval required</span>
+        </div>
+      </div>
+
+      <div className="emergency-item">
+        <h5>🛡️ Validator Jailing Protection</h5>
+        <p>Automatic unstaking triggered when validator is jailed for critical violations</p>
+        <div className="emergency-specs">
+          <span>⏱️ Automatic trigger: During jailing</span>
+          <span>💰 No additional fees</span>
+          <span>🔒 Normal 21-day unbonding</span>
+        </div>
+      </div>
+
+      <div className="emergency-item">
+        <h5>🔄 Validator Migration</h5>
+        <p>Transfer stake between validators without unbonding period</p>
+        <div className="emergency-specs">
+          <span>⏱️ Instant transfer</span>
+          <span>💰 Migration fee: 0.1% of stake</span>
+          <span>🔒 Once per month limit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Advanced Slashing Protections
+
+<div className="slashing-protections">
+  <h4>🛡️ Delegator Protections</h4>
+  
+  <div className="protection-features">
+    <div className="protection-item">
+      <h5>📊 Graduated Slashing</h5>
+      <p>Slashing penalties applied gradually to minimize delegator impact:</p>
+      <ul>
+        <li>First offense: 50% of total penalty</li>
+        <li>Second offense: 75% of total penalty</li>
+        <li>Third offense: 100% of total penalty</li>
+        <li>Grace period: 90 days between offense resets</li>
+      </ul>
+    </div>
+
+    <div className="protection-item">
+      <h5>⚠️ Early Warning System</h5>
+      <p>Automated notifications for delegators when validators show concerning patterns:</p>
+      <ul>
+        <li>Uptime drops below 95%</li>
+        <li>Missed block proposals exceed threshold</li>
+        <li>Commission rate changes</li>
+        <li>Abnormal behavior detected</li>
+      </ul>
+    </div>
+
+    <div className="protection-item">
+      <h5>🔄 Auto-Migration Options</h5>
+      <p>Smart contract features to protect delegator interests:</p>
+      <ul>
+        <li>Auto-unstake on critical violations</li>
+        <li>Automatic re-delegation to backup validators</li>
+        <li>Insurance pool for slashing compensation</li>
+        <li>Community-governed protection mechanisms</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div className="pos-summary">
   <div className="summary-content">
     <h3>🚀 Ready to Participate?</h3>
-    <p>Circle Layer's Proof of Stake consensus offers multiple ways to earn rewards while securing the network. Whether you want to run a validator, delegate your stake, or join a staking pool, there's an option that fits your needs and risk tolerance.</p>
+    <p>Circle Layer's advanced DPoS system with comprehensive punishment mechanisms ensures network security while protecting legitimate participants. Our detailed staking and slashing systems provide clear rules and fair protections for all network participants.</p>
     <div className="summary-actions">
       <button className="action-btn primary">Start Staking</button>
       <button className="action-btn secondary">Learn More</button>

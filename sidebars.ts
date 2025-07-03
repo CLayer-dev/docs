@@ -58,6 +58,8 @@ const sidebars: SidebarsConfig = {
         'development/deploying-contracts',
         'development/interacting-with-contracts',
         'development/web3-integration',
+        'development/cross-chain-bridge',
+        'development/support-plans',
       ],
     },
     {

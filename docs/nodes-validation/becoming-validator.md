@@ -29,11 +29,37 @@ Learn how to become a validator on Circle Layer and help secure the network.
 - Emergency fund
 
 ### 4. Network Requirements
-- **Ports**: 32668, 32669, 8545, 6060, 80, 22
-- **Firewall**: Not required
+
+#### Port Configuration
+Circle Layer validators require specific ports to be open and properly configured:
+
+```bash
+# Required Validator Ports
+# 32668 - Validator P2P communication
+# 32669 - Validator consensus protocol
+# 8545  - JSON-RPC endpoint (EVM compatibility)
+# 6060  - pprof profiling endpoint
+# 80    - HTTP endpoint (web interface)
+# 22    - SSH access (remote management)
+
+# Configure firewall for validator
+sudo ufw allow 32668/tcp comment 'Validator P2P'
+sudo ufw allow 32669/tcp comment 'Validator Consensus'
+sudo ufw allow 8545/tcp comment 'JSON-RPC'
+sudo ufw allow 6060/tcp comment 'pprof Profiling'
+sudo ufw allow 80/tcp comment 'HTTP Interface'
+sudo ufw allow 22/tcp comment 'SSH Access'
+sudo ufw enable
+```
+
+#### Network Specifications
+- **Firewall**: Custom configuration required (not disabled)
 - **Minimum Active Validators**: 5 validators required for security and active blockchain
 - **Maximum Active Validators**: 21 (testnet), 10,000 (mainnet)
-- **Multiple RPC**: Required for redundancy
+- **Multiple RPC**: Required for redundancy and high availability
+- **Network Latency**: <100ms to other validators
+- **Bandwidth**: Minimum 1Gbps for validators
+- **Connection Limits**: Support 10,000+ concurrent connections
 
 ## Economic Parameters
 

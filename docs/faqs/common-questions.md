@@ -67,8 +67,10 @@ const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circl
 ### What wallets are supported?
 - **MetaMask** (Recommended with testnet configuration)
 - **WalletConnect** (Register and follow their guidelines)
-- **Custom Wallets** (Same as EVM integration)
-- **Mobile Wallets** (Same as EVM integration)
+- **Custom Wallets** (EVM-compatible software wallets)
+- **Mobile Wallets** (Trust Wallet, Rainbow, Coinbase Wallet, etc.)
+
+**Note**: Ledger and other hardware wallets are NOT currently supported.
 
 ### How do I get testnet tokens?
 *Circle Layer testnet faucet:*

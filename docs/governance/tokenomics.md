@@ -8,10 +8,37 @@ sidebar_position: 2
 
 Circle Layer's tokenomics model is designed to ensure long-term sustainability and growth. The current testnet provides insight into the economic mechanisms that will support the network.
 
+## Economic Model
+
+### Endogenous Token System
+Circle Layer uses **CLAYER** as its native endogenous token that powers all network operations:
+
+- **Transaction Fees**: All transactions consume CLAYER as gas fees
+- **Network Security**: Validators must pledge CLAYER to participate in consensus
+- **Reward Distribution**: Gas fees are distributed according to stake proportion
+- **Economic Incentives**: Stake-weighted participation in network governance
+
+### Validator Economics Model
+The Circle Layer network operates on a stake-based validator system:
+
+1. **Validator Participation**: Miners pledge CLAYER to become validator nodes
+2. **Reward Distribution**: Node rewards come from gas fees, distributed according to mortgage (stake) proportion
+3. **Proportional Rewards**: Higher stake = higher share of network fees
+4. **Economic Security**: Validator incentives align with network security
+
+### Meta-Transaction Functionality
+Circle Layer implements advanced gas fee optimization:
+
+- **Gas Fee Reduction**: Meta-transaction function reduces overall network costs
+- **Step-wise Reduction**: Users holding CLAYER receive graduated gas fee discounts
+- **Developer Benefits**: Reduced costs for developers deploying and operating dApps
+- **User Experience**: Lower barriers to entry for end users
+
 ## Current Testnet Token Information
 
 ### Token Details
 - **Token Symbol**: CLAYER
+- **Token Type**: Endogenous network token
 - **Decimals**: 18
 - **Testnet Total Supply**: 10 Billion CLAYER
 - **Mainnet Total Supply**: 1 Billion CLAYER
@@ -35,13 +62,22 @@ Circle Layer's tokenomics model is designed to ensure long-term sustainability a
 - **Delegator Minimum Stake**: 32 CLAYER
 - **Maximum Validators**: 21 (testnet), 10,000 (mainnet)
 - **Staking Method**: Currently manual process
-- **Rewards**: CLAYER tokens
+- **Rewards**: CLAYER tokens from gas fees
+
+### Stake-Based Reward Distribution
+The network distributes rewards based on proportional stake holdings:
+
+- **Gas Fee Collection**: All transaction fees paid in CLAYER
+- **Proportional Distribution**: Rewards distributed according to validator stake percentage
+- **Delegation Support**: Delegators share in validator rewards proportionally
+- **Economic Alignment**: Higher stake = higher reward share + higher security responsibility
 
 ### Network Security
 - **Consensus**: Delegated Proof of Stake (DPoS)
-- **Security Model**: Standard EVM + DPoS consensus
+- **Security Model**: Stake-weighted consensus with economic penalties
 - **Minimum Validators**: 5 active validators for network security
 - **Maximum Validators**: 21 (testnet), 10,000 (mainnet)
+- **Economic Security**: Validators risk staked CLAYER for misbehavior
 
 ## Fee Structure
 
@@ -49,13 +85,25 @@ Circle Layer's tokenomics model is designed to ensure long-term sustainability a
 - **Gas Price Calculation**: Standard Ethereum method (gas price × gas amount)
 - **Base Gas Price**: 0.000000001 CLAYER (1 Gwei)
 - **Minimum Gas Price**: 0.000021 CLAYER
-- **Fee Payment**: CLAYER tokens
+- **Fee Payment**: CLAYER tokens only
+- **Meta-Transaction Benefits**: Reduced effective costs for CLAYER holders
 
-### Fee Distribution
-- **Delegator Rewards**: 45% from gas fees
-- **Validator Rewards**: 30% from gas fees
-- **Burn Mechanism**: 25% from gas fees
+### Fee Distribution Model
+Circle Layer implements a stake-weighted fee distribution system:
+
+- **Delegator Rewards**: 45% from gas fees (distributed by stake proportion)
+- **Validator Rewards**: 30% from gas fees (distributed by stake proportion)
+- **Burn Mechanism**: 25% from gas fees (deflationary pressure)
 - **Maximum Burn Limit**: 1,000,000 CLAYER (burning stops after this threshold)
+- **Proportional Allocation**: All distributions based on stake percentage
+
+### Meta-Transaction Gas Optimization
+Advanced gas fee reduction mechanisms:
+
+- **CLAYER Holder Benefits**: Step-wise gas fee reduction for token holders
+- **Developer Cost Reduction**: Lower operational costs for dApp deployment
+- **User Experience Enhancement**: Reduced transaction costs improve adoption
+- **Network Efficiency**: Optimized resource utilization across the network
 
 ## 🚧 Features in Development
 
