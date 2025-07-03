@@ -405,7 +405,7 @@ sudo iotop
 ### Getting Help
 
 For additional support:
-- Check the [official documentation](/docs/intro)
+- Check the [official documentation](/)
 - Join the [community forums](/community/social-media)
 - Review [GitHub issues](https://github.com/Circle-layer-org/testnet-core-blockchain/issues)
 
