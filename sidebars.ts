@@ -19,7 +19,6 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: '📚 Introduction',
       items: [
-        'introduction/what-is-circle-layer',
         'introduction/key-features',
         'introduction/use-cases',
       ],
@@ -60,6 +59,12 @@ const sidebars: SidebarsConfig = {
         'development/interacting-with-contracts',
         'development/web3-integration',
         'development/cross-chain-bridge',
+        'development/meta-transactions',
+        'development/erc20-tokens',
+        'development/transaction-troubleshooting',
+        'development/private-chain-setup',
+        'development/graphql-integration',
+        'development/wallet-connect-integration',
         'development/support-plans',
       ],
     },
@@ -115,6 +120,15 @@ const sidebars: SidebarsConfig = {
       items: [
         'community/social-media',
         'community/contribution-guidelines',
+      ],
+    },
+    {
+      type: 'category',
+      label: '🛡️ Security',
+      items: [
+        'security/risk-warnings',
+        'security/disclaimer',
+        'security/integrity-compliance',
       ],
     },
     {

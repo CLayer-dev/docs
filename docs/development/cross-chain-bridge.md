@@ -108,6 +108,21 @@ To apply for token bridging support, projects must follow this process:
    - Community announcement
    - Monitoring and support
 
+### Application Process Overview
+
+The Crosschain Bridge lets users to exchange the assets from other blockchains to our blockchain.
+
+**The process is:**
+
+1. **Submit application**
+   - Email: support@circlelayer.com
+   
+2. **Deploy token contract**
+
+3. **Testing**
+
+4. **Online**
+
 ### Application Timeline
 - **Initial Review**: 2-3 weeks
 - **Technical Development**: 4-6 weeks

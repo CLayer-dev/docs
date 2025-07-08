@@ -96,28 +96,7 @@ class DocumentationLoader {
                 filePath: 'docs/intro.mdx',
                 category: 'introduction'
             },
-            'what-is-circle-layer': {
-                id: 'what-is-circle-layer',
-                title: 'What is Circle Layer?',
-                content: `Circle Layer is a high-performance, EVM-compatible, Delegated Proof of Stake (DPoS) Layer 1 blockchain designed to power decentralized applications with low fees, fast transactions, and exceptional scalability.
 
-## Core Technology
-
-- **EVM Compatibility**: Full compatibility with Ethereum's virtual machine
-- **Delegated Proof of Stake (DPoS)**: Energy-efficient consensus mechanism
-- **Fast Performance**: 3-second block time with 1-3 second finality
-- **Low Energy Usage**: 99.9% less energy consumption than Proof of Work
-
-## Network Infrastructure
-
-- **Chain ID**: 28525
-- **RPC Endpoint**: https://rpc-testnet.circlelayer.com
-- **Block Explorer**: https://explorer-testnet.circlelayer.com
-- **Faucet**: https://faucet.circlelayer.com`,
-                frontmatter: { title: 'What is Circle Layer?' },
-                filePath: 'docs/introduction/what-is-circle-layer.md',
-                category: 'introduction'
-            },
             'set-up-wallet': {
                 id: 'set-up-wallet',
                 title: 'Set Up Wallet',
@@ -128,7 +107,7 @@ class DocumentationLoader {
 1. Install MetaMask browser extension
 2. Add Circle Layer testnet:
    - Network Name: Circle Layer Testnet
-   - RPC URL: https://rpc-testnet.circlelayer.com
+   - RPC URL: https://testnet-rpc.circlelayer.com
    - Chain ID: 28525
    - Currency Symbol: CLAYER
    - Block Explorer: https://explorer-testnet.circlelayer.com

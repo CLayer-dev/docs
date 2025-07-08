@@ -110,7 +110,7 @@ Learning from incidents in Sui and other ecosystems, we're implementing comprehe
 - **Transaction Simulation**: Preview transaction outcomes
 - **Risk Assessment**: AI-powered security warnings
 
-## 🛡️ Advanced Security Layer (Monad-Inspired)
+## 🛡️ Advanced Security Layer 
 
 ### Agentic Smart Contract Security
 
@@ -150,7 +150,7 @@ graph TD
 - **Social Engineering Protection**: Warnings for common scam patterns
 - **Educational Alerts**: Real-time security education for users
 
-### Security Implementation Timeline
+### Security Implementation 
 
 #### Phase 2.1: Foundation
 - ✅ Core AI model training

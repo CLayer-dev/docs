@@ -71,7 +71,7 @@ async function sendCLAYER() {
 ### Contract Interaction
 ```javascript
 // Interact with deployed example contract
-const contractAddress = '0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB';
+const contractAddress = '0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB'; // https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
 const contractABI = []; // ABI from explorer
 
 const contract = new web3.eth.Contract(contractABI, contractAddress);

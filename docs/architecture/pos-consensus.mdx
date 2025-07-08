@@ -1,9 +1,9 @@
 ---
 id: pos-consensus
-title: POS Consensus Mechanism
-sidebar_label: POS Consensus Mechanism
+title: DPoS Consensus Mechanism
+sidebar_label: DPoS Consensus Mechanism
 sidebar_position: 1
-description: Learn about Circle Layer's advanced Proof of Stake consensus mechanism, validator selection, and reward system.
+description: Learn about Circle Layer's Delegated Proof of Stake consensus mechanism, validator selection, and reward system.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,7 +14,7 @@ import '@site/src/css/intro.css';
 
 <div className="hero-gradient">
   <div className="hero-badge">🌱 Energy Efficient</div>
-  <h1 className="hero-title">Proof of Stake Consensus Mechanism</h1>
+  <h1 className="hero-title">Delegated Proof of Stake Consensus Mechanism</h1>
   <p className="hero-description">
     Circle Layer implements a cutting-edge Delegated Proof of Stake (DPoS) consensus mechanism that ensures network security, energy efficiency, and fast finality while maintaining true decentralization.
   </p>
@@ -29,6 +29,8 @@ import '@site/src/css/intro.css';
       <div className="hero-stat-label">Finality</div>
     </div>
     <div className="hero-stat">
+      <div className="hero-stat-value">21</div>
+      <div className="hero-stat-label">Max Validators</div>
       <div className="hero-stat-value">32</div>
       <div className="hero-stat-label">Min Stake (Testnet)</div>
     </div>
@@ -41,6 +43,10 @@ import '@site/src/css/intro.css';
 
 ## 🌐 Consensus Overview
 
+Circle Layer adopts **Delegated Proof of Stake (DPoS)** consensus mechanism with low transaction cost, low transaction latency, high transaction concurrency, and supports up to **21 validators**.
+
+DPoS allows anyone to become a validator by staking specified coins. It also allows delegators to stake small amounts and to participate in network security. Any address can stake to an address that qualifies to become a validator, and after the validator's staking volume ranks in the top 21, it will become an active validator in the next epoch.
+
 ```mermaid
 graph TB
     A[🗳️ Validator Selection] --> B[📦 Block Production]
@@ -48,9 +54,9 @@ graph TB
     C --> D[🎁 Reward Distribution]
     D --> A
     
-    E[👥 Delegators] --> A
+    E[👥 Stakers] --> A
     F[💰 Stake Pool] --> A
-    G[🔄 Rotation Timer] --> A
+    G[🔄 Epoch Timer] --> A
     
     B --> H[📋 Transaction Validation]
     B --> I[🔗 Block Assembly]
@@ -94,12 +100,12 @@ graph TB
       <span className="metric-value">67%+</span>
       <span className="metric-label">Attack Threshold</span>
     </div>
-    <p>Economic security through stake-based validation and slashing conditions</p>
-    <div className="security-features">
+    <p>Economic security through stake-based validation and punishment mechanisms</p>
+     <div className="security-features">
       <div className="security-item">🔒 Cryptographic Signatures</div>
-      <div className="security-item">⚔️ Slashing Penalties</div>
+      <div className="security-item">⚔️ punishment mechanisms</div>
       <div className="security-item">🎯 Stake Requirements</div>
-      <div className="security-item">🔄 Validator Rotation</div>
+
     </div>
   </div>
 
@@ -137,7 +143,7 @@ graph TB
     <p>Low barriers to entry reduce centralization risks and promote participation</p>
     <div className="decentralization-stats">
       <div className="stat-item">
-        <span className="stat-number">32 CLAYER</span>
+        <span className="stat-number">100,000 CLAYER</span>
         <span className="stat-label">Min Stake</span>
       </div>
       <div className="stat-item">
@@ -145,7 +151,7 @@ graph TB
         <span className="stat-label">Uptime Req.</span>
       </div>
       <div className="stat-item">
-        <span className="stat-number">0%</span>
+        <span className="stat-number">5%</span>
         <span className="stat-label">Hardware Cost</span>
       </div>
     </div>
@@ -183,64 +189,28 @@ graph TB
         </div>
 
         <div className="process-step">
-          <div className="step-icon">🎲</div>
+          <div className="step-icon">🏆</div>
           <div className="step-content">
-            <h5>Random Selection</h5>
-            <p>Validators are chosen using verifiable random function (VRF) weighted by stake amount</p>
-            <div className="selection-algorithm">
-              <div className="algorithm-box">
-                <h6>Selection Probability</h6>
-                <code>P = (Validator_Stake / Total_Stake) × Randomness_Factor</code>
-              </div>
-            </div>
+            <h5>Top 21 Selection</h5>
+            <p>Validators are selected based on their staking amount. The top 21 validators by stake become active validators in the next epoch.</p>
           </div>
         </div>
 
         <div className="process-step">
           <div className="step-icon">⏰</div>
           <div className="step-content">
-            <h5>Time Slots</h5>
-            <p>Selected validators are assigned specific time slots for block production</p>
-            <div className="time-slots">
-              <div className="slot active">
-                <span>Slot 1</span>
-                <span>Validator A</span>
+            <h5>Epoch-Based Rotation</h5>
+            <p>Validator sets are updated at the end of each epoch (200 blocks). This ensures dynamic participation based on current stake rankings.</p>
+            <div className="epoch-details">
+              <div className="detail-item">
+                <span>Epoch Duration:</span>
+                <span>200 blocks</span>
               </div>
-              <div className="slot upcoming">
-                <span>Slot 2</span>
-                <span>Validator B</span>
-              </div>
-              <div className="slot future">
-                <span>Slot 3</span>
-                <span>Validator C</span>
+              <div className="detail-item">
+                <span>Block Time:</span>
+                <span>3 seconds</span>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="validator-stats">
-        <h4>Current Validator Network</h4>
-        <div className="stats-grid">
-          <div className="stat-card">
-            <div className="stat-number">127</div>
-            <div className="stat-label">Active Validators</div>
-            <div className="stat-change">+12 this week</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">15,423</div>
-            <div className="stat-label">Total Staked CLAYER</div>
-            <div className="stat-change">+892 this week</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">99.95%</div>
-            <div className="stat-label">Network Uptime</div>
-            <div className="stat-change">Excellent</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">2.1s</div>
-            <div className="stat-label">Avg Block Time</div>
-            <div className="stat-change">Consistent</div>
           </div>
         </div>
       </div>
@@ -249,236 +219,45 @@ graph TB
 
   <TabItem value="production" label="📦 Block Production">
     <div className="block-production-panel">
-      <h3>Block Production Workflow</h3>
+      <h3>Block Production Process</h3>
       
-      <div className="production-timeline">
-        <div className="timeline-step">
-          <div className="timeline-number">1</div>
-          <div className="timeline-content">
-            <h5>Transaction Collection</h5>
-            <p>Validator collects pending transactions from mempool</p>
-            <div className="collection-stats">
-              <span>📋 2,847 pending transactions</span>
-              <span>⏱️ 0.2s collection time</span>
-            </div>
+      <div className="production-process">
+        <div className="process-step">
+          <div className="step-icon">🔄</div>
+          <div className="step-content">
+            <h5>Round-Robin Block Production</h5>
+            <p>All active validators are ordered according to predefined rules and take turns to produce blocks.</p>
           </div>
         </div>
 
-        <div className="timeline-step">
-          <div className="timeline-number">2</div>
-          <div className="timeline-content">
-            <h5>Transaction Validation</h5>
-            <p>Verify signatures, balances, and smart contract execution</p>
-            <div className="validation-process">
-              <div className="validation-item valid">
-                <span>✅ Signature Valid</span>
-                <span>2,834 txns</span>
-              </div>
-              <div className="validation-item invalid">
-                <span>❌ Invalid</span>
-                <span>13 txns</span>
-              </div>
-            </div>
+        <div className="process-step">
+          <div className="step-icon">⚠️</div>
+          <div className="step-content">
+            <h5>Fallback Mechanism</h5>
+            <p>If a validator fails to produce a block in time during its turn, active validators who have not been involved in the past n/2 blocks will randomly perform block production.</p>
           </div>
         </div>
 
-        <div className="timeline-step">
-          <div className="timeline-number">3</div>
-          <div className="timeline-content">
-            <h5>Block Assembly</h5>
-            <p>Package validated transactions into a new block</p>
-            <div className="block-details">
-              <div className="block-info">
-                <span>Block #1,234,567</span>
-                <span>2,834 transactions</span>
-                <span>1.2 MB size</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="timeline-step">
-          <div className="timeline-number">4</div>
-          <div className="timeline-content">
-            <h5>Block Proposal</h5>
-            <p>Broadcast block to network for validation</p>
-            <div className="proposal-status">
-              <span>📡 Broadcasted to 127 validators</span>
-              <span>🔍 Awaiting consensus</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="production-metrics">
-        <h4>Production Performance</h4>
-        <div className="metrics-dashboard">
-          <div className="metric-item">
-            <div className="metric-header">
-              <span>Block Production Rate</span>
-              <span className="metric-status good">Excellent</span>
-            </div>
-            <div className="metric-bar">
-              <div className="bar-progress" data-width="98"></div>
-            </div>
-            <div className="metric-details">
-              <span>98% successful blocks</span>
-              <span>2.1s avg time</span>
-            </div>
-          </div>
-
-          <div className="metric-item">
-            <div className="metric-header">
-              <span>Transaction Throughput</span>
-              <span className="metric-status good">High</span>
-            </div>
-            <div className="metric-bar">
-              <div className="bar-progress" data-width="85"></div>
-            </div>
-            <div className="metric-details">
-              <span>3,247 TPS</span>
-              <span>85% capacity</span>
-            </div>
-          </div>
-
-          <div className="metric-item">
-            <div className="metric-header">
-              <span>Network Latency</span>
-              <span className="metric-status excellent">Low</span>
-            </div>
-            <div className="metric-bar">
-              <div className="bar-progress" data-width="95"></div>
-            </div>
-            <div className="metric-details">
-              <span>47ms avg</span>
-              <span>Global network</span>
-            </div>
+        <div className="process-step">
+          <div className="step-icon">🛡️</div>
+          <div className="step-content">
+            <h5>Network Security</h5>
+            <p>At least n/2+1 active validators must work properly to ensure the proper operation of the blockchain.</p>
           </div>
         </div>
       </div>
     </div>
   </TabItem>
 
-  <TabItem value="consensus" label="✅ Consensus Process">
-    <div className="consensus-process-panel">
-      <h3>Byzantine Fault Tolerance</h3>
-      
-      <div className="bft-explanation">
-        <div className="bft-visual">
-          <div className="validator-network">
-            <div className="validator-node honest">
-              <span>🟢</span>
-              <label>Honest</label>
-            </div>
-            <div className="validator-node honest">
-              <span>🟢</span>
-              <label>Honest</label>
-            </div>
-            <div className="validator-node honest">
-              <span>🟢</span>
-              <label>Honest</label>
-            </div>
-            <div className="validator-node honest">
-              <span>🟢</span>
-              <label>Honest</label>
-            </div>
-            <div className="validator-node byzantine">
-              <span>🔴</span>
-              <label>Byzantine</label>
-            </div>
-          </div>
-          <div className="bft-result">
-            <h5>Consensus Achieved ✅</h5>
-            <p>4/5 honest validators (80%) > 2/3 threshold (67%)</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="consensus-phases">
-        <h4>Three-Phase Consensus</h4>
-        <div className="phases-grid">
-          <div className="phase-card propose">
-            <div className="phase-icon">📝</div>
-            <h5>1. Propose</h5>
-            <p>Selected validator proposes a new block</p>
-            <div className="phase-details">
-              <div>⏱️ Duration: 0.5s</div>
-              <div>🎯 Success Rate: 99.95%</div>
-            </div>
-          </div>
-
-          <div className="phase-card prevote">
-            <div className="phase-icon">🗳️</div>
-            <h5>2. Prevote</h5>
-            <p>Validators vote on the proposed block</p>
-            <div className="phase-details">
-              <div>⏱️ Duration: 0.7s</div>
-              <div>🎯 Threshold: 67%+</div>
-            </div>
-          </div>
-
-          <div className="phase-card precommit">
-            <div className="phase-icon">✅</div>
-            <h5>3. Precommit</h5>
-            <p>Final commitment to add block to chain</p>
-            <div className="phase-details">
-              <div>⏱️ Duration: 0.8s</div>
-              <div>🎯 Finality: Immediate</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="consensus-safety">
-        <h4>Safety Guarantees</h4>
-        <div className="safety-features">
-          <div className="safety-item">
-            <div className="safety-icon">🔒</div>
-            <div className="safety-content">
-              <h6>Fork Prevention</h6>
-              <p>Two valid blocks cannot be finalized at the same height</p>
-            </div>
-          </div>
-          <div className="safety-item">
-            <div className="safety-icon">🎯</div>
-            <div className="safety-content">
-              <h6>Liveness Guarantee</h6>
-              <p>Network continues to make progress even with up to 33% faulty validators</p>
-            </div>
-          </div>
-          <div className="safety-item">
-            <div className="safety-icon">⚔️</div>
-            <div className="safety-content">
-              <h6>Slashing Conditions</h6>
-              <p>Validators lose stake for double-signing or other malicious behavior</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </TabItem>
-
-  <TabItem value="rewards" label="🎁 Rewards & Staking">
+  <TabItem value="rewards" label="🎁 Reward Distribution">
     <div className="rewards-panel">
-      <h3>Staking Rewards & Economics</h3>
+      <h3>Reward Distribution System</h3>
       
-      <StakingCalculator />
-
-      <div className="reward-distribution">
-        <h4>📊 Reward Distribution & Revenue Sharing</h4>
-        <div className="distribution-chart">
-          <div className="chart-section validators">
-            <div className="section-header">
-              <span>👥 Validators</span>
-              <span>30%</span>
-            </div>
-            <div className="section-bar">
-              <div className="bar-fill" data-width="30"></div>
-            </div>
-            <div className="section-details">
-              <span>For block production and validation</span>
-            </div>
-          </div>
+      <div className="reward-details">
+        <div className="reward-item">
+          <h5>Gas Fee Distribution</h5>
+          <p>All transaction fees paid in CLAYER are collected and distributed to validators based on their stake proportion.</p>
+        </div>
 
           <div className="chart-section delegators">
             <div className="section-header">
@@ -493,233 +272,9 @@ graph TB
             </div>
           </div>
 
-          <div className="chart-section treasury">
-            <div className="section-header">
-              <span>🔥 Burn</span>
-              <span>25%</span>
-            </div>
-            <div className="section-bar">
-              <div className="bar-fill" data-width="25"></div>
-            </div>
-            <div className="section-details">
-              <span>Burned (stops at 1M CLAYER threshold)</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="revenue-sharing-details">
-          <h5>💰 Revenue Sharing Breakdown</h5>
-          <div className="revenue-sources">
-            <div className="revenue-source">
-              <h6>🔥 Transaction Fees</h6>
-              <ul>
-                <li>Validators: 30% of transaction fees</li>
-                <li>Delegators: 45% of transaction fees</li>
-                <li>Burn Mechanism: 25% (max 1M CLAYER threshold)</li>
-                <li>Expected Fee Revenue: $50K-500K daily at peak usage</li>
-              </ul>
-            </div>
-            <div className="revenue-source">
-              <h6>🎁 Block Rewards</h6>
-              <ul>
-                <li>Base Block Reward: 2 CLAYER per block</li>
-                <li>Uptime Bonus: +20% for 99%+ uptime</li>
-                <li>Performance Bonus: +15% for top 25% validators</li>
-                <li>Expected Block Revenue: 8,640-12,000 CLAYER daily</li>
-              </ul>
-            </div>
-            <div className="revenue-source">
-              <h6>📈 Delegation Commission</h6>
-              <ul>
-                <li>Validator Commission: 5-15% from delegator rewards</li>
-                <li>Competitive Commission Range: Market-driven rates</li>
-                <li>Expected Delegation Revenue: 2-8% annual from delegated stake</li>
-                <li>Total Delegated Value: $500K-5M per validator at scale</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="expected-revenue">
-            <h5>💎 Expected Validator Revenue (Annual)</h5>
-            <div className="revenue-scenarios">
-              <div className="scenario conservative">
-                <h6>🟢 Conservative (Low Network Usage)</h6>
-                <div className="revenue-item">
-                  <span>Block Rewards:</span>
-                  <span>12,000-18,000 CLAYER</span>
-                </div>
-                <div className="revenue-item">
-                  <span>Transaction Fees:</span>
-                  <span>5,000-15,000 CLAYER</span>
-                </div>
-                <div className="revenue-item">
-                  <span>Delegation Commission:</span>
-                  <span>8,000-25,000 CLAYER</span>
-                </div>
-                <div className="revenue-total">
-                  <span>Total Annual Revenue:</span>
-                  <span>25,000-58,000 CLAYER</span>
-                </div>
-                <div className="revenue-usd">
-                  <span>USD Equivalent:</span>
-                  <span>$25K-58K (at $1/CLAYER)</span>
-                </div>
-              </div>
-
-              <div className="scenario moderate">
-                <h6>🟡 Moderate (Medium Network Usage)</h6>
-                <div className="revenue-item">
-                  <span>Block Rewards:</span>
-                  <span>18,000-28,000 CLAYER</span>
-                </div>
-                <div className="revenue-item">
-                  <span>Transaction Fees:</span>
-                  <span>25,000-75,000 CLAYER</span>
-                </div>
-                <div className="revenue-item">
-                  <span>Delegation Commission:</span>
-                  <span>40,000-120,000 CLAYER</span>
-                </div>
-                <div className="revenue-total">
-                  <span>Total Annual Revenue:</span>
-                  <span>83,000-223,000 CLAYER</span>
-                </div>
-                <div className="revenue-usd">
-                  <span>USD Equivalent:</span>
-                  <span>$83K-223K (at $1/CLAYER)</span>
-                </div>
-              </div>
-
-              <div className="scenario optimistic">
-                <h6>🔴 Optimistic (High Network Usage)</h6>
-                <div className="revenue-item">
-                  <span>Block Rewards:</span>
-                  <span>28,000-42,000 CLAYER</span>
-                </div>
-                <div className="revenue-item">
-                  <span>Transaction Fees:</span>
-                  <span>100,000-500,000 CLAYER</span>
-                </div>
-                <div className="revenue-item">
-                  <span>Delegation Commission:</span>
-                  <span>200,000-800,000 CLAYER</span>
-                </div>
-                <div className="revenue-total">
-                  <span>Total Annual Revenue:</span>
-                  <span>328,000-1,342,000 CLAYER</span>
-                </div>
-                <div className="revenue-usd">
-                  <span>USD Equivalent:</span>
-                  <span>$328K-1.34M (at $1/CLAYER)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="revenue-factors">
-            <h5>📊 Revenue Factors</h5>
-            <div className="factors-grid">
-              <div className="factor-item">
-                <span>🔥 Network Activity</span>
-                <p>Higher transaction volume = more fee revenue</p>
-              </div>
-              <div className="factor-item">
-                <span>⚡ Validator Performance</span>
-                <p>Better uptime and performance = bonus rewards</p>
-              </div>
-              <div className="factor-item">
-                <span>🤝 Delegation Amount</span>
-                <p>More delegated stake = higher commission earnings</p>
-              </div>
-              <div className="factor-item">
-                <span>💰 Token Price</span>
-                <p>CLAYER price appreciation increases USD value</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="staking-options">
-        <h4>🎯 Staking Options</h4>
-        <div className="options-grid">
-          <div className="option-card validator">
-            <div className="option-header">
-              <div className="option-icon">👑</div>
-              <h5>Run Validator</h5>
-            </div>
-            <div className="option-content">
-              <div className="requirement">
-                <span>Min Stake:</span>
-                <span>100,000 CLAYER</span>
-              </div>
-              <div className="requirement">
-                <span>Hardware:</span>
-                <span>Cloud/VPS</span>
-              </div>
-              <div className="requirement">
-                <span>Uptime:</span>
-                <span>99%+</span>
-              </div>
-              <div className="reward-rate">
-                <span>Reward Rate:</span>
-                <span className="rate-value">15-20% APY</span>
-              </div>
-            </div>
-            <button className="option-btn">Start Validating</button>
-          </div>
-
-          <div className="option-card delegation">
-            <div className="option-header">
-              <div className="option-icon">🤝</div>
-              <h5>Delegate Stake</h5>
-            </div>
-            <div className="option-content">
-              <div className="requirement">
-                <span>Min Stake:</span>
-                <span>32 CLAYER</span>
-              </div>
-              <div className="requirement">
-                <span>Hardware:</span>
-                <span>None</span>
-              </div>
-              <div className="requirement">
-                <span>Maintenance:</span>
-                <span>None</span>
-              </div>
-              <div className="reward-rate">
-                <span>Reward Rate:</span>
-                <span className="rate-value">10-15% APY</span>
-              </div>
-            </div>
-            <button className="option-btn">Delegate Now</button>
-          </div>
-
-          <div className="option-card pool">
-            <div className="option-header">
-              <div className="option-icon">🏊</div>
-              <h5>Staking Pools</h5>
-            </div>
-            <div className="option-content">
-              <div className="requirement">
-                <span>Min Stake:</span>
-                <span>0.1 CLAYER</span>
-              </div>
-              <div className="requirement">
-                <span>Liquidity:</span>
-                <span>High</span>
-              </div>
-              <div className="requirement">
-                <span>Risk:</span>
-                <span>Low</span>
-              </div>
-              <div className="reward-rate">
-                <span>Reward Rate:</span>
-                <span className="rate-value">8-12% APY</span>
-              </div>
-            </div>
-            <button className="option-btn">Join Pool</button>
-          </div>
+        <div className="reward-item">
+          <h5>Block Rewards</h5>
+          <p>At the end of each block, the Validators contract is called and fees for all transactions in the block are distributed to active validators.</p>
         </div>
       </div>
     </div>

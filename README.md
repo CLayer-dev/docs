@@ -1,12 +1,13 @@
 # Circle Layer Documentation
 
-Official documentation for Circle Layer - a high-performance EVM-compatible blockchain built with Proof-of-Stake consensus, delivering exceptional throughput and security for DeFi, NFTs, and enterprise applications.
+Official documentation for Circle Layer - a high-performance EVM-compatible blockchain built with Delegated Proof-of-Stake consensus, delivering efficient throughput and security for DeFi, NFTs, and enterprise applications.
 
 ## 🌐 Live Documentation
 
 - **Documentation Site**: [https://docs.circlelayer.com](https://docs.circlelayer.com)
 - **Testnet RPC**: [https://testnet-rpc.circlelayer.com](https://testnet-rpc.circlelayer.com)
 - **Block Explorer**: [https://explorer-testnet.circlelayer.com](https://explorer-testnet.circlelayer.com)
+- **Faucet**: [https://faucet.circlelayer.com](https://faucet.circlelayer.com)
 - **API Documentation**: [https://explorer-testnet.circlelayer.com/api-docs](https://explorer-testnet.circlelayer.com/api-docs)
 - **GraphQL Endpoint**: [https://explorer-testnet.circlelayer.com/graphiql](https://explorer-testnet.circlelayer.com/graphiql)
 
@@ -43,7 +44,7 @@ This command generates static content into the `build` directory and can be serv
 
 ```
 docs/
-├── ai-security/          # AI-powered security features
+├── ai-security/          # AI-powered security features (planned)
 ├── apis-sdks/            # API documentation and SDKs
 ├── architecture/         # Blockchain architecture details
 ├── community/            # Community guidelines and resources
@@ -75,12 +76,12 @@ docs/
 
 ## 🌟 Key Features
 
-- **High Performance**: 10,000+ TPS with sub-second finality
+- **High Performance**: 2,000 TPS with 3-second block times
 - **EVM Compatible**: Deploy Ethereum contracts directly
-- **Proof-of-Stake**: Energy-efficient consensus mechanism
-- **AI Security**: Advanced threat detection and prevention
-- **Cross-Chain**: Bridge assets from major blockchains
+- **Delegated Proof-of-Stake**: Energy-efficient consensus mechanism
 - **Developer Friendly**: Comprehensive tooling and documentation
+- **Low Transaction Costs**: Meta-transaction support and efficient gas usage
+- **Cross-Chain Support**: Asset bridge functionality
 
 ## 🤝 Contributing
 
@@ -106,7 +107,7 @@ We welcome contributions! Please see our [Contribution Guidelines](docs/communit
 ## 🔗 Links
 
 - **Website**: [https://circlelayer.com](https://circlelayer.com)
-- **GitHub**: [https://github.com/Circle-layer-org](https://github.com/Circle-layer-org)
+- **GitHub**: [https://github.com/circlelayer](https://github.com/circlelayer)
 - **X (Twitter)**: [https://x.com/circlelayer](https://x.com/circlelayer)
 - **Telegram**: [https://t.me/circlelayer](https://t.me/circlelayer)
 

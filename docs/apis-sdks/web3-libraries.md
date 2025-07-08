@@ -8,6 +8,16 @@ sidebar_position: 2
 
 Circle Layer supports various Web3 libraries for interacting with the testnet. All standard Ethereum Web3 libraries work with Circle Layer using the same patterns.
 
+`Circle Layer Blockchain` is compatible with `Ethereum`'s ecosystem，support all `Ethereum`'s `RPC` API and SDK.
+
+### RPC Compatibility
+[RPC Method List](https://ethereum.org/en/developers/docs/apis/json-rpc/)
+
+Example:
+```bash
+curl -s -H 'content-type:application/json' -d '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' https://testnet-rpc.circlelayer.com
+```
+
 ## Network Configuration
 
 ### Circle Layer Testnet
@@ -38,7 +48,7 @@ console.log('Balance:', ethers.utils.formatEther(balance), 'CLAYER');
 
 ### 2. web3.js
 ```javascript
-import Web3 from 'web3';
+const Web3 = require('web3')
 
 // HTTP Provider
 const web3 = new Web3('https://testnet-rpc.circlelayer.com');
@@ -46,9 +56,45 @@ const web3 = new Web3('https://testnet-rpc.circlelayer.com');
 // WebSocket Provider
 const webSocketWeb3 = new Web3('wss://testnet-rpc.circlelayer.com');
 
-// Account setup
-const account = web3.eth.accounts.privateKeyToAccount(privateKey);
-web3.eth.accounts.wallet.add(account);
+// Get chain info
+async function getChainId() {
+    const web3 = new Web3('https://testnet-rpc.circlelayer.com')
+    let chainId = await web3.eth.getChainId()
+    console.log(`chain id: ${chainId}`)
+    return chainId
+}
+
+// Generate account
+function generateAccount() {
+    const Web3Accounts = require('web3-eth-accounts')
+    
+    let account = new Web3Accounts().create()
+    //do not do this on prd env
+    console.log(`account generated. address: ${account.address}, private key: ${account.privateKey}`)
+    return account
+}
+
+// Build transaction
+async function transfer(fromAccount, to, value){
+    const web3 = new Web3('https://testnet-rpc.circlelayer.com')
+    let chainId = await web3.eth.getChainId()
+    let nonce = await web3.eth.getTransactionCount(fromAccount.address)
+    let gasPrice = await web3.eth.getGasPrice()
+
+    let unsigned = {
+        from: fromAccount.address,
+        to,
+        value: web3.utils.numberToHex(web3.utils.toWei(value, 'ether')),
+        gasPrice,
+        nonce,
+        chainId,
+    }
+
+    unsigned.gas = await web3.eth.estimateGas(unsigned)
+
+    let signed = await fromAccount.signTransaction(unsigned)
+    return signed
+}
 
 // Check CLAYER balance
 const balance = await web3.eth.getBalance(account.address);
@@ -222,7 +268,7 @@ class CircleLayerService {
 ## Resources
 
 ### Example Contract
-- **Address**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
+- **Address**: [0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB)
 - **Explorer**: [View Contract](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
 - **ABI**: [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 

@@ -8,189 +8,168 @@ import '@site/src/css/comparison.css';
 
 # Performance Architecture
 
-Learn about Circle Layer's current performance capabilities and the architecture that enables fast, reliable transaction processing.
+Deep dive into the technical architecture and design decisions that enable Circle Layer's high-performance transaction processing.
 
-## Current Testnet Performance
+## Architecture Design Principles
 
-### Target Network Metrics
-- **Block Time**: 3 seconds (actual performance)
-- **Transaction Finality**: 1-3 seconds (actual performance)
-- **Network Uptime**: 99.95% (Last 30 days)
-- **Consensus**: Delegated Proof of Stake (DPoS)
+### DPoS Consensus Optimization
+Circle Layer's performance stems from architectural optimizations in our Delegated Proof of Stake implementation:
 
-### Network Configuration
-- **Chain ID**: 28525
-- **Gas Price**: Minimum 0.000021 CLAYER
-- **Block Gas Limit**: 10,000,000,000,000 per block
-- **Energy Efficiency**: 99.9% less than Proof of Work
+- **Validator Selection**: Top 21 validators by stake for optimal network performance
+- **Block Production**: Consistent 3-second intervals with deterministic ordering
+- **Byzantine Fault Tolerance**: Fast finality through enhanced consensus mechanism
+- **Resource Efficiency**: Modest hardware requirements enable broader participation
 
-## Technical Implementation
+### Network Infrastructure Design
+- **Multiple RPC Endpoints**: Distributed access via ports 32668, 32669, 8545, 6060
+- **Geographic Distribution**: Support for multiple regional endpoints
+- **WebSocket Integration**: Real-time event streaming via wss://testnet-rpc.circlelayer.com
+- **Optimized Propagation**: Efficient block and transaction distribution
 
-### DPoS Consensus Architecture
-- **Validator Network**: Minimum 5 active validators required
-- **Staking Requirements**: 100,000 CLAYER minimum
-- **Block Production**: Consistent 3-second intervals
-- **Finality**: Fast confirmation through DPoS mechanism
+## Performance Implementation
 
-### Network Infrastructure
-- **RPC Endpoint**: https://testnet-rpc.circlelayer.com
-- **WebSocket**: wss://testnet-rpc.circlelayer.com
-- **Multiple Ports**: 32668, 32669, 8545, 6060, 80, 22
-- **Geographic Distribution**: Support for multiple RPC endpoints
+### Transaction Processing Pipeline
+```mermaid
+flowchart LR
+    A[Transaction Submitted] --> B[Validation Pool]
+    B --> C[Consensus Verification]
+    C --> D[Block Assembly]
+    D --> E[Network Propagation]
+    E --> F[Finalization]
+    
+    subgraph "Performance Metrics"
+        G[< 1s Validation]
+        H[3s Block Time]
+        I[1-3s Finality]
+    end
+```
 
-### Performance Optimizations
-- **Efficient Block Propagation**: 3-second consistent timing
-- **Resource Optimization**: Modest hardware requirements
-- **Network Topology**: Optimized for low latency
-- **Gas Efficiency**: Predictable CLAYER-based fees
+### Technical Optimizations
+- **Gas Efficiency**: Predictable CLAYER-based fee structure
+- **Block Gas Limit**: 10,000,000,000,000 per block for high throughput
+- **Memory Management**: Optimized state management for validator nodes
+- **Network Topology**: Low-latency peer connections and routing
 
-## Current Use Cases
+## Scalability Framework
 
-### Development & Testing
-- **Smart Contract Testing**: Fast iteration with 3-second blocks
-- **dApp Development**: Quick feedback loops
-- **Integration Testing**: Real-time transaction confirmation
-- **Gas Optimization**: Cost-effective testing environment
+### Current Capabilities (Testnet)
+- **Sustained TPS**: Consistent performance under load
+- **Network Stability**: 99.95% uptime with predictable block times
+- **Validator Distribution**: Minimum 5 active validators for security
+- **Resource Scaling**: Efficient scaling with validator count
 
-### Target Applications
-- **DeFi Protocols**: Fast transaction settlement
-- **Token Development**: Quick deployment and testing
-- **Wallet Integration**: Seamless user experience
-- **Cross-chain Testing**: Bridge and oracle preparation
+### Future Enhancement Architecture
+*In development for mainnet:*
 
-## Performance Comparison
+- **Parallel Processing**: Multi-threaded transaction execution
+- **State Sharding**: Horizontal scaling architecture  
+- **Enhanced Consensus**: Advanced DPoS optimizations
+- **Cross-chain Performance**: Bridge and oracle optimization
 
-### Block Time Comparison
-| Network | Block Time | Finality |
-|---------|------------|----------|
-| Circle Layer Testnet | 3s | 1-3s |
-| Ethereum | 12s | 6-10min |
-| Polygon | 2s | 2-3s |
-| BSC | 3s | 3s |
+## Performance Monitoring
+
+### Real-time Metrics
+- **Block Production**: 3-second interval consistency
+- **Transaction Confirmation**: 1-3 second finality tracking
+- **Validator Performance**: Individual node contribution monitoring
+- **Network Health**: Continuous uptime and latency assessment
+
+### Benchmarking Results
+| Metric | Current Performance | Target (Mainnet) |
+|--------|-------------------|------------------|
+| Block Time | 3s (consistent) | Optimized |
+| Finality | 1-3s (average) | Enhanced |
+| Uptime | 99.95% (30d) | 99.99% |
+| Energy Usage | 99.9% less than PoW | Maintained |
 
 <div className="mobile-table-cards">
   <div className="section-header-card">
-    <h4>Block Time Comparison</h4>
+    <h4>Performance Benchmarks</h4>
   </div>
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Circle Layer Testnet</div>
-      <div className="network-badge">Our Network</div>
+      <div className="card-title">Current Testnet</div>
+      <div className="network-badge">Live Performance</div>
     </div>
     <div className="card-content">
       <div className="feature-row">
         <div className="feature-label">Block Time</div>
-        <div className="feature-value highlight">3s</div>
+        <div className="feature-value highlight">3s consistent</div>
       </div>
       <div className="feature-row">
         <div className="feature-label">Finality</div>
-        <div className="feature-value highlight">1-3s</div>
+        <div className="feature-value highlight">1-3s average</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Uptime</div>
+        <div className="feature-value">99.95% (30d)</div>
+      </div>
+      <div className="feature-row">
+        <div className="feature-label">Energy</div>
+        <div className="feature-value">99.9% less</div>
       </div>
     </div>
   </div>
   
   <div className="comparison-card">
     <div className="card-header">
-      <div className="card-title">Ethereum</div>
-      <div className="network-badge">Mainnet</div>
+      <div className="card-title">Mainnet Target</div>
+      <div className="network-badge">In Development</div>
     </div>
     <div className="card-content">
       <div className="feature-row">
         <div className="feature-label">Block Time</div>
-        <div className="feature-value">12s</div>
+        <div className="feature-value">Optimized</div>
       </div>
       <div className="feature-row">
         <div className="feature-label">Finality</div>
-        <div className="feature-value">6-10min</div>
-      </div>
-    </div>
-  </div>
-  
-  <div className="comparison-card">
-    <div className="card-header">
-      <div className="card-title">Polygon</div>
-      <div className="network-badge">Mainnet</div>
-    </div>
-    <div className="card-content">
-      <div className="feature-row">
-        <div className="feature-label">Block Time</div>
-        <div className="feature-value">2s</div>
+        <div className="feature-value">Enhanced</div>
       </div>
       <div className="feature-row">
-        <div className="feature-label">Finality</div>
-        <div className="feature-value">2-3s</div>
-      </div>
-    </div>
-  </div>
-  
-  <div className="comparison-card">
-    <div className="card-header">
-      <div className="card-title">BSC</div>
-      <div className="network-badge">Mainnet</div>
-    </div>
-    <div className="card-content">
-      <div className="feature-row">
-        <div className="feature-label">Block Time</div>
-        <div className="feature-value">3s</div>
+        <div className="feature-label">Uptime</div>
+        <div className="feature-value">99.99%</div>
       </div>
       <div className="feature-row">
-        <div className="feature-label">Finality</div>
-        <div className="feature-value">3s</div>
+        <div className="feature-label">Energy</div>
+        <div className="feature-value">Maintained</div>
       </div>
     </div>
   </div>
 </div>
 
-### Network Reliability
-- **Consistent Performance**: 99.95% uptime
-- **Predictable Gas Costs**: Stable CLAYER pricing
-- **Fast Confirmation**: 1-3 second finality
-- **Validator Network**: Distributed consensus
+## Developer Performance Benefits
 
-## 🚧 Future Performance Enhancements
+### Development Cycle Acceleration
+- **Fast Iteration**: 3-second block confirmation for rapid testing
+- **Predictable Costs**: Stable CLAYER gas pricing for budget planning
+- **Real-time Feedback**: Immediate transaction results and error handling
+- **Load Testing**: Consistent performance under development workloads
 
-### In Development
-- **Enhanced Consensus**: Advanced DPoS optimizations
-- **Monitoring Systems**: Real-time performance tracking
-- **Network Analytics**: Comprehensive performance metrics
-- **Scaling Solutions**: Preparation for higher throughput
+### Production Readiness Indicators
+- **Proven Stability**: Months of consistent testnet operation
+- **Validator Reliability**: Distributed consensus with multiple active nodes
+- **Performance Consistency**: Stable metrics across different load conditions
+- **Integration Success**: Multiple projects successfully deployed and tested
 
-### Planned Improvements
-- **TPS Optimization**: Enhanced transaction processing
-- **Latency Reduction**: Further consensus improvements
-- **Capacity Scaling**: Infrastructure expansion
-- **Cross-chain Performance**: Bridge optimization
+## Technical Implementation Details
 
-## Real-World Applications
+### Consensus Engine Performance
+- **Vote Processing**: Optimized validator signature verification
+- **Block Assembly**: Efficient transaction batching and ordering
+- **State Transitions**: Fast execution with minimal computational overhead
+- **Finality Confirmation**: Quick consensus achievement through DPoS design
 
-### Testnet Use Cases
-- **Development Testing**: 99.95% reliable environment
-- **Performance Benchmarking**: Consistent 3-second blocks
-- **Integration Validation**: Fast confirmation times
-- **User Experience Testing**: Real-time responsiveness
+### Infrastructure Scaling
+- **Horizontal Scaling**: Validator network growth support
+- **Vertical Optimization**: Per-node performance improvements
+- **Network Resilience**: Fault tolerance and recovery mechanisms
+- **Monitoring Integration**: Comprehensive performance tracking and alerting
 
-### Production Readiness
-- **Proven Stability**: Months of consistent operation
-- **Scalable Architecture**: Validator network growth
-- **Performance Monitoring**: Continuous optimization
-- **Community Testing**: Real-world validation
+## Next Steps for Performance
 
-## Developer Benefits
-
-### Fast Development Cycle
-- **Quick Deployment**: 3-second confirmation
-- **Rapid Testing**: Fast iteration cycles
-- **Real-time Feedback**: Immediate transaction results
-- **Cost-effective**: Affordable CLAYER gas fees
-
-### Integration Advantages
-- **Standard EVM**: Familiar performance patterns
-- **Predictable Timing**: Consistent block intervals
-- **Reliable Network**: High uptime guarantees
-- **Multiple Endpoints**: Redundant connectivity
-
-For detailed integration guides, see:
-- [Network Configuration](/getting-started/connect-testnet)
-- [Performance Monitoring](/nodes-validation/node-monitoring)
-- [Development Setup](/development/deploying-contracts)
+For implementation and monitoring:
+- [Validator Setup Guide](/nodes-validation/becoming-validator) - Hardware and performance requirements
+- [Node Monitoring](/nodes-validation/node-monitoring) - Performance tracking tools  
+- [Development Setup](/development/deploying-contracts) - Optimized configuration
+- [Network Configuration](/getting-started/connect-testnet) - Connection optimization

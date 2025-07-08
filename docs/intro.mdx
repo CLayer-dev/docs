@@ -2,7 +2,7 @@
 slug: /
 title: Welcome to Circle Layer
 hide_title: true
-description: Circle Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain with AI security features.
+description: Circle Layer is a high-performance, EVM-compatible blockchain built with Delegated Proof of Stake consensus, delivering efficient throughput and security for DeFi, NFTs, and enterprise applications.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 <div className="hero-gradient">
   <h1 className="hero-title">Welcome to Circle Layer Documentation</h1>
   <p className="hero-description">
-    Circle Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain designed to power the next generation of decentralized applications.
+    Circle Layer is a high-performance, EVM-compatible, Delegated Proof of Stake blockchain designed to power the next generation of decentralized applications with efficient transaction processing and comprehensive developer support.
   </p>
   
   <div className="hero-cta-container">
@@ -33,7 +33,7 @@ import TabItem from '@theme/TabItem';
       <div className="hero-stat-label">Finality</div>
     </div>
     <div className="hero-stat">
-      <div className="hero-stat-value">99.95%</div>
+      <div className="hero-stat-value">99.9%</div>
       <div className="hero-stat-label">Uptime</div>
     </div>
   </div>
@@ -43,31 +43,73 @@ import TabItem from '@theme/TabItem';
   </div>
 </div>
 
+## 🎥 Video Tutorial: Smart Contract Development
+
+Learn the complete smart contract development workflow on Circle Layer with this step-by-step video tutorial:
+
+<div className="video-tutorial-section" style={{margin: "30px 0", textAlign: "center"}}>
+  <div className="video-container" style={{position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", maxWidth: "100%", backgroundColor: "#000", borderRadius: "8px"}}>
+    <iframe 
+      style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}
+      src="https://www.youtube.com/embed/_Mpf0B0fsmQ" 
+      title="Circle Layer Smart Contract Development Tutorial" 
+      frameBorder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerPolicy="strict-origin-when-cross-origin" 
+      allowFullScreen>
+    </iframe>
+  </div>
+  
+  <div style={{marginTop: "20px", padding: "16px", backgroundColor: "var(--ifm-background-surface-color)", border: "1px solid var(--ifm-color-emphasis-200)", borderRadius: "8px"}}>
+    <h4 style={{margin: "0 0 12px 0", color: "var(--ifm-color-primary)"}}>📚 What you'll learn:</h4>
+    <div style={{display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "8px", textAlign: "left"}}>
+      <div>✅ Writing smart contracts for Circle Layer</div>
+      <div>✅ Using Circle Layer AI for development assistance</div>
+      <div>✅ Connecting MetaMask to Circle Layer testnet</div>
+      <div>✅ Getting testnet tokens from the faucet</div>
+      <div>✅ Deploying contracts using Remix IDE</div>
+      <div>✅ Verifying contracts on Circle Layer explorer</div>
+    </div>
+  </div>
+</div>
+
+## 🎯 Solving DApp Industry's Biggest Problem
+
+The blockchain industry's most significant application lies in decentralized applications (Dapps) functioning on various blockchains. However, the operational efficiency of these Dapps, particularly in high-demand sectors like gaming, metaverse, and NFTs, is critically hindered by the limited transaction speeds offered by conventional blockchain technology.
+
+**Circle Layer addresses two critical challenges:**
+
+### ⚡ Performance Bottleneck
+Our blockchain solution directly integrates a robust Delegated Proof of Stake (DPoS) consensus mechanism, enabling high transaction throughput. This advancement not only accelerates transaction processing but also fortifies network security through a dedicated network of validators responsible for transaction verification.
+
+### 💰 Developer Economics  
+Traditional blockchains leave DApp developers with inadequate cash flow despite high user engagement, as transaction fees typically go to miners or stakers. **Circle Layer's innovative solution redistributes a portion of transaction fees to smart contract deployers**, generating positive cash flow for DApp developers and creating a more equitable financial ecosystem.
+
 ## 📈 Network Performance Metrics
 
-<div className="metrics-dashboard">
+<div className="performance-metrics">
   <div className="metric-card">
-    <div className="metric-value">3s</div>
-    <div className="metric-label">Block Time</div>
-    <div className="metric-trend">⚡ Consistent</div>
+    <div className="metric-value">2,000</div>
+    <div className="metric-label">🎯 Current TPS</div>
+    <div className="metric-status">⚡ Fully Operational</div>
   </div>
   
   <div className="metric-card">
     <div className="metric-value">1-3s</div>
-    <div className="metric-label">Finality</div>
-    <div className="metric-trend">🚀 Ultra Fast</div>
+    <div className="metric-label">🚀 Finality</div>
+    <div className="metric-status">⚡ Ultra Fast</div>
   </div>
   
   <div className="metric-card">
-    <div className="metric-value">99.95%</div>
-    <div className="metric-label">Uptime (30d)</div>
-    <div className="metric-trend">🔒 Highly Reliable</div>
+    <div className="metric-value">99.9%</div>
+    <div className="metric-label">🔒 Uptime (30d)</div>
+    <div className="metric-status">🔒 Highly Reliable</div>
   </div>
   
   <div className="metric-card">
     <div className="metric-value">28525</div>
-    <div className="metric-label">Chain ID</div>
-    <div className="metric-trend">🌐 Ready for Testing</div>
+    <div className="metric-label">🌐 Chain ID</div>
+    <div className="metric-status">🌐 Ready for Testing</div>
   </div>
 </div>
 
@@ -99,25 +141,52 @@ import TabItem from '@theme/TabItem';
   <div className="feature-card">
     <div className="feature-icon">⚡</div>
     <h3>EVM Compatible</h3>
-    <span className="feature-description">Seamless migration from Ethereum</span>
-    <div className="feature-badges">
-      <span className="badge">Solidity Ready</span>
-      <span className="badge">Web3.js Support</span>
-      <span className="badge">Metamask Compatible</span>
+    <p>Seamless migration from Ethereum with full tooling support</p>
+    <div className="feature-specs">
+      <div className="spec-item">Solidity Ready</div>
+      <div className="spec-item">Web3.js Support</div>
+      <div className="spec-item">Metamask Compatible</div>
     </div>
   </div>
   
   <div className="feature-card">
     <div className="feature-icon">🌱</div>
     <h3>Energy Efficient</h3>
-    <span className="feature-description">Proof of Stake consensus mechanism</span>
-    <div className="feature-badges">
-      <span className="badge">99.9% Less Energy</span>
-      <span className="badge">PoS Consensus</span>
-      <span className="badge">Eco-Friendly</span>
+    <p>Delegated Proof of Stake consensus mechanism</p>
+    <div className="feature-specs">
+      <div className="spec-item">99.9% Less Energy</div>
+      <div className="spec-item">DPoS Consensus</div>
+      <div className="spec-item">Eco-Friendly</div>
+    </div>
+  </div>
+  
+  <div className="feature-card">
+    <div className="feature-icon">🔧</div>
+    <h3>Developer Friendly</h3>
+    <p>Comprehensive tooling and extensive support programs</p>
+    <div className="feature-specs">
+      <div className="spec-item">Full Documentation</div>
+      <div className="spec-item">Grant Programs</div>
+      <div className="spec-item">24/7 Support</div>
     </div>
   </div>
 </div>
+
+## 🔧 Core Technology & Technical Characteristics
+
+Circle Layer combines several cutting-edge technologies to deliver a superior blockchain experience:
+
+- **EVM Compatibility**: Full compatibility with Ethereum's virtual machine, allowing seamless migration of existing dApps
+- **Delegated Proof of Stake (DPoS)**: Energy-efficient consensus with enhanced security, supporting up to 21 validators
+- **Meta-transaction Function**: Gas fee reduction, effectively reducing costs for developers and users
+- **Cross-chain Support**: Assets like ETH, BNB and stable coins can be mapped via asset bridge
+- **Developer Revenue Share**: Portion of transaction fees redistributed to smart contract deployers
+
+### Economic Model
+- **Endogenous Token**: CLAYER serves as the native gas fee token
+- **Validator Staking**: Miners pledge CLAYER to become validator nodes  
+- **Reward Distribution**: Gas fees distributed according to staking proportion
+- **Burn Mechanism**: Deflationary tokenomics with systematic burning
 
 ## 🔥 Why Choose Circle Layer?
 
@@ -129,8 +198,8 @@ import TabItem from '@theme/TabItem';
 ```mermaid
 graph LR
     A[Transaction Submitted] -->|under 1s| B[Validated]
-    B -->|2-5s| C[Block Included]  
-    C -->|under 10s| D[Finalized]
+    B -->|2-3s| C[Block Included]  
+    C -->|1-3s| D[Finalized]
 ```
 
 #### Target Performance Metrics
@@ -399,7 +468,7 @@ flowchart TD
     </div>
     <span className="card-description">Secure the network and earn rewards</span>
     <div className="reward-preview">
-      <div>Up to 8% APY</div>
+      <div>100,000 CLAYER minimum stake</div>
       <div>Network rewards</div>
     </div>
     <a href="/nodes-validation/becoming-validator" className="button button--secondary">
@@ -440,7 +509,7 @@ graph TB
         A --> F[DApps]
         A --> G[APIs & SDKs]
         
-        B --> H[PoS Consensus]
+        B --> H[DPoS Consensus]
         B --> I[Validator Network]
         B --> J[Block Production]
         

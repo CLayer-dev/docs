@@ -48,7 +48,7 @@ Rate limiting information is not currently specified. Please check the API docum
 ## Smart Contract Examples
 
 ### Deployed Example Contract
-- **Contract Address**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
+- **Contract Address**: [0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB)
 - **Source Code**: [View on Explorer](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
 - **ABI**: [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 - **Deployment**: Manual Deploy
@@ -791,7 +791,7 @@ const result = await makeSignedRequest(
 ### Community & Support
 - **X (Twitter)**: https://x.com/circlelayer
 - **Telegram**: https://t.me/circlelayer
-- **GitHub Issues**: https://github.com/circle-layer-org/rpc-issues
+- **GitHub Issues**: https://github.com/circlelayer/rpc-issues
 
 ### Rate Limits & Performance
 - **Rate Limit**: 100 requests/minute for free tier

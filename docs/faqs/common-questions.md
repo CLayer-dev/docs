@@ -183,7 +183,6 @@ Circle Layer is currently in active development and testing phase with the follo
 - Documentation and developer resources
 
 **In Development:**
-- **AI security framework** (targeting 99.8% threat detection accuracy)
 - Testnet deployment and testing
 - Advanced validator tooling
 - Enhanced monitoring systems
@@ -209,11 +208,31 @@ Circle Layer is currently in active development and testing phase with the follo
 - Governance system activation
 - Economic model finalization
 
-**Phase 4: Mainnet & Expansion**
-- Full mainnet launch
-- Enterprise partnerships
-- Scaling to 50,000 TPS
-- Global ecosystem growth
+**Phase 4: Mainnet & Expansion** (Future Vision)
+- Planned mainnet launch
+- Enterprise partnerships (future goals)
+- Performance scaling goals
+- Global ecosystem growth plans
 
 ### When will testnet be available?
 We're currently in the final development and testing phase. Testnet availability will be announced through our official channels when ready.
+
+### What makes Circle Layer economically secure?
+
+Circle Layer's economic security is built on several mechanisms:
+
+- **Stake-based Consensus**: Validators must stake CLAYER tokens to participate
+- **Economic Incentives**: Validators earn rewards proportional to their stake
+- **Punishment System**: Poor performance results in slashing and income loss
+- **Economic Security**: Token burn mechanism (25% of transaction fees) *[Mainnet only]*
+
+### How does the fee distribution work?
+
+Circle Layer implements a sophisticated fee distribution system:
+
+- **Delegator Rewards**: 45% from gas fees (distributed by stake proportion)
+- **Validator Rewards**: 30% from gas fees (distributed by stake proportion)
+- **Burn Mechanism**: 25% of gas fees (stops at 1,000,000 CLAYER threshold) *[Mainnet only]*
+- **Proportional Distribution**: All rewards based on stake percentage
+
+*Note: The ETH token launch uses a simplified model with 5% trading fees. Full fee distribution and burn mechanisms will be implemented on mainnet migration.*

@@ -8,71 +8,50 @@ import '@site/src/css/comparison.css';
 
 # Key Features
 
-Circle Layer offers a comprehensive suite of features designed to meet the needs of modern blockchain applications and users. Our platform combines cutting-edge technology with user-friendly design to create a powerful and accessible blockchain ecosystem.
+Circle Layer offers a comprehensive suite of features designed to meet the needs of modern blockchain applications. This section details the practical implementation and current capabilities of our platform.
 
-## Current Network Features
+## Current Network Configuration
 
-### Target Network Performance
-- **Block Time**: 3 seconds (actual performance)
-- **Transaction Finality**: 1-3 seconds (actual performance)
-- **Network Uptime**: 99.95% (Last 30 days)
-- **Chain ID**: 28525
-- **Currency**: CLAYER tokens
-
-### Network Infrastructure
-*Configuration for testnet deployment:*
-
+**Network Details:**
+- **Chain ID**: 28525 | **Currency**: CLAYER tokens
 - **RPC Endpoint**: https://testnet-rpc.circlelayer.com
 - **WebSocket**: wss://testnet-rpc.circlelayer.com
 - **Block Explorer**: https://explorer-testnet.circlelayer.com
 - **Faucet**: https://faucet.circlelayer.com
-- **Faucet API**: https://faucet-api.circlelayer.com
 
-### Cost Efficiency
-- **Minimum Gas Price**: 0.000021 CLAYER
-- **Block Gas Limit**: 10,000,000,000,000 per block
-- **Gas Calculation**: Standard Ethereum method (gas price × gas amount)
-- **Energy Efficient**: 99.9% less energy than Proof of Work
+**Performance Specifications:**
+- **Block Time**: 3 seconds | **Finality**: 1-3 seconds  
+- **Gas Price**: Minimum 0.000021 CLAYER | **Block Gas Limit**: 10,000,000,000,000
+- **Network Uptime**: 99.95% (Last 30 days) | **Energy Efficiency**: 99.9% less than PoW
 
-## Technical Features
+## Technical Implementation
 
-### EVM Compatibility
-- **Full Compatibility**: Same as other EVM blockchains
-- **Standard Integration**: Works with Web3.js, Ethers.js
-- **Existing Tools**: Compatible with Hardhat, Truffle, Remix
-- **Seamless Migration**: Standard EVM integration patterns
-
-### Security Features
-- **DPoS Consensus**: Delegated Proof of Stake security model
-- **Validator Network**: Minimum 5 active validators required
+### Security & Consensus
+- **DPoS Consensus**: Delegated Proof of Stake security model with minimum 5 active validators
 - **Staking Requirements**: 100,000 CLAYER minimum stake
-- **Burn Mechanism**: 25% from gas fees (maximum 1,000,000 CLAYER)
+- **Validator Network**: Maximum 21 validators supported
 
-### Developer Tools
-- **API Endpoints**: REST and GraphQL available
-- **Example Contract**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
-- **Integration Guides**: Web3.js, Ethers.js, React, Vue.js
-- **Development Frameworks**: Hardhat, Truffle support
+### Development Integration
+- **EVM Compatibility**: Full compatibility with existing Ethereum tooling
+- **Library Support**: Web3.js, Ethers.js, Viem integration
+- **Development Tools**: Hardhat, Truffle, Remix, Foundry compatible
+- **Wallet Integration**: MetaMask, WalletConnect, and custom wallet support
 
-## User Features
+### Economic Features
+- **Deflationary Economics**: 25% from gas fees burned (maximum 1,000,000 CLAYER) *[Mainnet only]*
+- **Stake-based Rewards**: Higher stake = higher rewards proportionally
+- **Developer Revenue**: Gas fee sharing with smart contract deployers
 
-### Wallet Integration
-- **MetaMask**: Recommended with testnet configuration
-- **WalletConnect**: Register and follow their guidelines
-- **Custom Wallets**: Same as EVM integration
-- **Mobile Wallets**: Same as EVM integration
+*Note: Advanced economic mechanisms apply to Circle Layer mainnet. Current testnet uses simplified economics.*
 
-### Network Access
-- **Network Status**: Development & testing phase
-- **Faucet**: https://faucet.circlelayer.com (1 CLAYER per day)
-- **Block Explorer**: https://explorer-testnet.circlelayer.com - Real-time transaction tracking
-- **Network Monitoring**: 99.95% uptime target
+## Development Status Overview
 
-### Documentation
-- **Comprehensive Guides**: Complete setup and development docs
-- **API References**: REST and GraphQL documentation
-- **Integration Examples**: Web3, React, Vue.js examples
-- **Best Practices**: EVM development standards
+| Service | Status | Readiness |
+|---------|--------|-----------|
+| RPC API | 🟡 Ready for Testing | Infrastructure Complete |
+| WebSocket | 🟡 Ready for Testing | Infrastructure Complete |
+| Block Explorer | 🟡 Ready for Testing | Infrastructure Complete |
+| GraphQL | 🔄 In Development | Coming Soon |
 
 ## Current vs Future Comparison
 
@@ -206,185 +185,29 @@ Circle Layer offers a comprehensive suite of features designed to meet the needs
   </div>
 </div>
 
-## Network Comparison
+## Practical Implementation Notes
 
-| Feature | Circle Layer | Ethereum | Polygon | BSC |
-|---------|--------------|----------|---------|-----|
-| Block Time | 3s | 12s | 2s | 3s |
-| Finality | 1-3s | 6-10min | 2-3s | 3s |
-| Consensus | DPoS | PoW→PoS | PoS | PoA |
-| EVM Compatible | Yes | Native | Yes | Yes |
-| Gas Fees | Low (CLAYER) | High (ETH) | Low (MATIC) | Low (BNB) |
-| Chain ID | 28525 | 1 | 137 | 56 |
+### For Developers
+- **Network Access**: Development & testing phase with 99.95% uptime target
+- **Gas Efficiency**: Predictable costs with CLAYER token pricing
+- **Example Contracts**: Reference implementation at 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
+- **Integration Patterns**: Standard EVM development workflows apply
 
-<div className="mobile-table-cards">
-  <div className="section-header-card">
-    <h4>Network Comparison</h4>
-  </div>
-  
-  <div className="comparison-card circle-layer">
-    <div className="card-header">
-      <div className="card-title">Circle Layer</div>
-      <div className="network-badge">Our Network</div>
-    </div>
-    <div className="card-content">
-      <div className="feature-row">
-        <div className="feature-label">Block Time</div>
-        <div className="feature-value highlight">3s</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Finality</div>
-        <div className="feature-value highlight">1-3s</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Consensus</div>
-        <div className="feature-value highlight">DPoS</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">EVM Compatible</div>
-        <div className="feature-value highlight">Yes</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Gas Fees</div>
-        <div className="feature-value">Low (CLAYER)</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Chain ID</div>
-        <div className="feature-value">28525</div>
-      </div>
-    </div>
-  </div>
-  
-  <div className="comparison-card">
-    <div className="card-header">
-      <div className="card-title">Ethereum</div>
-      <div className="network-badge">Mainnet</div>
-    </div>
-    <div className="card-content">
-      <div className="feature-row">
-        <div className="feature-label">Block Time</div>
-        <div className="feature-value">12s</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Finality</div>
-        <div className="feature-value">6-10min</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Consensus</div>
-        <div className="feature-value">PoW→PoS</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">EVM Compatible</div>
-        <div className="feature-value">Native</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Gas Fees</div>
-        <div className="feature-value">High (ETH)</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Chain ID</div>
-        <div className="feature-value">1</div>
-      </div>
-    </div>
-  </div>
-  
-  <div className="comparison-card">
-    <div className="card-header">
-      <div className="card-title">Polygon</div>
-      <div className="network-badge">Mainnet</div>
-    </div>
-    <div className="card-content">
-      <div className="feature-row">
-        <div className="feature-label">Block Time</div>
-        <div className="feature-value">2s</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Finality</div>
-        <div className="feature-value">2-3s</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Consensus</div>
-        <div className="feature-value">PoS</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">EVM Compatible</div>
-        <div className="feature-value">Yes</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Gas Fees</div>
-        <div className="feature-value">Low (MATIC)</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Chain ID</div>
-        <div className="feature-value">137</div>
-      </div>
-    </div>
-  </div>
-  
-  <div className="comparison-card">
-    <div className="card-header">
-      <div className="card-title">BSC</div>
-      <div className="network-badge">Mainnet</div>
-    </div>
-    <div className="card-content">
-      <div className="feature-row">
-        <div className="feature-label">Block Time</div>
-        <div className="feature-value">3s</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Finality</div>
-        <div className="feature-value">3s</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Consensus</div>
-        <div className="feature-value">PoA</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">EVM Compatible</div>
-        <div className="feature-value">Yes</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Gas Fees</div>
-        <div className="feature-value">Low (BNB)</div>
-      </div>
-      <div className="feature-row">
-        <div className="feature-label">Chain ID</div>
-        <div className="feature-value">56</div>
-      </div>
-    </div>
-  </div>
-</div>
+### For Validators
+- **Minimum Requirements**: 5 active validators for network security
+- **Economic Incentives**: Gas fee distribution based on staking proportion
+- **Network Participation**: Manual setup currently, smart contracts in development
 
-## 🚧 Features in Development
+### For Users
+- **Wallet Support**: MetaMask recommended with testnet configuration
+- **Network Testing**: Free testnet tokens via faucet (1 CLAYER per day)
+- **Transaction Experience**: 1-3 second confirmation times
+- **Block Explorer**: Real-time transaction tracking available
 
-### Smart Contract Infrastructure
-- **Automated Staking**: Smart contract-based validator staking
-- **Governance System**: On-chain voting and proposals
-- **Bridge Contracts**: Cross-chain interoperability
-- **Oracle Network**: Decentralized data feeds
+## Next Steps
 
-### Network Enhancements
-- **Status Dashboard**: Real-time network monitoring
-- **Analytics Platform**: Advanced network metrics
-- **Alert System**: Automated monitoring and notifications
-- **Enhanced APIs**: Advanced rate limiting and features
-
-## Development Roadmap
-
-### Current Phase: Development & Testing ✅
-- ✅ Core network functionality in testing
-- ✅ DPoS consensus implemented
-- ✅ Developer tools in development
-- ✅ Community engagement building
-
-### Next Phase: Enhanced Features 🚧
-- 🚧 Smart contract infrastructure
-- 🚧 Advanced monitoring systems
-- 🚧 Governance implementation
-- 🚧 Cross-chain capabilities
-
-### Future Phase: Ecosystem Growth 📋
-- 📋 Advanced developer tools
-- 📋 Partner integrations
-- 📋 Community incentives
-- 📋 Performance optimizations
+For implementation guidance:
+- [Network Setup Guide](/getting-started/connect-testnet)  
+- [Development Tools](/development/writing-smart-contracts)
+- [API References](/apis-sdks/rpc-endpoints)
+- [Validator Setup](/nodes-validation/becoming-validator)

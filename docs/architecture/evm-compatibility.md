@@ -6,76 +6,35 @@ sidebar_label: EVM Compatibility
 
 # EVM Compatibility
 
-Circle Layer maintains full compatibility with the Ethereum Virtual Machine (EVM), allowing developers to seamlessly migrate existing applications or build new ones using familiar tools and patterns.
+Technical details on Circle Layer's Ethereum Virtual Machine compatibility, migration strategies, and implementation considerations for developers.
 
-## Current EVM Implementation
+## Technical Implementation
 
-### Full Compatibility Features
-- **Bytecode Compatibility**: 100% compatible with Ethereum bytecode
-- **Same Opcodes**: Identical instruction set as Ethereum
-- **Gas Model**: Standard Ethereum gas calculation (gas price × gas amount)
-- **Integration Patterns**: Same as other EVM blockchains
+### Bytecode & Execution Compatibility
+- **100% Bytecode Compatibility**: Identical instruction set and execution environment as Ethereum
+- **Gas Model**: Standard Ethereum gas calculation (gas price × gas amount)  
+- **State Management**: Compatible state tree and account structure
+- **Smart Contract ABI**: Full Application Binary Interface compatibility
 
-### Circle Layer Testnet Specifics
-- **Network**: Circle Layer Testnet (Chain ID: 28525)
-- **Currency**: CLAYER tokens for gas fees
-- **Gas Pricing**: Minimum 0.000021 CLAYER
-- **Block Gas Limit**: 10,000,000,000,000 per block
+### Network Integration
+Circle Layer testnet provides full EVM compatibility with:
+- **Chain ID**: 28525 for testnet distinction
+- **JSON-RPC API**: Complete Ethereum RPC method support
+- **WebSocket Events**: Real-time blockchain event streaming
+- **Block Structure**: Ethereum-compatible block and transaction format
 
-## Development Benefits
+## Migration Strategies
 
-### Familiar Environment
-- **Reuse Existing Contracts**: Deploy without modifications
-- **Same Development Tools**: Hardhat, Truffle, Remix work identically
-- **Standard Libraries**: Web3.js, Ethers.js work without changes
-- **Wallet Integration**: MetaMask and other EVM wallets compatible
+### From Ethereum Mainnet
+**Zero-Code Migration Process:**
+1. **Deploy Existing Contracts**: Use same bytecode and deployment scripts
+2. **Update Network Configuration**: Change RPC endpoint and chain ID
+3. **Configure Gas Token**: Use CLAYER instead of ETH for gas fees
+4. **Test Integration**: Verify functionality on Circle Layer testnet
 
-### Proven Security Model
-- **Standard EVM Security**: Established security patterns
-- **DPoS Consensus**: Enhanced with Delegated Proof of Stake
-- **Testing Environment**: Full testnet for comprehensive testing
-
-## Migration Guide
-
-### From Ethereum
-1. **Change Network Configuration**
-   ```javascript
-   // Update RPC endpoint
-   const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
-   
-   // Update network configuration
-   {
-     chainId: 28525,
-     name: 'Circle Layer Testnet',
-     currency: 'CLAYER',
-     rpcUrl: 'https://testnet-rpc.circlelayer.com'
-   }
-   ```
-
-2. **Get Test Tokens**
-   - Visit faucet: https://faucet.circlelayer.com
-   - Request 1 CLAYER per day for testing
-
-3. **Deploy Contracts**
-   - Use same deployment scripts
-   - Configure gas price for CLAYER
-   - Verify on Circle Layer explorer
-
-4. **Test Integration**
-   - Test with CLAYER for gas fees
-   - Verify wallet connectivity
-   - Check transaction finality (1-3 seconds)
-
-### From Other EVM Chains
-Migration from Polygon, BSC, or other EVM chains follows the same pattern:
-- Update RPC endpoint
-- Configure for CLAYER gas token
-- Test on Circle Layer testnet
-
-## Practical Examples
-
-### Hardhat Configuration
+**Network Configuration Update:**
 ```javascript
+// Hardhat configuration example
 module.exports = {
   networks: {
     circleLayerTestnet: {
@@ -88,19 +47,64 @@ module.exports = {
 };
 ```
 
-### Web3.js Integration
+### From Other EVM Chains (Polygon, BSC, Avalanche)
+Migration from other EVM-compatible chains follows identical patterns:
+- **Contract Deployment**: Same deployment tools and processes
+- **Library Integration**: Existing Web3 libraries work without modification
+- **Wallet Connection**: Standard MetaMask/WalletConnect integration
+- **Gas Management**: Only difference is CLAYER token for gas fees
+
+## Development Environment Setup
+
+### Library Integration Examples
+
+**Web3.js Implementation:**
 ```javascript
 const Web3 = require('web3');
 const web3 = new Web3('https://testnet-rpc.circlelayer.com');
 
-// Same API as Ethereum
+// Standard Ethereum API usage
 const balance = await web3.eth.getBalance(address);
 const gasPrice = await web3.eth.getGasPrice();
+const blockNumber = await web3.eth.getBlockNumber();
 ```
 
-### MetaMask Setup
+**Ethers.js Integration:**
 ```javascript
-// Add Circle Layer Testnet to MetaMask
+const { ethers } = require('ethers');
+const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
+
+// Same patterns as Ethereum development
+const signer = new ethers.Wallet(privateKey, provider);
+const contract = new ethers.Contract(address, abi, signer);
+```
+
+**Viem Integration:**
+```javascript
+import { createPublicClient, http } from 'viem';
+import { defineChain } from 'viem';
+
+const circleLayer = defineChain({
+  id: 28525,
+  name: 'Circle Layer Testnet',
+  network: 'circle-layer-testnet',
+  nativeCurrency: { name: 'CLAYER', symbol: 'CLAYER', decimals: 18 },
+  rpcUrls: {
+    default: { http: ['https://testnet-rpc.circlelayer.com'] }
+  }
+});
+
+const client = createPublicClient({
+  chain: circleLayer,
+  transport: http()
+});
+```
+
+## Wallet Integration
+
+### MetaMask Configuration
+```javascript
+// Programmatic network addition
 await window.ethereum.request({
   method: 'wallet_addEthereumChain',
   params: [{
@@ -117,29 +121,79 @@ await window.ethereum.request({
 });
 ```
 
-## Performance Benefits
+### WalletConnect Integration
+```javascript
+// Standard WalletConnect setup works with Circle Layer
+import { WalletConnect } from '@walletconnect/client';
 
-### Circle Layer Advantages
-- **Faster Finality**: 1-3 seconds vs Ethereum's 6-10 minutes
-- **Lower Gas Costs**: Affordable testing with CLAYER
-- **Consistent Block Time**: 3-second intervals
-- **High Uptime**: 99.95% network availability
+const connector = new WalletConnect({
+  bridge: "https://bridge.walletconnect.org",
+  qrcodeModal: QRCodeModal,
+});
 
-### Development Experience
-- **Same Tools**: No learning curve for Ethereum developers
-- **Quick Testing**: Fast block times for rapid iteration
-- **Cost Effective**: Free testnet tokens via faucet
-- **Standard Patterns**: Familiar development workflows
+// Network switching handled through standard EIP-3326
+await connector.request({
+  method: 'wallet_switchEthereumChain',
+  params: [{ chainId: '0x6F75' }]
+});
+```
 
-## Resources
+## Performance Advantages
 
-### Example Implementation
-- **Reference Contract**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
-- **Source Code**: [View on Explorer](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- **ABI**: [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+### Circle Layer Benefits over Ethereum
+- **3s Block Time**: vs Ethereum's 12s average
+- **1-3s Finality**: vs Ethereum's 6-10 minute finality  
+- **Predictable Gas**: Stable CLAYER pricing vs volatile ETH gas
+- **99.95% Uptime**: Consistent network availability
+- **Energy Efficiency**: 99.9% less energy consumption
 
-### Integration Guides
-- [Smart Contract Development](/development/writing-smart-contracts)
-- [Contract Deployment](/development/deploying-contracts)
-- [Web3 Integration](/development/web3-integration)
-- [Wallet Setup](/getting-started/set-up-wallet)
+### Development Experience Improvements
+- **Faster Testing**: 3-second blocks for rapid iteration
+- **Cost-Effective**: Free testnet tokens via faucet
+- **Reliable Performance**: Consistent block times and gas prices
+- **Standard Tooling**: No learning curve for Ethereum developers
+
+## Testing & Verification
+
+### Contract Verification Process
+1. **Deploy to Testnet**: Use standard deployment tools
+2. **Verify Source Code**: Submit to Circle Layer block explorer
+3. **Test Interactions**: Validate all contract functions
+4. **Performance Testing**: Measure gas usage and execution time
+
+### Integration Testing Checklist
+- ✅ Contract deployment successful
+- ✅ Web3 library connectivity verified  
+- ✅ Wallet interactions functioning
+- ✅ Event listening operational
+- ✅ Gas estimation accurate
+- ✅ Transaction confirmations reliable
+
+## Reference Implementation
+
+**Example Contract Address**: `0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB`
+- [View on Explorer](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+- [Source Code](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+
+## Best Practices
+
+### Gas Optimization for CLAYER
+- **Estimate Gas Carefully**: Use `eth_estimateGas` for accurate calculations
+- **Batch Operations**: Combine multiple calls to reduce gas overhead
+- **Storage Optimization**: Minimize state changes for cost efficiency
+- **Test Gas Usage**: Verify gas consumption on testnet before mainnet
+
+### Security Considerations
+- **Same Security Model**: Standard EVM security practices apply
+- **Testnet Testing**: Thorough testing recommended before mainnet deployment
+- **Audit Compatibility**: Existing Ethereum audit reports remain valid
+- **Network Effects**: Consider Circle Layer's DPoS consensus in security design
+
+## Next Steps
+
+For detailed implementation guidance:
+- [Smart Contract Development](/development/writing-smart-contracts) - Contract deployment guide
+- [Web3 Integration](/development/web3-integration) - Frontend integration patterns
+- [Wallet Setup](/getting-started/set-up-wallet) - User wallet configuration
+- [Network Configuration](/getting-started/connect-testnet) - Complete setup guide

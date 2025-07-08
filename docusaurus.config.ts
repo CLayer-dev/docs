@@ -78,14 +78,7 @@ const config: Config = {
         content: 'blockchain, layer 1, evm, pos, defi, smart contracts, circle layer',
       },
     },
-    // Add security headers
-    {
-      tagName: 'meta',
-      attributes: {
-        'http-equiv': 'Content-Security-Policy',
-        content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://api.fontshare.com; img-src 'self' data: https:; font-src 'self' https://api.fontshare.com https://*.fontshare.com; connect-src 'self' https://api.x.ai;"
-      },
-    },
+    // Security headers removed for development - will be handled at server level in production
     {
       tagName: 'meta',
       attributes: {
@@ -118,7 +111,7 @@ const config: Config = {
   },
 
   plugins: [
-    // Custom plugin to inject environment variables
+    // Custom plugin to inject environment variables and optimize webpack cache
     function injectEnvironmentVariables() {
       return {
         name: 'inject-environment-variables',
@@ -128,6 +121,7 @@ const config: Config = {
           console.log('🔍 DEBUG: GROK_API_KEY length:', process.env.GROK_API_KEY ? process.env.GROK_API_KEY.length : 'undefined');
 
           return {
+            cache: false,
             plugins: [
               new (require('webpack')).DefinePlugin({
                 'process.env.GROK_API_KEY': JSON.stringify(process.env.GROK_API_KEY || ''),
@@ -149,7 +143,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/Circle-layer-org/docs/tree/main/',
+          editUrl: 'https://github.com/circlelayer/docs/tree/main/',
           showLastUpdateTime: false,
           routeBasePath: '/', // Make docs the homepage
         },
@@ -188,7 +182,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/Circle-layer-org/docs',
+          href: 'https://github.com/circlelayer',
           label: 'GitHub',
           position: 'right',
         },
@@ -210,7 +204,7 @@ const config: Config = {
             },
             {
               label: 'Circle Layer for Users',
-              to: '/introduction/what-is-circle-layer',
+              to: '/introduction/key-features',
             },
           ],
         },
@@ -236,7 +230,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/Circle-layer-org/docs',
+              href: 'https://github.com/circlelayer',
             },
             {
               label: 'Testnet Explorer',

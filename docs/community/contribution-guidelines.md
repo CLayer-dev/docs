@@ -32,7 +32,7 @@ Welcome to the Circle Layer community! This guide will help you contribute to ou
 
 1. **Setup**
    ```bash
-   git clone https://github.com/Circle-layer-org/testnet-core-blockchain.git
+   git clone https://github.com/circlelayer/testnet-core-blockchain.git
    cd circle-layer
    npm install
 

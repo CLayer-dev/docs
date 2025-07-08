@@ -90,7 +90,7 @@ sudo ufw enable
 
 ```bash
 # Clone the repository
-git clone https://github.com/Circle-layer-org/testnet-core-blockchain
+git clone https://github.com/circlelayer/testnet-core-blockchain
 cd /path/to/core-blockchain
 
 # Compile the node
@@ -430,7 +430,7 @@ free -h
 For validator support:
 - Check the [official documentation](/)
 - Join [community forums](/community/social-media)
-- Review [GitHub issues](https://github.com/Circle-layer-org/testnet-core-blockchain/issues)
+- Review [GitHub issues](https://github.com/circlelayer/testnet-core-blockchain/issues)
 - Monitor network status and announcements
 
 ### Command Reference

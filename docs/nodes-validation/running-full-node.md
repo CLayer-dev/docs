@@ -45,7 +45,7 @@ Circle Layer is an Ethereum-compatible blockchain that uses Geth (Go Ethereum) a
 
 ```bash
 # Clone the repository
-git clone https://github.com/Circle-layer-org/testnet-core-blockchain
+git clone https://github.com/circlelayer/testnet-core-blockchain
 cd /path/to/core-blockchain
 
 # Compile the node
@@ -407,7 +407,7 @@ sudo iotop
 For additional support:
 - Check the [official documentation](/)
 - Join the [community forums](/community/social-media)
-- Review [GitHub issues](https://github.com/Circle-layer-org/testnet-core-blockchain/issues)
+- Review [GitHub issues](https://github.com/circlelayer/testnet-core-blockchain/issues)
 
 ### Command Reference
 
