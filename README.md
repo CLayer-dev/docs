@@ -2,6 +2,12 @@
 
 Official documentation for Circle Layer - a high-performance EVM-compatible blockchain built with Delegated Proof-of-Stake consensus, delivering efficient throughput and security for DeFi, NFTs, and enterprise applications.
 
+## 🚀 Build Status
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CircleLayer/docs)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Docs Version](https://img.shields.io/badge/version-1.0.0-blue)
+
 ## 🌐 Live Documentation
 
 - **Documentation Site**: [https://docs.circlelayer.com](https://docs.circlelayer.com)
