@@ -278,6 +278,28 @@
     font-weight: 700;
 }
 
+/* Chart Container Styles */
+.chartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 3rem 0;
+    padding: 0;
+    background: transparent;
+}
+
+.pieChart {
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.pieChart:hover {
+    transform: scale(1.02);
+}
+
 .sectionHeader p {
     margin: 0;
     color: var(--ifm-color-content-secondary);
