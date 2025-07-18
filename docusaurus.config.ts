@@ -78,6 +78,114 @@ const config: Config = {
         content: 'blockchain, layer 1, evm, pos, defi, smart contracts, circle layer',
       },
     },
+    // Open Graph meta tags for social media sharing
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:type',
+        content: 'website',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:title',
+        content: 'Circle Layer Documentation',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:description',
+        content: 'Official documentation for Circle Layer, an EVM-compatible POS Layer 1 blockchain with AI security features and exceptional scalability.',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:url',
+        content: 'https://docs.circlelayer.com',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:site_name',
+        content: 'Circle Layer',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:image',
+        content: 'https://docs.circlelayer.com/img/circle-layer-social-card.jpg',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:image:width',
+        content: '1200',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:image:height',
+        content: '630',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:image:alt',
+        content: 'Circle Layer - High-Performance EVM-Compatible Blockchain',
+      },
+    },
+    // Twitter Card meta tags
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:title',
+        content: 'Circle Layer Documentation',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:description',
+        content: 'Official documentation for Circle Layer, an EVM-compatible POS Layer 1 blockchain with AI security features and exceptional scalability.',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:image',
+        content: 'https://docs.circlelayer.com/img/circle-layer-social-card.jpg',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:image:alt',
+        content: 'Circle Layer - High-Performance EVM-Compatible Blockchain',
+      },
+    },
+    // Telegram specific meta tags
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'telegram:channel',
+        content: '@circlelayer',
+      },
+    },
     // Security headers removed for development - will be handled at server level in production
     {
       tagName: 'meta',
