@@ -4,6 +4,7 @@ description: Comprehensive tokenomics structure for Circle Layer's $CLAYER token
 ---
 
 import styles from './tokenomics.module.css';
+import ThemeAwarePieChart from '../../src/components/ThemeAwarePieChart.jsx';
 
 # Circle Layer Tokenomics
 
@@ -89,17 +90,7 @@ Circle Layer's tokenomics model is designed to create a sustainable, decentraliz
     </div>
     
     <div className={styles.chartContainer}>
-      <video 
-        src="/img/Pie_Chart.webm" 
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-        className={styles.pieChart}
-        alt="Circle Layer Token Distribution Chart"
-      >
-        Your browser does not support the video element.
-      </video>
+      <ThemeAwarePieChart className={styles.pieChart} />
     </div>
     
     <div className={styles.allocationGrid}>
