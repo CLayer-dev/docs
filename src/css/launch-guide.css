@@ -1,0 +1,135 @@
+/* CLAYER Trading Guide - Gradient Table Styling */
+
+.launch-guide-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Common header styling for both themes */
+.launch-guide-table thead th {
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: left;
+    border: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Light theme gradients */
+[data-theme="light"] .launch-guide-table thead th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+[data-theme="light"] .launch-guide-table tbody tr:nth-child(1) td {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #2d1b47;
+}
+
+[data-theme="light"] .launch-guide-table tbody tr:nth-child(2) td {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #8b4513;
+}
+
+[data-theme="light"] .launch-guide-table tbody tr:nth-child(3) td {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #2c5f5d;
+}
+
+[data-theme="light"] .launch-guide-table tbody tr:nth-child(4) td {
+    background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+    color: #6b4c93;
+}
+
+[data-theme="light"] .launch-guide-table tbody tr:nth-child(5) td {
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    color: #1e3a8a;
+}
+
+[data-theme="light"] .launch-guide-table tbody tr:nth-child(6) td {
+    background: linear-gradient(135deg, #81fbb6 0%, #28d8da 100%);
+    color: #065f46;
+}
+
+/* Dark theme gradients */
+[data-theme="dark"] .launch-guide-table thead th {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+[data-theme="dark"] .launch-guide-table tbody tr:nth-child(1) td {
+    background: linear-gradient(135deg, #ff4757 20%, #ff6b7d 100%);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .launch-guide-table tbody tr:nth-child(2) td {
+    background: linear-gradient(135deg, #ff7f50 0%, #ff6348 100%);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .launch-guide-table tbody tr:nth-child(3) td {
+    background: linear-gradient(135deg, #ffa726 0%, #fb8c00 100%);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .launch-guide-table tbody tr:nth-child(4) td {
+    background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .launch-guide-table tbody tr:nth-child(5) td {
+    background: linear-gradient(135deg, #42a5f5 0%, #2196f3 100%);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .launch-guide-table tbody tr:nth-child(6) td {
+    background: linear-gradient(135deg, #26c6da 0%, #00bcd4 100%);
+    color: #ffffff;
+}
+
+/* Common table cell styling */
+.launch-guide-table td {
+    padding: 1rem;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.launch-guide-table tbody tr td:first-child {
+    font-weight: 600;
+}
+
+.launch-guide-table tbody tr td:last-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Hover effects */
+.launch-guide-table tbody tr:hover td {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .launch-guide-table {
+        font-size: 0.9rem;
+    }
+
+    .launch-guide-table td {
+        padding: 0.8rem 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .launch-guide-table {
+        font-size: 0.8rem;
+    }
+
+    .launch-guide-table td {
+        padding: 0.6rem 0.4rem;
+    }
+}

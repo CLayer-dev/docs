@@ -31,6 +31,7 @@ import RoadmapIcon from '../../Icon/Roadmap';
 import ComparisonIcon from '../../Icon/Comparison';
 import CommunityIcon from '../../Icon/Community';
 import FAQsIcon from '../../Icon/FAQs';
+import TradingIcon from '../../Icon/Trading';
 
 // Custom icon renderer for categories
 function renderCategoryLabelWithIcon(label) {
@@ -43,6 +44,7 @@ function renderCategoryLabelWithIcon(label) {
     '🔧 APIs & SDKs': { icon: <APIsIcon />, text: 'APIs & SDKs' },
     '🎯 Nodes & Validation': { icon: <NodesIcon />, text: 'Nodes & Validation' },
     '🏛️ Governance': { icon: <GovernanceIcon />, text: 'Governance' },
+    '💰 Trading': { icon: <TradingIcon />, text: 'Trading' },
     '🗺️ Roadmap': { icon: <RoadmapIcon />, text: 'Roadmap' },
     '📊 Comparison': { icon: <ComparisonIcon />, text: 'Comparison' },
     '👥 Community': { icon: <CommunityIcon />, text: 'Community' },

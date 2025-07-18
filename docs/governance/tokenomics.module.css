@@ -831,3 +831,238 @@
         font-size: 0.8rem;
     }
 }
+
+/* ========================================
+   LP LOCK SECTION STYLING
+   ======================================== */
+
+.lpLockSection {
+    margin: 3rem 0;
+}
+
+.lpLockCard {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(67, 160, 71, 0.05) 100%);
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.1);
+    transition: all 0.3s ease;
+}
+
+.lpLockCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(76, 175, 80, 0.15);
+}
+
+.lpLockCard::before {
+    content: '🔒';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 6rem;
+    opacity: 0.05;
+    pointer-events: none;
+    transform: rotate(15deg);
+}
+
+.lpLockHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.uncxLogoSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.uncxLogo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.lockInfo h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ifm-color-emphasis-800);
+}
+
+.lockInfo p {
+    margin: 0.25rem 0 0 0;
+    color: var(--ifm-color-emphasis-600);
+    font-size: 0.95rem;
+}
+
+.lockBadge {
+    background: linear-gradient(135deg, #4caf50 0%, #43a047 100%);
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.lockDuration {
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.lockDetails {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.lockStats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.statItem .statLabel {
+    font-size: 0.85rem;
+    color: var(--ifm-color-emphasis-600);
+    font-weight: 500;
+}
+
+.statItem .statValue {
+    font-size: 1rem;
+    color: var(--ifm-color-emphasis-800);
+    font-weight: 600;
+}
+
+.verifySection {
+    justify-self: end;
+}
+
+.verifyButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+    color: white !important;
+    text-decoration: none !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.verifyButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.verifyIcon {
+    font-size: 1.1rem;
+}
+
+.externalIcon {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.lockDescription {
+    background: rgba(76, 175, 80, 0.05);
+    border-left: 4px solid #4caf50;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.lockDescription p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--ifm-color-emphasis-700);
+}
+
+.lockDescription strong {
+    color: var(--ifm-color-emphasis-800);
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .lpLockCard {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(67, 160, 71, 0.08) 100%);
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+[data-theme="dark"] .lockInfo h3 {
+    color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme="dark"] .lockInfo p {
+    color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme="dark"] .statItem .statLabel {
+    color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme="dark"] .statItem .statValue {
+    color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme="dark"] .lockDescription {
+    background: rgba(76, 175, 80, 0.08);
+}
+
+[data-theme="dark"] .lockDescription p {
+    color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme="dark"] .lockDescription strong {
+    color: var(--ifm-color-emphasis-900);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .lpLockHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .lockDetails {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .verifySection {
+        justify-self: start;
+    }
+
+    .lockStats {
+        grid-template-columns: 1fr;
+    }
+
+    .uncxLogoSection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .lockInfo {
+        text-align: left;
+    }
+}

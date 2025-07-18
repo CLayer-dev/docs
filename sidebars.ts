@@ -29,9 +29,12 @@ const sidebars: SidebarsConfig = {
       label: 'Tokenomics',
     },
     {
-      type: 'doc',
-      id: 'governance/trading-fees',
-      label: 'Trading Fees',
+      type: 'category',
+      label: '💰 Trading',
+      items: [
+        'governance/trading-fees',
+        'getting-started/clayer-trading-guide',
+      ],
     },
     {
       type: 'category',
