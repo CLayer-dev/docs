@@ -24,6 +24,16 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
+      type: 'doc',
+      id: 'governance/tokenomics',
+      label: 'Tokenomics',
+    },
+    {
+      type: 'doc',
+      id: 'governance/trading-fees',
+      label: 'Trading Fees',
+    },
+    {
       type: 'category',
       label: '🚀 Getting Started',
       items: [
@@ -93,7 +103,6 @@ const sidebars: SidebarsConfig = {
       label: '🏛️ Governance',
       items: [
         'governance/governance-model',
-        'governance/tokenomics',
       ],
     },
     {

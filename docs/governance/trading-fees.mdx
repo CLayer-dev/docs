@@ -1,0 +1,202 @@
+---
+sidebar_position: 3
+description: Comprehensive guide to Circle Layer's innovative progressive trading fee structure with automated reductions and transparency mechanisms.
+---
+
+import styles from './tokenomics.module.css';
+import ContractAddress from '../../src/components/ContractAddress.jsx';
+
+# Trading Fees
+
+<div className={styles.hero}>
+  <div className={styles.heroContent}>
+    <h2>Progressive Trading Fee Structure</h2>
+    <p>Circle Layer introduces the first token with a capped trading fee - a revolutionary progressive fee structure that automatically reduces and eventually eliminates fees as the project reaches funding milestones.</p>
+  </div>
+</div>
+
+<ContractAddress />
+
+## Trading Fee Structure
+
+**First token with a capped trading fee** - progressive reduction to 0% with complete transparency.
+
+**Key Point**: Fee applies **only** to buys/sells. **No fee** on wallet transfers.
+
+<div className={styles.tokenDetails}>
+  <div className={styles.tokenCard}>
+    <h3>📊 Trading Fee Overview</h3>
+    <div className={styles.detailsGrid}>
+      <div className={styles.detail}>
+        <span className={styles.label}>Fee Application:</span>
+        <span className={styles.value}>Buys & Sells Only</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>Transfer Fee:</span>
+        <span className={styles.value}>0% (Always Free)</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>Launch Protection:</span>
+        <span className={styles.value}>30% → 5% (First 15 Min)</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>Final State:</span>
+        <span className={styles.value}>0% (Fee-Free Forever)</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>Contract Address:</span>
+        <span className={styles.value}>0x7b5d...ee57</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Anti-Sniper Launch Protection
+
+Time-based restrictions prevent sniping and ensure fair distribution:
+
+<div className={styles.tokenDetails}>
+  <div className={styles.tokenCard}>
+    <h3>🛡️ Launch Fee Schedule</h3>
+    <div className={styles.detailsGrid}>
+      <div className={styles.detail}>
+        <span className={styles.label}>0-1 min:</span>
+        <span className={styles.value}>30% Fee | 0.10% Max Wallet</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>2-5 min:</span>
+        <span className={styles.value}>25% Fee | 0.15% Max Wallet</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>6-8 min:</span>
+        <span className={styles.value}>20% Fee | 0.20% Max Wallet</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>9-15 min:</span>
+        <span className={styles.value}>10% Fee | 0.30% Max Wallet</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>16-60 min:</span>
+        <span className={styles.value}>5% Fee | 0.50% Max Wallet</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>After 1 Hour:</span>
+        <span className={styles.value}>Progressive Fees | No Limits</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Progressive Fee Reduction
+
+**Automated fee reductions** based on ETH collection milestones:
+
+<div className={styles.tokenDetails}>
+  <div className={styles.tokenCard}>
+    <h3>📊 Treasury Milestone Chart</h3>
+    <div className={styles.detailsGrid}>
+      <div className={styles.detail}>
+        <span className={styles.label}>🔴 0-300 ETH:</span>
+        <span className={styles.value}>5% Fee (Bootstrap)</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>🟡 300-500 ETH:</span>
+        <span className={styles.value}>4% Fee (Growth)</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>🔵 500-2000 ETH:</span>
+        <span className={styles.value}>3% Fee (Scaling)</span>
+      </div>
+      <div className={styles.detail}>
+        <span className={styles.label}>🟢 2000+ ETH:</span>
+        <span className={styles.value}>0% Fee (Fee-Free Forever)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+## How It Works
+
+**Phased fee reduction** with automated smart contract execution:
+
+1. **0-300 ETH**: 5% fee → Bootstrap development
+2. **300-500 ETH**: 4% fee → Growth phase  
+3. **500-2000 ETH**: 3% fee → Scaling phase
+4. **2000+ ETH**: 0% fee → Fee-free forever
+
+## Why Cap Trading Fees?
+
+**First token** with capped fees and automated reductions:
+
+✅ **Clear Purpose**: Bootstrap to self-sustainability  
+✅ **Investor Protection**: Predictable fee structure with endpoints  
+✅ **Automated Execution**: Hardcoded smart contract reductions  
+✅ **Complete Transparency**: On-chain tracking and community oversight
+
+## Fund Allocation
+
+**Transparent distribution** across four key areas:
+
+<div className={styles.summaryStats}>
+  <div className={styles.statItem}>
+    <div className={styles.statValue}>40%</div>
+    <div className={styles.statLabel}>🔧 Development</div>
+  </div>
+  <div className={styles.statItem}>
+    <div className={styles.statValue}>30%</div>
+    <div className={styles.statLabel}>🖥️ Infrastructure</div>
+  </div>
+  <div className={styles.statItem}>
+    <div className={styles.statValue}>20%</div>
+    <div className={styles.statLabel}>📈 Marketing</div>
+  </div>
+  <div className={styles.statItem}>
+    <div className={styles.statValue}>10%</div>
+    <div className={styles.statLabel}>⚖️ Operations</div>
+  </div>
+</div>
+
+## Transparency Commitment
+
+**Complete accountability** with on-chain verification:
+
+✅ **Real-time on-chain tracking** of all fee collections  
+✅ **Automated smart contract execution** - no human intervention  
+✅ **Community oversight** with regular progress reporting  
+
+## Technical Implementation
+
+**Smart contract features**:
+- ⏰ **Automated time-based reductions** 
+- 📊 **Real-time ETH collection tracking**
+- 🎯 **Hardcoded milestone triggers**
+- 🛡️ **Advanced anti-bot protection**
+- 🔗 **Complete on-chain transparency**
+
+## Result
+
+**A bootstrapped project enabling early investors to grow with it while utilizing trading fees to reach funding goals and creating long-term value as it matures.**
+
+<div className={styles.summaryStats}>
+  <div className={styles.statItem}>
+    <div className={styles.statValue}>✅ Fair & Transparent</div>
+    <div className={styles.statLabel}>Clear reduction milestones</div>
+  </div>
+  <div className={styles.statItem}>
+    <div className={styles.statValue}>✅ Investor-Centric</div>
+    <div className={styles.statLabel}>Growth-focused fees</div>
+  </div>
+  <div className={styles.statItem}>
+    <div className={styles.statValue}>✅ Auto-Reducing</div>
+    <div className={styles.statLabel}>Hardcoded reductions</div>
+  </div>
+  <div className={styles.statItem}>
+    <div className={styles.statValue}>✅ Fee-Free Future</div>
+    <div className={styles.statLabel}>0% at 2000 ETH</div>
+  </div>
+</div>
+
+<div className={styles.disclaimer}>
+  <h4>⚖️ Smart Contract Guarantee</h4>
+  <p>The trading fee mechanism is **immutably coded** into the Circle Layer smart contract. Fee reductions cannot be altered, reversed, or manipulated by any party. This provides maximum security, predictability, and trust for all investors.</p>
+</div> 

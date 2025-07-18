@@ -5,6 +5,7 @@ description: Comprehensive tokenomics structure for Circle Layer's $CLAYER token
 
 import styles from './tokenomics.module.css';
 import ThemeAwarePieChart from '../../src/components/ThemeAwarePieChart.jsx';
+import ContractAddress from '../../src/components/ContractAddress.jsx';
 
 # Circle Layer Tokenomics
 
@@ -14,6 +15,8 @@ import ThemeAwarePieChart from '../../src/components/ThemeAwarePieChart.jsx';
     <p>A decentralized blockchain ecosystem enabling scalable infrastructure with a community-driven, fair launch approach.</p>
   </div>
 </div>
+
+<ContractAddress />
 
 ## Overview
 
@@ -45,7 +48,7 @@ Circle Layer's tokenomics model is designed to create a sustainable, decentraliz
       </div>
       <div className={styles.detail}>
         <span className={styles.label}>Official CA:</span>
-        <span className={styles.value}>TBA</span>
+        <span className={styles.value} style={{wordBreak: 'break-all', fontSize: '0.85rem'}}>0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57</span>
       </div>
     </div>
   </div>

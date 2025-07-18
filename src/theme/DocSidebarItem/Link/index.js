@@ -5,6 +5,20 @@ import { isActiveSidebarItem } from '@docusaurus/theme-common/internal';
 import Link from '@docusaurus/Link';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import IconExternalLink from '@theme/Icon/ExternalLink';
+import TokenomicsIcon from '../../Icon/Tokenomics';
+import TradingFeesIcon from '../../Icon/TradingFees';
+import IntroductionIcon from '../../Icon/Introduction';
+import GettingStartedIcon from '../../Icon/GettingStarted';
+import ArchitectureIcon from '../../Icon/Architecture';
+import SecurityIcon from '../../Icon/Security';
+import DevelopmentIcon from '../../Icon/Development';
+import APIsIcon from '../../Icon/APIs';
+import NodesIcon from '../../Icon/Nodes';
+import GovernanceIcon from '../../Icon/Governance';
+import RoadmapIcon from '../../Icon/Roadmap';
+import ComparisonIcon from '../../Icon/Comparison';
+import CommunityIcon from '../../Icon/Community';
+import FAQsIcon from '../../Icon/FAQs';
 import SearchModal from '../../../components/SearchModal';
 import styles from './styles.module.css';
 
@@ -16,6 +30,58 @@ function isJson(str) {
 	}
 	// return true;
 }
+
+// Custom icon renderer for specific pages and categories
+function renderLabelWithIcon(label, href) {
+	// Handle specific document pages
+	if (href && href.includes('/governance/tokenomics')) {
+		return (
+			<>
+				<TokenomicsIcon />
+				Tokenomics
+			</>
+		);
+	}
+	if (href && href.includes('/governance/trading-fees')) {
+		return (
+			<>
+				<TradingFeesIcon />
+				Trading Fees
+			</>
+		);
+	}
+
+	// Handle category labels (remove emojis and add icons)
+	const iconMap = {
+		'📚 Introduction': { icon: <IntroductionIcon />, text: 'Introduction' },
+		'🚀 Getting Started': { icon: <GettingStartedIcon />, text: 'Getting Started' },
+		'🏗️ Architecture': { icon: <ArchitectureIcon />, text: 'Architecture' },
+		'🔒 AI Security': { icon: <SecurityIcon />, text: 'AI Security' },
+		'💻 Development': { icon: <DevelopmentIcon />, text: 'Development' },
+		'🔧 APIs & SDKs': { icon: <APIsIcon />, text: 'APIs & SDKs' },
+		'🎯 Nodes & Validation': { icon: <NodesIcon />, text: 'Nodes & Validation' },
+		'🏛️ Governance': { icon: <GovernanceIcon />, text: 'Governance' },
+		'🗺️ Roadmap': { icon: <RoadmapIcon />, text: 'Roadmap' },
+		'📊 Comparison': { icon: <ComparisonIcon />, text: 'Comparison' },
+		'👥 Community': { icon: <CommunityIcon />, text: 'Community' },
+		'🛡️ Security': { icon: <SecurityIcon />, text: 'Security' },
+		'❓ FAQs': { icon: <FAQsIcon />, text: 'FAQs' },
+	};
+
+	// Check if this label matches any of our mapped categories
+	if (iconMap[label]) {
+		return (
+			<>
+				{iconMap[label].icon}
+				{iconMap[label].text}
+			</>
+		);
+	}
+
+	// Return original label for other items
+	return label;
+}
+
 export default function DocSidebarItemLink({
 	item,
 	onItemClick,
@@ -89,13 +155,13 @@ export default function DocSidebarItemLink({
 						})}
 						{...props}
 					>
-						{label}
+						{renderLabelWithIcon(label, href)}
 						{!isInternalLink && <IconExternalLink />}
 					</Link>
 				)}
 			</li>
 
-			{isSearchComponent && (
+			{isModalOpen && (
 				<SearchModal isOpen={isModalOpen} onClose={handleCloseModal} />
 			)}
 		</>
