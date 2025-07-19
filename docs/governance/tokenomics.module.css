@@ -2,7 +2,7 @@
 .hero {
     background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
     border-radius: 16px;
-    padding: 4rem 2rem;
+    padding: 1.5rem 2rem;
     margin: 2rem 0;
     color: white;
     text-align: center;
@@ -728,7 +728,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero {
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
     }
 
     .heroContent h2 {
@@ -1064,5 +1064,461 @@
 
     .lockInfo {
         text-align: left;
+    }
+}
+
+/* ========================================
+   VESTING SECTION STYLING
+   ======================================== */
+
+.vestingSection {
+    margin: 3rem 0;
+}
+
+.vestingHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.vestingHeader h3 {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ifm-color-emphasis-800);
+    background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.vestingHeader p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--ifm-color-emphasis-600);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.vestingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: start;
+}
+
+.vestingCard {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.08) 0%, rgba(103, 58, 183, 0.05) 100%);
+    border: 2px solid rgba(156, 39, 176, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(156, 39, 176, 0.1);
+}
+
+.vestingCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(156, 39, 176, 0.15);
+    border-color: rgba(156, 39, 176, 0.3);
+}
+
+.vestingCard::before {
+    content: '⏰';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 4rem;
+    opacity: 0.06;
+    pointer-events: none;
+    transform: rotate(20deg);
+}
+
+.vestingCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.pinkSaleIcon {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.pinkSaleLogo {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.vestingTitle h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ifm-color-emphasis-800);
+}
+
+.recordId {
+    font-size: 0.8rem;
+    color: var(--ifm-color-emphasis-500);
+    font-weight: 400;
+}
+
+.vestingStatus {
+    flex-shrink: 0;
+}
+
+.statusBadge {
+    background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(156, 39, 176, 0.3);
+}
+
+.vestingDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.vestingStats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Special styling for all cards with 4 stats */
+.vestingCard .vestingStats {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+/* Special slim wide styling for the KOL fund card (5th card) */
+.vestingCard:nth-child(5) {
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.08) 0%, rgba(255, 140, 0, 0.05) 100%);
+    border-color: rgba(255, 165, 0, 0.25);
+    padding: 1.25rem 2rem;
+    width: 100%;
+    max-width: none;
+    margin: 1rem 0;
+    grid-column: 1 / -1;
+}
+
+.vestingCard:nth-child(5) .vestingCardHeader {
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vestingCard:nth-child(5) .vestingDetails {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.vestingCard:nth-child(5) .vestingStats {
+    display: flex;
+    gap: 3rem;
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.vestingCard:nth-child(5) .vestingStat {
+    text-align: center;
+    min-width: 120px;
+}
+
+.vestingCard:nth-child(5) .vestingLabel {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    color: var(--ifm-color-emphasis-600);
+}
+
+.vestingCard:nth-child(5) .vestingValue {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ifm-color-emphasis-800);
+}
+
+.vestingCard:nth-child(5) .verifyVestingButton {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.vestingStat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.vestingLabel {
+    font-size: 0.8rem;
+    color: var(--ifm-color-emphasis-600);
+    font-weight: 500;
+}
+
+.vestingValue {
+    font-size: 0.95rem;
+    color: var(--ifm-color-emphasis-800);
+    font-weight: 600;
+}
+
+.verifyVestingButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+    color: white !important;
+    text-decoration: none !important;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(156, 39, 176, 0.3);
+    width: 100%;
+}
+
+.verifyVestingButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(156, 39, 176, 0.4);
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.vestingDescription {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.05) 0%, rgba(103, 58, 183, 0.03) 100%);
+    border: 1px solid rgba(156, 39, 176, 0.15);
+    border-radius: 16px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+}
+
+.vestingInfo h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--ifm-color-emphasis-800);
+}
+
+.vestingInfo p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--ifm-color-emphasis-700);
+}
+
+.vestingInfo strong {
+    color: var(--ifm-color-emphasis-800);
+}
+
+.vestingBenefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ifm-color-emphasis-700);
+}
+
+.benefitIcon {
+    font-size: 1rem;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .vestingCard {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.12) 0%, rgba(103, 58, 183, 0.08) 100%);
+    border-color: rgba(156, 39, 176, 0.25);
+}
+
+[data-theme="dark"] .vestingCard:hover {
+    border-color: rgba(156, 39, 176, 0.4);
+}
+
+[data-theme="dark"] .vestingTitle h4 {
+    color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme="dark"] .recordId {
+    color: var(--ifm-color-emphasis-600);
+}
+
+[data-theme="dark"] .vestingLabel {
+    color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme="dark"] .vestingValue {
+    color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme="dark"] .vestingDescription {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.08) 0%, rgba(103, 58, 183, 0.05) 100%);
+    border-color: rgba(156, 39, 176, 0.2);
+}
+
+[data-theme="dark"] .vestingInfo h4 {
+    color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme="dark"] .vestingInfo p {
+    color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme="dark"] .vestingInfo strong {
+    color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme="dark"] .benefit {
+    color: var(--ifm-color-emphasis-800);
+}
+
+/* Dark theme for KOL card */
+[data-theme="dark"] .vestingCard:nth-child(5) {
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.12) 0%, rgba(255, 140, 0, 0.08) 100%);
+    border-color: rgba(255, 165, 0, 0.3);
+}
+
+[data-theme="dark"] .vestingCard:nth-child(5) .vestingLabel {
+    color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme="dark"] .vestingCard:nth-child(5) .vestingValue {
+    color: var(--ifm-color-emphasis-900);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .vestingCard:nth-child(5) .vestingStats {
+        gap: 2rem;
+    }
+
+    .vestingCard:nth-child(5) .vestingStat {
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vestingGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .vestingCardHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .vestingStats {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    /* Cards with 4 stats responsive layout */
+    .vestingCard:nth-child(1) .vestingStats,
+    .vestingCard:nth-child(2) .vestingStats,
+    .vestingCard:last-child .vestingStats {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+
+    /* KOL card mobile responsive */
+    .vestingCard:nth-child(5) {
+        padding: 1rem 1.5rem;
+    }
+
+    .vestingCard:nth-child(5) .vestingDetails {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+
+    .vestingCard:nth-child(5) .vestingStats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .vestingCard:nth-child(5) .vestingStat {
+        text-align: left;
+        min-width: auto;
+    }
+
+    .vestingCard:nth-child(5) .verifyVestingButton {
+        align-self: center;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .vestingDescription {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .vestingBenefits {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .vestingHeader h3 {
+        font-size: 1.6rem;
+    }
+
+    .pinkSaleIcon {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .vestingCard {
+        padding: 1rem;
+    }
+
+    .vestingCard:nth-child(5) {
+        padding: 0.75rem 1rem;
+    }
+
+    .vestingCard:nth-child(5) .vestingStats {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .vestingCard:nth-child(5) .vestingStat {
+        text-align: center;
+        padding: 0.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+    }
+
+    .vestingDescription {
+        padding: 1rem;
+    }
+
+    .verifyVestingButton {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.8rem;
     }
 }

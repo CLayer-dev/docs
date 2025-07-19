@@ -97,7 +97,7 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         property: 'og:description',
-        content: 'Official documentation for Circle Layer, an EVM-compatible POS Layer 1 blockchain with AI security features and exceptional scalability.',
+        content: 'Official documentation for Circle Layer, an EVM-compatible DPOS Layer 1 blockchain with AI security features and exceptional scalability.',
       },
     },
     {
