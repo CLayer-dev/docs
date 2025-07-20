@@ -54,7 +54,7 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                 }}
             >
                 <UniswapIcon size={18} />
-                Buy on Uniswap
+                Trade on TGE (July 22)
             </a>
         );
     }
@@ -113,7 +113,7 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent'
                     }}>
-                        Trade $CLAYER on Uniswap
+                        $CLAYER TGE on Uniswap V2
                     </div>
                     <div style={{
                         fontSize: '0.9rem',
@@ -130,19 +130,19 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                             backgroundColor: '#10B981',
                             display: 'inline-block'
                         }} />
-                        Ethereum Mainnet  <span style={{
+                        TGE: July 22, 2025  <span style={{
                             width: '6px',
                             height: '6px',
                             borderRadius: '50%',
                             backgroundColor: '#10B981',
                             display: 'inline-block'
-                        }} /> Uniswap V2  <span style={{
+                        }} /> 4-6 PM UTC  <span style={{
                             width: '6px',
                             height: '6px',
                             borderRadius: '50%',
                             backgroundColor: '#10B981',
                             display: 'inline-block'
-                        }} /> ETH/CLAYER Pair
+                        }} /> Ethereum Mainnet
                     </div>
                 </div>
             </div>
@@ -156,8 +156,8 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                     position: 'relative',
                     zIndex: 1
                 }}>
-                    Buy $CLAYER tokens directly with ETH using Uniswap's decentralized exchange.
-                    Click the button below to open Uniswap with the correct trading pair pre-selected.
+                    $CLAYER will be available for trading on Uniswap during our TGE on July 22, 2025 at 4-6 PM UTC.
+                    The link below will open Uniswap with the correct ETH/CLAYER trading pair when trading goes live.
                 </div>
             )}
 
@@ -207,7 +207,7 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                     }}
                 >
                     <UniswapIcon size={22} />
-                    Buy $CLAYER on Uniswap
+                    Trade $CLAYER
                     <svg
                         width="16"
                         height="16"
@@ -251,7 +251,7 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                             strokeLinejoin="round"
                         />
                     </svg>
-                    <span style={{ color: 'var(--ifm-color-success)' }}>ETH → CLAYER</span>
+                    <span style={{ color: 'var(--ifm-color-success)' }}>TGE: July 22, 2025 4-6 PM UTC</span>
                 </div>
             </div>
 
@@ -286,8 +286,8 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                     />
                 </svg>
                 <div>
-                    <strong>Important:</strong> Always verify the contract address (0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57) before trading.
-                    If transaction fails, try again with a higher slippage.
+                    <strong>Important:</strong> $CLAYER trading will begin during TGE on July 22, 2025 (4-6 PM UTC).
+                    Always verify the contract address (0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57) before trading.
                 </div>
             </div>
         </div>
