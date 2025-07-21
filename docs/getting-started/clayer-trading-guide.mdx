@@ -10,7 +10,7 @@ import UniswapBuyButton from '../../src/components/UniswapBuyButton.jsx';
 
 ## ⚡ Quick Reference
 
-**IMPORTANT**: Follow these limits to prevent transaction failures during launch.
+**IMPORTANT**: Follow these limits to prevent transaction failures during **launch only**.
 
 <table className="launch-guide-table">
   <thead>
@@ -70,6 +70,8 @@ Circle Layer implements **automatic purchase limits** during launch to ensure fa
 - Not checking current time phase before buying
 - Attempting multiple large purchases quickly
 - Ignoring wallet limit warnings
+- Not verifying the contract address
+- Not updating slippage, gas, etc.
 
 ## 🔢 Exact Purchase Limits
 
