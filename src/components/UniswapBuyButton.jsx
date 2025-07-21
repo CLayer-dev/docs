@@ -285,9 +285,22 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                         strokeLinejoin="round"
                     />
                 </svg>
-                <div>
+                <div style={{
+                    wordBreak: 'break-word',
+                    overflowWrap: 'break-word',
+                    minWidth: 0,
+                    flex: 1,
+                    lineHeight: '1.5'
+                }}>
                     <strong>Important:</strong> $CLAYER trading will begin during TGE on July 22, 2025 (4-6 PM UTC).
-                    Always verify the contract address (0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57) before trading.
+                    Always verify the contract address <code style={{
+                        backgroundColor: 'var(--ifm-color-emphasis-200)',
+                        padding: '2px 4px',
+                        borderRadius: '4px',
+                        fontSize: '0.8rem',
+                        wordBreak: 'break-all',
+                        overflowWrap: 'break-word'
+                    }}>0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57</code> before trading.
                 </div>
             </div>
         </div>
