@@ -76,7 +76,7 @@ Circle Layer is building a robust, high-performance blockchain ecosystem through
 - ✅ Developer documentation (Complete)
 
 #### Ecosystem Development 🔄 COMING SOON
-- 🔄 ERC20 token deployment (Deploying Soon)
+- ✅ ERC20 token deployment (Deployed)
 - 🔄 Native wallet app development (In Progress)
 - 🔄 Native DEX development (In Progress)
 - 🔄 Native bridge development (In Progress)
