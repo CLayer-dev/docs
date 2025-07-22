@@ -151,7 +151,7 @@ Following successful testnet deployment, Phase 2 focuses on comprehensive ecosys
   - Technical partnerships
   - Educational content creation
 
-#### 🛡️ Advanced Security Layer (Inspired by Monad's Approach)
+#### 🛡️ Advanced Security Layer
 
 **Agentic Smart Contract Security**
 - **Pre-deployment AI Auditing**
@@ -168,7 +168,7 @@ Following successful testnet deployment, Phase 2 focuses on comprehensive ecosys
 
 **Why This Approach**: Recent incidents in the Sui ecosystem and other L1s have shown the critical importance of comprehensive pre-mainnet testing. By building a full ecosystem on testnet first, we can identify and resolve potential issues before they affect real user funds.
 
-#### 📊 Performance Optimization (Monad-Inspired)
+#### 📊 Performance Optimization
 - **Parallel Execution Engine**
   - Multi-threaded transaction processing
   - Optimistic execution with rollback capabilities
@@ -251,13 +251,13 @@ Building every component (bridge, DEX, wallets) in-house ensures seamless integr
 - Office hours with core team
 - Grant program applications
 
-## Inspiration: Learning from Monad
+## Circle Layer Innovation
 
-We're closely studying Monad's approach to high-performance blockchain development:
+Our approach to high-performance blockchain development focuses on:
 
-- **Parallel Execution**: Implementing similar multi-threaded transaction processing
+- **Parallel Execution**: Advanced multi-threaded transaction processing
 - **EVM Optimization**: Custom bytecode improvements for better performance
-- **State Management**: Advanced techniques for efficient state handling
+- **State Management**: Efficient techniques for optimal state handling
 - **Testing Methodology**: Comprehensive testing before mainnet deployment
 
 ## Get Involved
