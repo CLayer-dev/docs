@@ -12,7 +12,7 @@ import UniswapBuyButton from '../../src/components/UniswapBuyButton.jsx';
 <div className={styles.hero}>
   <div className={styles.heroContent}>
     <h2>Progressive Trading Fee Structure</h2>
-    <p>Circle Layer introduces the token with a capped trading fee - a progressive fee structure that automatically reduces and eventually eliminates fees as the project reaches funding milestones.</p>
+    <p>Circle Layer features a progressive fee structure that automatically reduces and eventually eliminates fees as the project reaches funding milestones. Token is now live and trading on Ethereum!</p>
   </div>
 </div>
 
@@ -20,16 +20,20 @@ import UniswapBuyButton from '../../src/components/UniswapBuyButton.jsx';
 
 <UniswapBuyButton />
 
-## Trading Fee Structure
+## Current Trading Fee Status
 
-**Token with a capped trading fee** - progressive reduction to 0% with complete transparency.
+**Token is Live** - Progressive fee structure is now active with automated reductions to 0%.
 
 **Key Point**: Fee applies **only** to buys/sells. **No fee** on wallet transfers.
 
 <div className={styles.tokenDetails}>
   <div className={styles.tokenCard}>
-    <h3>📊 Trading Fee Overview</h3>
+    <h3>📊 Current Trading Fee Overview</h3>
     <div className={styles.detailsGrid}>
+      <div className={styles.detail}>
+        <span className={styles.label}>Current Fee:</span>
+        <span className={styles.value}>5% (Post-Launch)</span>
+      </div>
       <div className={styles.detail}>
         <span className={styles.label}>Fee Application:</span>
         <span className={styles.value}>Buys & Sells Only</span>
@@ -39,54 +43,12 @@ import UniswapBuyButton from '../../src/components/UniswapBuyButton.jsx';
         <span className={styles.value}>0% (Always Free)</span>
       </div>
       <div className={styles.detail}>
-        <span className={styles.label}>Launch Protection:</span>
-        <span className={styles.value}>30% → 5% (First 15 Min)</span>
+        <span className={styles.label}>Status:</span>
+        <span className={styles.value}>Live & Progressive</span>
       </div>
     </div>
   </div>
 </div>
-
-## Anti-Sniper Launch Protection
-
-Time-based restrictions prevent sniping and ensure fair distribution:
-
-<div className={styles.tokenDetails}>
-  <div className={styles.tokenCard}>
-    <h3>🛡️ Launch Fee Schedule</h3>
-    <div className={styles.detailsGrid}>
-      <div className={styles.detail}>
-        <span className={styles.label}>0-1 min:</span>
-        <span className={styles.value}>30% Fee | 0.10% Max Wallet</span>
-      </div>
-      <div className={styles.detail}>
-        <span className={styles.label}>2-5 min:</span>
-        <span className={styles.value}>25% Fee | 0.15% Max Wallet</span>
-      </div>
-      <div className={styles.detail}>
-        <span className={styles.label}>6-8 min:</span>
-        <span className={styles.value}>20% Fee | 0.20% Max Wallet</span>
-      </div>
-      <div className={styles.detail}>
-        <span className={styles.label}>9-15 min:</span>
-        <span className={styles.value}>10% Fee | 0.30% Max Wallet</span>
-      </div>
-      <div className={styles.detail}>
-        <span className={styles.label}>16-60 min:</span>
-        <span className={styles.value}>5% Fee | 0.50% Max Wallet</span>
-      </div>
-      <div className={styles.detail}>
-        <span className={styles.label}>After 1 Hour:</span>
-        <span className={styles.value}>Progressive Fees | No Limits</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-:::warning TEMPORARY LAUNCH FEES
-🕐 **High trading fees (30%-5%) are ONLY active during the first 15 minutes after launch!**
-
-After the initial 15 minute launch period, trading fees automatically switch to the progressive fee structure starting at 5% and decreasing to 0% permanently based on funding milestones. These elevated launch fees ensure fair distribution and prevent bot sniping during the critical launch window only.
-:::
 
 ## Progressive Fee Reduction
 
@@ -98,7 +60,7 @@ After the initial 15 minute launch period, trading fees automatically switch to 
     <div className={styles.detailsGrid}>
       <div className={styles.detail}>
         <span className={styles.label}>🔴 0-300 ETH:</span>
-        <span className={styles.value}>5% Fee (Bootstrap)</span>
+        <span className={styles.value}>5% Fee (Current Phase)</span>
       </div>
       <div className={styles.detail}>
         <span className={styles.label}>🟡 300-500 ETH:</span>
@@ -116,23 +78,30 @@ After the initial 15 minute launch period, trading fees automatically switch to 
   </div>
 </div>
 
+:::info CURRENT STATUS
+🚀 **CLAYER is now live and trading!** 
+
+We are currently in the initial phase (0-300 ETH) with 5% trading fees. As the treasury grows through trading activity, fees will automatically reduce according to the milestone schedule above, eventually reaching 0% permanently at 2000+ ETH.
+:::
+
 ## How It Works
 
 **Phased fee reduction** with automated smart contract execution:
 
-1. **0-300 ETH**: 5% fee → Bootstrap development
+1. **0-300 ETH**: 5% fee → Bootstrap development (Current Phase)
 2. **300-500 ETH**: 4% fee → Growth phase  
 3. **500-2000 ETH**: 3% fee → Scaling phase
 4. **2000+ ETH**: 0% fee → Fee-free forever
 
-## Why Cap Trading Fees?
+## Why Progressive Trading Fees?
 
-**First token** with capped fees and automated reductions:
+**Innovative approach** with capped fees and automated reductions:
 
 ✅ **Clear Purpose**: Bootstrap to self-sustainability  
 ✅ **Investor Protection**: Predictable fee structure with endpoints  
 ✅ **Automated Execution**: Hardcoded smart contract reductions  
-✅ **Complete Transparency**: On-chain tracking and community oversight
+✅ **Complete Transparency**: On-chain tracking and community oversight  
+✅ **Fee-Free Future**: Guaranteed 0% fees at final milestone
 
 ## Fund Allocation
 
@@ -157,6 +126,15 @@ After the initial 15 minute launch period, trading fees automatically switch to 
   </div>
 </div>
 
+## Real-Time Treasury Tracking
+
+**Monitor progress toward fee reductions:**
+
+✅ **Live ETH collection tracking** via smart contract  
+✅ **Transparent milestone progress** with community updates  
+✅ **Automated fee reductions** when milestones are reached  
+✅ **Public verification** of all treasury movements
+
 ## Transparency Commitment
 
 **Complete accountability** with on-chain verification:
@@ -164,28 +142,38 @@ After the initial 15 minute launch period, trading fees automatically switch to 
 ✅ **Real-time on-chain tracking** of all fee collections  
 ✅ **Automated smart contract execution** - no human intervention  
 ✅ **Community oversight** with regular progress reporting  
+✅ **Milestone notifications** when fee reductions occur
 
 ## Technical Implementation
 
 **Smart contract features**:
-- ⏰ **Automated time-based reductions** 
+- ⏰ **Automated milestone-based reductions** 
 - 📊 **Real-time ETH collection tracking**
 - 🎯 **Hardcoded milestone triggers**
-- 🛡️ **Advanced anti-bot protection**
 - 🔗 **Complete on-chain transparency**
+- 🛡️ **Immutable fee reduction schedule**
+
+## Trading Tips
+
+**Optimize your trading experience:**
+
+- **Slippage**: Use 5-6% if experiencing transaction failures
+- **Gas Fees**: Use medium to fast gas for reliable execution  
+- **Timing**: Monitor gas prices to reduce overall trading costs
+- **Milestones**: Follow treasury progress for upcoming fee reductions
 
 ## Result
 
-**A bootstrapped project enabling early investors to grow with it while utilizing trading fees to reach funding goals and creating long-term value as it matures.**
+**A successfully launched project with clear path to fee-free trading as it grows and reaches sustainable funding levels.**
 
 <div className={styles.summaryStats}>
   <div className={styles.statItem}>
-    <div className={styles.statValue}>✅ Fair & Transparent</div>
-    <div className={styles.statLabel}>Clear reduction milestones</div>
+    <div className={styles.statValue}>✅ Live & Trading</div>
+    <div className={styles.statLabel}>Successfully launched on Ethereum</div>
   </div>
   <div className={styles.statItem}>
-    <div className={styles.statValue}>✅ Investor-Centric</div>
-    <div className={styles.statLabel}>Growth-focused fees</div>
+    <div className={styles.statValue}>✅ Progressive Structure</div>
+    <div className={styles.statLabel}>Clear path to 0% fees</div>
   </div>
   <div className={styles.statItem}>
     <div className={styles.statValue}>✅ Auto-Reducing</div>
@@ -193,7 +181,7 @@ After the initial 15 minute launch period, trading fees automatically switch to 
   </div>
   <div className={styles.statItem}>
     <div className={styles.statValue}>✅ Fee-Free Future</div>
-    <div className={styles.statLabel}>0% at 2000 ETH</div>
+    <div className={styles.statLabel}>0% at 2000 ETH milestone</div>
   </div>
 </div>
 

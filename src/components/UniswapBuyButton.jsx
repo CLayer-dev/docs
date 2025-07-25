@@ -54,7 +54,7 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                 }}
             >
                 <UniswapIcon size={18} />
-                Trade on TGE (July 22)
+                Trade $CLAYER Now
             </a>
         );
     }
@@ -113,7 +113,7 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent'
                     }}>
-                        $CLAYER TGE on Uniswap V2
+                        $CLAYER Live on Uniswap V2
                     </div>
                     <div style={{
                         fontSize: '0.9rem',
@@ -130,13 +130,13 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                             backgroundColor: '#10B981',
                             display: 'inline-block'
                         }} />
-                        TGE: July 22, 2025  <span style={{
+                        Live Trading  <span style={{
                             width: '6px',
                             height: '6px',
                             borderRadius: '50%',
                             backgroundColor: '#10B981',
                             display: 'inline-block'
-                        }} /> 4-6 PM UTC  <span style={{
+                        }} /> 5% Progressive Fees  <span style={{
                             width: '6px',
                             height: '6px',
                             borderRadius: '50%',
@@ -156,8 +156,8 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                     position: 'relative',
                     zIndex: 1
                 }}>
-                    $CLAYER will be available for trading on Uniswap during our TGE on July 22, 2025 at 4-6 PM UTC.
-                    The link below will open Uniswap with the correct ETH/CLAYER trading pair when trading goes live.
+                    $CLAYER is now live and trading on Uniswap V2! Click the button below to trade with the correct ETH/CLAYER pair.
+                    Use 5-6% slippage if experiencing transaction issues.
                 </div>
             )}
 
@@ -207,7 +207,7 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                     }}
                 >
                     <UniswapIcon size={22} />
-                    Trade $CLAYER
+                    Trade $CLAYER Now
                     <svg
                         width="16"
                         height="16"
@@ -251,18 +251,18 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                             strokeLinejoin="round"
                         />
                     </svg>
-                    <span style={{ color: 'var(--ifm-color-success)' }}>TGE: July 22, 2025 4-6 PM UTC</span>
+                    <span style={{ color: 'var(--ifm-color-success)' }}>🚀 Live & Trading on Ethereum</span>
                 </div>
             </div>
 
             <div style={{
                 marginTop: '16px',
                 padding: '12px 16px',
-                backgroundColor: 'var(--ifm-color-warning-contrast-background)',
+                backgroundColor: 'var(--ifm-color-info-contrast-background)',
                 borderRadius: '10px',
                 fontSize: '0.85rem',
-                color: 'var(--ifm-color-warning-contrast-foreground)',
-                border: '1px solid var(--ifm-color-warning)',
+                color: 'var(--ifm-color-info-contrast-foreground)',
+                border: '1px solid var(--ifm-color-info)',
                 display: 'flex',
                 alignItems: 'flex-start',
                 gap: '10px',
@@ -278,8 +278,8 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                     style={{ marginTop: '1px', flexShrink: 0 }}
                 >
                     <path
-                        d="M12 9V13M12 17H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                        stroke="var(--ifm-color-warning)"
+                        d="M13 16H12V12H11M12 8H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                        stroke="var(--ifm-color-info)"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -292,7 +292,7 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                     flex: 1,
                     lineHeight: '1.5'
                 }}>
-                    <strong>Important:</strong> $CLAYER trading will begin during TGE on July 22, 2025 (4-6 PM UTC).
+                    <strong>Trading Info:</strong> $CLAYER is now live on Ethereum with 5% trading fees (reducing to 0% via milestones).
                     Always verify the contract address <code style={{
                         backgroundColor: 'var(--ifm-color-emphasis-200)',
                         padding: '2px 4px',
@@ -300,7 +300,7 @@ const UniswapBuyButton = ({ compact = false, showDescription = true }) => {
                         fontSize: '0.8rem',
                         wordBreak: 'break-all',
                         overflowWrap: 'break-word'
-                    }}>0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57</code> before trading.
+                    }}>0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57</code> before trading. Use 5-6% slippage if needed.
                 </div>
             </div>
         </div>

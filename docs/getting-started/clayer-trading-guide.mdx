@@ -1,143 +1,131 @@
 ---
 sidebar_position: 4
-description: Essential CLAYER Trading Guide - purchase limits and timing to prevent transaction failures during Circle Layer token launch.
+description: CLAYER Trading Guide - How to buy and trade Circle Layer tokens on Ethereum with slippage recommendations and useful links.
 ---
 
 import '../../src/css/launch-guide.css';
 import UniswapBuyButton from '../../src/components/UniswapBuyButton.jsx';
 
-# CLAYER Launch Trading Guide
+# CLAYER Trading Guide
 
-## ⚡ Quick Reference
+## 🚀 Token is Live on Ethereum!
 
-**IMPORTANT**: Follow these limits to prevent transaction failures during **launch only**.
+Circle Layer (CLAYER) token is now live and trading on Ethereum mainnet. You can buy and trade CLAYER tokens freely without any restrictions.
 
-<table className="launch-guide-table">
-  <thead>
-    <tr>
-      <th>Time Period</th>
-      <th>Max Transaction per Wallet</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>0-1 minute</strong></td>
-      <td><strong>1,000,000 CLAYER</strong></td>
-    </tr>
-    <tr>
-      <td><strong>2-5 minutes</strong></td>
-      <td><strong>1,500,000 CLAYER</strong></td>
-    </tr>
-    <tr>
-      <td><strong>6-8 minutes</strong></td>
-      <td><strong>2,000,000 CLAYER</strong></td>
-    </tr>
-    <tr>
-      <td><strong>9-15 minutes</strong></td>
-      <td><strong>3,000,000 CLAYER</strong></td>
-    </tr>
-    <tr>
-      <td><strong>16-60 minutes</strong></td>
-      <td><strong>5,000,000 CLAYER</strong></td>
-    </tr>
-    <tr>
-      <td><strong>After 1 hour</strong></td>
-      <td><strong>No limits</strong></td>
-    </tr>
-  </tbody>
-</table>
+## 📊 Live Trading Data
 
-:::warning TEMPORARY LAUNCH RESTRICTIONS
-🕐 **These purchase limits are ONLY active for the first 60 minutes after launch!**
+**View live price and charts on DexScreener:**  
+🔗 [**CLAYER on DexScreener**](https://dexscreener.com/ethereum/0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57)
 
-After the initial 1-hour period, all wallet restrictions are automatically removed and you can trade freely without any purchase limits. These anti-sniper measures ensure fair distribution during the critical launch window only.
-:::
+### 📈 Live Chart
 
-:::info PROGRESSIVE TRADING FEES
-📈 **Trading fees start higher during launch and automatically decrease over time!**
+<style>{`
+#dexscreener-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 125%;
+  margin: 30px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media(min-width: 1400px) {
+  #dexscreener-embed {
+    padding-bottom: 65%;
+  }
+}
+#dexscreener-embed iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+`}</style>
 
-Launch fees begin at 30% (first minute) and reduce to 5% after 1 hour. Post-launch, fees progressively decrease based on project milestones from 5% → 4% → 3% → 0% permanently. This ensures project funding while protecting long-term holders with eventual fee-free trading.
-:::
+<div id="dexscreener-embed">
+  <iframe 
+    src="https://dexscreener.com/ethereum/0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+    title="CLAYER Live Trading Chart on DexScreener">
+  </iframe>
+</div>
 
-## 🛡️ Anti-Sniper Protection
+## 🛒 How to Buy CLAYER
 
-Circle Layer implements **automatic purchase limits** during launch to ensure fair distribution and prevent bot sniping.
-
-### Why These Limits Exist
-- **Prevent transaction failures** - Buying more than allowed will cause your transaction to fail
-- **Fair distribution** - Everyone gets equal opportunity to participate  
-- **Anti-bot protection** - Prevents automated sniping attacks
-- **Network stability** - Manages initial trading volume
-
-## 📋 Buying Strategy
-
-### ✅ **Recommended Approach**
-1. **Check the time** since launch started
-2. **Buy within limits** for your time window
-3. **Wait for next phase** if you want to buy more
-4. **Monitor gas fees** - higher during peak times
-
-### ❌ **Common Mistakes**
-- Trying to buy maximum amount in first minute
-- Not checking current time phase before buying
-- Attempting multiple large purchases quickly
-- Ignoring wallet limit warnings
-- Not verifying the contract address
-- Not updating slippage, gas, etc.
-
-## 🔢 Exact Purchase Limits
-
-**Total Supply**: 1,000,000,000 CLAYER
-
-- **First minute**: Max 0.10% = **1,000,000 tokens**
-- **2-5 minutes**: Max 0.15% = **1,500,000 tokens**  
-- **6-8 minutes**: Max 0.20% = **2,000,000 tokens**
-- **9-15 minutes**: Max 0.30% = **3,000,000 tokens**
-- **16-60 minutes**: Max 0.50% = **5,000,000 tokens**
-- **After 1 hour**: **No wallet limits**
-
-## ⚠️ Transaction Failure Prevention
-
-### Why Transactions Fail
-- **Exceeding wallet limit** for current time period
-- **Network congestion** during high activity
-- **Insufficient gas** for transaction processing
-- **Slippage tolerance** set too low
-
-### How to Avoid Failures
-1. **Stay within limits** - Check your current phase
-2. **Use adequate gas** - Don't use "slow" gas settings
-
-## 🎯 Pro Tips
-
-### Best Practice
-- **Start small** in early phases
-- **Scale up** as limits increase
-- **Monitor the clock** - know exactly when phases change
-- **Have backup plan** - be ready for network congestion
-
-
-## 🔗 Contract Address
-
+### 1. **Contract Address**
 **Circle Layer (CLAYER)**: `0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57`
 
-### Verification
-- Always verify the contract address
-- Only buy from official DEX pairs
-- Double-check you're on the right network
+:::warning VERIFY CONTRACT ADDRESS
+Always verify the contract address before trading. Only use the official contract address listed above to avoid scams.
+:::
 
-## 🦄 Trade on Uniswap
+### 2. **Trade on Uniswap**
 
 <UniswapBuyButton />
 
+### 3. **Trading Settings**
+
+**Recommended Settings:**
+- **Slippage**: 5-6% (if facing trading issues)
+- **Gas**: Use medium to fast gas settings for reliable execution
+- **MEV Protection**: Enable if your wallet supports it
+
+:::tip SLIPPAGE RECOMMENDATION
+If your transaction fails or you're having trouble with trades, try increasing slippage to 5-6%. This helps ensure your transaction goes through during periods of high volatility or low liquidity.
+:::
+
+## 🔧 Troubleshooting
+
+### Common Trading Issues
+
+**Transaction Failed?**
+- ✅ Increase slippage to 5-6%
+- ✅ Use higher gas fees
+- ✅ Verify you have enough ETH for gas
+- ✅ Double-check contract address
+
+**Price Impact Too High?**
+- ✅ Reduce trade size
+- ✅ Split large trades into smaller amounts
+- ✅ Wait for better liquidity
+
+**Slow Transaction?**
+- ✅ Increase gas price
+- ✅ Try trading during off-peak hours
+- ✅ Use MEV protection if available
+
+## 📈 Trading Tips
+
+### Best Practices
+1. **Start Small** - Test with small amounts first
+2. **Check Liquidity** - Monitor trading volume on DexScreener
+3. **Monitor Gas** - Trade when gas fees are reasonable
+4. **Use Limit Orders** - If your DEX supports them for better prices
+5. **DYOR** - Always do your own research before trading
+
+### Security Tips
+- ✅ Only use official contract addresses
+- ✅ Verify DEX pair authenticity
+- ✅ Never share your private keys
+- ✅ Use hardware wallets for large amounts
+- ✅ Double-check all transaction details
+
+## 🔗 Official Links
+
+- **DexScreener**: [CLAYER Charts & Data](https://dexscreener.com/ethereum/0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57)
+- **Uniswap**: Trade directly via the button above
+- **Telegram**: [Join Community](https://t.me/circlelayer)
+- **Website**: [Circle Layer Official](https://circlelayer.io)
+
 ## 📞 Support
 
-If your transaction fails:
-1. **Check wallet limits** - likely cause of failure
-2. **Wait for next phase** - limits increase over time  
-3. **Try smaller amount** - stay well within limits
-4. **Join [Telegram](https://t.me/circlelayer)** for live support
+Need help with trading?
+
+1. **Check this guide** - Most issues are covered above
+2. **Join [Telegram](https://t.me/circlelayer)** - Community support
+3. **Visit DexScreener** - Live trading data and community comments
+4. **Follow official channels** - Latest updates and announcements
 
 ---
 
-**Remember**: These limits are **hardcoded** in the smart contract and **cannot be bypassed**. Following this guide ensures successful transactions without transaction failures. 
+**Happy Trading!** 🎉 CLAYER is now fully live and trading on Ethereum. Use the resources above to trade safely and stay connected with the community. 
