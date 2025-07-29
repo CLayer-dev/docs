@@ -125,7 +125,7 @@ Circle Layer's architecture and features make it ideal for various blockchain ap
 ## Technical Requirements
 
 ### Performance Needs
-- High throughput (2,000-50,000 TPS)
+- High throughput (~5,000-50,000 TPS)
 - Low latency (&lt;10s finality)
 - Cost efficiency
 - Scalability

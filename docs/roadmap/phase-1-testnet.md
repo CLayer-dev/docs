@@ -52,7 +52,7 @@ Circle Layer is building a robust, high-performance blockchain ecosystem through
 - Seamless transition preserving all community value
 
 ### Technical Development Objectives
-- Build and test core blockchain infrastructure achieving 2,000 TPS on testnet
+- Build and test core blockchain infrastructure achieving ~5,000 TPS on testnet
 - Establish robust validator network and consensus mechanism
 - Create comprehensive developer tooling and documentation
 - Implement security frameworks and audit processes
@@ -64,7 +64,7 @@ Circle Layer is building a robust, high-performance blockchain ecosystem through
 - ✅ DPoS consensus implementation (Live)
 - ✅ EVM compatibility layer (Live)
 - ✅ Network optimization (Live)
-- ✅ 2,000 TPS achievement (Live)
+- ✅ ~5,000 TPS achievement (Live)
 - ✅ Testnet network operational (Live)
 
 #### Developer Infrastructure 🛠️ LIVE
@@ -94,7 +94,7 @@ Circle Layer is building a robust, high-performance blockchain ecosystem through
 ### Target Performance Metrics
 - **Block Time**: 3 seconds
 - **Transaction Finality**: 1-3 seconds
-- **Current TPS Target**: 2,000 TPS
+- **Current TPS Target**: ~5,000 TPS
 - **Target Network Uptime**: 99.95%
 - **Gas Price**: Minimum 0.000021 CLAYER
 

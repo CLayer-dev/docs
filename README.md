@@ -82,7 +82,7 @@ docs/
 
 ## 🌟 Key Features
 
-- **High Performance**: 2,000 TPS with 3-second block times
+- **High Performance**: ~5,000 TPS with 3-second block times
 - **EVM Compatible**: Deploy Ethereum contracts directly
 - **Delegated Proof-of-Stake**: Energy-efficient consensus mechanism
 - **Developer Friendly**: Comprehensive tooling and documentation

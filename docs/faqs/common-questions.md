@@ -30,7 +30,7 @@ Yes, Circle Layer is fully EVM compatible, allowing Ethereum developers to easil
 - **Block Time**: 3 seconds
 - **Finality**: 1-3 second
 - **Target Performance**: 50,000 TPS
-- **Current Performance**: 2,000+ TPS
+- **Current Performance**: ~5,000 TPS
 - **Target Uptime**: 99.95%
 
 ### Where can I find network resources?
