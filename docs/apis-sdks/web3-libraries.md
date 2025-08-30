@@ -6,23 +6,23 @@ sidebar_position: 2
 
 ## Overview
 
-Circle Layer supports various Web3 libraries for interacting with the testnet. All standard Ethereum Web3 libraries work with Circle Layer using the same patterns.
+Core Layer supports various Web3 libraries for interacting with the testnet. All standard Ethereum Web3 libraries work with Core Layer using the same patterns.
 
-`Circle Layer Blockchain` is compatible with `Ethereum`'s ecosystem，support all `Ethereum`'s `RPC` API and SDK.
+`Core Layer Blockchain` is compatible with `Ethereum`'s ecosystem，support all `Ethereum`'s `RPC` API and SDK.
 
 ### RPC Compatibility
 [RPC Method List](https://ethereum.org/en/developers/docs/apis/json-rpc/)
 
 Example:
 ```bash
-curl -s -H 'content-type:application/json' -d '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' https://testnet-rpc.circlelayer.com
+curl -s -H 'content-type:application/json' -d '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' https://testnet-rpc.clayer.io
 ```
 
 ## Network Configuration
 
-### Circle Layer Testnet
-- **RPC URL**: https://testnet-rpc.circlelayer.com
-- **WebSocket**: wss://testnet-rpc.circlelayer.com
+### Core Layer Testnet
+- **RPC URL**: https://testnet-rpc.clayer.io
+- **WebSocket**: wss://testnet-rpc.clayer.io
 - **Chain ID**: 28525
 - **Currency**: CLAYER
 
@@ -33,10 +33,10 @@ curl -s -H 'content-type:application/json' -d '{"jsonrpc":"2.0","method":"web3_c
 import { ethers } from 'ethers';
 
 // HTTP Provider
-const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
+const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.clayer.io');
 
 // WebSocket Provider
-const wsProvider = new ethers.providers.WebSocketProvider('wss://testnet-rpc.circlelayer.com');
+const wsProvider = new ethers.providers.WebSocketProvider('wss://testnet-rpc.clayer.io');
 
 // Wallet setup
 const wallet = new ethers.Wallet(privateKey, provider);
@@ -51,14 +51,14 @@ console.log('Balance:', ethers.utils.formatEther(balance), 'CLAYER');
 const Web3 = require('web3')
 
 // HTTP Provider
-const web3 = new Web3('https://testnet-rpc.circlelayer.com');
+const web3 = new Web3('https://testnet-rpc.clayer.io');
 
 // WebSocket Provider
-const webSocketWeb3 = new Web3('wss://testnet-rpc.circlelayer.com');
+const webSocketWeb3 = new Web3('wss://testnet-rpc.clayer.io');
 
 // Get chain info
 async function getChainId() {
-    const web3 = new Web3('https://testnet-rpc.circlelayer.com')
+    const web3 = new Web3('https://testnet-rpc.clayer.io')
     let chainId = await web3.eth.getChainId()
     console.log(`chain id: ${chainId}`)
     return chainId
@@ -76,7 +76,7 @@ function generateAccount() {
 
 // Build transaction
 async function transfer(fromAccount, to, value){
-    const web3 = new Web3('https://testnet-rpc.circlelayer.com')
+    const web3 = new Web3('https://testnet-rpc.clayer.io')
     let chainId = await web3.eth.getChainId()
     let nonce = await web3.eth.getTransactionCount(fromAccount.address)
     let gasPrice = await web3.eth.getGasPrice()
@@ -106,7 +106,7 @@ console.log('Balance:', web3.utils.fromWei(balance, 'ether'), 'CLAYER');
 from web3 import Web3
 
 # HTTP Provider
-w3 = Web3(Web3.HTTPProvider('https://testnet-rpc.circlelayer.com'))
+w3 = Web3(Web3.HTTPProvider('https://testnet-rpc.clayer.io'))
 
 # Account setup
 account = w3.eth.account.from_key(private_key)
@@ -116,7 +116,7 @@ balance = w3.eth.get_balance(account.address)
 print(f'Balance: {w3.from_wei(balance, "ether")} CLAYER')
 ```
 
-## Circle Layer Specific Features
+## Core Layer Specific Features
 
 ### Network Information
 ```javascript
@@ -168,13 +168,13 @@ const tx = await contract.someWriteMethod(params, {
 // Always verify network
 const network = await provider.getNetwork();
 if (network.chainId !== 28525) {
-  throw new Error('Please connect to Circle Layer Testnet');
+  throw new Error('Please connect to Core Layer Testnet');
 }
 ```
 
 ### 2. Gas Management
 ```javascript
-// Use appropriate gas settings for Circle Layer
+// Use appropriate gas settings for Core Layer
 const gasPrice = ethers.utils.parseUnits('21', 'gwei'); // 0.000021 CLAYER
 const gasLimit = await contract.estimateGas.methodName(params);
 ```
@@ -197,7 +197,7 @@ try {
 ```javascript
 // Use environment variables
 const provider = new ethers.providers.JsonRpcProvider(
-  process.env.CIRCLE_LAYER_RPC || 'https://testnet-rpc.circlelayer.com'
+  process.env.CIRCLE_LAYER_RPC || 'https://testnet-rpc.clayer.io'
 );
 ```
 
@@ -218,19 +218,19 @@ function useCircleLayer() {
         const web3Provider = new ethers.providers.Web3Provider(window.ethereum);
         setProvider(web3Provider);
         
-        // Add Circle Layer Testnet to MetaMask if needed
+        // Add Core Layer Testnet to MetaMask if needed
         await window.ethereum.request({
           method: 'wallet_addEthereumChain',
           params: [{
             chainId: '0x6F75', // 28525 in hex
-            chainName: 'Circle Layer Testnet',
+            chainName: 'Core Layer Testnet',
             nativeCurrency: {
               name: 'CLAYER',
               symbol: 'CLAYER',
               decimals: 18
             },
-            rpcUrls: ['https://testnet-rpc.circlelayer.com'],
-            blockExplorerUrls: ['https://explorer-testnet.circlelayer.com/']
+            rpcUrls: ['https://testnet-rpc.clayer.io'],
+            blockExplorerUrls: ['https://explorer-testnet.clayer.io/']
           }]
         });
       }
@@ -249,7 +249,7 @@ const { ethers } = require('ethers');
 
 class CircleLayerService {
   constructor() {
-    this.provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
+    this.provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.clayer.io');
     this.wallet = new ethers.Wallet(process.env.PRIVATE_KEY, this.provider);
   }
 
@@ -268,9 +268,9 @@ class CircleLayerService {
 ## Resources
 
 ### Example Contract
-- **Address**: [0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB)
-- **Explorer**: [View Contract](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- **ABI**: [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+- **Address**: [0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB)
+- **Explorer**: [View Contract](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- **ABI**: [Contract ABI](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 
 ### Additional Guides
 - [Web3 Integration Guide](/development/web3-integration)

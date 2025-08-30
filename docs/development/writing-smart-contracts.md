@@ -4,15 +4,15 @@ sidebar_position: 1
 
 # Writing Smart Contracts
 
-Circle Layer is fully EVM compatible, allowing you to use all existing Ethereum development tools and patterns with enhanced performance and lower costs.
+Core Layer is fully EVM compatible, allowing you to use all existing Ethereum development tools and patterns with enhanced performance and lower costs.
 
 ## Development Environment Setup
 
 ### Prerequisites
 - **Solidity Knowledge**: Familiarity with Solidity programming language
 - **Development Tools**: Node.js, npm/yarn for package management
-- **Circle Layer Access**: Testnet connection configured
-- **Test Tokens**: CLAYER tokens from [faucet](https://faucet.circlelayer.com)
+- **Core Layer Access**: Testnet connection configured
+- **Test Tokens**: CLAYER tokens from [faucet](https://faucet.clayer.io)
 
 ### Required Tools Installation
 ```bash
@@ -50,7 +50,7 @@ contract CircleLayerExample is ReentrancyGuard, Ownable {
         // Initialize contract state
     }
     
-    // Functions with Circle Layer optimizations
+    // Functions with Core Layer optimizations
     function deposit() external payable nonReentrant {
         require(msg.value > 0, "Deposit amount must be greater than 0");
         balances[msg.sender] += msg.value;
@@ -71,7 +71,7 @@ contract CircleLayerExample is ReentrancyGuard, Ownable {
 }
 ```
 
-## Circle Layer Optimization Best Practices
+## Core Layer Optimization Best Practices
 
 ### 1. Gas Efficiency for CLAYER
 ```solidity
@@ -102,7 +102,7 @@ contract OptimizedContract {
 
 ### 2. Security Patterns
 ```solidity
-// Follow Circle Layer security best practices
+// Follow Core Layer security best practices
 contract SecureContract {
     using SafeMath for uint256; // For older Solidity versions
     
@@ -134,7 +134,7 @@ contract SecureContract {
 
 ### 3. Event Optimization
 ```solidity
-// Optimize events for Circle Layer's fast finality
+// Optimize events for Core Layer's fast finality
 contract EventOptimizedContract {
     // Indexed parameters for efficient filtering
     event TokenTransfer(
@@ -162,7 +162,7 @@ contract EventOptimizedContract {
 
 ## Testing Framework
 
-### Hardhat Configuration for Circle Layer
+### Hardhat Configuration for Core Layer
 ```javascript
 // hardhat.config.js
 require("@nomiclabs/hardhat-waffle");
@@ -180,7 +180,7 @@ module.exports = {
   },
   networks: {
     circleLayerTestnet: {
-      url: "https://testnet-rpc.circlelayer.com",
+      url: "https://testnet-rpc.clayer.io",
       chainId: 28525,
       accounts: [process.env.PRIVATE_KEY],
       gasPrice: "21000000000", // 0.000021 CLAYER
@@ -188,7 +188,7 @@ module.exports = {
     }
   },
   mocha: {
-    timeout: 40000 // Extended timeout for Circle Layer's 3s blocks
+    timeout: 40000 // Extended timeout for Core Layer's 3s blocks
   }
 };
 ```
@@ -223,7 +223,7 @@ describe("CircleLayerExample", function () {
     expect(await contract.balances(user1.address)).to.equal(depositAmount);
   });
   
-  it("Should validate gas usage on Circle Layer", async function () {
+  it("Should validate gas usage on Core Layer", async function () {
     const tx = await contract.connect(user1).deposit({ 
       value: ethers.utils.parseEther("1.0") 
     });
@@ -243,7 +243,7 @@ describe("CircleLayerExample", function () {
 const { ethers } = require("hardhat");
 
 async function main() {
-  console.log("Deploying to Circle Layer Testnet...");
+  console.log("Deploying to Core Layer Testnet...");
   
   // Get deployer account
   const [deployer] = await ethers.getSigners();
@@ -270,7 +270,7 @@ async function main() {
   }
   
   console.log("✅ Contract successfully deployed and verified");
-  console.log("🔗 View on explorer:", `https://explorer-testnet.circlelayer.com/address/${contract.address}`);
+  console.log("🔗 View on explorer:", `https://explorer-testnet.clayer.io/address/${contract.address}`);
 }
 
 main()
@@ -323,7 +323,7 @@ const ContractInteraction = () => {
         const tx = await contract.deposit({ 
           value: ethers.utils.parseEther("1.0") 
         });
-        await tx.wait(); // Wait for Circle Layer's fast confirmation
+        await tx.wait(); // Wait for Core Layer's fast confirmation
         console.log("Transaction confirmed in ~3 seconds");
       } catch (error) {
         console.error("Transaction failed:", error);
@@ -335,22 +335,22 @@ const ContractInteraction = () => {
 
 ## Performance Considerations
 
-### Circle Layer Specific Optimizations
+### Core Layer Specific Optimizations
 - **Fast Finality**: Leverage 1-3 second finality for better UX
 - **Predictable Gas**: Stable CLAYER pricing allows for accurate gas estimation
-- **Event Handling**: Optimize for Circle Layer's efficient event processing
+- **Event Handling**: Optimize for Core Layer's efficient event processing
 - **State Management**: Design for optimal performance with DPoS consensus
 
 ## Reference Implementation
 
 **Live Example**: `0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB`
-- [View Contract](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- [Source Code](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+- [View Contract](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- [Source Code](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- [Contract ABI](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 
 ## Next Steps
 
-Continue your Circle Layer development journey:
+Continue your Core Layer development journey:
 - [Contract Deployment Guide](./deploying-contracts) - Advanced deployment strategies
 - [Web3 Integration](./web3-integration) - Frontend development patterns
 - [Contract Interaction](./interacting-with-contracts) - Runtime interaction guides

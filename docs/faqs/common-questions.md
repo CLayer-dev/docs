@@ -6,10 +6,10 @@ sidebar_position: 1
 
 ## General Questions
 
-### What is Circle Layer?
-Circle Layer is a high-performance, EVM-compatible blockchain platform powered by Delegated Proof of Stake (DPoS) consensus mechanism with AI-enhanced security features, designed to deliver up to 50,000 TPS with 1-3 second finality.
+### What is Core Layer?
+Core Layer is a high-performance, EVM-compatible blockchain platform powered by Delegated Proof of Stake (DPoS) consensus mechanism with AI-enhanced security features, designed to deliver up to 50,000 TPS with 1-3 second finality.
 
-### How does Circle Layer differ from Ethereum?
+### How does Core Layer differ from Ethereum?
 - **Performance**: Up to 50,000 TPS vs 15 TPS
 - **Block Time**: 3 seconds vs 12+ seconds
 - **Finality**: 1-3 seconds vs 6-10 minutes
@@ -18,8 +18,8 @@ Circle Layer is a high-performance, EVM-compatible blockchain platform powered b
 - **Security**: AI-enhanced security features
 - **Gas Fees**: Lower fees with CLAYER token
 
-### Is Circle Layer EVM compatible?
-Yes, Circle Layer is fully EVM compatible, allowing Ethereum developers to easily port their applications using the same tools and libraries.
+### Is Core Layer EVM compatible?
+Yes, Core Layer is fully EVM compatible, allowing Ethereum developers to easily port their applications using the same tools and libraries.
 
 ## Network Information
 
@@ -34,33 +34,33 @@ Yes, Circle Layer is fully EVM compatible, allowing Ethereum developers to easil
 - **Target Uptime**: 99.95%
 
 ### Where can I find network resources?
-*Circle Layer testnet resources:*
+*Core Layer testnet resources:*
 
-- **RPC**: https://testnet-rpc.circlelayer.com
-- **Explorer**: https://explorer-testnet.circlelayer.com
-- **Faucet**: https://faucet.circlelayer.com
-- **Faucet API**: https://faucet-api.circlelayer.com
+- **RPC**: https://testnet-rpc.clayer.io
+- **Explorer**: https://explorer-testnet.clayer.io
+- **Faucet**: https://faucet.clayer.io
+- **Faucet API**: https://faucet-api.clayer.io
 
 ## Technical Questions
 
-### How do I connect to Circle Layer testnet?
-*Configuration for Circle Layer testnet:*
+### How do I connect to Core Layer testnet?
+*Configuration for Core Layer testnet:*
 
 ```javascript
 // Using ethers.js
-const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
+const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.clayer.io');
 
 // Network configuration for MetaMask
 {
   chainId: '0x6F75', // 28525 in hex
-  chainName: 'Circle Layer Testnet',
+  chainName: 'Core Layer Testnet',
   nativeCurrency: {
     name: 'CLAYER',
     symbol: 'CLAYER',
     decimals: 18
   },
-  rpcUrls: ['https://testnet-rpc.circlelayer.com'],
-  blockExplorerUrls: ['https://explorer-testnet.circlelayer.com']
+  rpcUrls: ['https://testnet-rpc.clayer.io'],
+  blockExplorerUrls: ['https://explorer-testnet.clayer.io']
 }
 ```
 
@@ -73,9 +73,9 @@ const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circl
 **Note**: Ledger and other hardware wallets are NOT currently supported.
 
 ### How do I get testnet tokens?
-*Circle Layer testnet faucet:*
+*Core Layer testnet faucet:*
 
-1. Visit the faucet: https://faucet.circlelayer.com
+1. Visit the faucet: https://faucet.clayer.io
 2. Paste your EVM wallet address
 3. Click "Get 1 CLAYER coin"
 4. Wait 24 hours between requests (1 CLAYER per day limit)
@@ -83,10 +83,10 @@ const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circl
 ## Development Questions
 
 ### How do I deploy a smart contract?
-See our [Deployment Guide](/development/deploying-contracts) with Hardhat and Truffle configurations for Circle Layer testnet.
+See our [Deployment Guide](/development/deploying-contracts) with Hardhat and Truffle configurations for Core Layer testnet.
 
 ### What development tools are available?
-- **Hardhat** (with Circle Layer testnet configuration)
+- **Hardhat** (with Core Layer testnet configuration)
 - **Truffle** (with CLAYER gas settings)
 - **Remix** (using Injected Provider - MetaMask)
 - **Web3.js / Ethers.js** (standard EVM integration)
@@ -160,11 +160,11 @@ See our [Node Guide](/nodes-validation/running-full-node) with current hardware 
 
 ## Integration Questions
 
-### Is Circle Layer the same as other EVM chains?
-Yes, Circle Layer follows standard EVM integration patterns, making it compatible with existing Ethereum development tools and workflows.
+### Is Core Layer the same as other EVM chains?
+Yes, Core Layer follows standard EVM integration patterns, making it compatible with existing Ethereum development tools and workflows.
 
 ### Can I use existing Ethereum tools?
-Yes, all standard Ethereum development tools work with Circle Layer testnet:
+Yes, all standard Ethereum development tools work with Core Layer testnet:
 - Same Web3 libraries
 - Same wallet integrations  
 - Same development frameworks
@@ -173,7 +173,7 @@ Yes, all standard Ethereum development tools work with Circle Layer testnet:
 ## 🚧 Development Status & Roadmap
 
 ### What is the current development status?
-Circle Layer is currently in active development and testing phase with the following progress:
+Core Layer is currently in active development and testing phase with the following progress:
 
 **Completed Components:**
 - Core blockchain architecture (DPoS consensus)
@@ -217,9 +217,9 @@ Circle Layer is currently in active development and testing phase with the follo
 ### When will testnet be available?
 We're currently in the final development and testing phase. Testnet availability will be announced through our official channels when ready.
 
-### What makes Circle Layer economically secure?
+### What makes Core Layer economically secure?
 
-Circle Layer's economic security is built on several mechanisms:
+Core Layer's economic security is built on several mechanisms:
 
 - **Stake-based Consensus**: Validators must stake CLAYER tokens to participate
 - **Economic Incentives**: Validators earn rewards proportional to their stake
@@ -228,7 +228,7 @@ Circle Layer's economic security is built on several mechanisms:
 
 ### How does the fee distribution work?
 
-Circle Layer implements a sophisticated fee distribution system:
+Core Layer implements a sophisticated fee distribution system:
 
 - **Delegator Rewards**: 45% from gas fees (distributed by stake proportion)
 - **Validator Rewards**: 30% from gas fees (distributed by stake proportion)

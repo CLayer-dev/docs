@@ -6,7 +6,7 @@ sidebar_label: EVM Compatibility
 
 # EVM Compatibility
 
-Technical details on Circle Layer's Ethereum Virtual Machine compatibility, migration strategies, and implementation considerations for developers.
+Technical details on Core Layer's Ethereum Virtual Machine compatibility, migration strategies, and implementation considerations for developers.
 
 ## Technical Implementation
 
@@ -17,7 +17,7 @@ Technical details on Circle Layer's Ethereum Virtual Machine compatibility, migr
 - **Smart Contract ABI**: Full Application Binary Interface compatibility
 
 ### Network Integration
-Circle Layer testnet provides full EVM compatibility with:
+Core Layer testnet provides full EVM compatibility with:
 - **Chain ID**: 28525 for testnet distinction
 - **JSON-RPC API**: Complete Ethereum RPC method support
 - **WebSocket Events**: Real-time blockchain event streaming
@@ -30,7 +30,7 @@ Circle Layer testnet provides full EVM compatibility with:
 1. **Deploy Existing Contracts**: Use same bytecode and deployment scripts
 2. **Update Network Configuration**: Change RPC endpoint and chain ID
 3. **Configure Gas Token**: Use CLAYER instead of ETH for gas fees
-4. **Test Integration**: Verify functionality on Circle Layer testnet
+4. **Test Integration**: Verify functionality on Core Layer testnet
 
 **Network Configuration Update:**
 ```javascript
@@ -38,7 +38,7 @@ Circle Layer testnet provides full EVM compatibility with:
 module.exports = {
   networks: {
     circleLayerTestnet: {
-      url: "https://testnet-rpc.circlelayer.com",
+      url: "https://testnet-rpc.clayer.io",
       chainId: 28525,
       accounts: [process.env.PRIVATE_KEY],
       gasPrice: 21000000000, // 0.000021 CLAYER
@@ -61,7 +61,7 @@ Migration from other EVM-compatible chains follows identical patterns:
 **Web3.js Implementation:**
 ```javascript
 const Web3 = require('web3');
-const web3 = new Web3('https://testnet-rpc.circlelayer.com');
+const web3 = new Web3('https://testnet-rpc.clayer.io');
 
 // Standard Ethereum API usage
 const balance = await web3.eth.getBalance(address);
@@ -72,7 +72,7 @@ const blockNumber = await web3.eth.getBlockNumber();
 **Ethers.js Integration:**
 ```javascript
 const { ethers } = require('ethers');
-const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
+const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.clayer.io');
 
 // Same patterns as Ethereum development
 const signer = new ethers.Wallet(privateKey, provider);
@@ -86,11 +86,11 @@ import { defineChain } from 'viem';
 
 const circleLayer = defineChain({
   id: 28525,
-  name: 'Circle Layer Testnet',
-  network: 'circle-layer-testnet',
+  name: 'Core Layer Testnet',
+  network: 'core-layer-testnet',
   nativeCurrency: { name: 'CLAYER', symbol: 'CLAYER', decimals: 18 },
   rpcUrls: {
-    default: { http: ['https://testnet-rpc.circlelayer.com'] }
+    default: { http: ['https://testnet-rpc.clayer.io'] }
   }
 });
 
@@ -109,21 +109,21 @@ await window.ethereum.request({
   method: 'wallet_addEthereumChain',
   params: [{
     chainId: '0x6F75', // 28525 in hex
-    chainName: 'Circle Layer Testnet',
+    chainName: 'Core Layer Testnet',
     nativeCurrency: {
       name: 'CLAYER',
       symbol: 'CLAYER',
       decimals: 18
     },
-    rpcUrls: ['https://testnet-rpc.circlelayer.com'],
-    blockExplorerUrls: ['https://explorer-testnet.circlelayer.com/']
+    rpcUrls: ['https://testnet-rpc.clayer.io'],
+    blockExplorerUrls: ['https://explorer-testnet.clayer.io/']
   }]
 });
 ```
 
 ### WalletConnect Integration
 ```javascript
-// Standard WalletConnect setup works with Circle Layer
+// Standard WalletConnect setup works with Core Layer
 import { WalletConnect } from '@walletconnect/client';
 
 const connector = new WalletConnect({
@@ -140,7 +140,7 @@ await connector.request({
 
 ## Performance Advantages
 
-### Circle Layer Benefits over Ethereum
+### Core Layer Benefits over Ethereum
 - **3s Block Time**: vs Ethereum's 12s average
 - **1-3s Finality**: vs Ethereum's 6-10 minute finality  
 - **Predictable Gas**: Stable CLAYER pricing vs volatile ETH gas
@@ -157,7 +157,7 @@ await connector.request({
 
 ### Contract Verification Process
 1. **Deploy to Testnet**: Use standard deployment tools
-2. **Verify Source Code**: Submit to Circle Layer block explorer
+2. **Verify Source Code**: Submit to Core Layer block explorer
 3. **Test Interactions**: Validate all contract functions
 4. **Performance Testing**: Measure gas usage and execution time
 
@@ -172,9 +172,9 @@ await connector.request({
 ## Reference Implementation
 
 **Example Contract Address**: `0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB`
-- [View on Explorer](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
-- [Source Code](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- [View on Explorer](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- [Contract ABI](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+- [Source Code](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
 
 ## Best Practices
 
@@ -188,7 +188,7 @@ await connector.request({
 - **Same Security Model**: Standard EVM security practices apply
 - **Testnet Testing**: Thorough testing recommended before mainnet deployment
 - **Audit Compatibility**: Existing Ethereum audit reports remain valid
-- **Network Effects**: Consider Circle Layer's DPoS consensus in security design
+- **Network Effects**: Consider Core Layer's DPoS consensus in security design
 
 ## Next Steps
 

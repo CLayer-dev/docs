@@ -8,16 +8,16 @@ import '@site/src/css/comparison.css';
 
 # Key Features
 
-Circle Layer offers a comprehensive suite of features designed to meet the needs of modern blockchain applications. This section details the practical implementation and current capabilities of our platform.
+Core Layer offers a comprehensive suite of features designed to meet the needs of modern blockchain applications. This section details the practical implementation and current capabilities of our platform.
 
 ## Current Network Configuration
 
 **Network Details:**
 - **Chain ID**: 28525 | **Currency**: CLAYER tokens
-- **RPC Endpoint**: https://testnet-rpc.circlelayer.com
-- **WebSocket**: wss://testnet-rpc.circlelayer.com
-- **Block Explorer**: https://explorer-testnet.circlelayer.com
-- **Faucet**: https://faucet.circlelayer.com
+- **RPC Endpoint**: https://testnet-rpc.clayer.io
+- **WebSocket**: wss://testnet-rpc.clayer.io
+- **Block Explorer**: https://explorer-testnet.clayer.io
+- **Faucet**: https://faucet.clayer.io
 
 **Performance Specifications:**
 - **Block Time**: 3 seconds | **Finality**: 1-3 seconds  
@@ -42,7 +42,7 @@ Circle Layer offers a comprehensive suite of features designed to meet the needs
 - **Stake-based Rewards**: Higher stake = higher rewards proportionally
 - **Developer Revenue**: Gas fee sharing with smart contract deployers
 
-*Note: Advanced economic mechanisms apply to Circle Layer mainnet. Current testnet uses simplified economics.*
+*Note: Advanced economic mechanisms apply to Core Layer mainnet. Current testnet uses simplified economics.*
 
 ## Development Status Overview
 

@@ -297,9 +297,9 @@ const AskAINavbarItem: React.FC = () => {
     }, [aiService]);
 
     const quickActions = [
-        { label: "Getting Started", query: "How do I get started with Circle Layer?" },
-        { label: "Network Info", query: "What are Circle Layer network specifications?" },
-        { label: "Development", query: "How do I develop on Circle Layer?" },
+        { label: "Getting Started", query: "How do I get started with Core Layer?" },
+        { label: "Network Info", query: "What are Core Layer network specifications?" },
+        { label: "Development", query: "How do I develop on Core Layer?" },
         { label: "Staking", query: "How does staking work?" }
     ];
 
@@ -316,7 +316,7 @@ const AskAINavbarItem: React.FC = () => {
             <button
                 className={styles.askButton}
                 onClick={() => setIsModalOpen(true)}
-                aria-label="Ask AI about Circle Layer"
+                aria-label="Ask AI about Core Layer"
             >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className={styles.aiIcon}>
                     <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.17L10.5 10.84L11.91 12.25L17.58 6.58L20.25 9.25L21 9ZM1 9L2.5 7.5L5.17 10.17L10.84 4.5L12.25 5.91L6.58 11.58L9.25 14.25L9 15H7L1 9ZM23 16V18L17 24L15.5 22.5L18.17 19.83L12.5 14.16L11.09 15.57L16.76 21.24L14.09 23.91L13 23H15L23 16Z" />
@@ -374,7 +374,7 @@ const AskAINavbarItem: React.FC = () => {
                         <div className={styles.messagesContainer}>
                             {messages.length === 0 ? (
                                 <div className={styles.emptyState}>
-                                    <p>Hi! I'm your Circle Layer AI assistant.</p>
+                                    <p>Hi! I'm your Core Layer AI assistant.</p>
                                     <p>Ask me anything about our blockchain, development, staking, or getting started!</p>
                                 </div>
                             ) : (
@@ -420,7 +420,7 @@ const AskAINavbarItem: React.FC = () => {
                                 type="text"
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
-                                placeholder="Ask about Circle Layer..."
+                                placeholder="Ask about Core Layer..."
                                 className={styles.input}
                                 disabled={isLoading}
                             />

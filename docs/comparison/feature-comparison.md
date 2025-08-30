@@ -8,12 +8,12 @@ import '@site/src/css/comparison.css';
 
 ## Overview
 
-Compare Circle Layer's current testnet features with other blockchain platforms:
+Compare Core Layer's current testnet features with other blockchain platforms:
 
 ## Technical Features
 
 ### Performance (Target vs Live Networks)
-| Feature | Circle Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Block Time | 3s | 12s | 2s | 3s |
 | Finality | 1-3s | 6-10min | 2-3s | 3s |
@@ -27,7 +27,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Circle Layer Testnet</div>
+      <div className="card-title">Core Layer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -127,7 +127,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 </div>
 
 ### Network Configuration
-| Feature | Circle Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Consensus | DPoS | PoW→PoS | PoS | PoA |
 | Currency | CLAYER | ETH | MATIC | BNB |
@@ -141,7 +141,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Circle Layer Testnet</div>
+      <div className="card-title">Core Layer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -241,7 +241,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 </div>
 
 ### Validator Requirements
-| Feature | Circle Layer Testnet | Circle Layer Mainnet | Ethereum 2.0 | Polygon | BSC |
+| Feature | Core Layer Testnet | Core Layer Mainnet | Ethereum 2.0 | Polygon | BSC |
 |---------|---------------------|---------------------|---------------|---------|-----|
 | Min Stake | 32 CLAYER | 100,000 CLAYER | 32 ETH | 1 MATIC | N/A |
 | Min Validators | 5 active | 5 active | Various | 100+ | 21 |
@@ -255,7 +255,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Circle Layer Testnet</div>
+      <div className="card-title">Core Layer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -280,7 +280,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Circle Layer Mainnet</div>
+      <div className="card-title">Core Layer Mainnet</div>
       <div className="network-badge">Mainnet</div>
     </div>
     <div className="card-content">
@@ -382,7 +382,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 ## Security Features
 
 ### Current Implementation
-| Feature | Circle Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Security Model | Standard EVM + DPoS | PoW→PoS | PoS | PoA |
 | Burn Mechanism | 25% gas fees | EIP-1559 | No | No |
@@ -395,7 +395,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Circle Layer Testnet</div>
+      <div className="card-title">Core Layer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -481,7 +481,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 ## Developer Experience
 
 ### Development Tools
-| Feature | Circle Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Hardhat Support | Yes | Yes | Yes | Yes |
 | Truffle Support | Yes | Yes | Yes | Yes |
@@ -495,7 +495,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Circle Layer Testnet</div>
+      <div className="card-title">Core Layer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -595,11 +595,11 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 </div>
 
 ### Network Resources
-| Feature | Circle Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
-| Block Explorer | explorer-testnet.circlelayer.com | etherscan.io | polygonscan.com | bscscan.com |
+| Block Explorer | explorer-testnet.clayer.io | etherscan.io | polygonscan.com | bscscan.com |
 | Faucet | 1 CLAYER/day | Various | Yes | Yes |
-| API Docs | explorer-testnet.circlelayer.com/api-docs | Various | docs.polygon.technology | docs.bnbchain.org |
+| API Docs | explorer-testnet.clayer.io/api-docs | Various | docs.polygon.technology | docs.bnbchain.org |
 | GraphQL | Yes | Yes | Yes | Yes |
 
 <div className="mobile-table-cards">
@@ -609,13 +609,13 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Circle Layer Testnet</div>
+      <div className="card-title">Core Layer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
       <div className="feature-row">
         <div className="feature-label">Block Explorer</div>
-        <div className="feature-value">explorer-testnet.circlelayer.com</div>
+        <div className="feature-value">explorer-testnet.clayer.io</div>
       </div>
       <div className="feature-row">
         <div className="feature-label">Faucet</div>
@@ -623,7 +623,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="feature-row">
         <div className="feature-label">API Docs</div>
-        <div className="feature-value">explorer-testnet.circlelayer.com/api-docs</div>
+        <div className="feature-value">explorer-testnet.clayer.io/api-docs</div>
       </div>
       <div className="feature-row">
         <div className="feature-label">GraphQL</div>
@@ -711,7 +711,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 ## User Experience
 
 ### Wallet Integration
-| Feature | Circle Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | MetaMask | Yes (testnet config) | Yes | Yes | Yes |
 | WalletConnect | Yes (register required) | Yes | Yes | Yes |
@@ -725,7 +725,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Circle Layer Testnet</div>
+      <div className="card-title">Core Layer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -825,7 +825,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 </div>
 
 ### Ecosystem Status
-| Feature | Circle Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Status | In Development | Mainnet | Mainnet | Mainnet |
 | DApps | Testing Phase | 3000+ | 1000+ | 500+ |
@@ -838,7 +838,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Circle Layer Testnet</div>
+      <div className="card-title">Core Layer Testnet</div>
       <div className="network-badge">Development</div>
     </div>
     <div className="card-content">
@@ -923,7 +923,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 
 ## 🚧 Features in Development
 
-### Upcoming Circle Layer Features
+### Upcoming Core Layer Features
 | Feature | Status | Comparable Networks |
 |---------|--------|-------------------|
 | Automated Staking | In Development | Ethereum 2.0, Polygon |
@@ -944,7 +944,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Circle Layer</div>
+          <div className="network-name">Core Layer</div>
           <div className="network-value">In Development</div>
         </div>
         <div className="network-item">
@@ -960,7 +960,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Circle Layer</div>
+          <div className="network-name">Core Layer</div>
           <div className="network-value">In Development</div>
         </div>
         <div className="network-item">
@@ -976,7 +976,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Circle Layer</div>
+          <div className="network-name">Core Layer</div>
           <div className="network-value">In Development</div>
         </div>
         <div className="network-item">
@@ -992,7 +992,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Circle Layer</div>
+          <div className="network-name">Core Layer</div>
           <div className="network-value">In Development</div>
         </div>
         <div className="network-item">
@@ -1008,7 +1008,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Circle Layer</div>
+          <div className="network-name">Core Layer</div>
           <div className="network-value">In Development</div>
         </div>
         <div className="network-item">
@@ -1023,7 +1023,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
 ## Integration Comparison
 
 ### Development Similarity
-| Aspect | Circle Layer | Similarity to |
+| Aspect | Core Layer | Similarity to |
 |--------|-------------|---------------|
 | Smart Contracts | Solidity | Ethereum (100%) |
 | Web3 Libraries | Web3.js, Ethers.js | Ethereum (100%) |
@@ -1042,7 +1042,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Circle Layer</div>
+          <div className="network-name">Core Layer</div>
           <div className="network-value">Solidity</div>
         </div>
         <div className="network-item">
@@ -1058,7 +1058,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Circle Layer</div>
+          <div className="network-name">Core Layer</div>
           <div className="network-value">Web3.js, Ethers.js</div>
         </div>
         <div className="network-item">
@@ -1074,7 +1074,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Circle Layer</div>
+          <div className="network-name">Core Layer</div>
           <div className="network-value">Standard EVM</div>
         </div>
         <div className="network-item">
@@ -1090,7 +1090,7 @@ Compare Circle Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Circle Layer</div>
+          <div className="network-name">Core Layer</div>
           <div className="network-value">Standard EVM</div>
         </div>
         <div className="network-item">

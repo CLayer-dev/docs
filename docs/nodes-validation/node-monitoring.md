@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Overview
 
-Learn how to monitor your Circle Layer node effectively using the correct Geth-based monitoring tools and approaches.
+Learn how to monitor your Core Layer node effectively using the correct Geth-based monitoring tools and approaches.
 
 ## Monitoring Setup
 
@@ -80,7 +80,7 @@ scrape_configs:
 ```json
 {
   "dashboard": {
-    "title": "Circle Layer Node Dashboard",
+    "title": "Core Layer Node Dashboard",
     "panels": [
       {
         "title": "Block Height",
@@ -224,7 +224,7 @@ ls -la /data/circlelayer/config.toml
 ### 1. Critical Alerts
 
 ```yaml
-# alert-rules.yml - Updated for Circle Layer
+# alert-rules.yml - Updated for Core Layer
 groups:
   - name: circlelayer_critical
     rules:
@@ -234,7 +234,7 @@ groups:
         labels:
           severity: critical
         annotations:
-          summary: "Circle Layer node is down"
+          summary: "Core Layer node is down"
           description: "Node has been down for more than 2 minutes"
       
       - alert: SyncFalling
@@ -315,9 +315,9 @@ route:
 receivers:
   - name: 'web.hook'
     email_configs:
-      - to: 'admin@circlelayer.com'
-from: 'admin@circlelayer.com'
-        subject: 'Circle Layer Node Alert'
+      - to: 'admin@clayer.io'
+from: 'admin@clayer.io'
+        subject: 'Core Layer Node Alert'
         body: |
           {{ range .Alerts }}
           Alert: {{ .Annotations.summary }}
@@ -421,7 +421,7 @@ grep -i "slow\|timeout\|delay" /data/circlelayer/logs/systemd_chain_console.out 
 
 #### Log Rotation Configuration
 ```bash
-# Configure logrotate for Circle Layer logs
+# Configure logrotate for Core Layer logs
 sudo cat > /etc/logrotate.d/circlelayer << 'EOF'
 /data/circlelayer/logs/*.log {
     daily
@@ -448,7 +448,7 @@ EOF
 #!/bin/bash
 # daily-check.sh
 
-echo "=== Circle Layer Node Daily Check ===" 
+echo "=== Core Layer Node Daily Check ===" 
 echo "Date: $(date)"
 echo "Node Status: $(systemctl is-active circlelayer.service)"
 echo "Disk Usage: $(df -h /data/circlelayer | tail -1 | awk '{print $5}')"
@@ -470,7 +470,7 @@ echo "====================================="
 
 #### Resource Tuning
 ```bash
-# Optimize system for Circle Layer
+# Optimize system for Core Layer
 echo 'vm.swappiness=10' >> /etc/sysctl.conf
 echo 'fs.file-max=2097152' >> /etc/sysctl.conf
 echo 'net.core.rmem_max=134217728' >> /etc/sysctl.conf

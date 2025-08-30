@@ -6,20 +6,20 @@ sidebar_position: 6
 
 ## Overview
 
-Circle Layer provides comprehensive support for developers and projects building on our blockchain ecosystem. Our multi-faceted support program includes financial assistance, traffic support, and resource allocation to help projects succeed and grow within the Circle Layer ecosystem.
+Core Layer provides comprehensive support for developers and projects building on our blockchain ecosystem. Our multi-faceted support program includes financial assistance, traffic support, and resource allocation to help projects succeed and grow within the Core Layer ecosystem.
 
 ## Support Categories
 
 ### 🏦 Financial Support
 
-Circle Layer offers various forms of financial assistance to support developer success:
+Core Layer offers various forms of financial assistance to support developer success:
 
 #### Special Developer Fund
 - **Purpose**: Direct financial support for promising projects
-- **Eligibility**: Projects building innovative solutions on Circle Layer
+- **Eligibility**: Projects building innovative solutions on Core Layer
 - **Application Process**: Submit proposal through official channels
 - **Funding Range**: Varies based on project scope and potential impact
-- **Contact**: support@circlelayer.com
+- **Contact**: support@clayer.io
 
 #### Competition Programs
 - **Hackathons**: Regular hackathon events with substantial prize pools
@@ -36,24 +36,24 @@ Circle Layer offers various forms of financial assistance to support developer s
 
 ### 🚀 Traffic Support
 
-Circle Layer helps quality projects gain visibility and user adoption:
+Core Layer helps quality projects gain visibility and user adoption:
 
 #### Traffic Entrance Programs
 - **Quality dApp Promotion**: Featured placement for high-quality applications
-- **Ecosystem Integration**: Integration into Circle Layer's native ecosystem
-- **User Acquisition**: Access to Circle Layer's growing user base
-- **Cross-Promotion**: Promotion across Circle Layer's marketing channels
+- **Ecosystem Integration**: Integration into Core Layer's native ecosystem
+- **User Acquisition**: Access to Core Layer's growing user base
+- **Cross-Promotion**: Promotion across Core Layer's marketing channels
 
 #### Token Listing Opportunities
-- **DEX Integration**: Priority listing on Circle Layer's native DEX
+- **DEX Integration**: Priority listing on Core Layer's native DEX
 - **Bridge Support**: Cross-chain token bridging assistance
 - **Liquidity Support**: Initial liquidity provision assistance
 - **Market Making**: Support for healthy token markets
 
 #### Community Exposure
 - **Official Features**: Highlighting in official documentation and announcements
-- **Social Media Promotion**: Promotion across Circle Layer's social channels
-- **Conference Presentations**: Opportunities to present at Circle Layer events
+- **Social Media Promotion**: Promotion across Core Layer's social channels
+- **Conference Presentations**: Opportunities to present at Core Layer events
 - **Press Coverage**: Assistance with blockchain media coverage
 
 ### 🎁 Resource Support
@@ -85,20 +85,20 @@ Comprehensive resource allocation to accelerate project development:
 #### Basic Criteria
 - **Innovation**: Project demonstrates technical innovation or unique value proposition
 - **Quality**: High-quality code and professional development practices
-- **Commitment**: Long-term commitment to building on Circle Layer
-- **Community Value**: Potential to add value to the Circle Layer ecosystem
+- **Commitment**: Long-term commitment to building on Core Layer
+- **Community Value**: Potential to add value to the Core Layer ecosystem
 
 #### Technical Requirements
 - **EVM Compatibility**: Projects must be EVM-compatible
 - **Security Standards**: Adherence to blockchain security best practices
 - **Documentation**: Comprehensive technical documentation
-- **Testing**: Thorough testing on Circle Layer testnet
+- **Testing**: Thorough testing on Core Layer testnet
 
 ### Application Steps
 
 #### 1. Initial Application
 ```
-Contact: support@circlelayer.com
+Contact: support@clayer.io
 Subject: Support Plan Application - [Project Name]
 
 Required Information:
@@ -114,7 +114,7 @@ Required Information:
 - **Code Review**: Evaluation of technical implementation
 - **Security Assessment**: Security audit and vulnerability analysis
 - **Scalability Analysis**: Assessment of project scalability potential
-- **Ecosystem Fit**: Evaluation of alignment with Circle Layer ecosystem
+- **Ecosystem Fit**: Evaluation of alignment with Core Layer ecosystem
 
 #### 3. Support Plan Design
 - **Customized Package**: Tailored support plan based on project needs
@@ -185,17 +185,17 @@ Required Information:
 ### Maximizing Support Value
 - **Active Communication**: Maintain regular communication with support team
 - **Milestone Achievement**: Consistently meet agreed-upon milestones
-- **Community Engagement**: Actively engage with Circle Layer community
+- **Community Engagement**: Actively engage with Core Layer community
 - **Feedback Integration**: Incorporate support team feedback and guidance
 - **Success Sharing**: Share successes and learnings with the ecosystem
 
 ## Contact Information
 
 ### Support Team Contacts
-- **General Inquiries**: support@circlelayer.com
-- **Financial Support**: marketing@circlelayer.com
-- **Marketing Support**: marketing@circlelayer.com
-- **Technical Support**: support@circlelayer.com
+- **General Inquiries**: support@clayer.io
+- **Financial Support**: marketing@clayer.io
+- **Marketing Support**: marketing@clayer.io
+- **Technical Support**: support@clayer.io
 
 ### Response Times
 - **Initial Response**: Within 48 hours
@@ -205,4 +205,4 @@ Required Information:
 
 ---
 
-*Circle Layer is committed to fostering a thriving developer ecosystem through comprehensive support programs. We believe in supporting innovation and helping projects achieve their full potential within our ecosystem.* 
+*Core Layer is committed to fostering a thriving developer ecosystem through comprehensive support programs. We believe in supporting innovation and helping projects achieve their full potential within our ecosystem.* 

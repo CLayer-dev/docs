@@ -1,16 +1,16 @@
 ---
 sidebar_position: 2
 title: Running a Full Node
-description: Complete guide for operating Circle Layer blockchain full nodes
+description: Complete guide for operating Core Layer blockchain full nodes
 ---
 
 # Running a Full Node
 
-Learn how to run and operate a full node on Circle Layer blockchain network.
+Learn how to run and operate a full node on Core Layer blockchain network.
 
 ## Overview
 
-Circle Layer is an Ethereum-compatible blockchain that uses Geth (Go Ethereum) as its base. Running a full node allows you to participate in the network, validate transactions, and support decentralization.
+Core Layer is an Ethereum-compatible blockchain that uses Geth (Go Ethereum) as its base. Running a full node allows you to participate in the network, validate transactions, and support decentralization.
 
 ## Prerequisites
 

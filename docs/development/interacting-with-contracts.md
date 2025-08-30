@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Overview
 
-Learn how to interact with smart contracts on Circle Layer.
+Learn how to interact with smart contracts on Core Layer.
 
 ## Methods of Interaction
 
@@ -25,15 +25,15 @@ const result = await contract.someFunction();
 ```
 ```
 ```bash
-# Using Circle Layer CLI
-circle-layer contract call <address> <function> [args]
+# Using Core Layer CLI
+core-layer contract call <address> <function> [args]
 ```
 ```
 ```
 ```
 
 ### 3. Web Interface
-- Circle Layer Explorer
+- Core Layer Explorer
 - Custom DApp interfaces
 - Wallet integrations
 

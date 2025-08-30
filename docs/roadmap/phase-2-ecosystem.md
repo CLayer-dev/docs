@@ -9,7 +9,7 @@ sidebar_position: 2
 
 ## Overview
 
-Phase 2 represents Circle Layer's comprehensive ecosystem development phase, where we build a complete DeFi infrastructure, native applications, and advanced security systems before mainnet launch. This strategic approach ensures a battle-tested, production-ready ecosystem.
+Phase 2 represents Core Layer's comprehensive ecosystem development phase, where we build a complete DeFi infrastructure, native applications, and advanced security systems before mainnet launch. This strategic approach ensures a battle-tested, production-ready ecosystem.
 
 :::info Strategic Philosophy
 Rather than rushing to mainnet, we're investing significant time in building a complete ecosystem on testnet. This approach helps us avoid the major exploits and security issues that have plagued other L1 blockchains.
@@ -182,7 +182,7 @@ graph TD
 
 #### Hackathon Strategy
 - **Major Hackathon Participation**: ETHGlobal, Solana Breakpoint, etc.
-- **Circle Layer Hackathons**: Quarterly ecosystem hackathons
+- **Core Layer Hackathons**: Quarterly ecosystem hackathons
 - **Prize Pools**: $1M+ in total prize distribution
 - **Continued Support**: Post-hackathon project incubation
 

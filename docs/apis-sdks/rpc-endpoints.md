@@ -6,32 +6,32 @@ sidebar_position: 1
 
 ## Overview
 
-Circle Layer provides multiple RPC endpoints for interacting with the network:
+Core Layer provides multiple RPC endpoints for interacting with the network:
 
 ## Public Endpoints
 
 ### Testnet
 ```bash
 # HTTP RPC
-https://testnet-rpc.circlelayer.com
+https://testnet-rpc.clayer.io
 
 # WebSocket
-wss://testnet-rpc.circlelayer.com
+wss://testnet-rpc.clayer.io
 
 # Block Explorer
-https://explorer-testnet.circlelayer.com
+https://explorer-testnet.clayer.io
 
 # Faucet
-https://faucet.circlelayer.com
+https://faucet.clayer.io
 
 # Faucet API
-https://faucet-api.circlelayer.com
+https://faucet-api.clayer.io
 ```
 
 ## Network Configuration
 
 - **Chain ID**: 28525
-- **Network Name**: Circle Layer Testnet
+- **Network Name**: Core Layer Testnet
 - **Currency Symbol**: CLAYER
 - **Currency Decimals**: 18
 - **Block Time**: 3 seconds
@@ -48,9 +48,9 @@ Rate limiting information is not currently specified. Please check the API docum
 ## Smart Contract Examples
 
 ### Deployed Example Contract
-- **Contract Address**: [0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB)
-- **Source Code**: [View on Explorer](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- **ABI**: [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+- **Contract Address**: [0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB)
+- **Source Code**: [View on Explorer](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- **ABI**: [Contract ABI](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 - **Deployment**: Manual Deploy
 
 ## Methods
@@ -61,7 +61,7 @@ Rate limiting information is not currently specified. Please check the API docum
 - eth_getTransactionReceipt
 - eth_blockNumber
 
-### Circle Layer Specific Methods
+### Core Layer Specific Methods
 
 #### Validator & Staking Methods
 - `clayer_getValidatorInfo(validatorAddress)` - Get validator details and performance metrics
@@ -101,7 +101,7 @@ Rate limiting information is not currently specified. Please check the API docum
 
 #### Get Balance
 ```javascript
-const response = await fetch('https://testnet-rpc.circlelayer.com', {
+const response = await fetch('https://testnet-rpc.clayer.io', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -120,7 +120,7 @@ console.log('Balance in wei:', result.result);
 
 #### Get Transaction Receipt
 ```javascript
-const response = await fetch('https://testnet-rpc.circlelayer.com', {
+const response = await fetch('https://testnet-rpc.clayer.io', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -137,12 +137,12 @@ const receipt = await response.json();
 console.log('Transaction status:', receipt.result.status);
 ```
 
-### Circle Layer Specific Methods
+### Core Layer Specific Methods
 
 #### Get Validator Information
 ```javascript
 async function getValidatorInfo(validatorAddress) {
-  const response = await fetch('https://testnet-rpc.circlelayer.com', {
+  const response = await fetch('https://testnet-rpc.clayer.io', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ console.log('Uptime:', validatorInfo.uptime);
 #### Get Staking Rewards
 ```javascript
 async function getStakingRewards(delegatorAddress) {
-  const response = await fetch('https://testnet-rpc.circlelayer.com', {
+  const response = await fetch('https://testnet-rpc.clayer.io', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -197,7 +197,7 @@ console.log('Validators:', rewards.validatorRewards);
 #### Get Network Statistics
 ```javascript
 async function getNetworkStats() {
-  const response = await fetch('https://testnet-rpc.circlelayer.com', {
+  const response = await fetch('https://testnet-rpc.clayer.io', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -227,7 +227,7 @@ console.log('Network uptime:', stats.uptime);
 #### Report Suspicious Activity
 ```javascript
 async function reportSuspiciousActivity(evidence) {
-  const response = await fetch('https://testnet-rpc.circlelayer.com', {
+  const response = await fetch('https://testnet-rpc.clayer.io', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -261,7 +261,7 @@ console.log('Report submitted with ID:', reportId);
 #### Get Integrity Report
 ```javascript
 async function getIntegrityReport(startBlock, endBlock) {
-  const response = await fetch('https://testnet-rpc.circlelayer.com', {
+  const response = await fetch('https://testnet-rpc.clayer.io', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -289,7 +289,7 @@ console.log('Anomalies:', report.anomalies);
 #### Check Compliance Status
 ```javascript
 async function getComplianceStatus(address) {
-  const response = await fetch('https://testnet-rpc.circlelayer.com', {
+  const response = await fetch('https://testnet-rpc.clayer.io', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -316,7 +316,7 @@ console.log('Last updated:', status.lastUpdated);
 
 ## SDK Examples
 
-### Circle Layer JavaScript SDK
+### Core Layer JavaScript SDK
 
 #### Installation
 ```bash
@@ -330,7 +330,7 @@ import { CircleLayerSDK } from '@circlelayer/sdk';
 // Initialize SDK
 const clayer = new CircleLayerSDK({
   network: 'testnet', // or 'mainnet'
-  rpcUrl: 'https://testnet-rpc.circlelayer.com',
+  rpcUrl: 'https://testnet-rpc.clayer.io',
   apiKey: 'your-api-key' // Optional for enhanced features
 });
 
@@ -444,7 +444,7 @@ from circlelayer import CircleLayerSDK
 # Initialize SDK
 clayer = CircleLayerSDK(
     network='testnet',
-    rpc_url='https://testnet-rpc.circlelayer.com',
+    rpc_url='https://testnet-rpc.clayer.io',
     api_key='your-api-key'
 )
 
@@ -467,7 +467,7 @@ print(f"Pending rewards: {rewards['pendingRewards']}")
 
 #### Subscribe to New Blocks
 ```javascript
-const ws = new WebSocket('wss://testnet-rpc.circlelayer.com');
+const ws = new WebSocket('wss://testnet-rpc.clayer.io');
 
 ws.onopen = () => {
   // Subscribe to new block headers
@@ -490,7 +490,7 @@ ws.onmessage = (event) => {
 
 #### Subscribe to Validator Events
 ```javascript
-const ws = new WebSocket('wss://testnet-rpc.circlelayer.com');
+const ws = new WebSocket('wss://testnet-rpc.clayer.io');
 
 ws.onopen = () => {
   // Subscribe to validator status changes
@@ -517,7 +517,7 @@ ws.onmessage = (event) => {
 
 #### Subscribe to Staking Events
 ```javascript
-const ws = new WebSocket('wss://testnet-rpc.circlelayer.com');
+const ws = new WebSocket('wss://testnet-rpc.clayer.io');
 
 ws.onopen = () => {
   // Subscribe to staking events for specific address
@@ -569,7 +569,7 @@ const batchRequest = [
   }
 ];
 
-const response = await fetch('https://testnet-rpc.circlelayer.com', {
+const response = await fetch('https://testnet-rpc.clayer.io', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -585,7 +585,7 @@ const results = await response.json();
 ```javascript
 async function makeRPCCall(method, params) {
   try {
-    const response = await fetch('https://testnet-rpc.circlelayer.com', {
+    const response = await fetch('https://testnet-rpc.clayer.io', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -692,7 +692,7 @@ class CircleLayerRPCClient {
 }
 
 // Usage
-const client = new CircleLayerRPCClient('https://testnet-rpc.circlelayer.com', {
+const client = new CircleLayerRPCClient('https://testnet-rpc.clayer.io', {
   maxRetries: 5,
   retryDelay: 2000,
   timeout: 30000
@@ -706,7 +706,7 @@ const balance = await client.call('eth_getBalance', ['0x123...', 'latest']);
 ### API Key Authentication
 ```javascript
 // For enhanced features that require authentication
-const response = await fetch('https://testnet-rpc.circlelayer.com', {
+const response = await fetch('https://testnet-rpc.clayer.io', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -742,7 +742,7 @@ async function makeSignedRequest(method, params, privateKey) {
   const wallet = new ethers.Wallet(privateKey);
   const signature = await wallet.signMessage(message);
   
-  const response = await fetch('https://testnet-rpc.circlelayer.com', {
+  const response = await fetch('https://testnet-rpc.clayer.io', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -780,12 +780,12 @@ const result = await makeSignedRequest(
 ## Resources
 
 ### Official Documentation
-- **API Reference**: https://explorer-testnet.circlelayer.com/api-docs
-- **SDK Documentation**: https://docs.circlelayer.com/sdk
-- **WebSocket API**: https://docs.circlelayer.com/websocket
+- **API Reference**: https://explorer-testnet.clayer.io/api-docs
+- **SDK Documentation**: https://docs.clayer.io/sdk
+- **WebSocket API**: https://docs.clayer.io/websocket
 
 ### Development Tools
-- **GraphQL Endpoint**: https://explorer-testnet.circlelayer.com/graphiql
+- **GraphQL Endpoint**: https://explorer-testnet.clayer.io/graphiql
 - **API Testing**: Use Postman collection or curl examples
 
 ### Community & Support
@@ -800,7 +800,7 @@ const result = await makeSignedRequest(
 - **Batch Requests**: Maximum 10 requests per batch
 
 ```javascript
-const ws = new WebSocket('wss://testnet-rpc.circlelayer.com');
+const ws = new WebSocket('wss://testnet-rpc.clayer.io');
 ws.send(JSON.stringify({
   jsonrpc: '2.0',
   method: 'eth_subscribe',
@@ -815,7 +815,7 @@ ws.send(JSON.stringify({
 const contractAddress = '0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB';
 
 // Get contract interaction examples
-const response = await fetch('https://testnet-rpc.circlelayer.com', {
+const response = await fetch('https://testnet-rpc.clayer.io', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',

@@ -3,7 +3,7 @@ id: meta-transactions
 title: Meta Transactions
 sidebar_label: Meta Transactions
 sidebar_position: 6
-description: Comprehensive guide to Circle Layer's meta transaction functionality for gas fee optimization and seamless user experience.
+description: Comprehensive guide to Core Layer's meta transaction functionality for gas fee optimization and seamless user experience.
 ---
 
 # Meta Transactions
@@ -62,11 +62,11 @@ this.rlpEncodeData = RlpEncoder.encode(rlpList);
 
 ## Official Meta Transaction Service
 
-Circle Layer Blockchain officially provides a meta transaction service with fee subsidies based on the caller's `CLAYER` holdings.
+Core Layer Blockchain officially provides a meta transaction service with fee subsidies based on the caller's `CLAYER` holdings.
 
 ### Service Details
 
-- **API Endpoint**: (not live yet) `https://meta-mainnet.circlelayer.com`
+- **API Endpoint**: (not live yet) `https://meta-mainnet.clayer.io`
 - **Subsidy Expiration**: 1 day (28,800 blocks)
 - **Daily Limit**: Maximum 5 subsidized transactions per account per day
 
@@ -153,7 +153,7 @@ err: expired meta transaction. current:2083222, need execute before 2075609
 ```javascript
 // Calculate subsidy rate
 async function calculateSubsidy(txParams) {
-    const response = await fetch('https://meta-mainnet.circlelayer.com/meta/fee', {
+    const response = await fetch('https://meta-mainnet.clayer.io/meta/fee', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(txParams)
@@ -163,7 +163,7 @@ async function calculateSubsidy(txParams) {
 
 // Submit meta transaction
 async function submitMetaTransaction(signedTx) {
-    const response = await fetch('https://meta-mainnet.circlelayer.com/meta/tx', {
+    const response = await fetch('https://meta-mainnet.clayer.io/meta/tx', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ raw: signedTx })
@@ -215,4 +215,4 @@ async function createMetaTransaction(wallet, txParams) {
 - **Fee Validation**: Validate fee percentages to prevent exploitation
 - **Rate Limiting**: Respect API rate limits and daily quotas
 
-Meta transactions provide a powerful tool for improving user experience and reducing costs on Circle Layer. By implementing meta transactions properly, developers can create seamless applications that handle gas fees transparently for users. 
+Meta transactions provide a powerful tool for improving user experience and reducing costs on Core Layer. By implementing meta transactions properly, developers can create seamless applications that handle gas fees transparently for users. 

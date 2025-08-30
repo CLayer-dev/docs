@@ -6,12 +6,12 @@ sidebar_position: 1
 
 ## Overview
 
-Circle Layer uses a decentralized governance model that allows token holders to participate in decision-making. The governance structure clearly separates the Circle Layer company's supportive role from network control, ensuring true decentralization.
+Core Layer uses a decentralized governance model that allows token holders to participate in decision-making. The governance structure clearly separates the Core Layer company's supportive role from network control, ensuring true decentralization.
 
 ## Company Structure & Network Governance
 
-### Circle Layer Company Role
-The Circle Layer company serves as an ecosystem supporter and facilitator, **not as a network controller**:
+### Core Layer Company Role
+The Core Layer company serves as an ecosystem supporter and facilitator, **not as a network controller**:
 
 - **Ecosystem Support**: Provides development resources, documentation, and community support
 - **Infrastructure Development**: Builds tools, SDKs, and developer resources
@@ -19,7 +19,7 @@ The Circle Layer company serves as an ecosystem supporter and facilitator, **not
 - **No Network Control**: Does not control network operations, consensus, or governance decisions
 
 ### Network Control Model
-The Circle Layer network is controlled by its validators and community:
+The Core Layer network is controlled by its validators and community:
 
 - **Validator Governance**: Network controlled by distributed validator nodes
 - **Decentralized Consensus**: No single entity controls the blockchain

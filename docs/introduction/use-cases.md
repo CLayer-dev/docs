@@ -6,7 +6,7 @@ sidebar_label: Use Cases
 
 # Use Cases
 
-Circle Layer's architecture and features make it ideal for various blockchain applications and use cases. Our high throughput, low latency, and AI security features enable innovative solutions across multiple industries.
+Core Layer's architecture and features make it ideal for various blockchain applications and use cases. Our high throughput, low latency, and AI security features enable innovative solutions across multiple industries.
 
 ## DeFi Applications
 

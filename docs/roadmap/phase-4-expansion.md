@@ -9,10 +9,10 @@ sidebar_position: 4
 
 ## Overview
 
-Phase 4 represents Circle Layer's long-term vision for global expansion and innovation - this is future strategic planning, not current operations. These plans outline our aspirational goals for establishing market leadership after successful mainnet deployment and ecosystem maturity.
+Phase 4 represents Core Layer's long-term vision for global expansion and innovation - this is future strategic planning, not current operations. These plans outline our aspirational goals for establishing market leadership after successful mainnet deployment and ecosystem maturity.
 
 :::danger Future Vision Only
-🚧 **IMPORTANT: This represents future strategic vision, not current operational reality**. Circle Layer is currently in testnet development phase. These expansion plans are contingent on successful completion of Phases 1-3.
+🚧 **IMPORTANT: This represents future strategic vision, not current operational reality**. Core Layer is currently in testnet development phase. These expansion plans are contingent on successful completion of Phases 1-3.
 
 **Current Status**: Phase 1 (testnet development) - These global expansion plans are 2+ years in the future.
 :::
@@ -174,7 +174,7 @@ Phase 4 represents Circle Layer's long-term vision for global expansion and inno
 #### Developer Incentives 2.0
 - **Advanced Grant Program**: $100M+ developer fund
 - **Revenue Sharing**: Developers earn from their applications
-- **Accelerator Program**: Circle Layer startup accelerator
+- **Accelerator Program**: Core Layer startup accelerator
 - **Global Hackathons**: Worldwide hackathon series with $10M+ prizes
 
 ### DeFi 3.0 Innovation
@@ -315,4 +315,4 @@ Phase 4 represents Circle Layer's long-term vision for global expansion and inno
 
 ---
 
-*Phase 4 establishes Circle Layer as the global leader in blockchain technology, serving millions of users and pioneering the future of decentralized systems. Through global scale, breakthrough innovation, and positive global impact, we fulfill our vision of powering the decentralized economy of tomorrow.* 
+*Phase 4 establishes Core Layer as the global leader in blockchain technology, serving millions of users and pioneering the future of decentralized systems. Through global scale, breakthrough innovation, and positive global impact, we fulfill our vision of powering the decentralized economy of tomorrow.* 

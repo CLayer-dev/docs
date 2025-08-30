@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## Overview
 
-Learn about security best practices for running Circle Layer nodes.
+Learn about security best practices for running Core Layer nodes.
 
 ## Security Fundamentals
 

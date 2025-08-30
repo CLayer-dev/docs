@@ -3,16 +3,16 @@ id: private-chain-setup
 title: Private Chain Setup
 sidebar_label: Private Chain Setup
 sidebar_position: 9
-description: Guide for setting up private Circle Layer blockchain networks for enterprise and development use.
+description: Guide for setting up private Core Layer blockchain networks for enterprise and development use.
 ---
 
 # Private Chain Setup
 
-Setting up a private Circle Layer blockchain network enables enterprises and development teams to create isolated environments for testing, development, and internal applications while maintaining full control over the network.
+Setting up a private Core Layer blockchain network enables enterprises and development teams to create isolated environments for testing, development, and internal applications while maintaining full control over the network.
 
 ## Overview
 
-A private Circle Layer chain provides:
+A private Core Layer chain provides:
 - **Complete Control**: Full control over validator nodes and network parameters
 - **Privacy**: Isolated network not connected to public testnet/mainnet
 - **Customization**: Ability to modify consensus parameters, gas limits, and block times
@@ -54,10 +54,10 @@ brew install curl wget git go
 
 ## Installation
 
-### 1. Download and Compile Circle Layer
+### 1. Download and Compile Core Layer
 
 ```bash
-# Clone the Circle Layer blockchain source code
+# Clone the Core Layer blockchain source code
 git clone https://github.com/circlelayer/testnet-core-blockchain.git
 
 # Navigate to the project directory
@@ -308,6 +308,6 @@ To run with debug logging:
 
 ## Additional Resources
 
-- [Circle Layer Development Guide](./deploying-contracts.md)
+- [Core Layer Development Guide](./deploying-contracts.md)
 - [Smart Contract Deployment](./writing-smart-contracts.md)
 - [Web3 Integration](./web3-integration.md) 

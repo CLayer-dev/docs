@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: Node Deployment & Compilation
-description: Complete guide for compiling, deploying, and configuring Circle Layer blockchain nodes from source
+description: Complete guide for compiling, deploying, and configuring Core Layer blockchain nodes from source
 ---
 
 import Tabs from '@theme/Tabs';
@@ -210,7 +210,7 @@ WantedBy=multi-user.target
 
 ## Directory Structure
 
-Recommended directory structure for Circle Layer node deployment:
+Recommended directory structure for Core Layer node deployment:
 
 ```
 /data/circlelayer/
@@ -252,7 +252,7 @@ Configure firewall to allow only necessary ports:
 # Allow SSH (if needed)
 sudo ufw allow 22/tcp
 
-# Allow Circle Layer P2P port
+# Allow Core Layer P2P port
 sudo ufw allow 32668
 
 # Allow RPC (only if needed externally)

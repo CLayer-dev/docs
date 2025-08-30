@@ -1,6 +1,6 @@
-# Circle Layer Documentation
+# Core Layer Documentation
 
-Official documentation for Circle Layer - a high-performance EVM-compatible blockchain built with Delegated Proof-of-Stake consensus, delivering efficient throughput and security for DeFi, NFTs, and enterprise applications.
+Official documentation for Core Layer - a high-performance EVM-compatible blockchain built with Delegated Proof-of-Stake consensus, delivering efficient throughput and security for DeFi, NFTs, and enterprise applications.
 
 ## 🚀 Build Status
 
@@ -10,12 +10,12 @@ Official documentation for Circle Layer - a high-performance EVM-compatible bloc
 
 ## 🌐 Live Documentation
 
-- **Documentation Site**: [https://docs.circlelayer.com](https://docs.circlelayer.com)
-- **Testnet RPC**: [https://testnet-rpc.circlelayer.com](https://testnet-rpc.circlelayer.com)
-- **Block Explorer**: [https://explorer-testnet.circlelayer.com](https://explorer-testnet.circlelayer.com)
-- **Faucet**: [https://faucet.circlelayer.com](https://faucet.circlelayer.com)
-- **API Documentation**: [https://explorer-testnet.circlelayer.com/api-docs](https://explorer-testnet.circlelayer.com/api-docs)
-- **GraphQL Endpoint**: [https://explorer-testnet.circlelayer.com/graphiql](https://explorer-testnet.circlelayer.com/graphiql)
+- **Documentation Site**: [https://docs.clayer.io](https://docs.clayer.io)
+- **Testnet RPC**: [https://testnet-rpc.clayer.io](https://testnet-rpc.clayer.io)
+- **Block Explorer**: [https://explorer-testnet.clayer.io](https://explorer-testnet.clayer.io)
+- **Faucet**: [https://faucet.clayer.io](https://faucet.clayer.io)
+- **API Documentation**: [https://explorer-testnet.clayer.io/api-docs](https://explorer-testnet.clayer.io/api-docs)
+- **GraphQL Endpoint**: [https://explorer-testnet.clayer.io/graphiql](https://explorer-testnet.clayer.io/graphiql)
 
 ## 🚀 Quick Start
 
@@ -59,11 +59,14 @@ docs/
 ├── faqs/                 # Frequently asked questions
 ├── getting-started/      # Quick start guides
 ├── governance/           # Governance and tokenomics
-├── introduction/         # What is Circle Layer
+├── introduction/         # What is Core Layer
 ├── nodes-validation/     # Node setup and validation
 ├── roadmap/              # Development roadmap
-└── security/             # Security guidelines
+├── security/             # Security guidelines
+└── hackathon-starter/    # Ready-to-use starter (contracts + web)
 ```
+
+- Start building now: see `hackathon-starter/README.md`
 
 ## 🛠️ Available Scripts
 
@@ -106,13 +109,13 @@ We welcome contributions! Please see our [Contribution Guidelines](docs/communit
 
 ## 📞 Contact & Support
 
-- **Technical Support**: [support@circlelayer.com](mailto:support@circlelayer.com)
-- **General Inquiries**: [admin@circlelayer.com](mailto:admin@circlelayer.com)
-- **Marketing & Partnerships**: [marketing@circlelayer.com](mailto:marketing@circlelayer.com)
+- **Technical Support**: [support@clayer.io](mailto:support@clayer.io)
+- **General Inquiries**: [admin@clayer.io](mailto:admin@clayer.io)
+- **Marketing & Partnerships**: [marketing@clayer.io](mailto:marketing@clayer.io)
 
 ## 🔗 Links
 
-- **Website**: [https://circlelayer.com](https://circlelayer.com)
+- **Website**: [https://clayer.io](https://clayer.io)
 - **GitHub**: [https://github.com/circlelayer](https://github.com/circlelayer)
 - **X (Twitter)**: [https://x.com/circlelayer](https://x.com/circlelayer)
 - **Telegram**: [https://t.me/circlelayer](https://t.me/circlelayer)
@@ -123,4 +126,4 @@ This documentation is licensed under the MIT License. See [LICENSE](LICENSE) for
 
 ---
 
-**Circle Layer** - Building the future of scalable, secure blockchain infrastructure.
+**Core Layer** - Building the future of scalable, secure blockchain infrastructure.

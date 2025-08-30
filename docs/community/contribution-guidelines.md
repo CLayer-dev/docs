@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Overview
 
-Welcome to the Circle Layer community! This guide will help you contribute to our project.
+Welcome to the Core Layer community! This guide will help you contribute to our project.
 
 ## How to Contribute
 
@@ -33,7 +33,7 @@ Welcome to the Circle Layer community! This guide will help you contribute to ou
 1. **Setup**
    ```bash
    git clone https://github.com/circlelayer/testnet-core-blockchain.git
-   cd circle-layer
+   cd core-layer
    npm install
 
 2. **Testing**

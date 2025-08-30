@@ -1,16 +1,16 @@
 ---
 sidebar_position: 1
 title: Becoming a Validator
-description: Learn how to become a validator on Circle Layer and help secure the network
+description: Learn how to become a validator on Core Layer and help secure the network
 ---
 
 # Becoming a Validator
 
-Learn how to become a validator on Circle Layer and help secure the network while earning rewards.
+Learn how to become a validator on Core Layer and help secure the network while earning rewards.
 
 ## Overview
 
-Circle Layer validators play a crucial role in securing the network through Delegated Proof of Stake (DPoS) consensus. Validators are responsible for producing blocks, validating transactions, and maintaining network security.
+Core Layer validators play a crucial role in securing the network through Delegated Proof of Stake (DPoS) consensus. Validators are responsible for producing blocks, validating transactions, and maintaining network security.
 
 ## Requirements
 
@@ -49,7 +49,7 @@ Circle Layer validators play a crucial role in securing the network through Dele
 ### Required Ports
 
 ```bash
-# Open required port for Circle Layer
+# Open required port for Core Layer
 sudo ufw allow 32668/tcp
 sudo ufw allow 32668/udp
 

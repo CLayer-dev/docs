@@ -1,6 +1,6 @@
 ---
 title: Genesis Configuration
-description: Genesis file configuration for Circle Layer Blockchain mainnet and testnet networks
+description: Genesis file configuration for Core Layer Blockchain mainnet and testnet networks
 ---
 
 import Tabs from '@theme/Tabs';
@@ -9,7 +9,7 @@ import '../../src/css/genesis.css';
 
 # Genesis Configuration
 
-The Genesis file defines the initial state of the Circle Layer Blockchain, including network parameters, initial validators, system contracts, and pre-allocated accounts. Both mainnet and testnet genesis information is hardcoded in the blockchain for verification purposes.
+The Genesis file defines the initial state of the Core Layer Blockchain, including network parameters, initial validators, system contracts, and pre-allocated accounts. Both mainnet and testnet genesis information is hardcoded in the blockchain for verification purposes.
 
 ## What is a Genesis File?
 
@@ -24,7 +24,7 @@ The genesis file is a JSON configuration that contains:
 
 | Parameter | Description |
 |-----------|-------------|
-| `chainId` | The unique identification of the chain (28525 for Circle Layer testnet) |
+| `chainId` | The unique identification of the chain (28525 for Core Layer testnet) |
 | `homesteadBlock` | Hard fork height for Homestead protocol changes |
 | `eip150Block` | Hard fork height for EIP-150 (Gas cost changes) |
 | `eip155Block` | Hard fork height for EIP-155 (Simple replay attack protection) |
@@ -41,7 +41,7 @@ The genesis file is a JSON configuration that contains:
 
 | Parameter | Description |
 |-----------|-------------|
-| `congress.period` | Time interval between blocks (3 seconds for Circle Layer) |
+| `congress.period` | Time interval between blocks (3 seconds for Core Layer) |
 | `congress.epoch` | Number of blocks in an epoch for validator adjustments (100 blocks) |
 
 ### Block Parameters
@@ -61,7 +61,7 @@ The genesis file is a JSON configuration that contains:
 
 ## System Contracts
 
-Circle Layer uses several pre-deployed system contracts for network operations:
+Core Layer uses several pre-deployed system contracts for network operations:
 
 <div className="system-contracts-grid">
   <div className="contract-card">
@@ -84,7 +84,7 @@ Circle Layer uses several pre-deployed system contracts for network operations:
 </div>
 
 :::info System Contracts Repository
-The complete source code for Circle Layer system contracts is available at: **Circle Layer Blockchain-System-Contracts**
+The complete source code for Core Layer system contracts is available at: **Core Layer Blockchain-System-Contracts**
 :::
 
 ## Account Allocations
@@ -99,7 +99,7 @@ The complete source code for Circle Layer system contracts is available at: **Ci
 <Tabs>
   <TabItem value="testnet" label="🧪 Testnet" default>
 
-### Circle Layer Testnet Genesis
+### Core Layer Testnet Genesis
 
 ```json title="Testnet Genesis Configuration"
 {
@@ -176,7 +176,7 @@ The complete source code for Circle Layer system contracts is available at: **Ci
   
   <TabItem value="mainnet" label="🚀 Mainnet">
 
-### Circle Layer Mainnet Genesis
+### Core Layer Mainnet Genesis
 
 <div className="mainnet-status">
   <div className="status-badge coming-soon">
@@ -193,7 +193,7 @@ The complete source code for Circle Layer system contracts is available at: **Ci
 - **Token Migration**: Native $CLAYER token allocation from ERC-20 bridge
 
 :::note Mainnet Timeline
-The mainnet genesis file will be published before the mainnet launch in **Phase 3** of the Circle Layer roadmap. Stay tuned for updates!
+The mainnet genesis file will be published before the mainnet launch in **Phase 3** of the Core Layer roadmap. Stay tuned for updates!
 :::
 
   </TabItem>
@@ -203,7 +203,7 @@ The mainnet genesis file will be published before the mainnet launch in **Phase 
 
 ### Hard Fork Compatibility
 
-Circle Layer implements all major Ethereum hard forks from genesis (block 0), ensuring:
+Core Layer implements all major Ethereum hard forks from genesis (block 0), ensuring:
 
 - ✅ **Full EVM Compatibility**: All Ethereum opcodes and features supported
 - ✅ **Smart Contract Migration**: Seamless deployment from other EVM chains
@@ -230,7 +230,7 @@ The `extraData` field contains the initial validator configuration:
 
 ## Verification
 
-Both genesis configurations are hardcoded in the Circle Layer blockchain client for verification purposes. This ensures:
+Both genesis configurations are hardcoded in the Core Layer blockchain client for verification purposes. This ensures:
 
 1. **Network Integrity**: All nodes start with identical initial state
 2. **Fork Prevention**: Prevents accidental network splits
@@ -245,26 +245,26 @@ Use these parameters when configuring your development environment:
 
 ```javascript
 // Web3.js configuration
-const web3 = new Web3('https://testnet-rpc.circlelayer.com');
+const web3 = new Web3('https://testnet-rpc.clayer.io');
 
 // Network configuration
 const networkConfig = {
   chainId: 28525,
-  name: 'Circle Layer Testnet',
-  rpcUrl: 'https://testnet-rpc.circlelayer.com',
-  blockExplorer: 'https://explorer-testnet.circlelayer.com'
+  name: 'Core Layer Testnet',
+  rpcUrl: 'https://testnet-rpc.clayer.io',
+  blockExplorer: 'https://explorer-testnet.clayer.io'
 };
 ```
 
 ### MetaMask Configuration
 
-Add Circle Layer Testnet to MetaMask:
+Add Core Layer Testnet to MetaMask:
 
-1. **Network Name**: Circle Layer Testnet
-2. **RPC URL**: `https://testnet-rpc.circlelayer.com`
+1. **Network Name**: Core Layer Testnet
+2. **RPC URL**: `https://testnet-rpc.clayer.io`
 3. **Chain ID**: `28525`
 4. **Currency Symbol**: `CL`
-5. **Block Explorer**: `https://explorer-testnet.circlelayer.com`
+5. **Block Explorer**: `https://explorer-testnet.clayer.io`
 
 ---
 

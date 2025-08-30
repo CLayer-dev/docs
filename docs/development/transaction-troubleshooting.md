@@ -3,12 +3,12 @@ id: transaction-troubleshooting
 title: Transaction Troubleshooting
 sidebar_label: Transaction Troubleshooting
 sidebar_position: 8
-description: Complete guide to troubleshooting pending transactions, gas issues, and meta transaction problems on Circle Layer.
+description: Complete guide to troubleshooting pending transactions, gas issues, and meta transaction problems on Core Layer.
 ---
 
 # Transaction Troubleshooting
 
-This guide helps developers and users resolve common transaction issues on Circle Layer blockchain, including pending transactions, gas problems, and meta transaction errors.
+This guide helps developers and users resolve common transaction issues on Core Layer blockchain, including pending transactions, gas problems, and meta transaction errors.
 
 ## Common Transaction Issues
 
@@ -240,7 +240,7 @@ async function sendTransactionWithRetry(txParams, maxRetries = 3) {
 1. **Use Multiple RPC Endpoints**:
 ```javascript
 const providers = [
-    'https://testnet-rpc.circlelayer.com'
+    'https://testnet-rpc.clayer.io'
 ];
 
 class FallbackProvider {
@@ -296,11 +296,11 @@ When experiencing persistent nonce issues:
 ### Custom RPC Configuration
 ```javascript
 // MetaMask Custom Network Settings
-Network Name: Circle Layer Testnet
-RPC URL: https://testnet-rpc.circlelayer.com
+Network Name: Core Layer Testnet
+RPC URL: https://testnet-rpc.clayer.io
 Chain ID: 28525
 Currency Symbol: CLAYER
-Block Explorer: https://explorer-testnet.circlelayer.com
+Block Explorer: https://explorer-testnet.clayer.io
 ```
 
 ### Enable Advanced Features
@@ -420,4 +420,4 @@ async function emergencyDrain(toAddress) {
 4. **Set reasonable timeouts** for transaction confirmation
 5. **Have fallback strategies** for failed transactions
 
-This troubleshooting guide should help resolve most common transaction issues on Circle Layer. For complex problems, consider reaching out to the Circle Layer development community or support channels. 
+This troubleshooting guide should help resolve most common transaction issues on Core Layer. For complex problems, consider reaching out to the Core Layer development community or support channels. 

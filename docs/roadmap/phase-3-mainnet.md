@@ -9,7 +9,7 @@ sidebar_position: 3
 
 ## Overview
 
-Phase 3 marks the culmination of Circle Layer's comprehensive development strategy with the launch of a production-ready, fully-featured blockchain network. After extensive testnet ecosystem development and security validation, we launch with a complete DeFi infrastructure and proven 50,000 TPS performance.
+Phase 3 marks the culmination of Core Layer's comprehensive development strategy with the launch of a production-ready, fully-featured blockchain network. After extensive testnet ecosystem development and security validation, we launch with a complete DeFi infrastructure and proven 50,000 TPS performance.
 
 :::info Launch Philosophy
 We launch only when our ecosystem is battle-tested, secure, and ready for global adoption. Quality and security take precedence over speed to market.

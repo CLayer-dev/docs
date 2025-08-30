@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Overview
 
-Circle Layer Blockchain is committed to providing a secure development and testing environment. Users and developers must be aware of important security considerations and risks when participating in our ecosystem.
+Core Layer Blockchain is committed to providing a secure development and testing environment. Users and developers must be aware of important security considerations and risks when participating in our ecosystem.
 
 ## General Risk Warnings
 
@@ -45,34 +45,34 @@ Users **MUST** understand and distinguish between different network environments
 - **Testnet Tokens Have No Value**: Any attempt to sell or trade testnet CLAYER is fraudulent
 - **Fake Token Sales**: Beware of scammers selling "early access" or "pre-sale" tokens
 - **Impersonation Scams**: Scammers may impersonate team members or create fake platforms
-- **Verify Authenticity**: Only use official Circle Layer platforms and communication channels
+- **Verify Authenticity**: Only use official Core Layer platforms and communication channels
 
 ### Official Channel Verification
-Circle Layer **ONLY** announces official information through verified channels:
+Core Layer **ONLY** announces official information through verified channels:
 
 #### Official Communication Channels
-- **Official Website**: [circlelayer.com](https://circlelayer.com)
+- **Official Website**: [clayer.io](https://clayer.io)
 - **Official Documentation**: This documentation site
 - **Official Social Media**: Verified accounts only
-- **Official Email**: @circlelayer.com domain only
+- **Official Email**: @clayer.io domain only
 
 #### Red Flags - Unofficial/Fraudulent
 - **Unofficial Websites**: Similar-looking but different domain names
 - **Unverified Social Media**: Accounts without official verification
-- **Email Scams**: Emails from non-@circlelayer.com addresses
+- **Email Scams**: Emails from non-@clayer.io addresses
 - **Social Media Scams**: Unverified community channels and impersonators
 
 ### Website Security
 
 #### Official Website Protection
-- **Correct Domain**: Always verify you're on **circlelayer.com**
+- **Correct Domain**: Always verify you're on **clayer.io**
 - **HTTPS Security**: Ensure connection is secure (https://)
 - **Bookmark Official Site**: Avoid typing URLs manually
 - **Double-Check URLs**: Be vigilant about similar-looking domains
 
 #### Common Phishing Tactics
-- **Domain Spoofing**: circlelayer.io, circle-layer.com, circlelayer.net
-- **Subdomain Attacks**: fake.circlelayer.com-scam.com
+- **Domain Spoofing**: circlelayer.io, core-layer.com, circlelayer.net
+- **Subdomain Attacks**: fake.clayer.io-scam.com
 - **URL Shorteners**: Links that hide the real destination
 - **Urgent Messages**: Fake urgent security warnings or deadlines
 
@@ -82,7 +82,7 @@ Circle Layer **ONLY** announces official information through verified channels:
 **🔐 NEVER SHARE YOUR PRIVATE KEYS**
 
 - **Never Share**: Private keys should NEVER be shared with anyone
-- **Team Never Asks**: Circle Layer team will NEVER ask for private keys
+- **Team Never Asks**: Core Layer team will NEVER ask for private keys
 - **Secure Storage**: Use hardware wallets or secure storage solutions
 - **Backup Safely**: Keep secure, offline backups of your keys
 
@@ -103,13 +103,13 @@ Common private key phishing attempts:
 ## Investment & Financial Warnings
 
 ### No Investment Advice
-- **Not Financial Advice**: Circle Layer documentation provides technical information only
+- **Not Financial Advice**: Core Layer documentation provides technical information only
 - **DYOR**: Always do your own research before any financial decisions
 - **Regulatory Compliance**: Ensure compliance with local regulations
 - **Risk Assessment**: Understand and assess your personal risk tolerance
 
 ### Development Stage Risks
-- **Early Development**: Circle Layer is in active development
+- **Early Development**: Core Layer is in active development
 - **Technical Risks**: Software bugs and vulnerabilities possible
 - **Network Changes**: Protocol may change during development
 - **No Guarantees**: No guarantees about future performance or value
@@ -117,7 +117,7 @@ Common private key phishing attempts:
 ## Compliance & Reporting
 
 ### Integrity Standards
-Circle Layer maintains the highest standards of business conduct:
+Core Layer maintains the highest standards of business conduct:
 
 - **Fair Practices**: Open, transparent, and fair resource allocation
 - **Evaluation Criteria**: All support policies have clear, public criteria
@@ -128,7 +128,7 @@ Circle Layer maintains the highest standards of business conduct:
 If you encounter suspicious activity or security concerns:
 
 #### Report To
-- **Security Issues**: admin@circlelayer.com
+- **Security Issues**: admin@clayer.io
 - **Provide Details**: Include as much detail as possible
 - **Contact Information**: Provide your contact details for follow-up
 - **Confidentiality**: All reports handled with strict confidentiality
@@ -144,7 +144,7 @@ If you encounter suspicious activity or security concerns:
 - **Investigation**: Thorough investigation following applicable laws
 - **Privacy Protection**: Reporter privacy protection within legal limits
 - **Top Management**: Direct reporting to senior leadership
-- **Legal Action**: Circle Layer reserves right to pursue legal action against fraud
+- **Legal Action**: Core Layer reserves right to pursue legal action against fraud
 
 ## Development Safety Guidelines
 
@@ -190,4 +190,4 @@ If you encounter suspicious activity or security concerns:
 
 ---
 
-**Remember**: When in doubt, always verify through official channels and prioritize security over convenience. The Circle Layer team will never ask for private keys, passwords, or request payment for testnet access. 
+**Remember**: When in doubt, always verify through official channels and prioritize security over convenience. The Core Layer team will never ask for private keys, passwords, or request payment for testnet access. 

@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Overview
 
-Circle Layer offers several key advantages over other blockchain platforms:
+Core Layer offers several key advantages over other blockchain platforms:
 
 ## Technical Advantages
 

@@ -6,7 +6,7 @@ sidebar_label: Set Up a Wallet
 
 # Set Up a Wallet
 
-Learn how to set up your wallet for Circle Layer testnet access.
+Learn how to set up your wallet for Core Layer testnet access.
 
 ## Supported Wallets
 
@@ -16,7 +16,7 @@ Learn how to set up your wallet for Circle Layer testnet access.
 - **Mobile Wallets** (Trust Wallet, Rainbow, Coinbase Wallet, etc.)
 
 :::warning Hardware Wallet Limitation
-**Ledger hardware wallets are NOT supported** on Circle Layer at this time. Please use software wallets like MetaMask for Circle Layer testnet access.
+**Ledger hardware wallets are NOT supported** on Core Layer at this time. Please use software wallets like MetaMask for Core Layer testnet access.
 :::
 
 ### Wallet Compatibility Details
@@ -41,19 +41,19 @@ Learn how to set up your wallet for Circle Layer testnet access.
 2. Install the wallet extension or application
 3. Create a new wallet or import existing
 4. Configure network settings
-5. Add Circle Layer testnet
+5. Add Core Layer testnet
 
 ## MetaMask Configuration
 
 ### Testnet Network Settings
 ```json
 {
-  "networkName": "Circle Layer Testnet",
-  "rpcUrl": "https://testnet-rpc.circlelayer.com",
+  "networkName": "Core Layer Testnet",
+  "rpcUrl": "https://testnet-rpc.clayer.io",
   "chainId": 28525,
   "currencySymbol": "CLAYER",
   "currencyDecimals": 18,
-  "blockExplorerUrl": "https://explorer-testnet.circlelayer.com"
+  "blockExplorerUrl": "https://explorer-testnet.clayer.io"
 }
 ```
 
@@ -63,34 +63,34 @@ Learn how to set up your wallet for Circle Layer testnet access.
 1. **Open MetaMask** and click the network dropdown
 2. **Select "Add Network"** → "Add a network manually"
 3. **Fill in the network details**:
-   - Network Name: `Circle Layer Testnet`
-   - New RPC URL: `https://testnet-rpc.circlelayer.com`
+   - Network Name: `Core Layer Testnet`
+   - New RPC URL: `https://testnet-rpc.clayer.io`
    - Chain ID: `28525`
    - Currency Symbol: `CLAYER`
-   - Block Explorer URL: `https://explorer-testnet.circlelayer.com`
+   - Block Explorer URL: `https://explorer-testnet.clayer.io`
 4. **Click "Save"** to add the network
-5. **Switch to Circle Layer** from the network dropdown
+5. **Switch to Core Layer** from the network dropdown
 
 #### Method 2: Programmatic Addition
 ```javascript
-// Add Circle Layer Testnet programmatically
+// Add Core Layer Testnet programmatically
 async function addCircleLayerNetwork() {
   try {
     await window.ethereum.request({
       method: 'wallet_addEthereumChain',
       params: [{
         chainId: '0x6F75', // 28525 in hexadecimal
-        chainName: 'Circle Layer Testnet',
+        chainName: 'Core Layer Testnet',
         nativeCurrency: {
           name: 'CLAYER',
           symbol: 'CLAYER',
           decimals: 18
         },
-        rpcUrls: ['https://testnet-rpc.circlelayer.com'],
-        blockExplorerUrls: ['https://explorer-testnet.circlelayer.com']
+        rpcUrls: ['https://testnet-rpc.clayer.io'],
+        blockExplorerUrls: ['https://explorer-testnet.clayer.io']
       }]
     });
-    console.log('Circle Layer Testnet added successfully');
+    console.log('Core Layer Testnet added successfully');
   } catch (error) {
     console.error('Error adding network:', error);
   }
@@ -100,7 +100,7 @@ async function addCircleLayerNetwork() {
 ### Network Verification
 After adding the network, verify the configuration:
 
-1. **Check Network Display**: Should show "Circle Layer Testnet"
+1. **Check Network Display**: Should show "Core Layer Testnet"
 2. **Verify Chain ID**: Should display 28525
 3. **Currency Symbol**: Should show CLAYER
 4. **Test Connection**: Try viewing account balance
@@ -109,7 +109,7 @@ After adding the network, verify the configuration:
 
 #### Gas Configuration
 ```javascript
-// Recommended gas settings for Circle Layer
+// Recommended gas settings for Core Layer
 const gasSettings = {
   gasPrice: '21000000000', // 0.000021 CLAYER in wei
   gasLimit: '21000', // Standard transfer
@@ -119,8 +119,8 @@ const gasSettings = {
 ```
 
 #### Custom RPC Configuration
-- **Primary RPC**: `https://testnet-rpc.circlelayer.com`
-- **WebSocket**: `wss://testnet-rpc.circlelayer.com`
+- **Primary RPC**: `https://testnet-rpc.clayer.io`
+- **WebSocket**: `wss://testnet-rpc.clayer.io`
 - **Backup RPC**: Contact support for additional endpoints
 - **Connection Timeout**: 30 seconds (default)
 
@@ -129,28 +129,28 @@ For WalletConnect integration, you need to register on WalletConnect and follow 
 
 ### WalletConnect Configuration
 ```javascript
-// WalletConnect v2 setup for Circle Layer
+// WalletConnect v2 setup for Core Layer
 import { Web3Modal } from '@web3modal/wagmi/react';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const circleLayerTestnet = {
   id: 28525,
-  name: 'Circle Layer Testnet',
-  network: 'circle-layer-testnet',
+  name: 'Core Layer Testnet',
+  network: 'core-layer-testnet',
   nativeCurrency: {
     decimals: 18,
     name: 'CLAYER',
     symbol: 'CLAYER',
   },
   rpcUrls: {
-    default: { http: ['https://testnet-rpc.circlelayer.com'] },
-    public: { http: ['https://testnet-rpc.circlelayer.com'] },
+    default: { http: ['https://testnet-rpc.clayer.io'] },
+    public: { http: ['https://testnet-rpc.clayer.io'] },
   },
   blockExplorers: {
     default: { 
-      name: 'Circle Layer Explorer', 
-      url: 'https://explorer-testnet.circlelayer.com' 
+      name: 'Core Layer Explorer', 
+      url: 'https://explorer-testnet.clayer.io' 
     },
   },
 };
@@ -160,7 +160,7 @@ const { chains, publicClient } = configureChains(
   [
     jsonRpcProvider({
       rpc: (chain) => ({
-        http: 'https://testnet-rpc.circlelayer.com',
+        http: 'https://testnet-rpc.clayer.io',
       }),
     }),
   ]
@@ -173,18 +173,18 @@ const { chains, publicClient } = configureChains(
 1. **Open Trust Wallet** → Settings → Wallets
 2. **Add Network** → Select "Custom"
 3. **Enter Network Details**:
-   - Network Name: `Circle Layer Testnet`
-   - RPC URL: `https://testnet-rpc.circlelayer.com`
+   - Network Name: `Core Layer Testnet`
+   - RPC URL: `https://testnet-rpc.clayer.io`
    - Chain ID: `28525`
    - Symbol: `CLAYER`
-   - Explorer: `https://explorer-testnet.circlelayer.com`
+   - Explorer: `https://explorer-testnet.clayer.io`
 
 ### Rainbow Wallet Setup
 1. **Open Rainbow Wallet** → Settings → Networks
 2. **Add Network** → Custom Network
-3. **Configure Circle Layer**:
-   - Name: `Circle Layer Testnet`
-   - RPC: `https://testnet-rpc.circlelayer.com`
+3. **Configure Core Layer**:
+   - Name: `Core Layer Testnet`
+   - RPC: `https://testnet-rpc.clayer.io`
    - Chain ID: `28525`
    - Currency: `CLAYER`
 
@@ -192,8 +192,8 @@ const { chains, publicClient } = configureChains(
 1. **Open Coinbase Wallet** → Settings → Active Networks
 2. **Add Network** → Custom RPC
 3. **Fill Network Information**:
-   - Network Name: `Circle Layer Testnet`
-   - RPC URL: `https://testnet-rpc.circlelayer.com`
+   - Network Name: `Core Layer Testnet`
+   - RPC URL: `https://testnet-rpc.clayer.io`
    - Chain ID: `28525`
    - Currency Symbol: `CLAYER`
 
@@ -202,9 +202,9 @@ const { chains, publicClient } = configureChains(
 ### Common Issues
 
 #### Connection Problems
-- **Verify RPC URL**: Ensure `https://testnet-rpc.circlelayer.com` is correct
+- **Verify RPC URL**: Ensure `https://testnet-rpc.clayer.io` is correct
 - **Check Chain ID**: Must be exactly `28525`
-- **Network Status**: Check Circle Layer testnet status
+- **Network Status**: Check Core Layer testnet status
 - **Clear Cache**: Clear wallet cache and retry
 
 #### Transaction Issues
@@ -215,13 +215,13 @@ const { chains, publicClient } = configureChains(
 
 #### Balance Display
 - **Token Not Visible**: May need to manually add CLAYER token
-- **Incorrect Network**: Ensure you're on Circle Layer Testnet
+- **Incorrect Network**: Ensure you're on Core Layer Testnet
 - **Sync Issues**: Try refreshing wallet or switching networks
 
 ### Support Contacts
-- **Technical Support**: support@circlelayer.com
-- **Wallet Issues**: support@circlelayer.com
-- **Documentation**: support@circlelayer.com
+- **Technical Support**: support@clayer.io
+- **Wallet Issues**: support@clayer.io
+- **Documentation**: support@clayer.io
 
 ## Development Integration
-Circle Layer follows standard EVM integration patterns, making it compatible with existing Ethereum development tools and wallets.
+Core Layer follows standard EVM integration patterns, making it compatible with existing Ethereum development tools and wallets.

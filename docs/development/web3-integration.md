@@ -6,19 +6,19 @@ sidebar_position: 4
 
 ## Overview
 
-Learn how to integrate Web3 libraries with Circle Layer testnet. Circle Layer follows standard EVM blockchain integration patterns, making it compatible with existing Ethereum development tools.
+Learn how to integrate Web3 libraries with Core Layer testnet. Core Layer follows standard EVM blockchain integration patterns, making it compatible with existing Ethereum development tools.
 
 ## Network Configuration
 
-### Circle Layer Testnet
+### Core Layer Testnet
 *Configuration for testnet deployment:*
 
-- **RPC URL**: https://testnet-rpc.circlelayer.com
-- **WebSocket**: wss://testnet-rpc.circlelayer.com
+- **RPC URL**: https://testnet-rpc.clayer.io
+- **WebSocket**: wss://testnet-rpc.clayer.io
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
 
-- **Block Explorer**: https://explorer-testnet.circlelayer.com
+- **Block Explorer**: https://explorer-testnet.clayer.io
 
 ## Web3.js Integration
 
@@ -32,15 +32,15 @@ npm install web3
 const Web3 = require('web3');
 
 // HTTP Provider
-const web3 = new Web3('https://testnet-rpc.circlelayer.com');
+const web3 = new Web3('https://testnet-rpc.clayer.io');
 
 // WebSocket Provider
-const web3WS = new Web3('wss://testnet-rpc.circlelayer.com');
+const web3WS = new Web3('wss://testnet-rpc.clayer.io');
 
 // Network Configuration
 const networkConfig = {
   chainId: 28525,
-  name: 'Circle Layer Testnet',
+  name: 'Core Layer Testnet',
   currency: 'CLAYER'
 };
 ```
@@ -71,7 +71,7 @@ async function sendCLAYER() {
 ### Contract Interaction
 ```javascript
 // Interact with deployed example contract
-const contractAddress = '0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB'; // https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
+const contractAddress = '0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB'; // https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB
 const contractABI = []; // ABI from explorer
 
 const contract = new web3.eth.Contract(contractABI, contractAddress);
@@ -114,14 +114,14 @@ npm install ethers
 const { ethers } = require('ethers');
 
 // Provider setup
-const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
+const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.clayer.io');
 
 // WebSocket Provider
-const wsProvider = new ethers.providers.WebSocketProvider('wss://testnet-rpc.circlelayer.com');
+const wsProvider = new ethers.providers.WebSocketProvider('wss://testnet-rpc.clayer.io');
 
 // Network configuration
 const network = {
-  name: 'Circle Layer Testnet',
+  name: 'Core Layer Testnet',
   chainId: 28525,
   ensAddress: null
 };
@@ -201,19 +201,19 @@ const useCircleLayer = () => {
         // Request account access
         await window.ethereum.request({ method: 'eth_requestAccounts' });
         
-        // Add Circle Layer network
+        // Add Core Layer network
         await window.ethereum.request({
           method: 'wallet_addEthereumChain',
           params: [{
             chainId: '0x6F75', // 28525 in hex
-            chainName: 'Circle Layer Testnet',
+            chainName: 'Core Layer Testnet',
             nativeCurrency: {
               name: 'CLAYER',
               symbol: 'CLAYER',
               decimals: 18
             },
-            rpcUrls: ['https://testnet-rpc.circlelayer.com'],
-            blockExplorerUrls: ['https://explorer-testnet.circlelayer.com/']
+            rpcUrls: ['https://testnet-rpc.clayer.io'],
+            blockExplorerUrls: ['https://explorer-testnet.clayer.io/']
           }]
         });
         
@@ -294,14 +294,14 @@ export default {
 
 ## Mobile Integration
 
-Circle Layer testnet can be integrated into mobile applications using the same EVM integration patterns:
+Core Layer testnet can be integrated into mobile applications using the same EVM integration patterns:
 
 ### React Native Example
 ```javascript
 import { ethers } from 'ethers';
 
 // Provider setup for mobile
-const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.circlelayer.com');
+const provider = new ethers.providers.JsonRpcProvider('https://testnet-rpc.clayer.io');
 
 // Mobile wallet integration follows standard EVM patterns
 const connectMobileWallet = async () => {
@@ -336,7 +336,7 @@ try {
 // Verify connected to correct network
 const network = await provider.getNetwork();
 if (network.chainId !== 28525) {
-  throw new Error('Please connect to Circle Layer Testnet');
+  throw new Error('Please connect to Core Layer Testnet');
 }
 ```
 
@@ -348,7 +348,7 @@ if (network.chainId !== 28525) {
 
 ## Resources
 
-- **API Documentation**: https://explorer-testnet.circlelayer.com/api-docs
-- **GraphQL Endpoint**: https://explorer-testnet.circlelayer.com/graphiql
-- **Block Explorer**: https://explorer-testnet.circlelayer.com/
+- **API Documentation**: https://explorer-testnet.clayer.io/api-docs
+- **GraphQL Endpoint**: https://explorer-testnet.clayer.io/graphiql
+- **Block Explorer**: https://explorer-testnet.clayer.io/
 - **Example Contract**: 0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB 

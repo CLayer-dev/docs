@@ -9,8 +9,8 @@ require('dotenv').config();
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Circle Layer Documentation',
-  tagline: 'Official documentation for Circle Layer, an EVM-compatible POS Layer 1 blockchain',
+  title: 'Core Layer Documentation',
+  tagline: 'Official documentation for Core Layer, an EVM-compatible POS Layer 1 blockchain',
   favicon: 'img/CL_favicon.png',
 
   // Client modules for default theme setting
@@ -68,14 +68,14 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         name: 'description',
-        content: 'Circle Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain with AI security features and exceptional scalability.',
+        content: 'Core Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain with AI security features and exceptional scalability.',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         name: 'keywords',
-        content: 'blockchain, layer 1, evm, pos, defi, smart contracts, circle layer',
+        content: 'blockchain, layer 1, evm, pos, defi, smart contracts, core layer',
       },
     },
     // Open Graph meta tags for social media sharing
@@ -90,35 +90,35 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         property: 'og:title',
-        content: 'Circle Layer Documentation',
+        content: 'Core Layer Documentation',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         property: 'og:description',
-        content: 'Official documentation for Circle Layer, an EVM-compatible DPOS Layer 1 blockchain with AI security features and exceptional scalability.',
+        content: 'Official documentation for Core Layer, an EVM-compatible DPOS Layer 1 blockchain with AI security features and exceptional scalability.',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         property: 'og:url',
-        content: 'https://docs.circlelayer.com',
+        content: 'https://docs.clayer.io',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         property: 'og:site_name',
-        content: 'Circle Layer',
+        content: 'Core Layer',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         property: 'og:image',
-        content: 'https://docs.circlelayer.com/img/circle-layer-social-card.jpg',
+        content: 'https://docs.clayer.io/img/circle-layer-social-card.jpg',
       },
     },
     {
@@ -139,7 +139,7 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         property: 'og:image:alt',
-        content: 'Circle Layer - High-Performance EVM-Compatible Blockchain',
+        content: 'Core Layer - High-Performance EVM-Compatible Blockchain',
       },
     },
     // Twitter Card meta tags
@@ -154,28 +154,28 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         name: 'twitter:title',
-        content: 'Circle Layer Documentation',
+        content: 'Core Layer Documentation',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         name: 'twitter:description',
-        content: 'Official documentation for Circle Layer, an EVM-compatible POS Layer 1 blockchain with AI security features and exceptional scalability.',
+        content: 'Official documentation for Core Layer, an EVM-compatible POS Layer 1 blockchain with AI security features and exceptional scalability.',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         name: 'twitter:image',
-        content: 'https://docs.circlelayer.com/img/circle-layer-social-card.jpg',
+        content: 'https://docs.clayer.io/img/circle-layer-social-card.jpg',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         name: 'twitter:image:alt',
-        content: 'Circle Layer - High-Performance EVM-Compatible Blockchain',
+        content: 'Core Layer - High-Performance EVM-Compatible Blockchain',
       },
     },
     // Telegram specific meta tags
@@ -197,14 +197,14 @@ const config: Config = {
   ],
 
   // Set the production url of your site here
-  url: process.env.SITE_URL || 'https://docs.circlelayer.com',
+  url: process.env.SITE_URL || 'https://docs.clayer.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.BASE_URL || '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'circle-layer', // Usually your GitHub org/user name.
+  organizationName: 'core-layer', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -280,7 +280,7 @@ const config: Config = {
 
     navbar: {
       logo: {
-        alt: 'Circle Layer Logo',
+        alt: 'Core Layer Logo',
         src: 'img/light-theme-logo.png',
         srcDark: 'img/dark-theme-logo.png',
       },
@@ -307,11 +307,11 @@ const config: Config = {
               to: '/',
             },
             {
-              label: 'Circle Layer for Developers',
+              label: 'Core Layer for Developers',
               to: '/development/writing-smart-contracts',
             },
             {
-              label: 'Circle Layer for Users',
+              label: 'Core Layer for Users',
               to: '/introduction/key-features',
             },
           ],
@@ -334,7 +334,7 @@ const config: Config = {
           items: [
             {
               label: 'Website',
-              href: 'https://circlelayer.com',
+              href: 'https://clayer.io',
             },
             {
               label: 'GitHub',
@@ -342,12 +342,12 @@ const config: Config = {
             },
             {
               label: 'Testnet Explorer',
-              href: 'https://explorer-testnet.circlelayer.com/',
+              href: 'https://explorer-testnet.clayer.io/',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Circle Layer Foundation. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Core Layer Foundation. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -2,7 +2,7 @@ import { VercelRequest, VercelResponse } from '@vercel/node';
 import GrokAI from '../src/services/grok-ai';
 import { AIServiceOptions } from '../src/types/docs';
 
-// Valid API key - using existing Circle Layer docs API key
+// Valid API key - using existing Core Layer docs API key
 const VALID_API_KEY = process.env.Circle_Layer_Docs_API_KEY;
 
 // Rate limiting storage (in production, use Redis or similar)

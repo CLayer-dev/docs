@@ -1,14 +1,14 @@
 ---
 id: phase-1-testnet
-title: Circle Layer Development Roadmap
+title: Core Layer Development Roadmap
 sidebar_label: Development Roadmap
 ---
 
-# Circle Layer Development Roadmap
+# Core Layer Development Roadmap
 
 ## Strategic Overview
 
-Circle Layer is building a robust, high-performance blockchain ecosystem through a carefully planned 2-phase development approach before mainnet launch. Our strategy focuses on comprehensive testing, ecosystem development, and security hardening to ensure a production-ready network.
+Core Layer is building a robust, high-performance blockchain ecosystem through a carefully planned 2-phase development approach before mainnet launch. Our strategy focuses on comprehensive testing, ecosystem development, and security hardening to ensure a production-ready network.
 
 ## Phase 1: Token Launch & Core Infrastructure Development (Current)
 
@@ -68,10 +68,10 @@ Circle Layer is building a robust, high-performance blockchain ecosystem through
 - ✅ Testnet network operational (Live)
 
 #### Developer Infrastructure 🛠️ LIVE
-- ✅ RPC endpoints (https://testnet-rpc.circlelayer.com)
-- ✅ WebSocket endpoints (wss://testnet-rpc.circlelayer.com)
-- ✅ Block explorer (https://explorer-testnet.circlelayer.com)
-- ✅ Faucet service (https://faucet.circlelayer.com)
+- ✅ RPC endpoints (https://testnet-rpc.clayer.io)
+- ✅ WebSocket endpoints (wss://testnet-rpc.clayer.io)
+- ✅ Block explorer (https://explorer-testnet.clayer.io)
+- ✅ Faucet service (https://faucet.clayer.io)
 - ✅ Web3 library compatibility (Live)
 - ✅ Developer documentation (Complete)
 
@@ -83,12 +83,12 @@ Circle Layer is building a robust, high-performance blockchain ecosystem through
 
 <!-- 
 ### Testnet Network Details (READY - WILL BE ACTIVATED)
-- **Network Name**: Circle Layer Testnet
-- **RPC URL**: https://testnet-rpc.circlelayer.com
+- **Network Name**: Core Layer Testnet
+- **RPC URL**: https://testnet-rpc.clayer.io
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
-- **Block Explorer**: https://explorer-testnet.circlelayer.com/
-- **Faucet**: https://faucet.circlelayer.com
+- **Block Explorer**: https://explorer-testnet.clayer.io/
+- **Faucet**: https://faucet.clayer.io
 -->
 
 ### Target Performance Metrics
@@ -231,12 +231,12 @@ Building every component (bridge, DEX, wallets) in-house ensures seamless integr
 
 <!-- 
 ### Network Endpoints (READY FOR ACTIVATION)
-- **RPC**: https://testnet-rpc.circlelayer.com
-- **WebSocket**: wss://testnet-rpc.circlelayer.com
-- **Explorer**: https://explorer-testnet.circlelayer.com
-- **Faucet**: https://faucet.circlelayer.com
-- **GraphQL**: https://explorer-testnet.circlelayer.com/graphiql
-- **Faucet**: https://faucet.circlelayer.com
+- **RPC**: https://testnet-rpc.clayer.io
+- **WebSocket**: wss://testnet-rpc.clayer.io
+- **Explorer**: https://explorer-testnet.clayer.io
+- **Faucet**: https://faucet.clayer.io
+- **GraphQL**: https://explorer-testnet.clayer.io/graphiql
+- **Faucet**: https://faucet.clayer.io
 -->
 
 ### Technical Documentation
@@ -251,7 +251,7 @@ Building every component (bridge, DEX, wallets) in-house ensures seamless integr
 - Office hours with core team
 - Grant program applications
 
-## Circle Layer Innovation
+## Core Layer Innovation
 
 Our approach to high-performance blockchain development focuses on:
 

@@ -157,7 +157,7 @@ Return numbers only (e.g., 0, 5, 12):`;
      */
     private isSimpleQuery(query: string): boolean {
         const simplePatterns = [
-            /^what is circle layer/i,
+            /^what is core layer/i,
             /^how to start/i,
             /^getting started/i,
             /^installation/i,
@@ -242,17 +242,17 @@ Return numbers only (e.g., 0, 5, 12):`;
             .join('\n\n')
             .substring(0, 8000); // Optimized overall limit for budget efficiency
 
-        return `Circle Layer blockchain assistant. Answer ONLY Circle Layer questions using provided docs.
+        return `Core Layer blockchain assistant. Answer ONLY Core Layer questions using provided docs.
 
 Rules:
-- Circle Layer topics only (including content updates and documentation) any other that makes sense
+- Core Layer topics only (including content updates and documentation) any other that makes sense
 - Use clear, helpful explanations
 - Use markdown (##, \`\`\`, bullets)
 - CRITICAL: Provide COMPLETE answers - NEVER truncate or cut off responses mid-sentence
 - Always finish your thoughts and complete all sentences
-- If non-Circle Layer: "I help with Circle Layer blockchain only. Ask about Circle Layer development, staking, or setup."
+- If non-Core Layer: "I help with Core Layer blockchain only. Ask about Core Layer development, staking, or setup."
 
-Circle Layer Documentation:
+Core Layer Documentation:
 ${contextContent}`;
     }
 
@@ -262,16 +262,16 @@ ${contextContent}`;
     private createUserPrompt(query: string): string {
         return `Question: ${query}
 
-Please provide a helpful answer based on the Circle Layer documentation provided in the system prompt.`;
+Please provide a helpful answer based on the Core Layer documentation provided in the system prompt.`;
     }
 
     /**
-     * Detect if query is related to Circle Layer
+     * Detect if query is related to Core Layer
      */
     private isCircleLayerRelated(query: string): boolean {
         const circleLayerTerms = [
-            // Direct Circle Layer references
-            'circle layer', 'circlelayer', 'clayer', 'circle-layer',
+            // Direct Core Layer references
+            'core layer', 'circlelayer', 'clayer', 'core-layer',
 
             // Network and infrastructure
             'testnet', 'mainnet', 'blockchain', 'validator', 'staking',
@@ -322,12 +322,12 @@ Please provide a helpful answer based on the Circle Layer documentation provided
 
         const queryLower = query.toLowerCase();
 
-        // Check for explicit Circle Layer mentions
-        if (queryLower.includes('circle layer') || queryLower.includes('circlelayer')) {
+        // Check for explicit Core Layer mentions
+        if (queryLower.includes('core layer') || queryLower.includes('circlelayer')) {
             return true;
         }
 
-        // Check for blockchain-related terms that could be Circle Layer related
+        // Check for blockchain-related terms that could be Core Layer related
         return circleLayerTerms.some(term =>
             queryLower.includes(term.toLowerCase())
         );
@@ -372,10 +372,10 @@ Please provide a helpful answer based on the Circle Layer documentation provided
                 };
             }
 
-            // Check if query is related to Circle Layer
+            // Check if query is related to Core Layer
             if (!this.isCircleLayerRelated(userQuery)) {
                 return {
-                    message: "I'm specifically designed to help with Circle Layer blockchain topics. I can assist you with:\n\n• Circle Layer development and deployment\n• Smart contract development on Circle Layer\n• Network configurations and RPC endpoints\n• Staking and validator information\n• Getting started guides\n• Circle Layer testnet and mainnet information\n\nPlease ask me anything about Circle Layer! 🚀",
+                    message: "I'm specifically designed to help with Core Layer blockchain topics. I can assist you with:\n\n• Core Layer development and deployment\n• Smart contract development on Core Layer\n• Network configurations and RPC endpoints\n• Staking and validator information\n• Getting started guides\n• Core Layer testnet and mainnet information\n\nPlease ask me anything about Core Layer! 🚀",
                     isDetailed: true,
                     isTechnical: false,
                     timestamp: Date.now(),
@@ -407,7 +407,7 @@ Please provide a helpful answer based on the Circle Layer documentation provided
                 isDetailed: response.length > 150,
                 isTechnical: this.detectTechnical(userQuery),
                 timestamp: Date.now(),
-                sources: ['Circle Layer Documentation']
+                sources: ['Core Layer Documentation']
             };
 
             // Budget optimization: Cache the response

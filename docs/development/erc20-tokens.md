@@ -3,16 +3,16 @@ id: erc20-tokens
 title: ERC20 Token Development
 sidebar_label: ERC20 Tokens
 sidebar_position: 7
-description: Complete guide to developing and deploying ERC20 tokens on Circle Layer blockchain.
+description: Complete guide to developing and deploying ERC20 tokens on Core Layer blockchain.
 ---
 
 # ERC20 Token Development
 
-Circle Layer Blockchain is fully compatible with the [ERC20](https://eips.ethereum.org/EIPS/eip-20) standard, allowing developers to create and deploy standard-compliant tokens seamlessly.
+Core Layer Blockchain is fully compatible with the [ERC20](https://eips.ethereum.org/EIPS/eip-20) standard, allowing developers to create and deploy standard-compliant tokens seamlessly.
 
 ## ERC20 Standard Interface
 
-Circle Layer supports the complete ERC20 interface with all standard functions and events:
+Core Layer supports the complete ERC20 interface with all standard functions and events:
 
 ```solidity
 // ----------------------------------------------------------------------------
@@ -103,7 +103,7 @@ contract MyToken {
 3. **Compile**: Select Solidity compiler version 0.8.0 or higher
 4. **Deploy**: 
    - Select "Injected Web3" environment
-   - Ensure MetaMask is connected to Circle Layer testnet
+   - Ensure MetaMask is connected to Core Layer testnet
    - Set constructor parameters
    - Click "Deploy"
 
@@ -126,7 +126,7 @@ module.exports = {
   solidity: "0.8.19",
   networks: {
     circlelayer: {
-      url: "https://testnet-rpc.circlelayer.com",
+      url: "https://testnet-rpc.clayer.io",
       chainId: 28525,
       accounts: [process.env.PRIVATE_KEY]
     }
@@ -237,7 +237,7 @@ contract PausableToken is ERC20Interface {
 
 ### Contract Verification on Explorer
 
-1. Navigate to [explorer-testnet.circlelayer.com](https://explorer-testnet.circlelayer.com)
+1. Navigate to [explorer-testnet.clayer.io](https://explorer-testnet.clayer.io)
 2. Search for your contract address
 3. Click "Verify Contract"
 4. Submit source code and constructor parameters
@@ -309,7 +309,7 @@ npx hardhat test
 ### Adding Liquidity to DEX
 
 ```javascript
-// Example: Adding token to Circle Layer DEX
+// Example: Adding token to Core Layer DEX
 const tokenContract = new ethers.Contract(tokenAddress, tokenABI, signer);
 const dexRouter = new ethers.Contract(routerAddress, routerABI, signer);
 
@@ -373,7 +373,7 @@ await dexRouter.addLiquidityETH(
 
 - **EIP-20 Standard**: [https://eips.ethereum.org/EIPS/eip-20](https://eips.ethereum.org/EIPS/eip-20)
 - **OpenZeppelin Contracts**: [https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)
-- **Circle Layer Testnet Explorer**: [https://explorer-testnet.circlelayer.com](https://explorer-testnet.circlelayer.com)
-- **Circle Layer Faucet**: [https://faucet.circlelayer.com](https://faucet.circlelayer.com)
+- **Core Layer Testnet Explorer**: [https://explorer-testnet.clayer.io](https://explorer-testnet.clayer.io)
+- **Core Layer Faucet**: [https://faucet.clayer.io](https://faucet.clayer.io)
 
-ERC20 token development on Circle Layer provides developers with a fast, low-cost environment for creating and deploying standard-compliant tokens with full Ethereum ecosystem compatibility. 
+ERC20 token development on Core Layer provides developers with a fast, low-cost environment for creating and deploying standard-compliant tokens with full Ethereum ecosystem compatibility. 

@@ -8,12 +8,12 @@ import '@site/src/css/comparison.css';
 
 # Performance Architecture
 
-Deep dive into the technical architecture and design decisions that enable Circle Layer's high-performance transaction processing.
+Deep dive into the technical architecture and design decisions that enable Core Layer's high-performance transaction processing.
 
 ## Architecture Design Principles
 
 ### DPoS Consensus Optimization
-Circle Layer's performance stems from architectural optimizations in our Delegated Proof of Stake implementation:
+Core Layer's performance stems from architectural optimizations in our Delegated Proof of Stake implementation:
 
 - **Validator Selection**: Top 21 validators by stake for optimal network performance
 - **Block Production**: Consistent 3-second intervals with deterministic ordering
@@ -23,7 +23,7 @@ Circle Layer's performance stems from architectural optimizations in our Delegat
 ### Network Infrastructure Design
 - **Multiple RPC Endpoints**: Distributed access via ports 32668, 32669, 8545, 6060
 - **Geographic Distribution**: Support for multiple regional endpoints
-- **WebSocket Integration**: Real-time event streaming via wss://testnet-rpc.circlelayer.com
+- **WebSocket Integration**: Real-time event streaming via wss://testnet-rpc.clayer.io
 - **Optimized Propagation**: Efficient block and transaction distribution
 
 ## Performance Implementation

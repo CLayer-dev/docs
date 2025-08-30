@@ -6,17 +6,17 @@ sidebar_position: 3
 
 ## Overview
 
-Learn how to deploy smart contracts to Circle Layer testnet.
+Learn how to deploy smart contracts to Core Layer testnet.
 
 ## Network Configuration
 
-### Circle Layer Testnet
-- **RPC URL**: https://testnet-rpc.circlelayer.com
+### Core Layer Testnet
+- **RPC URL**: https://testnet-rpc.clayer.io
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
 - **Gas Price**: Minimum 0.000021 CLAYER (adjusts based on network consumption)
 - **Block Gas Limit**: 10,000,000,000,000 per block
-- **Block Explorer**: https://explorer-testnet.circlelayer.com/
+- **Block Explorer**: https://explorer-testnet.clayer.io/
 
 ## Deployment Methods
 
@@ -29,7 +29,7 @@ module.exports = {
   solidity: "0.8.19",
   networks: {
     circleLayerTestnet: {
-      url: "https://testnet-rpc.circlelayer.com",
+      url: "https://testnet-rpc.clayer.io",
       chainId: 28525,
       accounts: [process.env.PRIVATE_KEY],
       gasPrice: 21000000000, // 0.000021 CLAYER in wei
@@ -72,7 +72,7 @@ module.exports = {
     circleLayerTestnet: {
       provider: () => new HDWalletProvider(
         process.env.PRIVATE_KEY,
-        'https://testnet-rpc.circlelayer.com'
+        'https://testnet-rpc.clayer.io'
       ),
       network_id: 28525,
       gas: 10000000000000,
@@ -98,29 +98,29 @@ module.exports = function(deployer) {
 
 ### 3. Using Remix IDE
 1. Open [Remix IDE](https://remix.ethereum.org/)
-2. Connect to Circle Layer testnet:
+2. Connect to Core Layer testnet:
    - Environment: "Injected Provider - MetaMask"
-   - Ensure MetaMask is connected to Circle Layer Testnet
+   - Ensure MetaMask is connected to Core Layer Testnet
 3. Compile your contract
 4. Deploy with appropriate gas settings
 
 ## Example Deployed Contract
 
-For reference, here's an example contract deployed on Circle Layer testnet:
-- **Contract Address**: [0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB)
-- **Explorer**: [View Contract](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
-- **ABI**: [Contract ABI](https://explorer-testnet.circlelayer.com/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
+For reference, here's an example contract deployed on Core Layer testnet:
+- **Contract Address**: [0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB)
+- **Explorer**: [View Contract](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
+- **ABI**: [Contract ABI](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
 
 ## Deployment Checklist
 
 ### 1. Pre-deployment
-- Test thoroughly on Circle Layer testnet
-- Get CLAYER from [faucet](https://faucet.circlelayer.com)
+- Test thoroughly on Core Layer testnet
+- Get CLAYER from [faucet](https://faucet.clayer.io)
 - Check gas estimates with current network conditions
 - Verify constructor arguments
 
 ### 2. During Deployment
-- Monitor transaction on [explorer](https://explorer-testnet.circlelayer.com/)
+- Monitor transaction on [explorer](https://explorer-testnet.clayer.io/)
 - Use appropriate gas price (minimum 0.000021 CLAYER)
 - Verify deployment address
 - Save deployment info
@@ -133,7 +133,7 @@ For reference, here's an example contract deployed on Circle Layer testnet:
 
 ## Gas Calculation
 
-Circle Layer follows Ethereum's standard gas calculation:
+Core Layer follows Ethereum's standard gas calculation:
 ```
 Total Fee = Gas Price × Gas Used
 ```
@@ -147,7 +147,7 @@ With current parameters:
 
 ### 1. Security
 - Use secure private keys
-- Test on Circle Layer testnet first
+- Test on Core Layer testnet first
 - Verify contract code on explorer
 - Monitor deployment transactions
 
