@@ -83,7 +83,7 @@ We launch only when our ecosystem is battle-tested, secure, and ready for global
 
 ### Phase 3.1: Genesis Launch
 
-#### Core Network Activation
+#### CLayer Network Activation
 **Duration**: 2 weeks
 
 **Validator Network Bootstrap**
@@ -94,14 +94,14 @@ We launch only when our ecosystem is battle-tested, secure, and ready for global
 - **Security**: Multi-sig genesis ceremony
 
 **Initial Features**
-- ✅ Core blockchain functionality
+- ✅ CLayer blockchain functionality
 - ✅ Basic token transfers
 - ✅ Smart contract deployment
 - ✅ Web3 API endpoints
 - 🔄 Conservative performance limits (10,000 TPS initially)
 
 **Launch Monitoring**
-- **24/7 Network Monitoring**: Core team + community
+- **24/7 Network Monitoring**: CLayer team + community
 - **Performance Metrics**: Real-time dashboards
 - **Security Monitoring**: AI layer + manual oversight
 - **Incident Response**: Immediate response team

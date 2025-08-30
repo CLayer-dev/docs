@@ -61,7 +61,7 @@ brew install curl wget git go
 git clone https://github.com/clayer/testnet-clayer-blockchain.git
 
 # Navigate to the project directory
-cd Core-Blockchain
+cd CLayer-Blockchain
 
 # Compile the geth binary
 make geth
@@ -88,7 +88,7 @@ mkdir -p ~/private-clayer
 cd ~/private-clayer
 
 # Create a new account
-./path/to/Core-Blockchain/build/bin/geth account new --datadir data
+./path/to/CLayer-Blockchain/build/bin/geth account new --datadir data
 
 # Store password in a text file for convenience
 echo "your-password" > password.txt
@@ -146,14 +146,14 @@ Create a custom `genesis.json` configuration:
 After generating the `genesis.json` file, execute the following command to generate the genesis block:
 
 ```bash
-./path/to/Core-Blockchain/build/bin/geth init genesis.json --datadir data
+./path/to/CLayer-Blockchain/build/bin/geth init genesis.json --datadir data
 ```
 
 ### 4. Start Private Node
 
 ```bash
 # Start the private chain
-./path/to/Core-Blockchain/build/bin/geth \
+./path/to/CLayer-Blockchain/build/bin/geth \
     --datadir ./data \
     --networkid 12345 \
     --http \
@@ -179,7 +179,7 @@ Use the same `genesis.json` file for initializing each node. Then use the geth c
 #### Node 1 (Bootnode)
 ```bash
 # Start first node
-./path/to/Core-Blockchain/build/bin/geth \
+./path/to/CLayer-Blockchain/build/bin/geth \
     --datadir ./node1 \
     --networkid 12345 \
     --port 30303 \
@@ -191,7 +191,7 @@ Use the same `genesis.json` file for initializing each node. Then use the geth c
 #### Node 2 (Peer)
 ```bash
 # Start second node
-./path/to/Core-Blockchain/build/bin/geth \
+./path/to/CLayer-Blockchain/build/bin/geth \
     --datadir ./node2 \
     --networkid 12345 \
     --port 30304 \
@@ -202,7 +202,7 @@ Use the same `genesis.json` file for initializing each node. Then use the geth c
 #### Connect Nodes
 ```bash
 # Connect to first node console
-./path/to/Core-Blockchain/build/bin/geth attach http://localhost:8545
+./path/to/CLayer-Blockchain/build/bin/geth attach http://localhost:8545
 
 # Get node info
 admin.nodeInfo.enode
@@ -271,7 +271,7 @@ IdleTimeout = 120000000000
 Then start with the configuration file:
 
 ```bash
-./path/to/Core-Blockchain/build/bin/geth --config config.toml
+./path/to/CLayer-Blockchain/build/bin/geth --config config.toml
 ```
 
 ## Network Connection
@@ -303,7 +303,7 @@ By default, the node will attempt to connect to the mainnet. To connect to diffe
 To run with debug logging:
 
 ```bash
-./path/to/Core-Blockchain/build/bin/geth --verbosity 4 [other-flags]
+./path/to/CLayer-Blockchain/build/bin/geth --verbosity 4 [other-flags]
 ```
 
 ## Additional Resources

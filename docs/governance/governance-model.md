@@ -29,7 +29,7 @@ The CLayer network is controlled by its validators and community:
 ### Shared Vision Framework
 - **Global Contributors**: Open ecosystem welcoming global development contributors
 - **Shared Vision**: Alignment around advancing blockchain technology and adoption
-- **Value Creation Focus**: Core values centered on creating value for the blockchain industry
+- **Value Creation Focus**: CLayer values centered on creating value for the blockchain industry
 - **Community-Driven**: Development priorities shaped by community needs and input
 
 ### Governance Separation

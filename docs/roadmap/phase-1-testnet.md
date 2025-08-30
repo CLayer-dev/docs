@@ -10,7 +10,7 @@ sidebar_label: Development Roadmap
 
 CLayer is building a robust, high-performance blockchain ecosystem through a carefully planned 2-phase development approach before mainnet launch. Our strategy focuses on comprehensive testing, ecosystem development, and security hardening to ensure a production-ready network.
 
-## Phase 1: Token Launch & Core Infrastructure Development (Current)
+## Phase 1: Token Launch & CLayer Infrastructure Development (Current)
 
 ### Strategic Development Approach
 
@@ -31,7 +31,7 @@ CLayer is building a robust, high-performance blockchain ecosystem through a car
 ### Technical Development & Community Building
 
 **🎯 Development Milestone Strategy**
-- **Foundation Phase**: Core infrastructure development and testing
+- **Foundation Phase**: CLayer infrastructure development and testing
 - **Community Phase**: Developer onboarding and documentation
 - **Ecosystem Phase**: Validator network establishment and testing
 - **Pre-Mainnet Phase**: Security audits and stress testing
@@ -60,7 +60,7 @@ CLayer is building a robust, high-performance blockchain ecosystem through a car
 
 ### Current Development Status
 
-#### Core Infrastructure 🚀 LIVE
+#### CLayer Infrastructure 🚀 LIVE
 - ✅ DPoS consensus implementation (Live)
 - ✅ EVM compatibility layer (Live)
 - ✅ Network optimization (Live)

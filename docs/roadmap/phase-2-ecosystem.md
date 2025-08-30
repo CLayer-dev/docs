@@ -58,7 +58,7 @@ Learning from incidents in Sui and other ecosystems, we're implementing comprehe
 
 ### Automated Market Maker (AMM)
 
-#### Core Features
+#### CLayer Features
 - **Advanced AMM Design**: Improved from Uniswap V3 concepts
 - **Concentrated Liquidity**: Capital-efficient trading
 - **Dynamic Fee Structure**: Adaptive fees based on volatility
@@ -153,7 +153,7 @@ graph TD
 ### Security Implementation 
 
 #### Phase 2.1: Foundation
-- ✅ Core AI model training
+- ✅ CLayer AI model training
 - 🔄 Basic vulnerability scanning
 - 🔄 Pattern recognition engine
 - 🔄 Developer integration tools
@@ -302,7 +302,7 @@ impl ParallelExecutor {
 
 ### Developer Community
 - **Technical Working Groups**: Specialized development teams
-- **Open Source Contributions**: Core infrastructure contributions
+- **Open Source Contributions**: CLayer infrastructure contributions
 - **Documentation Improvements**: Community-driven docs
 - **Educational Content**: Community-created tutorials
 

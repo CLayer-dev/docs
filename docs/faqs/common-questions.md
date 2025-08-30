@@ -176,7 +176,7 @@ Yes, all standard Ethereum development tools work with CLayer testnet:
 CLayer is currently in active development and testing phase with the following progress:
 
 **Completed Components:**
-- Core blockchain architecture (DPoS consensus)
+- CLayer blockchain architecture (DPoS consensus)
 - EVM compatibility layer
 - Basic smart contract infrastructure
 - Network configuration and tooling
