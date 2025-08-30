@@ -355,7 +355,7 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
-  // Custom CSS variables for Circle Layer branding
+  // Custom CSS variables for CLayer branding
   stylesheets: [
     {
       href: 'https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap',
