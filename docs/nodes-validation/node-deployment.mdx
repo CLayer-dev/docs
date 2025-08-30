@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: Node Deployment & Compilation
-description: Complete guide for compiling, deploying, and configuring Core Layer blockchain nodes from source
+description: Complete guide for compiling, deploying, and configuring CLayer blockchain nodes from source
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
 Download source code via git:
 
 ```bash
-git clone https://github.com/circlelayer/testnet-core-blockchain
+git clone https://github.com/clayer/testnet-clayer-blockchain
 ```
 
 ### Install Golang
@@ -26,7 +26,7 @@ git clone https://github.com/circlelayer/testnet-core-blockchain
 ### Compile
 
 ```bash
-cd /path/to/core-blockchain
+cd /path/to/clayer-blockchain
 make geth
 ```
 
@@ -84,7 +84,7 @@ CacheDir = "ethash"
 CachesInMem = 2
 CachesOnDisk = 3
 CachesLockMmap = false
-DatasetDir = "/data/circlelayer/data/.ethash"
+DatasetDir = "/data/clayer/data/.ethash"
 DatasetsInMem = 1
 DatasetsOnDisk = 2
 DatasetsLockMmap = false
@@ -104,7 +104,7 @@ GlobalQueue = 1024
 Lifetime = 10800000000000
 
 [Node]
-DataDir = "/data/circlelayer/data"
+DataDir = "/data/clayer/data"
 InsecureUnlockAllowed = true
 NoUSB = true
 IPCPath = "geth.ipc"
@@ -154,10 +154,10 @@ To show full detail help info of all flags, type `geth help` or `geth -h`.
 
 ```bash
 #!/usr/bin/env bash
-/data/circlelayer/geth-linux-amd64 \
---config /data/circlelayer/config.toml  \
---logpath /data/circlelayer/logs \
---verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+/data/clayer/geth-linux-amd64 \
+--config /data/clayer/config.toml  \
+--logpath /data/clayer/logs \
+--verbosity 3  >> /data/clayer/logs/systemd_chain_console.out 2>&1
 ```
 
 ### Archive Node
@@ -173,17 +173,17 @@ So:
 
 ```bash
 #!/usr/bin/env bash
-/data/circlelayer/geth-linux-amd64 \
---config /data/circlelayer/config.toml  \
---logpath /data/circlelayer/logs \
+/data/clayer/geth-linux-amd64 \
+--config /data/clayer/config.toml  \
+--logpath /data/clayer/logs \
 --syncmode full \
 --gcmode archive \
---verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+--verbosity 3  >> /data/clayer/logs/systemd_chain_console.out 2>&1
 ```
 
 ### Network Selection
 
-If no any network flags were provided, the node will connect the circlelayer Blockchain-mainnet by default. If you want to connect to circlelayer Blockchain-testnet, add:
+If no any network flags were provided, the node will connect the clayer Blockchain-mainnet by default. If you want to connect to clayer Blockchain-testnet, add:
 
 ```bash
 --testnet
@@ -193,11 +193,11 @@ If no any network flags were provided, the node will connect the circlelayer Blo
 
 ```ini
 [Unit]
-Description=circlelayer Blockchain service
+Description=clayer Blockchain service
 
 [Service]
 Type=simple
-ExecStart=/bin/sh /data/circlelayer/run.sh
+ExecStart=/bin/sh /data/clayer/run.sh
 
 Restart=on-failure
 RestartSec=5s
@@ -210,10 +210,10 @@ WantedBy=multi-user.target
 
 ## Directory Structure
 
-Recommended directory structure for Core Layer node deployment:
+Recommended directory structure for CLayer node deployment:
 
 ```
-/data/circlelayer/
+/data/clayer/
 ├── geth-linux-amd64          # Compiled binary
 ├── config.toml               # Main configuration
 ├── run.sh                    # Startup script
@@ -233,15 +233,15 @@ Set appropriate permissions for security:
 
 ```bash
 # Create dedicated user
-sudo useradd -r -s /bin/false circlelayer
+sudo useradd -r -s /bin/false clayer
 
 # Set ownership
-sudo chown -R circlelayer:circlelayer /data/circlelayer
+sudo chown -R clayer:clayer /data/clayer
 
 # Set permissions
-sudo chmod 755 /data/circlelayer
-sudo chmod 600 /data/circlelayer/config.toml
-sudo chmod 755 /data/circlelayer/run.sh
+sudo chmod 755 /data/clayer
+sudo chmod 600 /data/clayer/config.toml
+sudo chmod 755 /data/clayer/run.sh
 ```
 
 ### Firewall Configuration
@@ -252,7 +252,7 @@ Configure firewall to allow only necessary ports:
 # Allow SSH (if needed)
 sudo ufw allow 22/tcp
 
-# Allow Core Layer P2P port
+# Allow CLayer P2P port
 sudo ufw allow 32668
 
 # Allow RPC (only if needed externally)
@@ -270,13 +270,13 @@ Monitor node logs for issues:
 
 ```bash
 # Real-time log monitoring
-tail -f /data/circlelayer/logs/systemd_chain_console.out
+tail -f /data/clayer/logs/systemd_chain_console.out
 
 # Search for errors
-grep -i error /data/circlelayer/logs/systemd_chain_console.out
+grep -i error /data/clayer/logs/systemd_chain_console.out
 
 # Check sync status
-grep -i "block" /data/circlelayer/logs/systemd_chain_console.out | tail -20
+grep -i "block" /data/clayer/logs/systemd_chain_console.out | tail -20
 ```
 
 ### Health Checks
@@ -291,7 +291,7 @@ ps aux | grep geth
 netstat -tlnp | grep 32668
 
 # Check disk space
-df -h /data/circlelayer
+df -h /data/clayer
 
 # Check memory usage
 free -h
@@ -303,10 +303,10 @@ Important files to backup:
 
 ```bash
 # Backup keystore and configuration
-tar -czf circlelayer-backup-$(date +%Y%m%d).tar.gz \
-    /data/circlelayer/config.toml \
-    /data/circlelayer/data/keystore/ \
-    /etc/systemd/system/circlelayer.service
+tar -czf clayer-backup-$(date +%Y%m%d).tar.gz \
+    /data/clayer/config.toml \
+    /data/clayer/data/keystore/ \
+    /etc/systemd/system/clayer.service
 ```
 
 ## Troubleshooting
@@ -338,7 +338,7 @@ telnet <your-ip> 32668
 
 For additional support:
 - Join the [community forums](/community/social-media)
-- Review [GitHub issues](https://github.com/circlelayer/testnet-core-blockchain/issues)
+- Review [GitHub issues](https://github.com/clayer/testnet-clayer-blockchain/issues)
 
 ---
 

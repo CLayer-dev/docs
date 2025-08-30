@@ -3,14 +3,14 @@ id: disclaimer
 title: Disclaimer
 sidebar_label: Disclaimer
 sidebar_position: 3
-description: Important disclaimer regarding third-party DAPPs and user responsibilities on Core Layer blockchain.
+description: Important disclaimer regarding third-party DAPPs and user responsibilities on CLayer blockchain.
 ---
 
 # Disclaimer
 
 Dear user (here in after referred as "you"):
 
-Core Layer Blockchain (here in after referred to as "Core Layer Blockchain" or "we") is a decentralized public chain. Developers around the world can deploy applications on CLayer, and all users can read, send and trade on CLayer. Due to the decentralized nature, we would like to remind you of the risks of third-party DAPPs as follows:
+CLayer Blockchain (here in after referred to as "CLayer Blockchain" or "we") is a decentralized public chain. Developers around the world can deploy applications on CLayer, and all users can read, send and trade on CLayer. Due to the decentralized nature, we would like to remind you of the risks of third-party DAPPs as follows:
 
 1. Whether you participate in or use the DAPP on CLayer through any trading platform, wallet, it is your personal free choice and we do not recommend it to you;
 

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Overview
 
-Core Layer provides multiple RPC endpoints for interacting with the network:
+CLayer provides multiple RPC endpoints for interacting with the network:
 
 ## Public Endpoints
 
@@ -31,7 +31,7 @@ https://faucet-api.clayer.io
 ## Network Configuration
 
 - **Chain ID**: 28525
-- **Network Name**: Core Layer Testnet
+- **Network Name**: CLayer Testnet
 - **Currency Symbol**: CLAYER
 - **Currency Decimals**: 18
 - **Block Time**: 3 seconds
@@ -61,7 +61,7 @@ Rate limiting information is not currently specified. Please check the API docum
 - eth_getTransactionReceipt
 - eth_blockNumber
 
-### Core Layer Specific Methods
+### CLayer Specific Methods
 
 #### Validator & Staking Methods
 - `clayer_getValidatorInfo(validatorAddress)` - Get validator details and performance metrics
@@ -137,7 +137,7 @@ const receipt = await response.json();
 console.log('Transaction status:', receipt.result.status);
 ```
 
-### Core Layer Specific Methods
+### CLayer Specific Methods
 
 #### Get Validator Information
 ```javascript
@@ -316,16 +316,16 @@ console.log('Last updated:', status.lastUpdated);
 
 ## SDK Examples
 
-### Core Layer JavaScript SDK
+### CLayer JavaScript SDK
 
 #### Installation
 ```bash
-npm install @circlelayer/sdk
+npm install @clayer/sdk
 ```
 
 #### Basic Setup
 ```javascript
-import { CircleLayerSDK } from '@circlelayer/sdk';
+import { CircleLayerSDK } from '@clayer/sdk';
 
 // Initialize SDK
 const clayer = new CircleLayerSDK({
@@ -392,7 +392,7 @@ const fees = await clayer.bridge.getFees('ethereum', 'USDC');
 // Initiate bridge transfer
 const bridgeTx = await clayer.bridge.transfer({
   fromChain: 'ethereum',
-  toChain: 'circlelayer',
+  toChain: 'clayer',
   token: 'USDC',
   amount: '1000000000', // 1000 USDC
   recipient: '0x123...'
@@ -434,12 +434,12 @@ const proposalTx = await clayer.governance.createProposal({
 
 #### Installation
 ```bash
-pip install circlelayer-sdk
+pip install clayer-sdk
 ```
 
 #### Basic Usage
 ```python
-from circlelayer import CircleLayerSDK
+from clayer import CircleLayerSDK
 
 # Initialize SDK
 clayer = CircleLayerSDK(
@@ -789,9 +789,9 @@ const result = await makeSignedRequest(
 - **API Testing**: Use Postman collection or curl examples
 
 ### Community & Support
-- **X (Twitter)**: https://x.com/circlelayer
-- **Telegram**: https://t.me/circlelayer
-- **GitHub Issues**: https://github.com/circlelayer/rpc-issues
+- **X (Twitter)**: https://x.com/clayer_io
+- **Telegram**: https://t.me/clayer_io
+- **GitHub Issues**: https://github.com/clayer/rpc-issues
 
 ### Rate Limits & Performance
 - **Rate Limit**: 100 requests/minute for free tier

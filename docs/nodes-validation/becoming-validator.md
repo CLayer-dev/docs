@@ -1,16 +1,16 @@
 ---
 sidebar_position: 1
 title: Becoming a Validator
-description: Learn how to become a validator on Core Layer and help secure the network
+description: Learn how to become a validator on CLayer and help secure the network
 ---
 
 # Becoming a Validator
 
-Learn how to become a validator on Core Layer and help secure the network while earning rewards.
+Learn how to become a validator on CLayer and help secure the network while earning rewards.
 
 ## Overview
 
-Core Layer validators play a crucial role in securing the network through Delegated Proof of Stake (DPoS) consensus. Validators are responsible for producing blocks, validating transactions, and maintaining network security.
+CLayer validators play a crucial role in securing the network through Delegated Proof of Stake (DPoS) consensus. Validators are responsible for producing blocks, validating transactions, and maintaining network security.
 
 ## Requirements
 
@@ -49,7 +49,7 @@ Core Layer validators play a crucial role in securing the network through Delega
 ### Required Ports
 
 ```bash
-# Open required port for Core Layer
+# Open required port for CLayer
 sudo ufw allow 32668/tcp
 sudo ufw allow 32668/udp
 
@@ -90,8 +90,8 @@ sudo ufw enable
 
 ```bash
 # Clone the repository
-git clone https://github.com/circlelayer/testnet-core-blockchain
-cd /path/to/core-blockchain
+git clone https://github.com/clayer/testnet-clayer-blockchain
+cd /path/to/clayer-blockchain
 
 # Compile the node
 make geth
@@ -103,17 +103,17 @@ make geth
 
 ```bash
 # Create directory structure
-sudo mkdir -p /data/circlelayer/{data,logs}
-sudo chown -R $USER:$USER /data/circlelayer
+sudo mkdir -p /data/clayer/{data,logs}
+sudo chown -R $USER:$USER /data/clayer
 
 # Copy compiled binary
-sudo cp build/bin/geth /data/circlelayer/geth-linux-amd64
-sudo chmod +x /data/circlelayer/geth-linux-amd64
+sudo cp build/bin/geth /data/clayer/geth-linux-amd64
+sudo chmod +x /data/clayer/geth-linux-amd64
 ```
 
 ### 3. Configuration
 
-Create the validator configuration file at `/data/circlelayer/config.toml`:
+Create the validator configuration file at `/data/clayer/config.toml`:
 
 ```toml
 [Eth]
@@ -133,7 +133,7 @@ CacheDir = "ethash"
 CachesInMem = 2
 CachesOnDisk = 3
 CachesLockMmap = false
-DatasetDir = "/data/circlelayer/data/.ethash"
+DatasetDir = "/data/clayer/data/.ethash"
 DatasetsInMem = 1
 DatasetsOnDisk = 2
 DatasetsLockMmap = false
@@ -153,7 +153,7 @@ GlobalQueue = 1024
 Lifetime = 10800000000000
 
 [Node]
-DataDir = "/data/circlelayer/data"
+DataDir = "/data/clayer/data"
 InsecureUnlockAllowed = true
 NoUSB = true
 IPCPath = "geth.ipc"
@@ -183,19 +183,19 @@ IdleTimeout = 120000000000
 
 ### 4. Startup Script
 
-Create `/data/circlelayer/run.sh`:
+Create `/data/clayer/run.sh`:
 
 ```bash
 #!/usr/bin/env bash
-/data/circlelayer/geth-linux-amd64 \
---config /data/circlelayer/config.toml  \
---logpath /data/circlelayer/logs \
---verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+/data/clayer/geth-linux-amd64 \
+--config /data/clayer/config.toml  \
+--logpath /data/clayer/logs \
+--verbosity 3  >> /data/clayer/logs/systemd_chain_console.out 2>&1
 ```
 
 Make it executable:
 ```bash
-chmod +x /data/circlelayer/run.sh
+chmod +x /data/clayer/run.sh
 ```
 
 ### 5. Network Selection
@@ -203,33 +203,33 @@ chmod +x /data/circlelayer/run.sh
 #### Testnet (Default for Testing)
 ```bash
 #!/usr/bin/env bash
-/data/circlelayer/geth-linux-amd64 \
---config /data/circlelayer/config.toml  \
+/data/clayer/geth-linux-amd64 \
+--config /data/clayer/config.toml  \
 --testnet \
---logpath /data/circlelayer/logs \
---verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+--logpath /data/clayer/logs \
+--verbosity 3  >> /data/clayer/logs/systemd_chain_console.out 2>&1
 ```
 
 #### Mainnet (Production)
 ```bash
 #!/usr/bin/env bash
-/data/circlelayer/geth-linux-amd64 \
---config /data/circlelayer/config.toml  \
---logpath /data/circlelayer/logs \
---verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+/data/clayer/geth-linux-amd64 \
+--config /data/clayer/config.toml  \
+--logpath /data/clayer/logs \
+--verbosity 3  >> /data/clayer/logs/systemd_chain_console.out 2>&1
 ```
 
 ### 6. Service Management
 
-Create systemd service at `/etc/systemd/system/circlelayer.service`:
+Create systemd service at `/etc/systemd/system/clayer.service`:
 
 ```ini
 [Unit]
-Description=circlelayer Blockchain service
+Description=clayer Blockchain service
 
 [Service]
 Type=simple
-ExecStart=/bin/sh /data/circlelayer/run.sh
+ExecStart=/bin/sh /data/clayer/run.sh
 
 Restart=on-failure
 RestartSec=5s
@@ -247,13 +247,13 @@ Enable and start the service:
 sudo systemctl daemon-reload
 
 # Enable service to start on boot
-sudo systemctl enable circlelayer.service
+sudo systemctl enable clayer.service
 
 # Start the service
-sudo systemctl start circlelayer.service
+sudo systemctl start clayer.service
 
 # Check service status
-sudo systemctl status circlelayer.service
+sudo systemctl status clayer.service
 ```
 
 ## Monitoring
@@ -265,13 +265,13 @@ sudo systemctl status circlelayer.service
 ps aux | grep geth
 
 # Check service status
-sudo systemctl status circlelayer.service
+sudo systemctl status clayer.service
 
 # View service logs
-sudo journalctl -u circlelayer.service -f
+sudo journalctl -u clayer.service -f
 
 # Real-time log monitoring
-tail -f /data/circlelayer/logs/systemd_chain_console.out
+tail -f /data/clayer/logs/systemd_chain_console.out
 ```
 
 ### 2. RPC Commands
@@ -306,7 +306,7 @@ Monitor these key metrics:
 
 ```bash
 # Check disk space
-df -h /data/circlelayer
+df -h /data/clayer
 
 # Check memory usage  
 free -h
@@ -324,15 +324,15 @@ top -p $(pgrep geth)
 
 ```bash
 # Create dedicated user
-sudo useradd -r -s /bin/false circlelayer
+sudo useradd -r -s /bin/false clayer
 
 # Set ownership
-sudo chown -R circlelayer:circlelayer /data/circlelayer
+sudo chown -R clayer:clayer /data/clayer
 
 # Set secure permissions
-sudo chmod 755 /data/circlelayer
-sudo chmod 600 /data/circlelayer/config.toml
-sudo chmod 755 /data/circlelayer/run.sh
+sudo chmod 755 /data/clayer
+sudo chmod 600 /data/clayer/config.toml
+sudo chmod 755 /data/clayer/run.sh
 ```
 
 ### Network Security
@@ -348,9 +348,9 @@ sudo chmod 755 /data/circlelayer/run.sh
 ```bash
 # Backup critical files
 tar -czf validator-backup-$(date +%Y%m%d).tar.gz \
-    /data/circlelayer/config.toml \
-    /data/circlelayer/data/keystore/ \
-    /etc/systemd/system/circlelayer.service
+    /data/clayer/config.toml \
+    /data/clayer/data/keystore/ \
+    /etc/systemd/system/clayer.service
 ```
 
 ## Troubleshooting
@@ -365,7 +365,7 @@ curl -H "Content-Type: application/json" \
   http://localhost:8545
 
 # Restart service if stuck
-sudo systemctl restart circlelayer.service
+sudo systemctl restart clayer.service
 ```
 
 #### Port Issues
@@ -430,7 +430,7 @@ free -h
 For validator support:
 - Check the [official documentation](/)
 - Join [community forums](/community/social-media)
-- Review [GitHub issues](https://github.com/circlelayer/testnet-core-blockchain/issues)
+- Review [GitHub issues](https://github.com/clayer/testnet-clayer-blockchain/issues)
 - Monitor network status and announcements
 
 ### Command Reference

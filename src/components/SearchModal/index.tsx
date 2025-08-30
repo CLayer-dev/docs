@@ -225,7 +225,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
 
                 <div className={styles.footer}>
                     <div className={styles.footerContent}>
-                        <span>Search by Core Layer</span>
+                        <span>Search by CLayer</span>
                         <div className={styles.shortcuts}>
                             <span><kbd>↑</kbd><kbd>↓</kbd> to navigate</span>
                             <span><kbd>↵</kbd> to select</span>

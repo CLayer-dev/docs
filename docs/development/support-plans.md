@@ -6,17 +6,17 @@ sidebar_position: 6
 
 ## Overview
 
-Core Layer provides comprehensive support for developers and projects building on our blockchain ecosystem. Our multi-faceted support program includes financial assistance, traffic support, and resource allocation to help projects succeed and grow within the Core Layer ecosystem.
+CLayer provides comprehensive support for developers and projects building on our blockchain ecosystem. Our multi-faceted support program includes financial assistance, traffic support, and resource allocation to help projects succeed and grow within the CLayer ecosystem.
 
 ## Support Categories
 
 ### 🏦 Financial Support
 
-Core Layer offers various forms of financial assistance to support developer success:
+CLayer offers various forms of financial assistance to support developer success:
 
 #### Special Developer Fund
 - **Purpose**: Direct financial support for promising projects
-- **Eligibility**: Projects building innovative solutions on Core Layer
+- **Eligibility**: Projects building innovative solutions on CLayer
 - **Application Process**: Submit proposal through official channels
 - **Funding Range**: Varies based on project scope and potential impact
 - **Contact**: support@clayer.io
@@ -36,24 +36,24 @@ Core Layer offers various forms of financial assistance to support developer suc
 
 ### 🚀 Traffic Support
 
-Core Layer helps quality projects gain visibility and user adoption:
+CLayer helps quality projects gain visibility and user adoption:
 
 #### Traffic Entrance Programs
 - **Quality dApp Promotion**: Featured placement for high-quality applications
-- **Ecosystem Integration**: Integration into Core Layer's native ecosystem
-- **User Acquisition**: Access to Core Layer's growing user base
-- **Cross-Promotion**: Promotion across Core Layer's marketing channels
+- **Ecosystem Integration**: Integration into CLayer's native ecosystem
+- **User Acquisition**: Access to CLayer's growing user base
+- **Cross-Promotion**: Promotion across CLayer's marketing channels
 
 #### Token Listing Opportunities
-- **DEX Integration**: Priority listing on Core Layer's native DEX
+- **DEX Integration**: Priority listing on CLayer's native DEX
 - **Bridge Support**: Cross-chain token bridging assistance
 - **Liquidity Support**: Initial liquidity provision assistance
 - **Market Making**: Support for healthy token markets
 
 #### Community Exposure
 - **Official Features**: Highlighting in official documentation and announcements
-- **Social Media Promotion**: Promotion across Core Layer's social channels
-- **Conference Presentations**: Opportunities to present at Core Layer events
+- **Social Media Promotion**: Promotion across CLayer's social channels
+- **Conference Presentations**: Opportunities to present at CLayer events
 - **Press Coverage**: Assistance with blockchain media coverage
 
 ### 🎁 Resource Support
@@ -85,14 +85,14 @@ Comprehensive resource allocation to accelerate project development:
 #### Basic Criteria
 - **Innovation**: Project demonstrates technical innovation or unique value proposition
 - **Quality**: High-quality code and professional development practices
-- **Commitment**: Long-term commitment to building on Core Layer
-- **Community Value**: Potential to add value to the Core Layer ecosystem
+- **Commitment**: Long-term commitment to building on CLayer
+- **Community Value**: Potential to add value to the CLayer ecosystem
 
 #### Technical Requirements
 - **EVM Compatibility**: Projects must be EVM-compatible
 - **Security Standards**: Adherence to blockchain security best practices
 - **Documentation**: Comprehensive technical documentation
-- **Testing**: Thorough testing on Core Layer testnet
+- **Testing**: Thorough testing on CLayer testnet
 
 ### Application Steps
 
@@ -114,7 +114,7 @@ Required Information:
 - **Code Review**: Evaluation of technical implementation
 - **Security Assessment**: Security audit and vulnerability analysis
 - **Scalability Analysis**: Assessment of project scalability potential
-- **Ecosystem Fit**: Evaluation of alignment with Core Layer ecosystem
+- **Ecosystem Fit**: Evaluation of alignment with CLayer ecosystem
 
 #### 3. Support Plan Design
 - **Customized Package**: Tailored support plan based on project needs
@@ -185,7 +185,7 @@ Required Information:
 ### Maximizing Support Value
 - **Active Communication**: Maintain regular communication with support team
 - **Milestone Achievement**: Consistently meet agreed-upon milestones
-- **Community Engagement**: Actively engage with Core Layer community
+- **Community Engagement**: Actively engage with CLayer community
 - **Feedback Integration**: Incorporate support team feedback and guidance
 - **Success Sharing**: Share successes and learnings with the ecosystem
 
@@ -205,4 +205,4 @@ Required Information:
 
 ---
 
-*Core Layer is committed to fostering a thriving developer ecosystem through comprehensive support programs. We believe in supporting innovation and helping projects achieve their full potential within our ecosystem.* 
+*CLayer is committed to fostering a thriving developer ecosystem through comprehensive support programs. We believe in supporting innovation and helping projects achieve their full potential within our ecosystem.* 

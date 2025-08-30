@@ -6,19 +6,19 @@ sidebar_label: Use the Faucet
 
 # Use the Faucet
 
-Learn about Core Layer's testnet faucet for development and testing.
+Learn about CLayer's testnet faucet for development and testing.
 
 ## Faucet Access
 
 - **URL**: https://faucet.clayer.io
 - **API URL**: https://faucet-api.clayer.io
-- **Supported Networks**: Core Layer Testnet
+- **Supported Networks**: CLayer Testnet
 - **Token Type**: CLAYER
 - **Supported Wallet Formats**: EVM-based wallets
 
 ## How to Use
 
-To use the Core Layer testnet faucet:
+To use the CLayer testnet faucet:
 
 1. Copy your wallet address
 2. Paste your wallet address in the text box on the faucet page
@@ -44,4 +44,4 @@ Common issues and solutions for faucet usage:
 
 - Ensure you're using an EVM-compatible wallet address
 - Wait 24 hours between requests
-- Check that your wallet is configured for Core Layer Testnet
+- Check that your wallet is configured for CLayer Testnet

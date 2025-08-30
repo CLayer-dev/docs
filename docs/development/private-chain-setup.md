@@ -3,16 +3,16 @@ id: private-chain-setup
 title: Private Chain Setup
 sidebar_label: Private Chain Setup
 sidebar_position: 9
-description: Guide for setting up private Core Layer blockchain networks for enterprise and development use.
+description: Guide for setting up private CLayer blockchain networks for enterprise and development use.
 ---
 
 # Private Chain Setup
 
-Setting up a private Core Layer blockchain network enables enterprises and development teams to create isolated environments for testing, development, and internal applications while maintaining full control over the network.
+Setting up a private CLayer blockchain network enables enterprises and development teams to create isolated environments for testing, development, and internal applications while maintaining full control over the network.
 
 ## Overview
 
-A private Core Layer chain provides:
+A private CLayer chain provides:
 - **Complete Control**: Full control over validator nodes and network parameters
 - **Privacy**: Isolated network not connected to public testnet/mainnet
 - **Customization**: Ability to modify consensus parameters, gas limits, and block times
@@ -54,11 +54,11 @@ brew install curl wget git go
 
 ## Installation
 
-### 1. Download and Compile Core Layer
+### 1. Download and Compile CLayer
 
 ```bash
-# Clone the Core Layer blockchain source code
-git clone https://github.com/circlelayer/testnet-core-blockchain.git
+# Clone the CLayer blockchain source code
+git clone https://github.com/clayer/testnet-clayer-blockchain.git
 
 # Navigate to the project directory
 cd Core-Blockchain
@@ -84,8 +84,8 @@ According to the number of miner nodes, prepare corresponding validator account(
 
 ```bash
 # Create directory for private chain
-mkdir -p ~/private-circlelayer
-cd ~/private-circlelayer
+mkdir -p ~/private-clayer
+cd ~/private-clayer
 
 # Create a new account
 ./path/to/Core-Blockchain/build/bin/geth account new --datadir data
@@ -242,7 +242,7 @@ GlobalQueue = 1024
 Lifetime = 10800000000000
 
 [Node]
-DataDir = "/data/circlelayer/data"
+DataDir = "/data/clayer/data"
 InsecureUnlockAllowed = true
 NoUSB = true
 IPCPath = "geth.ipc"
@@ -308,6 +308,6 @@ To run with debug logging:
 
 ## Additional Resources
 
-- [Core Layer Development Guide](./deploying-contracts.md)
+- [CLayer Development Guide](./deploying-contracts.md)
 - [Smart Contract Deployment](./writing-smart-contracts.md)
 - [Web3 Integration](./web3-integration.md) 

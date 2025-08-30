@@ -9,8 +9,8 @@ require('dotenv').config();
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Core Layer Documentation',
-  tagline: 'Official documentation for Core Layer, an EVM-compatible POS Layer 1 blockchain',
+  title: 'CLayer Documentation',
+  tagline: 'Official documentation for CLayer, an EVM-compatible POS Layer 1 blockchain',
   favicon: 'img/CL_favicon.png',
 
   // Client modules for default theme setting
@@ -68,14 +68,14 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         name: 'description',
-        content: 'Core Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain with AI security features and exceptional scalability.',
+        content: 'CLayer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain with AI security features and exceptional scalability.',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         name: 'keywords',
-        content: 'blockchain, layer 1, evm, pos, defi, smart contracts, core layer',
+        content: 'blockchain, layer 1, evm, pos, defi, smart contracts, clayer',
       },
     },
     // Open Graph meta tags for social media sharing
@@ -90,14 +90,14 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         property: 'og:title',
-        content: 'Core Layer Documentation',
+        content: 'CLayer Documentation',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         property: 'og:description',
-        content: 'Official documentation for Core Layer, an EVM-compatible DPOS Layer 1 blockchain with AI security features and exceptional scalability.',
+        content: 'Official documentation for CLayer, an EVM-compatible DPOS Layer 1 blockchain with AI security features and exceptional scalability.',
       },
     },
     {
@@ -111,7 +111,7 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         property: 'og:site_name',
-        content: 'Core Layer',
+        content: 'CLayer',
       },
     },
     {
@@ -139,7 +139,7 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         property: 'og:image:alt',
-        content: 'Core Layer - High-Performance EVM-Compatible Blockchain',
+        content: 'CLayer - High-Performance EVM-Compatible Blockchain',
       },
     },
     // Twitter Card meta tags
@@ -154,14 +154,14 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         name: 'twitter:title',
-        content: 'Core Layer Documentation',
+        content: 'CLayer Documentation',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         name: 'twitter:description',
-        content: 'Official documentation for Core Layer, an EVM-compatible POS Layer 1 blockchain with AI security features and exceptional scalability.',
+        content: 'Official documentation for CLayer, an EVM-compatible POS Layer 1 blockchain with AI security features and exceptional scalability.',
       },
     },
     {
@@ -175,7 +175,7 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         name: 'twitter:image:alt',
-        content: 'Core Layer - High-Performance EVM-Compatible Blockchain',
+        content: 'CLayer - High-Performance EVM-Compatible Blockchain',
       },
     },
     // Telegram specific meta tags
@@ -183,7 +183,7 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         property: 'telegram:channel',
-        content: '@circlelayer',
+        content: '@clayer',
       },
     },
     // Security headers removed for development - will be handled at server level in production
@@ -204,7 +204,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'core-layer', // Usually your GitHub org/user name.
+  organizationName: 'clayer', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -251,7 +251,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/circlelayer/docs/tree/main/',
+          editUrl: 'https://github.com/clayer/docs/tree/main/',
           showLastUpdateTime: false,
           routeBasePath: '/', // Make docs the homepage
         },
@@ -280,7 +280,7 @@ const config: Config = {
 
     navbar: {
       logo: {
-        alt: 'Core Layer Logo',
+        alt: 'CLayer Logo',
         src: 'img/light-theme-logo.png',
         srcDark: 'img/dark-theme-logo.png',
       },
@@ -290,7 +290,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/circlelayer',
+          href: 'https://github.com/clayer',
           label: 'GitHub',
           position: 'right',
         },
@@ -307,11 +307,11 @@ const config: Config = {
               to: '/',
             },
             {
-              label: 'Core Layer for Developers',
+              label: 'CLayer for Developers',
               to: '/development/writing-smart-contracts',
             },
             {
-              label: 'Core Layer for Users',
+              label: 'CLayer for Users',
               to: '/introduction/key-features',
             },
           ],
@@ -321,11 +321,11 @@ const config: Config = {
           items: [
             {
               label: 'Telegram',
-              href: 'https://t.me/circlelayer',
+              href: 'https://t.me/clayer_io',
             },
             {
               label: 'X (Twitter)',
-              href: 'https://x.com/circlelayer',
+              href: 'https://x.com/clayer_io',
             },
           ],
         },
@@ -338,7 +338,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/circlelayer',
+              href: 'https://github.com/clayer',
             },
             {
               label: 'Testnet Explorer',
@@ -347,7 +347,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Core Layer Foundation. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} CLayer Foundation. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

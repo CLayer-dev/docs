@@ -1,14 +1,14 @@
 ---
 id: phase-1-testnet
-title: Core Layer Development Roadmap
+title: CLayer Development Roadmap
 sidebar_label: Development Roadmap
 ---
 
-# Core Layer Development Roadmap
+# CLayer Development Roadmap
 
 ## Strategic Overview
 
-Core Layer is building a robust, high-performance blockchain ecosystem through a carefully planned 2-phase development approach before mainnet launch. Our strategy focuses on comprehensive testing, ecosystem development, and security hardening to ensure a production-ready network.
+CLayer is building a robust, high-performance blockchain ecosystem through a carefully planned 2-phase development approach before mainnet launch. Our strategy focuses on comprehensive testing, ecosystem development, and security hardening to ensure a production-ready network.
 
 ## Phase 1: Token Launch & Core Infrastructure Development (Current)
 
@@ -52,7 +52,7 @@ Core Layer is building a robust, high-performance blockchain ecosystem through a
 - Seamless transition preserving all community value
 
 ### Technical Development Objectives
-- Build and test core blockchain infrastructure achieving ~5,000 TPS on testnet
+- Build and test clayer blockchain infrastructure achieving ~5,000 TPS on testnet
 - Establish robust validator network and consensus mechanism
 - Create comprehensive developer tooling and documentation
 - Implement security frameworks and audit processes
@@ -83,7 +83,7 @@ Core Layer is building a robust, high-performance blockchain ecosystem through a
 
 <!-- 
 ### Testnet Network Details (READY - WILL BE ACTIVATED)
-- **Network Name**: Core Layer Testnet
+- **Network Name**: CLayer Testnet
 - **RPC URL**: https://testnet-rpc.clayer.io
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
@@ -248,10 +248,10 @@ Building every component (bridge, DEX, wallets) in-house ensures seamless integr
 ### Community Support
 - Developer Telegram community
 - Technical workshops
-- Office hours with core team
+- Office hours with clayer team
 - Grant program applications
 
-## Core Layer Innovation
+## CLayer Innovation
 
 Our approach to high-performance blockchain development focuses on:
 

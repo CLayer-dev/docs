@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## Overview
 
-Learn about security best practices for running Core Layer nodes.
+Learn about security best practices for running CLayer nodes.
 
 ## Security Fundamentals
 
@@ -53,11 +53,11 @@ sudo ufw enable
 ```
 ```bash
 # Create service user
-sudo useradd -m -s /bin/bash circlelayer
-sudo usermod -aG docker circlelayer
+sudo useradd -m -s /bin/bash clayer
+sudo usermod -aG docker clayer
 
 # Set permissions
-sudo chown -R circlelayer:circlelayer ~/.circlelayer
+sudo chown -R clayer:clayer ~/.clayer
 ```
 ```
 ```

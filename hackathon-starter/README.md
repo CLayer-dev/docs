@@ -1,10 +1,10 @@
-# Core Layer Hackathon Starter
+# CLayer Hackathon Starter
 
-Kickstart your Core Layer hackathon project with this ready-to-use starter that includes:
+Kickstart your CLayer hackathon project with this ready-to-use starter that includes:
 
 - Smart contracts (Hardhat + TypeScript)
 - Minimal React frontend (Vite + Ethers.js)
-- One-command deploy to Core Layer Testnet
+- One-command deploy to CLayer Testnet
 - Environment variables template and end-to-end instructions
 
 ## What’s inside
@@ -20,7 +20,7 @@ hackathon-starter/
 
 - Node.js 18+
 - npm or yarn
-- A wallet with test funds from the Core Layer Faucet
+- A wallet with test funds from the CLayer Faucet
 
 Useful links:
 - Docs: https://docs.clayer.io
@@ -42,7 +42,7 @@ Then fill in the values in both `.env` files:
 - `PRIVATE_KEY`: Your wallet private key (for deployments only). Use a test wallet.
 - `RPC_URL`: Testnet RPC URL (default is provided).
 - `VITE_RPC_URL`: Same as `RPC_URL` for the frontend.
-- `VITE_CHAIN_ID`: Core Layer Testnet chain ID (optional for basic usage).
+- `VITE_CHAIN_ID`: CLayer Testnet chain ID (optional for basic usage).
 - `VITE_COUNTER_ADDRESS`: Will be filled after deployment.
 
 ## 2) Install dependencies
@@ -80,7 +80,7 @@ Open the URL shown by Vite. You can:
 
 ## MetaMask network setup
 
-Add the Core Layer Testnet in MetaMask using the RPC and explorer above. If you know the chain ID, include it; otherwise you can still connect your wallet and interact as long as your wallet is on the correct network.
+Add the CLayer Testnet in MetaMask using the RPC and explorer above. If you know the chain ID, include it; otherwise you can still connect your wallet and interact as long as your wallet is on the correct network.
 
 ## Notes
 

@@ -6,12 +6,12 @@ sidebar_position: 5
 
 ## Overview
 
-Core Layer implements a comprehensive cross-chain bridge infrastructure that enables seamless asset transfer between Core Layer Blockchain and other major blockchain networks. The bridge uses a secure lock-and-mint mechanism to ensure asset safety and maintain liquidity across chains.
+CLayer implements a comprehensive cross-chain bridge infrastructure that enables seamless asset transfer between CLayer Blockchain and other major blockchain networks. The bridge uses a secure lock-and-mint mechanism to ensure asset safety and maintain liquidity across chains.
 
 ## Bridge Architecture
 
 ### Asset Mapping System
-Core Layer's cross-chain bridge supports mapping of major crypto assets to the Core Layer ecosystem:
+CLayer's cross-chain bridge supports mapping of major crypto assets to the CLayer ecosystem:
 
 - **ETH (Ethereum)**: Native Ethereum tokens
 - **BNB (Binance Smart Chain)**: BSC native and BEP-20 tokens  
@@ -24,14 +24,14 @@ The bridge operates using a secure lock-and-mint protocol:
 
 1. **Asset Locking**: Original tokens are locked in secure smart contracts on the source chain
 2. **Verification**: Multi-signature validation confirms the lock transaction
-3. **Minting**: Corresponding amount of tokens are minted on Core Layer Blockchain
-4. **Redemption**: Users can burn Core Layer tokens to unlock original assets
+3. **Minting**: Corresponding amount of tokens are minted on CLayer Blockchain
+4. **Redemption**: Users can burn CLayer tokens to unlock original assets
 
 ```mermaid
 graph TD
     A[User Deposits ETH] --> B[Lock in Bridge Contract]
     B --> C[Multi-sig Validation]
-    C --> D[Mint Wrapped ETH on Core Layer]
+    C --> D[Mint Wrapped ETH on CLayer]
     D --> E[User Receives clETH]
     
     F[User Burns clETH] --> G[Burn Verification]
@@ -53,7 +53,7 @@ graph TD
 #### 1. Native Tokens
 - **Ethereum (ETH)**: 1:1 mapping to clETH
 - **BNB**: 1:1 mapping to clBNB
-- **CLAYER**: Native Core Layer token
+- **CLAYER**: Native CLayer token
 
 #### 2. Stable Coins
 - **USDC**: USD Coin bridging
@@ -132,7 +132,7 @@ The Crosschain Bridge lets users to exchange the assets from other blockchains t
 ## Decentralized Cross-Chain Solutions
 
 ### Community Development
-Core Layer encourages the development of decentralized cross-chain solutions:
+CLayer encourages the development of decentralized cross-chain solutions:
 
 - **Open Source Bridges**: Community-developed bridge protocols
 - **Decentralized Validators**: Permissionless validator participation
@@ -149,24 +149,24 @@ Core Layer encourages the development of decentralized cross-chain solutions:
 
 ### User Guide
 
-#### Bridging Assets to Core Layer
+#### Bridging Assets to CLayer
 1. **Connect Wallet**: Connect MetaMask or compatible wallet
 2. **Select Asset**: Choose asset to bridge (ETH, BNB, USDC, etc.)
 3. **Enter Amount**: Specify amount to bridge
 4. **Confirm Transaction**: Sign the lock transaction
-5. **Wait for Minting**: Receive wrapped tokens on Core Layer
+5. **Wait for Minting**: Receive wrapped tokens on CLayer
 
-#### Bridging Assets from Core Layer
+#### Bridging Assets from CLayer
 1. **Select Wrapped Asset**: Choose asset to bridge back
 2. **Enter Amount**: Specify amount to unlock
-3. **Initiate Burn**: Burn wrapped tokens on Core Layer
+3. **Initiate Burn**: Burn wrapped tokens on CLayer
 4. **Wait for Unlock**: Original tokens released on source chain
 
 ### Integration Examples
 
 #### Web3.js Integration
 ```javascript
-const CircleLayerBridge = require('@circlelayer/bridge-sdk');
+const CircleLayerBridge = require('@clayer/bridge-sdk');
 
 // Initialize bridge
 const bridge = new CircleLayerBridge({
@@ -174,7 +174,7 @@ const bridge = new CircleLayerBridge({
   contractAddress: '0x...' // Bridge contract address
 });
 
-// Bridge ETH to Core Layer
+// Bridge ETH to CLayer
 async function bridgeETH(amount, userAddress) {
   const tx = await bridge.lockETH({
     amount: amount,
@@ -199,7 +199,7 @@ async function bridgeBack(amount, userAddress) {
 
 #### React Integration
 ```jsx
-import { useBridge } from '@circlelayer/bridge-sdk';
+import { useBridge } from '@clayer/bridge-sdk';
 
 function BridgeComponent() {
   const { bridge, bridgeETH, getBalances } = useBridge();
@@ -222,7 +222,7 @@ function BridgeComponent() {
         placeholder="Amount to bridge"
       />
       <button onClick={handleBridge}>
-        Bridge to Core Layer
+        Bridge to CLayer
       </button>
     </div>
   );

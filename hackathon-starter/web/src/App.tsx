@@ -78,7 +78,7 @@ export default function App() {
 
     return (
         <div style={{ maxWidth: 720, margin: '40px auto', fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif' }}>
-            <h1>Core Layer Hackathon Starter</h1>
+            <h1>CLayer Hackathon Starter</h1>
 
             <section style={{ marginBottom: 24 }}>
                 <button onClick={connectWallet} disabled={isConnecting}>

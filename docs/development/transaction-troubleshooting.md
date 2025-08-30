@@ -3,12 +3,12 @@ id: transaction-troubleshooting
 title: Transaction Troubleshooting
 sidebar_label: Transaction Troubleshooting
 sidebar_position: 8
-description: Complete guide to troubleshooting pending transactions, gas issues, and meta transaction problems on Core Layer.
+description: Complete guide to troubleshooting pending transactions, gas issues, and meta transaction problems on CLayer.
 ---
 
 # Transaction Troubleshooting
 
-This guide helps developers and users resolve common transaction issues on Core Layer blockchain, including pending transactions, gas problems, and meta transaction errors.
+This guide helps developers and users resolve common transaction issues on CLayer blockchain, including pending transactions, gas problems, and meta transaction errors.
 
 ## Common Transaction Issues
 
@@ -296,7 +296,7 @@ When experiencing persistent nonce issues:
 ### Custom RPC Configuration
 ```javascript
 // MetaMask Custom Network Settings
-Network Name: Core Layer Testnet
+Network Name: CLayer Testnet
 RPC URL: https://testnet-rpc.clayer.io
 Chain ID: 28525
 Currency Symbol: CLAYER
@@ -420,4 +420,4 @@ async function emergencyDrain(toAddress) {
 4. **Set reasonable timeouts** for transaction confirmation
 5. **Have fallback strategies** for failed transactions
 
-This troubleshooting guide should help resolve most common transaction issues on Core Layer. For complex problems, consider reaching out to the Core Layer development community or support channels. 
+This troubleshooting guide should help resolve most common transaction issues on CLayer. For complex problems, consider reaching out to the CLayer development community or support channels. 

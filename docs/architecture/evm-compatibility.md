@@ -6,7 +6,7 @@ sidebar_label: EVM Compatibility
 
 # EVM Compatibility
 
-Technical details on Core Layer's Ethereum Virtual Machine compatibility, migration strategies, and implementation considerations for developers.
+Technical details on CLayer's Ethereum Virtual Machine compatibility, migration strategies, and implementation considerations for developers.
 
 ## Technical Implementation
 
@@ -17,7 +17,7 @@ Technical details on Core Layer's Ethereum Virtual Machine compatibility, migrat
 - **Smart Contract ABI**: Full Application Binary Interface compatibility
 
 ### Network Integration
-Core Layer testnet provides full EVM compatibility with:
+CLayer testnet provides full EVM compatibility with:
 - **Chain ID**: 28525 for testnet distinction
 - **JSON-RPC API**: Complete Ethereum RPC method support
 - **WebSocket Events**: Real-time blockchain event streaming
@@ -30,7 +30,7 @@ Core Layer testnet provides full EVM compatibility with:
 1. **Deploy Existing Contracts**: Use same bytecode and deployment scripts
 2. **Update Network Configuration**: Change RPC endpoint and chain ID
 3. **Configure Gas Token**: Use CLAYER instead of ETH for gas fees
-4. **Test Integration**: Verify functionality on Core Layer testnet
+4. **Test Integration**: Verify functionality on CLayer testnet
 
 **Network Configuration Update:**
 ```javascript
@@ -86,8 +86,8 @@ import { defineChain } from 'viem';
 
 const circleLayer = defineChain({
   id: 28525,
-  name: 'Core Layer Testnet',
-  network: 'core-layer-testnet',
+  name: 'CLayer Testnet',
+  network: 'clayer-testnet',
   nativeCurrency: { name: 'CLAYER', symbol: 'CLAYER', decimals: 18 },
   rpcUrls: {
     default: { http: ['https://testnet-rpc.clayer.io'] }
@@ -109,7 +109,7 @@ await window.ethereum.request({
   method: 'wallet_addEthereumChain',
   params: [{
     chainId: '0x6F75', // 28525 in hex
-    chainName: 'Core Layer Testnet',
+    chainName: 'CLayer Testnet',
     nativeCurrency: {
       name: 'CLAYER',
       symbol: 'CLAYER',
@@ -123,7 +123,7 @@ await window.ethereum.request({
 
 ### WalletConnect Integration
 ```javascript
-// Standard WalletConnect setup works with Core Layer
+// Standard WalletConnect setup works with CLayer
 import { WalletConnect } from '@walletconnect/client';
 
 const connector = new WalletConnect({
@@ -140,7 +140,7 @@ await connector.request({
 
 ## Performance Advantages
 
-### Core Layer Benefits over Ethereum
+### CLayer Benefits over Ethereum
 - **3s Block Time**: vs Ethereum's 12s average
 - **1-3s Finality**: vs Ethereum's 6-10 minute finality  
 - **Predictable Gas**: Stable CLAYER pricing vs volatile ETH gas
@@ -157,7 +157,7 @@ await connector.request({
 
 ### Contract Verification Process
 1. **Deploy to Testnet**: Use standard deployment tools
-2. **Verify Source Code**: Submit to Core Layer block explorer
+2. **Verify Source Code**: Submit to CLayer block explorer
 3. **Test Interactions**: Validate all contract functions
 4. **Performance Testing**: Measure gas usage and execution time
 
@@ -188,7 +188,7 @@ await connector.request({
 - **Same Security Model**: Standard EVM security practices apply
 - **Testnet Testing**: Thorough testing recommended before mainnet deployment
 - **Audit Compatibility**: Existing Ethereum audit reports remain valid
-- **Network Effects**: Consider Core Layer's DPoS consensus in security design
+- **Network Effects**: Consider CLayer's DPoS consensus in security design
 
 ## Next Steps
 

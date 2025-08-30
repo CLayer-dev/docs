@@ -3,7 +3,7 @@ id: meta-transactions
 title: Meta Transactions
 sidebar_label: Meta Transactions
 sidebar_position: 6
-description: Comprehensive guide to Core Layer's meta transaction functionality for gas fee optimization and seamless user experience.
+description: Comprehensive guide to CLayer's meta transaction functionality for gas fee optimization and seamless user experience.
 ---
 
 # Meta Transactions
@@ -62,7 +62,7 @@ this.rlpEncodeData = RlpEncoder.encode(rlpList);
 
 ## Official Meta Transaction Service
 
-Core Layer Blockchain officially provides a meta transaction service with fee subsidies based on the caller's `CLAYER` holdings.
+CLayer Blockchain officially provides a meta transaction service with fee subsidies based on the caller's `CLAYER` holdings.
 
 ### Service Details
 
@@ -215,4 +215,4 @@ async function createMetaTransaction(wallet, txParams) {
 - **Fee Validation**: Validate fee percentages to prevent exploitation
 - **Rate Limiting**: Respect API rate limits and daily quotas
 
-Meta transactions provide a powerful tool for improving user experience and reducing costs on Core Layer. By implementing meta transactions properly, developers can create seamless applications that handle gas fees transparently for users. 
+Meta transactions provide a powerful tool for improving user experience and reducing costs on CLayer. By implementing meta transactions properly, developers can create seamless applications that handle gas fees transparently for users. 

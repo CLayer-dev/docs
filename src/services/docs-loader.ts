@@ -75,8 +75,8 @@ class DocumentationLoader {
         return {
             'intro': {
                 id: 'intro',
-                title: 'Welcome to Core Layer',
-                content: `Core Layer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain designed to power the next generation of decentralized applications.
+                title: 'Welcome to CLayer',
+                content: `CLayer is a high-performance, EVM-compatible, Proof of Stake Layer 1 blockchain designed to power the next generation of decentralized applications.
 
 ## Key Features
 
@@ -92,7 +92,7 @@ class DocumentationLoader {
 - Finality: 1-3 seconds
 - Consensus: Delegated Proof of Stake (DPoS)
 - Target TPS: 50,000`,
-                frontmatter: { title: 'Welcome to Core Layer' },
+                frontmatter: { title: 'Welcome to CLayer' },
                 filePath: 'docs/intro.mdx',
                 category: 'introduction'
             },
@@ -100,13 +100,13 @@ class DocumentationLoader {
             'set-up-wallet': {
                 id: 'set-up-wallet',
                 title: 'Set Up Wallet',
-                content: `To get started with Core Layer, you'll need to set up a compatible wallet.
+                content: `To get started with CLayer, you'll need to set up a compatible wallet.
 
 ## MetaMask Setup
 
 1. Install MetaMask browser extension
-2. Add Core Layer testnet:
-   - Network Name: Core Layer Testnet
+2. Add CLayer testnet:
+   - Network Name: CLayer Testnet
    - RPC URL: https://testnet-rpc.clayer.io
    - Chain ID: 28525
    - Currency Symbol: CLAYER
@@ -124,7 +124,7 @@ class DocumentationLoader {
             'writing-smart-contracts': {
                 id: 'writing-smart-contracts',
                 title: 'Writing Smart Contracts',
-                content: `Core Layer is fully EVM compatible, so you can use all your existing Ethereum development tools and knowledge.
+                content: `CLayer is fully EVM compatible, so you can use all your existing Ethereum development tools and knowledge.
 
 ## Supported Tools
 
@@ -147,7 +147,7 @@ class DocumentationLoader {
 ## Example Contract Deployment
 
 Using Hardhat:
-npx hardhat run scripts/deploy.js --network circlelayer`,
+npx hardhat run scripts/deploy.js --network clayer`,
                 frontmatter: { title: 'Writing Smart Contracts' },
                 filePath: 'docs/development/writing-smart-contracts.md',
                 category: 'development'
@@ -155,7 +155,7 @@ npx hardhat run scripts/deploy.js --network circlelayer`,
             'becoming-validator': {
                 id: 'becoming-validator',
                 title: 'Becoming a Validator',
-                content: `Core Layer uses Delegated Proof of Stake (DPoS) consensus. Here's how to become a validator.
+                content: `CLayer uses Delegated Proof of Stake (DPoS) consensus. Here's how to become a validator.
 
 ## Requirements
 
@@ -188,7 +188,7 @@ npx hardhat run scripts/deploy.js --network circlelayer`,
             'rpc-endpoints': {
                 id: 'rpc-endpoints',
                 title: 'RPC Endpoints',
-                content: `Core Layer provides standard JSON-RPC endpoints compatible with Ethereum.
+                content: `CLayer provides standard JSON-RPC endpoints compatible with Ethereum.
 
 ## Testnet Endpoints
 

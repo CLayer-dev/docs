@@ -1,16 +1,16 @@
 ---
 sidebar_position: 2
 title: Running a Full Node
-description: Complete guide for operating Core Layer blockchain full nodes
+description: Complete guide for operating CLayer blockchain full nodes
 ---
 
 # Running a Full Node
 
-Learn how to run and operate a full node on Core Layer blockchain network.
+Learn how to run and operate a full node on CLayer blockchain network.
 
 ## Overview
 
-Core Layer is an Ethereum-compatible blockchain that uses Geth (Go Ethereum) as its base. Running a full node allows you to participate in the network, validate transactions, and support decentralization.
+CLayer is an Ethereum-compatible blockchain that uses Geth (Go Ethereum) as its base. Running a full node allows you to participate in the network, validate transactions, and support decentralization.
 
 ## Prerequisites
 
@@ -45,8 +45,8 @@ Core Layer is an Ethereum-compatible blockchain that uses Geth (Go Ethereum) as 
 
 ```bash
 # Clone the repository
-git clone https://github.com/circlelayer/testnet-core-blockchain
-cd /path/to/core-blockchain
+git clone https://github.com/clayer/testnet-clayer-blockchain
+cd /path/to/clayer-blockchain
 
 # Compile the node
 make geth
@@ -59,13 +59,13 @@ make geth
 Create the recommended directory structure:
 
 ```bash
-sudo mkdir -p /data/circlelayer/{data,logs}
-sudo chown -R $USER:$USER /data/circlelayer
+sudo mkdir -p /data/clayer/{data,logs}
+sudo chown -R $USER:$USER /data/clayer
 ```
 
 Expected structure:
 ```
-/data/circlelayer/
+/data/clayer/
 ├── geth-linux-amd64          # Compiled binary
 ├── config.toml               # Node configuration
 ├── run.sh                    # Startup script
@@ -80,7 +80,7 @@ Expected structure:
 
 #### config.toml
 
-Create the main configuration file at `/data/circlelayer/config.toml`:
+Create the main configuration file at `/data/clayer/config.toml`:
 
 ```toml
 [Eth]
@@ -100,7 +100,7 @@ CacheDir = "ethash"
 CachesInMem = 2
 CachesOnDisk = 3
 CachesLockMmap = false
-DatasetDir = "/data/circlelayer/data/.ethash"
+DatasetDir = "/data/clayer/data/.ethash"
 DatasetsInMem = 1
 DatasetsOnDisk = 2
 DatasetsLockMmap = false
@@ -120,7 +120,7 @@ GlobalQueue = 1024
 Lifetime = 10800000000000
 
 [Node]
-DataDir = "/data/circlelayer/data"
+DataDir = "/data/clayer/data"
 InsecureUnlockAllowed = true
 NoUSB = true
 IPCPath = "geth.ipc"
@@ -166,19 +166,19 @@ Downloads and validates all blocks from genesis.
 
 ### 1. Startup Script
 
-Create `/data/circlelayer/run.sh`:
+Create `/data/clayer/run.sh`:
 
 ```bash
 #!/usr/bin/env bash
-/data/circlelayer/geth-linux-amd64 \
---config /data/circlelayer/config.toml  \
---logpath /data/circlelayer/logs \
---verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+/data/clayer/geth-linux-amd64 \
+--config /data/clayer/config.toml  \
+--logpath /data/clayer/logs \
+--verbosity 3  >> /data/clayer/logs/systemd_chain_console.out 2>&1
 ```
 
 Make it executable:
 ```bash
-chmod +x /data/circlelayer/run.sh
+chmod +x /data/clayer/run.sh
 ```
 
 ### 2. Network Selection
@@ -186,18 +186,18 @@ chmod +x /data/circlelayer/run.sh
 **Mainnet (Default)**
 ```bash
 # No additional flags needed - connects to mainnet by default
-/data/circlelayer/run.sh
+/data/clayer/run.sh
 ```
 
 **Testnet**
 ```bash
 # Add --testnet flag to connect to testnet
 #!/usr/bin/env bash
-/data/circlelayer/geth-linux-amd64 \
---config /data/circlelayer/config.toml  \
+/data/clayer/geth-linux-amd64 \
+--config /data/clayer/config.toml  \
 --testnet \
---logpath /data/circlelayer/logs \
---verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+--logpath /data/clayer/logs \
+--verbosity 3  >> /data/clayer/logs/systemd_chain_console.out 2>&1
 ```
 
 ### 3. Archive Node
@@ -206,27 +206,27 @@ For complete historical data:
 
 ```bash
 #!/usr/bin/env bash
-/data/circlelayer/geth-linux-amd64 \
---config /data/circlelayer/config.toml  \
---logpath /data/circlelayer/logs \
+/data/clayer/geth-linux-amd64 \
+--config /data/clayer/config.toml  \
+--logpath /data/clayer/logs \
 --syncmode full \
 --gcmode archive \
---verbosity 3  >> /data/circlelayer/logs/systemd_chain_console.out 2>&1
+--verbosity 3  >> /data/clayer/logs/systemd_chain_console.out 2>&1
 ```
 
 ## Service Management
 
 ### systemd Configuration
 
-Create `/etc/systemd/system/circlelayer.service`:
+Create `/etc/systemd/system/clayer.service`:
 
 ```ini
 [Unit]
-Description=circlelayer Blockchain service
+Description=clayer Blockchain service
 
 [Service]
 Type=simple
-ExecStart=/bin/sh /data/circlelayer/run.sh
+ExecStart=/bin/sh /data/clayer/run.sh
 
 Restart=on-failure
 RestartSec=5s
@@ -244,22 +244,22 @@ WantedBy=multi-user.target
 sudo systemctl daemon-reload
 
 # Enable service to start on boot
-sudo systemctl enable circlelayer.service
+sudo systemctl enable clayer.service
 
 # Start the service
-sudo systemctl start circlelayer.service
+sudo systemctl start clayer.service
 
 # Check service status
-sudo systemctl status circlelayer.service
+sudo systemctl status clayer.service
 
 # View service logs
-sudo journalctl -u circlelayer.service -f
+sudo journalctl -u clayer.service -f
 
 # Stop the service
-sudo systemctl stop circlelayer.service
+sudo systemctl stop clayer.service
 
 # Restart the service
-sudo systemctl restart circlelayer.service
+sudo systemctl restart clayer.service
 ```
 
 ## Network Configuration
@@ -302,7 +302,7 @@ ps aux | grep geth
 netstat -tlnp | grep 32668
 
 # Check disk space
-df -h /data/circlelayer
+df -h /data/clayer
 
 # Check memory usage
 free -h
@@ -312,13 +312,13 @@ free -h
 
 ```bash
 # Real-time log monitoring
-tail -f /data/circlelayer/logs/systemd_chain_console.out
+tail -f /data/clayer/logs/systemd_chain_console.out
 
 # Search for errors
-grep -i error /data/circlelayer/logs/systemd_chain_console.out
+grep -i error /data/clayer/logs/systemd_chain_console.out
 
 # Check sync status
-grep -i "block" /data/circlelayer/logs/systemd_chain_console.out | tail -20
+grep -i "block" /data/clayer/logs/systemd_chain_console.out | tail -20
 ```
 
 ### RPC Commands
@@ -367,7 +367,7 @@ curl -H "Content-Type: application/json" \
   http://localhost:8545
 
 # Restart sync if stuck
-sudo systemctl restart circlelayer.service
+sudo systemctl restart clayer.service
 ```
 
 #### Performance Issues
@@ -393,10 +393,10 @@ sudo iptables -L
 #### Storage Issues
 ```bash
 # Check disk space
-df -h /data/circlelayer
+df -h /data/clayer
 
 # Check inode usage
-df -i /data/circlelayer
+df -i /data/clayer
 
 # Monitor disk performance
 sudo iotop
@@ -407,7 +407,7 @@ sudo iotop
 For additional support:
 - Check the [official documentation](/)
 - Join the [community forums](/community/social-media)
-- Review [GitHub issues](https://github.com/circlelayer/testnet-core-blockchain/issues)
+- Review [GitHub issues](https://github.com/clayer/testnet-clayer-blockchain/issues)
 
 ### Command Reference
 
@@ -427,15 +427,15 @@ For detailed command-line options, refer to [Geth Command-line Options](https://
 
 ```bash
 # Create dedicated user
-sudo useradd -r -s /bin/false circlelayer
+sudo useradd -r -s /bin/false clayer
 
 # Set ownership
-sudo chown -R circlelayer:circlelayer /data/circlelayer
+sudo chown -R clayer:clayer /data/clayer
 
 # Set secure permissions
-sudo chmod 755 /data/circlelayer
-sudo chmod 600 /data/circlelayer/config.toml
-sudo chmod 755 /data/circlelayer/run.sh
+sudo chmod 755 /data/clayer
+sudo chmod 600 /data/clayer/config.toml
+sudo chmod 755 /data/clayer/run.sh
 ```
 
 ### Network Security
@@ -452,23 +452,23 @@ sudo chmod 755 /data/circlelayer/run.sh
 
 ```bash
 # Backup configuration and keystore
-tar -czf circlelayer-backup-$(date +%Y%m%d).tar.gz \
-    /data/circlelayer/config.toml \
-    /data/circlelayer/data/keystore/ \
-    /etc/systemd/system/circlelayer.service
+tar -czf clayer-backup-$(date +%Y%m%d).tar.gz \
+    /data/clayer/config.toml \
+    /data/clayer/data/keystore/ \
+    /etc/systemd/system/clayer.service
 ```
 
 ### Recovery Procedures
 
 ```bash
 # Stop service
-sudo systemctl stop circlelayer.service
+sudo systemctl stop clayer.service
 
 # Restore from backup
-tar -xzf circlelayer-backup-YYYYMMDD.tar.gz -C /
+tar -xzf clayer-backup-YYYYMMDD.tar.gz -C /
 
 # Restart service
-sudo systemctl start circlelayer.service
+sudo systemctl start clayer.service
 ```
 
 ---

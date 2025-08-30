@@ -140,7 +140,7 @@ function generateDocsIndex() {
     const timestamp = new Date().toISOString();
     const tsContent = `// Auto-generated documentation index
 // Generated at: ${timestamp}
-// Source: Core Layer documentation files
+// Source: CLayer documentation files
 
 import { DocumentationIndex } from '../types/docs';
 

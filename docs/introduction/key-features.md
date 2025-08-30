@@ -8,7 +8,7 @@ import '@site/src/css/comparison.css';
 
 # Key Features
 
-Core Layer offers a comprehensive suite of features designed to meet the needs of modern blockchain applications. This section details the practical implementation and current capabilities of our platform.
+CLayer offers a comprehensive suite of features designed to meet the needs of modern blockchain applications. This section details the practical implementation and current capabilities of our platform.
 
 ## Current Network Configuration
 
@@ -42,7 +42,7 @@ Core Layer offers a comprehensive suite of features designed to meet the needs o
 - **Stake-based Rewards**: Higher stake = higher rewards proportionally
 - **Developer Revenue**: Gas fee sharing with smart contract deployers
 
-*Note: Advanced economic mechanisms apply to Core Layer mainnet. Current testnet uses simplified economics.*
+*Note: Advanced economic mechanisms apply to CLayer mainnet. Current testnet uses simplified economics.*
 
 ## Development Status Overview
 

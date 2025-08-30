@@ -157,7 +157,7 @@ Return numbers only (e.g., 0, 5, 12):`;
      */
     private isSimpleQuery(query: string): boolean {
         const simplePatterns = [
-            /^what is core layer/i,
+            /^what is clayer/i,
             /^how to start/i,
             /^getting started/i,
             /^installation/i,
@@ -242,17 +242,17 @@ Return numbers only (e.g., 0, 5, 12):`;
             .join('\n\n')
             .substring(0, 8000); // Optimized overall limit for budget efficiency
 
-        return `Core Layer blockchain assistant. Answer ONLY Core Layer questions using provided docs.
+        return `CLayer blockchain assistant. Answer ONLY CLayer questions using provided docs.
 
 Rules:
-- Core Layer topics only (including content updates and documentation) any other that makes sense
+- CLayer topics only (including content updates and documentation) any other that makes sense
 - Use clear, helpful explanations
 - Use markdown (##, \`\`\`, bullets)
 - CRITICAL: Provide COMPLETE answers - NEVER truncate or cut off responses mid-sentence
 - Always finish your thoughts and complete all sentences
-- If non-Core Layer: "I help with Core Layer blockchain only. Ask about Core Layer development, staking, or setup."
+- If non-CLayer: "I help with CLayer blockchain only. Ask about CLayer development, staking, or setup."
 
-Core Layer Documentation:
+CLayer Documentation:
 ${contextContent}`;
     }
 
@@ -262,16 +262,16 @@ ${contextContent}`;
     private createUserPrompt(query: string): string {
         return `Question: ${query}
 
-Please provide a helpful answer based on the Core Layer documentation provided in the system prompt.`;
+Please provide a helpful answer based on the CLayer documentation provided in the system prompt.`;
     }
 
     /**
-     * Detect if query is related to Core Layer
+     * Detect if query is related to CLayer
      */
     private isCircleLayerRelated(query: string): boolean {
         const circleLayerTerms = [
-            // Direct Core Layer references
-            'core layer', 'circlelayer', 'clayer', 'core-layer',
+            // Direct CLayer references
+            'clayer', 'clayer', 'clayer', 'clayer',
 
             // Network and infrastructure
             'testnet', 'mainnet', 'blockchain', 'validator', 'staking',
@@ -322,12 +322,12 @@ Please provide a helpful answer based on the Core Layer documentation provided i
 
         const queryLower = query.toLowerCase();
 
-        // Check for explicit Core Layer mentions
-        if (queryLower.includes('core layer') || queryLower.includes('circlelayer')) {
+        // Check for explicit CLayer mentions
+        if (queryLower.includes('clayer') || queryLower.includes('clayer')) {
             return true;
         }
 
-        // Check for blockchain-related terms that could be Core Layer related
+        // Check for blockchain-related terms that could be CLayer related
         return circleLayerTerms.some(term =>
             queryLower.includes(term.toLowerCase())
         );
@@ -372,10 +372,10 @@ Please provide a helpful answer based on the Core Layer documentation provided i
                 };
             }
 
-            // Check if query is related to Core Layer
+            // Check if query is related to CLayer
             if (!this.isCircleLayerRelated(userQuery)) {
                 return {
-                    message: "I'm specifically designed to help with Core Layer blockchain topics. I can assist you with:\n\n• Core Layer development and deployment\n• Smart contract development on Core Layer\n• Network configurations and RPC endpoints\n• Staking and validator information\n• Getting started guides\n• Core Layer testnet and mainnet information\n\nPlease ask me anything about Core Layer! 🚀",
+                    message: "I'm specifically designed to help with CLayer blockchain topics. I can assist you with:\n\n• CLayer development and deployment\n• Smart contract development on CLayer\n• Network configurations and RPC endpoints\n• Staking and validator information\n• Getting started guides\n• CLayer testnet and mainnet information\n\nPlease ask me anything about CLayer! 🚀",
                     isDetailed: true,
                     isTechnical: false,
                     timestamp: Date.now(),
@@ -407,7 +407,7 @@ Please provide a helpful answer based on the Core Layer documentation provided i
                 isDetailed: response.length > 150,
                 isTechnical: this.detectTechnical(userQuery),
                 timestamp: Date.now(),
-                sources: ['Core Layer Documentation']
+                sources: ['CLayer Documentation']
             };
 
             // Budget optimization: Cache the response

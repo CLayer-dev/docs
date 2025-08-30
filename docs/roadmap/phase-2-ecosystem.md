@@ -9,7 +9,7 @@ sidebar_position: 2
 
 ## Overview
 
-Phase 2 represents Core Layer's comprehensive ecosystem development phase, where we build a complete DeFi infrastructure, native applications, and advanced security systems before mainnet launch. This strategic approach ensures a battle-tested, production-ready ecosystem.
+Phase 2 represents CLayer's comprehensive ecosystem development phase, where we build a complete DeFi infrastructure, native applications, and advanced security systems before mainnet launch. This strategic approach ensures a battle-tested, production-ready ecosystem.
 
 :::info Strategic Philosophy
 Rather than rushing to mainnet, we're investing significant time in building a complete ecosystem on testnet. This approach helps us avoid the major exploits and security issues that have plagued other L1 blockchains.
@@ -176,13 +176,13 @@ graph TD
 
 #### Startup Support Initiative
 - **Grant Programs**: $10M+ in developer grants
-- **Technical Mentorship**: 1-on-1 support from core team
+- **Technical Mentorship**: 1-on-1 support from clayer team
 - **Infrastructure Credits**: Free infrastructure for qualifying projects
 - **Go-to-market Support**: Marketing and community support
 
 #### Hackathon Strategy
 - **Major Hackathon Participation**: ETHGlobal, Solana Breakpoint, etc.
-- **Core Layer Hackathons**: Quarterly ecosystem hackathons
+- **CLayer Hackathons**: Quarterly ecosystem hackathons
 - **Prize Pools**: $1M+ in total prize distribution
 - **Continued Support**: Post-hackathon project incubation
 
@@ -190,7 +190,7 @@ graph TD
 - **Comprehensive Documentation**: Complete API and SDK docs
 - **Video Tutorials**: Step-by-step development guides
 - **Sample Applications**: Full-stack example projects
-- **24/7 Support**: Developer Telegram with core team presence
+- **24/7 Support**: Developer Telegram with clayer team presence
 
 ### Community Building
 - **Ambassador Program**: Global community leaders

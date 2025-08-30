@@ -6,11 +6,11 @@ sidebar_position: 3
 
 ## Overview
 
-Learn how to deploy smart contracts to Core Layer testnet.
+Learn how to deploy smart contracts to CLayer testnet.
 
 ## Network Configuration
 
-### Core Layer Testnet
+### CLayer Testnet
 - **RPC URL**: https://testnet-rpc.clayer.io
 - **Chain ID**: 28525
 - **Currency Symbol**: CLAYER
@@ -98,15 +98,15 @@ module.exports = function(deployer) {
 
 ### 3. Using Remix IDE
 1. Open [Remix IDE](https://remix.ethereum.org/)
-2. Connect to Core Layer testnet:
+2. Connect to CLayer testnet:
    - Environment: "Injected Provider - MetaMask"
-   - Ensure MetaMask is connected to Core Layer Testnet
+   - Ensure MetaMask is connected to CLayer Testnet
 3. Compile your contract
 4. Deploy with appropriate gas settings
 
 ## Example Deployed Contract
 
-For reference, here's an example contract deployed on Core Layer testnet:
+For reference, here's an example contract deployed on CLayer testnet:
 - **Contract Address**: [0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB)
 - **Explorer**: [View Contract](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract)
 - **ABI**: [Contract ABI](https://explorer-testnet.clayer.io/address/0xfCb4Ce5953dE22cbF04d015df88a3a9895E86bEB?tab=contract_abi)
@@ -114,7 +114,7 @@ For reference, here's an example contract deployed on Core Layer testnet:
 ## Deployment Checklist
 
 ### 1. Pre-deployment
-- Test thoroughly on Core Layer testnet
+- Test thoroughly on CLayer testnet
 - Get CLAYER from [faucet](https://faucet.clayer.io)
 - Check gas estimates with current network conditions
 - Verify constructor arguments
@@ -133,7 +133,7 @@ For reference, here's an example contract deployed on Core Layer testnet:
 
 ## Gas Calculation
 
-Core Layer follows Ethereum's standard gas calculation:
+CLayer follows Ethereum's standard gas calculation:
 ```
 Total Fee = Gas Price × Gas Used
 ```
@@ -147,7 +147,7 @@ With current parameters:
 
 ### 1. Security
 - Use secure private keys
-- Test on Core Layer testnet first
+- Test on CLayer testnet first
 - Verify contract code on explorer
 - Monitor deployment transactions
 

@@ -8,12 +8,12 @@ import '@site/src/css/comparison.css';
 
 # Performance Architecture
 
-Deep dive into the technical architecture and design decisions that enable Core Layer's high-performance transaction processing.
+Deep dive into the technical architecture and design decisions that enable CLayer's high-performance transaction processing.
 
 ## Architecture Design Principles
 
 ### DPoS Consensus Optimization
-Core Layer's performance stems from architectural optimizations in our Delegated Proof of Stake implementation:
+CLayer's performance stems from architectural optimizations in our Delegated Proof of Stake implementation:
 
 - **Validator Selection**: Top 21 validators by stake for optimal network performance
 - **Block Production**: Consistent 3-second intervals with deterministic ordering

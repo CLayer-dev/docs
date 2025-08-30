@@ -6,14 +6,14 @@ sidebar_label: Connect to Testnet
 
 # Connect to Testnet
 
-Step-by-step guide to configure your development environment for Core Layer testnet.
+Step-by-step guide to configure your development environment for CLayer testnet.
 
 ## Network Configuration
 
 ### Required Network Details
-Use these settings to connect to Core Layer testnet:
+Use these settings to connect to CLayer testnet:
 
-- **Network Name**: Core Layer Testnet
+- **Network Name**: CLayer Testnet
 - **RPC URL**: https://testnet-rpc.clayer.io
 - **WebSocket Endpoint**: wss://testnet-rpc.clayer.io
 - **Chain ID**: 28525
@@ -28,7 +28,7 @@ Use these settings to connect to Core Layer testnet:
 2. **Select "Add Network"** or "Custom RPC"
 3. **Enter Network Details**:
    ```
-   Network Name: Core Layer Testnet
+   Network Name: CLayer Testnet
    RPC URL: https://testnet-rpc.clayer.io
    Chain ID: 28525
    Currency Symbol: CLAYER
@@ -37,7 +37,7 @@ Use these settings to connect to Core Layer testnet:
 4. **Save and Switch** to the new network
 
 ### Method 2: Programmatic Setup
-Add Core Layer testnet programmatically to MetaMask:
+Add CLayer testnet programmatically to MetaMask:
 
 ```javascript
 async function addCircleLayerNetwork() {
@@ -46,7 +46,7 @@ async function addCircleLayerNetwork() {
       method: 'wallet_addEthereumChain',
       params: [{
         chainId: '0x6F75', // 28525 in hex
-        chainName: 'Core Layer Testnet',
+        chainName: 'CLayer Testnet',
         nativeCurrency: {
           name: 'CLAYER',
           symbol: 'CLAYER',
@@ -56,7 +56,7 @@ async function addCircleLayerNetwork() {
         blockExplorerUrls: ['https://explorer-testnet.clayer.io/']
       }]
     });
-    console.log('Core Layer testnet added successfully');
+    console.log('CLayer testnet added successfully');
   } catch (error) {
     console.error('Error adding network:', error);
   }
@@ -64,7 +64,7 @@ async function addCircleLayerNetwork() {
 ```
 
 ### Method 3: Development Environment
-Configure your development tools for Core Layer:
+Configure your development tools for CLayer:
 
 **Hardhat Configuration:**
 ```javascript
@@ -123,7 +123,7 @@ Monitor network performance:
 - **Network Uptime**: 99.95% target
 
 ### 3. Get Test Tokens
-Visit the [Core Layer Faucet](https://faucet.clayer.io):
+Visit the [CLayer Faucet](https://faucet.clayer.io):
 - **Daily Limit**: 1 CLAYER per address
 - **Purpose**: Testing and development only
 - **Alternative**: Faucet API at https://faucet-api.clayer.io
@@ -177,7 +177,7 @@ After successful connection:
 
 1. **[Set Up Wallet](./set-up-wallet)** - Configure your wallet for development
 2. **[Use Faucet](./use-faucet)** - Get test tokens for development
-3. **[Deploy Contracts](../development/writing-smart-contracts)** - Start building on Core Layer
+3. **[Deploy Contracts](../development/writing-smart-contracts)** - Start building on CLayer
 4. **[Explore APIs](../apis-sdks/)** - Learn about available endpoints
 
 ## Network Monitoring

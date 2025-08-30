@@ -17,7 +17,7 @@ const ThemeAwarePieChart = ({ className, ...props }) => {
             muted
             playsInline
             className={className}
-            alt="Core Layer Token Distribution Chart"
+            alt="CLayer Token Distribution Chart"
             {...props}
         >
             Your browser does not support the video element.

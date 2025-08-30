@@ -6,11 +6,11 @@ sidebar_position: 4
 
 ## Overview
 
-Learn how to integrate Web3 libraries with Core Layer testnet. Core Layer follows standard EVM blockchain integration patterns, making it compatible with existing Ethereum development tools.
+Learn how to integrate Web3 libraries with CLayer testnet. CLayer follows standard EVM blockchain integration patterns, making it compatible with existing Ethereum development tools.
 
 ## Network Configuration
 
-### Core Layer Testnet
+### CLayer Testnet
 *Configuration for testnet deployment:*
 
 - **RPC URL**: https://testnet-rpc.clayer.io
@@ -40,7 +40,7 @@ const web3WS = new Web3('wss://testnet-rpc.clayer.io');
 // Network Configuration
 const networkConfig = {
   chainId: 28525,
-  name: 'Core Layer Testnet',
+  name: 'CLayer Testnet',
   currency: 'CLAYER'
 };
 ```
@@ -121,7 +121,7 @@ const wsProvider = new ethers.providers.WebSocketProvider('wss://testnet-rpc.cla
 
 // Network configuration
 const network = {
-  name: 'Core Layer Testnet',
+  name: 'CLayer Testnet',
   chainId: 28525,
   ensAddress: null
 };
@@ -201,12 +201,12 @@ const useCircleLayer = () => {
         // Request account access
         await window.ethereum.request({ method: 'eth_requestAccounts' });
         
-        // Add Core Layer network
+        // Add CLayer network
         await window.ethereum.request({
           method: 'wallet_addEthereumChain',
           params: [{
             chainId: '0x6F75', // 28525 in hex
-            chainName: 'Core Layer Testnet',
+            chainName: 'CLayer Testnet',
             nativeCurrency: {
               name: 'CLAYER',
               symbol: 'CLAYER',
@@ -294,7 +294,7 @@ export default {
 
 ## Mobile Integration
 
-Core Layer testnet can be integrated into mobile applications using the same EVM integration patterns:
+CLayer testnet can be integrated into mobile applications using the same EVM integration patterns:
 
 ### React Native Example
 ```javascript
@@ -336,7 +336,7 @@ try {
 // Verify connected to correct network
 const network = await provider.getNetwork();
 if (network.chainId !== 28525) {
-  throw new Error('Please connect to Core Layer Testnet');
+  throw new Error('Please connect to CLayer Testnet');
 }
 ```
 

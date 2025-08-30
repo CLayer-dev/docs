@@ -6,12 +6,12 @@ sidebar_position: 1
 
 ## Overview
 
-Core Layer uses a decentralized governance model that allows token holders to participate in decision-making. The governance structure clearly separates the Core Layer company's supportive role from network control, ensuring true decentralization.
+CLayer uses a decentralized governance model that allows token holders to participate in decision-making. The governance structure clearly separates the CLayer company's supportive role from network control, ensuring true decentralization.
 
 ## Company Structure & Network Governance
 
-### Core Layer Company Role
-The Core Layer company serves as an ecosystem supporter and facilitator, **not as a network controller**:
+### CLayer Company Role
+The CLayer company serves as an ecosystem supporter and facilitator, **not as a network controller**:
 
 - **Ecosystem Support**: Provides development resources, documentation, and community support
 - **Infrastructure Development**: Builds tools, SDKs, and developer resources
@@ -19,7 +19,7 @@ The Core Layer company serves as an ecosystem supporter and facilitator, **not a
 - **No Network Control**: Does not control network operations, consensus, or governance decisions
 
 ### Network Control Model
-The Core Layer network is controlled by its validators and community:
+The CLayer network is controlled by its validators and community:
 
 - **Validator Governance**: Network controlled by distributed validator nodes
 - **Decentralized Consensus**: No single entity controls the blockchain

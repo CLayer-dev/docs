@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Overview
 
-Learn how to monitor your Core Layer node effectively using the correct Geth-based monitoring tools and approaches.
+Learn how to monitor your CLayer node effectively using the correct Geth-based monitoring tools and approaches.
 
 ## Monitoring Setup
 
@@ -17,10 +17,10 @@ Learn how to monitor your Core Layer node effectively using the correct Geth-bas
 ps aux | grep geth
 
 # Check service status (if using systemd)
-sudo systemctl status circlelayer.service
+sudo systemctl status clayer.service
 
 # View real-time logs
-tail -f /data/circlelayer/logs/systemd_chain_console.out
+tail -f /data/clayer/logs/systemd_chain_console.out
 
 # Check sync status via RPC
 curl -H "Content-Type: application/json" \
@@ -45,7 +45,7 @@ curl -H "Content-Type: application/json" \
 free -h
 
 # Check disk space (important for SSD requirements)
-df -h /data/circlelayer
+df -h /data/clayer
 
 # Monitor CPU usage
 top -p $(pgrep geth)
@@ -65,7 +65,7 @@ global:
   scrape_interval: 15s
 
 scrape_configs:
-  - job_name: 'circlelayer-geth'
+  - job_name: 'clayer-geth'
     static_configs:
       - targets: ['localhost:6060']  # Geth metrics endpoint
     metrics_path: '/debug/metrics/prometheus'
@@ -80,7 +80,7 @@ scrape_configs:
 ```json
 {
   "dashboard": {
-    "title": "Core Layer Node Dashboard",
+    "title": "CLayer Node Dashboard",
     "panels": [
       {
         "title": "Block Height",
@@ -216,7 +216,7 @@ sudo ufw status verbose
 ps aux | grep geth | grep -v grep
 
 # Check file permissions
-ls -la /data/circlelayer/config.toml
+ls -la /data/clayer/config.toml
 ```
 
 ## Alerting Configuration
@@ -224,17 +224,17 @@ ls -la /data/circlelayer/config.toml
 ### 1. Critical Alerts
 
 ```yaml
-# alert-rules.yml - Updated for Core Layer
+# alert-rules.yml - Updated for CLayer
 groups:
   - name: circlelayer_critical
     rules:
       - alert: NodeDown
-        expr: up{job="circlelayer-geth"} == 0
+        expr: up{job="clayer-geth"} == 0
         for: 2m
         labels:
           severity: critical
         annotations:
-          summary: "Core Layer node is down"
+          summary: "CLayer node is down"
           description: "Node has been down for more than 2 minutes"
       
       - alert: SyncFalling
@@ -265,7 +265,7 @@ groups:
           description: "CPU usage above 85% for 5 minutes"
 
       - alert: DiskSpaceLow
-        expr: (node_filesystem_avail_bytes{mountpoint="/data/circlelayer"} / node_filesystem_size_bytes) * 100 < 20
+        expr: (node_filesystem_avail_bytes{mountpoint="/data/clayer"} / node_filesystem_size_bytes) * 100 < 20
         for: 1m
         labels:
           severity: critical
@@ -317,7 +317,7 @@ receivers:
     email_configs:
       - to: 'admin@clayer.io'
 from: 'admin@clayer.io'
-        subject: 'Core Layer Node Alert'
+        subject: 'CLayer Node Alert'
         body: |
           {{ range .Alerts }}
           Alert: {{ .Annotations.summary }}
@@ -334,7 +334,7 @@ from: 'admin@clayer.io'
 #!/bin/bash
 # /usr/local/bin/node-health-check.sh
 
-LOG_FILE="/data/circlelayer/logs/health-check.log"
+LOG_FILE="/data/clayer/logs/health-check.log"
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 
 # Function to log with timestamp
@@ -381,13 +381,13 @@ log "Health check completed successfully - Peers: $PEER_COUNT_DEC"
 #!/bin/bash
 # /usr/local/bin/performance-monitor.sh
 
-METRICS_FILE="/data/circlelayer/logs/performance-metrics.log"
+METRICS_FILE="/data/clayer/logs/performance-metrics.log"
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 
 # Collect system metrics
 CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d'%' -f1)
 MEMORY_USAGE=$(free | grep Mem | awk '{printf "%.2f", ($3/$2) * 100.0}')
-DISK_USAGE=$(df /data/circlelayer | tail -1 | awk '{print $5}' | sed 's/%//')
+DISK_USAGE=$(df /data/clayer | tail -1 | awk '{print $5}' | sed 's/%//')
 
 # Collect geth metrics via RPC
 BLOCK_NUMBER=$(curl -s -X POST -H "Content-Type: application/json" \
@@ -407,32 +407,32 @@ echo "[$TIMESTAMP] CPU:${CPU_USAGE}% MEM:${MEMORY_USAGE}% DISK:${DISK_USAGE}% BL
 #### Log Parsing and Analysis
 ```bash
 # Monitor error patterns
-grep -i "error\|panic\|fatal" /data/circlelayer/logs/systemd_chain_console.out | tail -20
+grep -i "error\|panic\|fatal" /data/clayer/logs/systemd_chain_console.out | tail -20
 
 # Monitor connection issues
-grep -i "dial\|connection\|timeout" /data/circlelayer/logs/systemd_chain_console.out | tail -10
+grep -i "dial\|connection\|timeout" /data/clayer/logs/systemd_chain_console.out | tail -10
 
 # Monitor block production
-grep -i "imported\|mined" /data/circlelayer/logs/systemd_chain_console.out | tail -10
+grep -i "imported\|mined" /data/clayer/logs/systemd_chain_console.out | tail -10
 
 # Performance patterns
-grep -i "slow\|timeout\|delay" /data/circlelayer/logs/systemd_chain_console.out | tail -10
+grep -i "slow\|timeout\|delay" /data/clayer/logs/systemd_chain_console.out | tail -10
 ```
 
 #### Log Rotation Configuration
 ```bash
-# Configure logrotate for Core Layer logs
-sudo cat > /etc/logrotate.d/circlelayer << 'EOF'
-/data/circlelayer/logs/*.log {
+# Configure logrotate for CLayer logs
+sudo cat > /etc/logrotate.d/clayer << 'EOF'
+/data/clayer/logs/*.log {
     daily
     rotate 30
     compress
     delaycompress
     missingok
     notifempty
-    create 644 circlelayer circlelayer
+    create 644 clayer clayer
     postrotate
-        systemctl reload circlelayer.service
+        systemctl reload clayer.service
     endscript
 }
 EOF
@@ -448,12 +448,12 @@ EOF
 #!/bin/bash
 # daily-check.sh
 
-echo "=== Core Layer Node Daily Check ===" 
+echo "=== CLayer Node Daily Check ===" 
 echo "Date: $(date)"
-echo "Node Status: $(systemctl is-active circlelayer.service)"
-echo "Disk Usage: $(df -h /data/circlelayer | tail -1 | awk '{print $5}')"
+echo "Node Status: $(systemctl is-active clayer.service)"
+echo "Disk Usage: $(df -h /data/clayer | tail -1 | awk '{print $5}')"
 echo "Memory Usage: $(free -h | grep Mem | awk '{print $3 "/" $2}')"
-echo "Log Size: $(du -sh /data/circlelayer/logs)"
+echo "Log Size: $(du -sh /data/clayer/logs)"
 echo "Last Block: $(curl -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' http://localhost:8545 | jq -r '.result')"
 echo "Peer Count: $(curl -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' http://localhost:8545 | jq -r '.result')"
 echo "====================================="
@@ -470,7 +470,7 @@ echo "====================================="
 
 #### Resource Tuning
 ```bash
-# Optimize system for Core Layer
+# Optimize system for CLayer
 echo 'vm.swappiness=10' >> /etc/sysctl.conf
 echo 'fs.file-max=2097152' >> /etc/sysctl.conf
 echo 'net.core.rmem_max=134217728' >> /etc/sysctl.conf
@@ -491,11 +491,11 @@ sysctl -p
 #### Configuration Backup
 ```bash
 # Backup critical files
-tar -czf circlelayer-backup-$(date +%Y%m%d).tar.gz \
-    /data/circlelayer/config.toml \
-    /data/circlelayer/run.sh \
-    /etc/systemd/system/circlelayer.service \
-    /etc/logrotate.d/circlelayer
+tar -czf clayer-backup-$(date +%Y%m%d).tar.gz \
+    /data/clayer/config.toml \
+    /data/clayer/run.sh \
+    /etc/systemd/system/clayer.service \
+    /etc/logrotate.d/clayer
 ```
 
 #### Data Recovery Procedures
@@ -511,21 +511,21 @@ tar -czf circlelayer-backup-$(date +%Y%m%d).tar.gz \
 #### Node Won't Start
 ```bash
 # Check service logs
-sudo journalctl -u circlelayer.service -f
+sudo journalctl -u clayer.service -f
 
 # Check configuration
-geth --datadir /data/circlelayer/data --config /data/circlelayer/config.toml --check-config
+geth --datadir /data/clayer/data --config /data/clayer/config.toml --check-config
 
 # Check permissions
-ls -la /data/circlelayer/
+ls -la /data/clayer/
 ```
 
 #### Sync Issues
 ```bash
 # Force resync (use with caution)
-sudo systemctl stop circlelayer.service
-rm -rf /data/circlelayer/data/geth/chaindata
-sudo systemctl start circlelayer.service
+sudo systemctl stop clayer.service
+rm -rf /data/clayer/data/geth/chaindata
+sudo systemctl start clayer.service
 ```
 
 #### Performance Issues

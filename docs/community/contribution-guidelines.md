@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Overview
 
-Welcome to the Core Layer community! This guide will help you contribute to our project.
+Welcome to the CLayer community! This guide will help you contribute to our project.
 
 ## How to Contribute
 
@@ -32,8 +32,8 @@ Welcome to the Core Layer community! This guide will help you contribute to our 
 
 1. **Setup**
    ```bash
-   git clone https://github.com/circlelayer/testnet-core-blockchain.git
-   cd core-layer
+   git clone https://github.com/clayer/testnet-clayer-blockchain.git
+   cd clayer
    npm install
 
 2. **Testing**

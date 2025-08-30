@@ -4,14 +4,14 @@ sidebar_position: 1
 
 # Writing Smart Contracts
 
-Core Layer is fully EVM compatible, allowing you to use all existing Ethereum development tools and patterns with enhanced performance and lower costs.
+CLayer is fully EVM compatible, allowing you to use all existing Ethereum development tools and patterns with enhanced performance and lower costs.
 
 ## Development Environment Setup
 
 ### Prerequisites
 - **Solidity Knowledge**: Familiarity with Solidity programming language
 - **Development Tools**: Node.js, npm/yarn for package management
-- **Core Layer Access**: Testnet connection configured
+- **CLayer Access**: Testnet connection configured
 - **Test Tokens**: CLAYER tokens from [faucet](https://faucet.clayer.io)
 
 ### Required Tools Installation
@@ -50,7 +50,7 @@ contract CircleLayerExample is ReentrancyGuard, Ownable {
         // Initialize contract state
     }
     
-    // Functions with Core Layer optimizations
+    // Functions with CLayer optimizations
     function deposit() external payable nonReentrant {
         require(msg.value > 0, "Deposit amount must be greater than 0");
         balances[msg.sender] += msg.value;
@@ -71,7 +71,7 @@ contract CircleLayerExample is ReentrancyGuard, Ownable {
 }
 ```
 
-## Core Layer Optimization Best Practices
+## CLayer Optimization Best Practices
 
 ### 1. Gas Efficiency for CLAYER
 ```solidity
@@ -102,7 +102,7 @@ contract OptimizedContract {
 
 ### 2. Security Patterns
 ```solidity
-// Follow Core Layer security best practices
+// Follow CLayer security best practices
 contract SecureContract {
     using SafeMath for uint256; // For older Solidity versions
     
@@ -134,7 +134,7 @@ contract SecureContract {
 
 ### 3. Event Optimization
 ```solidity
-// Optimize events for Core Layer's fast finality
+// Optimize events for CLayer's fast finality
 contract EventOptimizedContract {
     // Indexed parameters for efficient filtering
     event TokenTransfer(
@@ -162,7 +162,7 @@ contract EventOptimizedContract {
 
 ## Testing Framework
 
-### Hardhat Configuration for Core Layer
+### Hardhat Configuration for CLayer
 ```javascript
 // hardhat.config.js
 require("@nomiclabs/hardhat-waffle");
@@ -188,7 +188,7 @@ module.exports = {
     }
   },
   mocha: {
-    timeout: 40000 // Extended timeout for Core Layer's 3s blocks
+    timeout: 40000 // Extended timeout for CLayer's 3s blocks
   }
 };
 ```
@@ -223,7 +223,7 @@ describe("CircleLayerExample", function () {
     expect(await contract.balances(user1.address)).to.equal(depositAmount);
   });
   
-  it("Should validate gas usage on Core Layer", async function () {
+  it("Should validate gas usage on CLayer", async function () {
     const tx = await contract.connect(user1).deposit({ 
       value: ethers.utils.parseEther("1.0") 
     });
@@ -243,7 +243,7 @@ describe("CircleLayerExample", function () {
 const { ethers } = require("hardhat");
 
 async function main() {
-  console.log("Deploying to Core Layer Testnet...");
+  console.log("Deploying to CLayer Testnet...");
   
   // Get deployer account
   const [deployer] = await ethers.getSigners();
@@ -323,7 +323,7 @@ const ContractInteraction = () => {
         const tx = await contract.deposit({ 
           value: ethers.utils.parseEther("1.0") 
         });
-        await tx.wait(); // Wait for Core Layer's fast confirmation
+        await tx.wait(); // Wait for CLayer's fast confirmation
         console.log("Transaction confirmed in ~3 seconds");
       } catch (error) {
         console.error("Transaction failed:", error);
@@ -335,10 +335,10 @@ const ContractInteraction = () => {
 
 ## Performance Considerations
 
-### Core Layer Specific Optimizations
+### CLayer Specific Optimizations
 - **Fast Finality**: Leverage 1-3 second finality for better UX
 - **Predictable Gas**: Stable CLAYER pricing allows for accurate gas estimation
-- **Event Handling**: Optimize for Core Layer's efficient event processing
+- **Event Handling**: Optimize for CLayer's efficient event processing
 - **State Management**: Design for optimal performance with DPoS consensus
 
 ## Reference Implementation
@@ -350,7 +350,7 @@ const ContractInteraction = () => {
 
 ## Next Steps
 
-Continue your Core Layer development journey:
+Continue your CLayer development journey:
 - [Contract Deployment Guide](./deploying-contracts) - Advanced deployment strategies
 - [Web3 Integration](./web3-integration) - Frontend development patterns
 - [Contract Interaction](./interacting-with-contracts) - Runtime interaction guides

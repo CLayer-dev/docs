@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Overview
 
-Learn how to interact with smart contracts on Core Layer.
+Learn how to interact with smart contracts on CLayer.
 
 ## Methods of Interaction
 
@@ -25,15 +25,15 @@ const result = await contract.someFunction();
 ```
 ```
 ```bash
-# Using Core Layer CLI
-core-layer contract call <address> <function> [args]
+# Using CLayer CLI
+clayer contract call <address> <function> [args]
 ```
 ```
 ```
 ```
 
 ### 3. Web Interface
-- Core Layer Explorer
+- CLayer Explorer
 - Custom DApp interfaces
 - Wallet integrations
 

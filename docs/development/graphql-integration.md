@@ -3,7 +3,7 @@ id: graphql-integration
 title: GraphQL Node Integration
 sidebar_label: GraphQL Integration
 sidebar_position: 10
-description: Guide to setting up and using The Graph protocol with Core Layer blockchain for decentralized application data indexing.
+description: Guide to setting up and using The Graph protocol with CLayer blockchain for decentralized application data indexing.
 ---
 
 # Graph Node
@@ -23,7 +23,7 @@ We recommend following the [Official documentation](https://thegraph.com/docs/) 
 
 For convenience reasons, we use the official [docker compose](https://github.com/graphprotocol/graph-node/tree/master/docker) for node, database, and IPFS deployment.
 
-Note that the value of the `ethereum` field in `docker-compose.yml` is replaced with `Core Layer Blockchain`'s node connection information.
+Note that the value of the `ethereum` field in `docker-compose.yml` is replaced with `CLayer Blockchain`'s node connection information.
 
 ```yaml
 graph-node:
@@ -43,7 +43,7 @@ graph-node:
       postgres_pass: let-me-in
       postgres_db: graph-node
       ipfs: 'ipfs:5001'
-      ethereum: 'mainnet:http://127.0.0.1:8545'  #replaced with Core Layer Blockchain rpc info
+      ethereum: 'mainnet:http://127.0.0.1:8545'  #replaced with CLayer Blockchain rpc info
       RUST_LOG: info
 ```
 

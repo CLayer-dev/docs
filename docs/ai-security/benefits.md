@@ -10,7 +10,7 @@ sidebar_position: 1
 
 ## Overview
 
-Core Layer's planned AI-powered security features will provide several key benefits for developers and users:
+CLayer's planned AI-powered security features will provide several key benefits for developers and users:
 
 ## Key Benefits
 

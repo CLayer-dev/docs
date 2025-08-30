@@ -1,6 +1,6 @@
-# Core Layer Documentation
+# CLayer Documentation
 
-Official documentation for Core Layer - a high-performance EVM-compatible blockchain built with Delegated Proof-of-Stake consensus, delivering efficient throughput and security for DeFi, NFTs, and enterprise applications.
+Official documentation for CLayer - a high-performance EVM-compatible blockchain built with Delegated Proof-of-Stake consensus, delivering efficient throughput and security for DeFi, NFTs, and enterprise applications.
 
 ## 🚀 Build Status
 
@@ -59,7 +59,7 @@ docs/
 ├── faqs/                 # Frequently asked questions
 ├── getting-started/      # Quick start guides
 ├── governance/           # Governance and tokenomics
-├── introduction/         # What is Core Layer
+├── introduction/         # What is CLayer
 ├── nodes-validation/     # Node setup and validation
 ├── roadmap/              # Development roadmap
 ├── security/             # Security guidelines
@@ -116,9 +116,9 @@ We welcome contributions! Please see our [Contribution Guidelines](docs/communit
 ## 🔗 Links
 
 - **Website**: [https://clayer.io](https://clayer.io)
-- **GitHub**: [https://github.com/circlelayer](https://github.com/circlelayer)
-- **X (Twitter)**: [https://x.com/circlelayer](https://x.com/circlelayer)
-- **Telegram**: [https://t.me/circlelayer](https://t.me/circlelayer)
+- **GitHub**: [https://github.com/clayer](https://github.com/clayer)
+- **X (Twitter)**: [https://x.com/clayer_io](https://x.com/clayer_io)
+- **Telegram**: [https://t.me/clayer_io](https://t.me/clayer_io)
 
 ## 📄 License
 
@@ -126,4 +126,4 @@ This documentation is licensed under the MIT License. See [LICENSE](LICENSE) for
 
 ---
 
-**Core Layer** - Building the future of scalable, secure blockchain infrastructure.
+**CLayer** - Building the future of scalable, secure blockchain infrastructure.

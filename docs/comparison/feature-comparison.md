@@ -8,12 +8,12 @@ import '@site/src/css/comparison.css';
 
 ## Overview
 
-Compare Core Layer's current testnet features with other blockchain platforms:
+Compare CLayer's current testnet features with other blockchain platforms:
 
 ## Technical Features
 
 ### Performance (Target vs Live Networks)
-| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | CLayer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Block Time | 3s | 12s | 2s | 3s |
 | Finality | 1-3s | 6-10min | 2-3s | 3s |
@@ -27,7 +27,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Core Layer Testnet</div>
+      <div className="card-title">CLayer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -127,7 +127,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
 </div>
 
 ### Network Configuration
-| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | CLayer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Consensus | DPoS | PoW→PoS | PoS | PoA |
 | Currency | CLAYER | ETH | MATIC | BNB |
@@ -141,7 +141,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Core Layer Testnet</div>
+      <div className="card-title">CLayer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -241,7 +241,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
 </div>
 
 ### Validator Requirements
-| Feature | Core Layer Testnet | Core Layer Mainnet | Ethereum 2.0 | Polygon | BSC |
+| Feature | CLayer Testnet | CLayer Mainnet | Ethereum 2.0 | Polygon | BSC |
 |---------|---------------------|---------------------|---------------|---------|-----|
 | Min Stake | 32 CLAYER | 100,000 CLAYER | 32 ETH | 1 MATIC | N/A |
 | Min Validators | 5 active | 5 active | Various | 100+ | 21 |
@@ -255,7 +255,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Core Layer Testnet</div>
+      <div className="card-title">CLayer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -280,7 +280,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
 
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Core Layer Mainnet</div>
+      <div className="card-title">CLayer Mainnet</div>
       <div className="network-badge">Mainnet</div>
     </div>
     <div className="card-content">
@@ -382,7 +382,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
 ## Security Features
 
 ### Current Implementation
-| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | CLayer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Security Model | Standard EVM + DPoS | PoW→PoS | PoS | PoA |
 | Burn Mechanism | 25% gas fees | EIP-1559 | No | No |
@@ -395,7 +395,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Core Layer Testnet</div>
+      <div className="card-title">CLayer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -481,7 +481,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
 ## Developer Experience
 
 ### Development Tools
-| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | CLayer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Hardhat Support | Yes | Yes | Yes | Yes |
 | Truffle Support | Yes | Yes | Yes | Yes |
@@ -495,7 +495,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Core Layer Testnet</div>
+      <div className="card-title">CLayer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -595,7 +595,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
 </div>
 
 ### Network Resources
-| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | CLayer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Block Explorer | explorer-testnet.clayer.io | etherscan.io | polygonscan.com | bscscan.com |
 | Faucet | 1 CLAYER/day | Various | Yes | Yes |
@@ -609,7 +609,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Core Layer Testnet</div>
+      <div className="card-title">CLayer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -711,7 +711,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
 ## User Experience
 
 ### Wallet Integration
-| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | CLayer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | MetaMask | Yes (testnet config) | Yes | Yes | Yes |
 | WalletConnect | Yes (register required) | Yes | Yes | Yes |
@@ -725,7 +725,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Core Layer Testnet</div>
+      <div className="card-title">CLayer Testnet</div>
       <div className="network-badge">Testnet</div>
     </div>
     <div className="card-content">
@@ -825,7 +825,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
 </div>
 
 ### Ecosystem Status
-| Feature | Core Layer Testnet | Ethereum | Polygon | BSC |
+| Feature | CLayer Testnet | Ethereum | Polygon | BSC |
 |---------|---------------------|----------|---------|-----|
 | Status | In Development | Mainnet | Mainnet | Mainnet |
 | DApps | Testing Phase | 3000+ | 1000+ | 500+ |
@@ -838,7 +838,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
   
   <div className="comparison-card circle-layer">
     <div className="card-header">
-      <div className="card-title">Core Layer Testnet</div>
+      <div className="card-title">CLayer Testnet</div>
       <div className="network-badge">Development</div>
     </div>
     <div className="card-content">
@@ -923,7 +923,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
 
 ## 🚧 Features in Development
 
-### Upcoming Core Layer Features
+### Upcoming CLayer Features
 | Feature | Status | Comparable Networks |
 |---------|--------|-------------------|
 | Automated Staking | In Development | Ethereum 2.0, Polygon |
@@ -944,7 +944,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Core Layer</div>
+          <div className="network-name">CLayer</div>
           <div className="network-value">In Development</div>
         </div>
         <div className="network-item">
@@ -960,7 +960,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Core Layer</div>
+          <div className="network-name">CLayer</div>
           <div className="network-value">In Development</div>
         </div>
         <div className="network-item">
@@ -976,7 +976,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Core Layer</div>
+          <div className="network-name">CLayer</div>
           <div className="network-value">In Development</div>
         </div>
         <div className="network-item">
@@ -992,7 +992,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Core Layer</div>
+          <div className="network-name">CLayer</div>
           <div className="network-value">In Development</div>
         </div>
         <div className="network-item">
@@ -1008,7 +1008,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Core Layer</div>
+          <div className="network-name">CLayer</div>
           <div className="network-value">In Development</div>
         </div>
         <div className="network-item">
@@ -1023,7 +1023,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
 ## Integration Comparison
 
 ### Development Similarity
-| Aspect | Core Layer | Similarity to |
+| Aspect | CLayer | Similarity to |
 |--------|-------------|---------------|
 | Smart Contracts | Solidity | Ethereum (100%) |
 | Web3 Libraries | Web3.js, Ethers.js | Ethereum (100%) |
@@ -1042,7 +1042,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Core Layer</div>
+          <div className="network-name">CLayer</div>
           <div className="network-value">Solidity</div>
         </div>
         <div className="network-item">
@@ -1058,7 +1058,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Core Layer</div>
+          <div className="network-name">CLayer</div>
           <div className="network-value">Web3.js, Ethers.js</div>
         </div>
         <div className="network-item">
@@ -1074,7 +1074,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Core Layer</div>
+          <div className="network-name">CLayer</div>
           <div className="network-value">Standard EVM</div>
         </div>
         <div className="network-item">
@@ -1090,7 +1090,7 @@ Compare Core Layer's current testnet features with other blockchain platforms:
       </div>
       <div className="networks-comparison">
         <div className="network-item circle-layer">
-          <div className="network-name">Core Layer</div>
+          <div className="network-name">CLayer</div>
           <div className="network-value">Standard EVM</div>
         </div>
         <div className="network-item">

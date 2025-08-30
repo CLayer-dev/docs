@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Overview
 
-Core Layer offers several key advantages over other blockchain platforms:
+CLayer offers several key advantages over other blockchain platforms:
 
 ## Technical Advantages
 

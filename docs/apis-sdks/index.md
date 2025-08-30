@@ -1,11 +1,11 @@
 ---
 title: APIs & SDKs Overview
-description: Complete guide to Core Layer APIs, SDKs, and developer tools
+description: Complete guide to CLayer APIs, SDKs, and developer tools
 ---
 
 # APIs & SDKs Overview
 
-Core Layer provides comprehensive APIs and SDKs for seamless blockchain integration. This section covers all the endpoints, libraries, and tools you need for development.
+CLayer provides comprehensive APIs and SDKs for seamless blockchain integration. This section covers all the endpoints, libraries, and tools you need for development.
 
 ## 🔧 Available APIs
 
@@ -27,7 +27,7 @@ Core Layer provides comprehensive APIs and SDKs for seamless blockchain integrat
 
 ## 📚 Supported Web3 Libraries
 
-Core Layer works seamlessly with all popular Ethereum libraries:
+CLayer works seamlessly with all popular Ethereum libraries:
 
 ### Web3.js
 ```javascript
@@ -63,7 +63,7 @@ const client = createPublicClient({
 ## 🛠️ Development Environment Integration
 
 ### Smart Contract Development
-- **Hardhat**: Full development environment with Core Layer network configuration
+- **Hardhat**: Full development environment with CLayer network configuration
 - **Truffle**: Complete framework support with CLAYER gas configuration  
 - **Remix**: Browser-based IDE with injected provider support
 - **Foundry**: Rust-based toolkit for advanced smart contract development
@@ -155,8 +155,8 @@ const result = await contract.someMethod();
 
 ### Documentation Resources
 - 📖 Complete API reference documentation
-- 💬 Community support via [Telegram](https://t.me/circlelayer)
-- 🐛 Issue tracking on [GitHub](https://github.com/circlelayer/docs)
+- 💬 Community support via [Telegram](https://t.me/clayer_io)
+- 🐛 Issue tracking on [GitHub](https://github.com/clayer/docs)
 - 📧 Direct developer support available
 
 ### Integration Examples

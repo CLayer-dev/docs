@@ -6,9 +6,9 @@ sidebar_position: 2
 
 ## Overview
 
-Core Layer supports various Web3 libraries for interacting with the testnet. All standard Ethereum Web3 libraries work with Core Layer using the same patterns.
+CLayer supports various Web3 libraries for interacting with the testnet. All standard Ethereum Web3 libraries work with CLayer using the same patterns.
 
-`Core Layer Blockchain` is compatible with `Ethereum`'s ecosystem，support all `Ethereum`'s `RPC` API and SDK.
+`CLayer Blockchain` is compatible with `Ethereum`'s ecosystem，support all `Ethereum`'s `RPC` API and SDK.
 
 ### RPC Compatibility
 [RPC Method List](https://ethereum.org/en/developers/docs/apis/json-rpc/)
@@ -20,7 +20,7 @@ curl -s -H 'content-type:application/json' -d '{"jsonrpc":"2.0","method":"web3_c
 
 ## Network Configuration
 
-### Core Layer Testnet
+### CLayer Testnet
 - **RPC URL**: https://testnet-rpc.clayer.io
 - **WebSocket**: wss://testnet-rpc.clayer.io
 - **Chain ID**: 28525
@@ -116,7 +116,7 @@ balance = w3.eth.get_balance(account.address)
 print(f'Balance: {w3.from_wei(balance, "ether")} CLAYER')
 ```
 
-## Core Layer Specific Features
+## CLayer Specific Features
 
 ### Network Information
 ```javascript
@@ -168,13 +168,13 @@ const tx = await contract.someWriteMethod(params, {
 // Always verify network
 const network = await provider.getNetwork();
 if (network.chainId !== 28525) {
-  throw new Error('Please connect to Core Layer Testnet');
+  throw new Error('Please connect to CLayer Testnet');
 }
 ```
 
 ### 2. Gas Management
 ```javascript
-// Use appropriate gas settings for Core Layer
+// Use appropriate gas settings for CLayer
 const gasPrice = ethers.utils.parseUnits('21', 'gwei'); // 0.000021 CLAYER
 const gasLimit = await contract.estimateGas.methodName(params);
 ```
@@ -218,12 +218,12 @@ function useCircleLayer() {
         const web3Provider = new ethers.providers.Web3Provider(window.ethereum);
         setProvider(web3Provider);
         
-        // Add Core Layer Testnet to MetaMask if needed
+        // Add CLayer Testnet to MetaMask if needed
         await window.ethereum.request({
           method: 'wallet_addEthereumChain',
           params: [{
             chainId: '0x6F75', // 28525 in hex
-            chainName: 'Core Layer Testnet',
+            chainName: 'CLayer Testnet',
             nativeCurrency: {
               name: 'CLAYER',
               symbol: 'CLAYER',
